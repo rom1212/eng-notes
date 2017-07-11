@@ -18,3 +18,12 @@ sudo apt-get install sbt
 [info] sbt, sbt plugins, and build definitions are using Scala 2.10.6
 # date: 2017-07-11
 ```
+## package management
+
+sbt uses [coursier](https://github.com/coursier/coursier) to manage dependency packages, which are stored in .coursier/cache/v1/https/, e.g.
+```
+# repo1.maven.org
+.coursier/cache/v1/https/repo1.maven.org/maven2/commons-io/commons-io/2.4/commons-io-2.4.jar
+# downloads.mesosphere.com
+.coursier/cache/v1/https/downloads.mesosphere.com/maven/mesosphere/marathon/ui/1.2.0/ui-1.2.0.jar
+```
