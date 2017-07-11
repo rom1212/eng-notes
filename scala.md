@@ -16,4 +16,5 @@ sudo apt-get install sbt
 [info] The current project is built against Scala 2.10.6
 [info] Available Plugins: sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.CorePlugin, sbt.plugins.JUnitXmlReportPlugin, sbt.plugins.Giter8TemplatePlugin
 [info] sbt, sbt plugins, and build definitions are using Scala 2.10.6
+# date: 2017-07-11
 ```
