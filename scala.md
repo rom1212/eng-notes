@@ -2,6 +2,17 @@
 ## Gettting started guide
 http://www.scala-sbt.org/0.13/docs/Getting-Started.html
 
+## Common Usage
+sbt's batch mode is similar to mvn. sbt's command with parameters must be enclosed with quotes, e.g. sbt "run xx xx"
+```
+sbt clean
+sbt compile
+sbt package
+sbt test
+sbt assembly
+```
+
+
 ## Install sbt on Ubuntu/Debian
 http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Linux.html
 ```
