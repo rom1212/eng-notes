@@ -174,3 +174,6 @@ def conv2d(input, filter, strides, padding, use_cudnn_on_gpu=None,
                                 data_format=data_format, name=name)
   return result
 ```
+
+Code search:  [tensorflow/tensorflow/python/layers/convolutional.py](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/python/layers/convolutional.py)
+
