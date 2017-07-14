@@ -113,7 +113,7 @@ https://www.tensorflow.org/get_started/summaries_and_tensorboard
 # Code 
 ## conv2d()
 IntelliJ
-tensorflow/python/ops/gen_nn_ops.py
+tensorflow/python/ops/gen_nn_ops.py, which is a registered operation in [tensorflow/core/ops/nn_ops.cc](https://github.com/tensorflow/tensorflow/blob/master/tensorflow/core/ops/nn_ops.cc)
 ```
 def conv2d(input, filter, strides, padding, use_cudnn_on_gpu=None,
            data_format=None, name=None):
