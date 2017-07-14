@@ -110,3 +110,67 @@ https://github.com/tensorflow/tensorflow/blob/r1.2/tensorflow/tensorboard/README
 
 https://www.tensorflow.org/get_started/summaries_and_tensorboard
 
+# Code 
+## conv2d()
+IntelliJ
+tensorflow/python/ops/gen_nn_ops.py
+```
+def conv2d(input, filter, strides, padding, use_cudnn_on_gpu=None,
+           data_format=None, name=None):
+  r"""Computes a 2-D convolution given 4-D `input` and `filter` tensors.
+
+  Given an input tensor of shape `[batch, in_height, in_width, in_channels]`
+  and a filter / kernel tensor of shape
+  `[filter_height, filter_width, in_channels, out_channels]`, this op
+  performs the following:
+
+  1. Flattens the filter to a 2-D matrix with shape
+     `[filter_height * filter_width * in_channels, output_channels]`.
+  2. Extracts image patches from the input tensor to form a *virtual*
+     tensor of shape `[batch, out_height, out_width,
+     filter_height * filter_width * in_channels]`.
+  3. For each patch, right-multiplies the filter matrix and the image patch
+     vector.
+
+  In detail, with the default NHWC format,
+
+      output[b, i, j, k] =
+          sum_{di, dj, q} input[b, strides[1] * i + di, strides[2] * j + dj, q] *
+                          filter[di, dj, q, k]
+
+  Must have `strides[0] = strides[3] = 1`.  For the most common case of the same
+  horizontal and vertices strides, `strides = [1, stride, stride, 1]`.
+
+  Args:
+    input: A `Tensor`. Must be one of the following types: `half`, `float32`.
+      A 4-D tensor. The dimension order is interpreted according to the value
+      of `data_format`, see below for details.
+    filter: A `Tensor`. Must have the same type as `input`.
+      A 4-D tensor of shape
+      `[filter_height, filter_width, in_channels, out_channels]`
+    strides: A list of `ints`.
+      1-D tensor of length 4.  The stride of the sliding window for each
+      dimension of `input`. The dimension order is determined by the value of
+        `data_format`, see below for details.
+    padding: A `string` from: `"SAME", "VALID"`.
+      The type of padding algorithm to use.
+    use_cudnn_on_gpu: An optional `bool`. Defaults to `True`.
+    data_format: An optional `string` from: `"NHWC", "NCHW"`. Defaults to `"NHWC"`.
+      Specify the data format of the input and output data. With the
+      default format "NHWC", the data is stored in the order of:
+          [batch, height, width, channels].
+      Alternatively, the format could be "NCHW", the data storage order of:
+          [batch, channels, height, width].
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor`. Has the same type as `input`.
+    A 4-D tensor. The dimension order is determined by the value of
+    `data_format`, see below for details.
+  """
+  result = _op_def_lib.apply_op("Conv2D", input=input, filter=filter,
+                                strides=strides, padding=padding,
+                                use_cudnn_on_gpu=use_cudnn_on_gpu,
+                                data_format=data_format, name=name)
+  return result
+```
