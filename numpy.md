@@ -38,3 +38,20 @@ array([104, 101, 108, 108, 111,  32, 119, 111, 114, 108, 100], dtype=uint8)
 >>> type(b)
 <type 'numpy.ndarray'>
 ```
+
+## from csv
+??? how to control the result type, numpy.float64 or float32?
+
+```
+# https://stackoverflow.com/questions/25614749/how-to-import-csv-file-as-numpy-array-in-python
+import numpy as np
+csv = np.genfromtxt ('file.csv', delimiter=",")
+second = csv[:,1]
+third = csv[:,2]
+
+>>> second
+Out[1]: array([ 432.,  300.,  432.])
+
+>>> third
+Out[2]: array([ 1.,  1.,  0.])
+```
