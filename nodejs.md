@@ -35,3 +35,13 @@ v4.2.6
 # need sudo
 sudo npm install -g oas-raml-converter
 ```
+If this problem happens:
+```
+$ oas-raml-converter --from RAML10 --to OAS api.raml 
+/usr/bin/env: ‘node --harmony’: No such file or directory
+```
+Then, change first line of oas-raml-converter
+```
+sudo vim /usr/local/bin/oas-raml-converter
+#!/usr/bin/node --harmony
+```
