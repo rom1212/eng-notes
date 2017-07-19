@@ -55,3 +55,11 @@ Out[1]: array([ 432.,  300.,  432.])
 >>> third
 Out[2]: array([ 1.,  1.,  0.])
 ```
+
+## numpy.concatenate, numpy.stack
+[numpy.concatenate](https://docs.scipy.org/doc/numpy/reference/generated/numpy.concatenate.html): "Join a sequence of arrays along an existing axis." e.g. np.concatenate((a, b), axis=1) assumes that a has axis 1 (second axis). So, it is suitable to append a new column or new columns to an existing array (which is a matrix)
+
+[numpy.stack](https://docs.scipy.org/doc/numpy/reference/generated/numpy.stack.html): it will add a new axis. if axis=0, it treats inputs as rows, and if axis=1, it treats inputs as columns.
+
+
+
