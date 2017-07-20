@@ -13,3 +13,26 @@ chmod +x ./swagger
 ```
 ./swagger generate client --spec api.swagger.json --name marathon-api --target go-swagger-client
 ```
+
+# Swagger Codegen
+
+## Debutg go-resty
+https://github.com/go-resty/resty
+```
+// api_client.go
+func (c *APIClient) prepareClient() *resty.Client {
+
+	rClient := resty.New()
+
+	rClient.SetDebug(true)
+	if c.config.Transport != nil {
+		rClient.SetTransport(c.config.Transport)
+	}
+
+	if c.config.Timeout != nil {
+		rClient.SetTimeout(*c.config.Timeout)
+	}
+	rClient.SetLogger(os.Stdout)
+	return rClient
+}
+```
