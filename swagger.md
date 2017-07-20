@@ -32,8 +32,40 @@ chmod +x ./swagger
 ```
 
 # Swagger Codegen
+## Usage
+```
+package main
 
-## Debutg go-resty
+import "fmt"
+import mapi "marathon-api"
+
+func main() {
+	fmt.Printf("hello, world\n")
+	api := mapi.NewDefaultApiWithBasePath("http://localhost:8080")
+	fmt.Println("api.Configuration", api.Configuration)
+	applist, response, error := api.V2AppsGet("", "", "", "");
+
+	if error != nil {
+		fmt.Println("error:", error)
+	} else {
+		fmt.Println("error:", error)
+		fmt.Println("applist:", applist)
+		fmt.Println("applist len:", len(applist.Apps))
+		//var app mapi.AppApp
+		for _, app := range applist.Apps {
+			fmt.Println("app.Id:", app.Id)
+			fmt.Println("app.Cmd:", app.Cmd)
+		}
+		fmt.Println("response:", response)
+		fmt.Println("response.Message:", response.Message)
+		fmt.Println("response.Payload:", response.Payload)
+		fmt.Println("response.len(Payload):", len(response.Payload))
+	}
+
+}
+```
+
+## Debug go-resty
 https://github.com/go-resty/resty
 ```
 // api_client.go
