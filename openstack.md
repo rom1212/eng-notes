@@ -16,7 +16,10 @@
 
 # Identity 
 ## domains, projects (tenants), users, and roles.
+* doc: https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html
 * domain:
+  * In the same domain, we couldn't have two projects with the same name, or two users with the same name. So, a domain can be used to represent an enterprise. 
+    * "For example, a cloud could have two domains, IBM and Acme Inc. IBM has their own collection of groups, users, and projects and so does Acme Inc." [safaribooksonline](https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html)
   * create default domain
   ```
   openstack domain create --description "Default Domain" default
@@ -27,16 +30,23 @@
     ```
     openstack project create --domain default --description "Admin Project" admin
     ```
-  * user
+  * user and groups
     * create "admin" user (user is parallel with project)
     ```
     openstack user create --domain default --password-prompt admin
     ```
+    * users and groups can be referred as actors.
   * relationship between project and user
-    * doc: https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html
     * Projects were originally referred to as Tenants.
     * It is probably fair to say that the most fundamental purpose of Keystone is to be the **registry of Projects and to be able to articulate who should have access to those Projects**. 
     * users and projects are separate so that one user can be assigned to access more than one projects, and one project can have more than one users and each user can have different role (e.g. owner, writer, reader). e.g. 
       * Google project and google gmail users. 
 * role
   * can create a role and add to project and user. role can be separate from domain
+  * "Roles are used in Keystone to convey a sense of Authorization. An actor may have numerous roles on a target."
+  * "A role assignment is a ternary (or triple): the combination of an actor, a target, and a role". "For example, the role of admin is “assigned to” the user “bob” and it is “assigned on” the project “development.”"
+  * actors
+    * "We refer to Users and Groups as Actors since, when assigning a role, these are the entities to which the role is “assigned to.”"
+  * targets
+    * "Projects and Domains are very similar in that both are entities where the role is “assigned on.” In other words, a User or User Group is given access to either a Project or Domain by assigning a particular Role value for that User or User Group for a specific Project or Domain. Because Projects and Domains have such similar characteristics, when we need to refer to both entities collectively we refer to them as Targets."
+  
