@@ -13,3 +13,23 @@
   * Essentially, it routes virtual networks to physical networks using NAT. 
   * Additionally, this option provides the foundation for advanced services such as LBaaS and FWaaS.
   * TBD: It uses a VLAN-like encapsulation technique to encapsulate MAC-based OSI layer 2 Ethernet frames within layer 4 UDP packets
+
+# Identity 
+## domains, projects (tenants), users, and roles.
+* domain:
+  * create default domain
+  ```
+  openstack domain create --description "Default Domain" default
+  ```
+  * project:
+    * Projects represent the base unit of “ownership” in OpenStack, in that all resources in OpenStack should be owned by a specific project. In OpenStack Identity, a project must be owned by a specific domain.
+    * create "admin" project
+    ```
+    openstack project create --domain default --description "Admin Project" admin
+    ```
+  * user
+    * create "admin" user (user is parallel with project)
+    ```
+    openstack user create --domain default --password-prompt admin
+    ```
+* role
