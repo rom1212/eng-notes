@@ -57,3 +57,9 @@
   * targets
     * "Projects and Domains are very similar in that both are entities where the role is “assigned on.” In other words, a User or User Group is given access to either a Project or Domain by assigning a particular Role value for that User or User Group for a specific Project or Domain. Because Projects and Domains have such similar characteristics, when we need to refer to both entities collectively we refer to them as Targets."
   
+# Ironic
+
+## Architecture
+* https://docs.openstack.org/ironic/latest/user/
+  * use Nova API, message queue and database
+* https://docs.openstack.org/ironic/latest/contributor/architecture.html
