@@ -33,3 +33,4 @@
     openstack user create --domain default --password-prompt admin
     ```
 * role
+  * can create a role and add to project and user. role can be separate from domain
