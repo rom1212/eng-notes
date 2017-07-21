@@ -32,5 +32,11 @@
     ```
     openstack user create --domain default --password-prompt admin
     ```
+  * relationship between project and user
+    * doc: https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html
+    * Projects were originally referred to as Tenants.
+    * It is probably fair to say that the most fundamental purpose of Keystone is to be the **registry of Projects and to be able to articulate who should have access to those Projects**. 
+    * users and projects are separate so that one user can be assigned to access more than one projects, and one project can have more than one users and each user can have different role (e.g. owner, writer, reader). e.g. 
+      * Google project and google gmail users. 
 * role
   * can create a role and add to project and user. role can be separate from domain
