@@ -20,6 +20,7 @@
 * domain:
   * In the same domain, we couldn't have two projects with the same name, or two users with the same name. So, a domain can be used to represent an enterprise. 
     * "For example, a cloud could have two domains, IBM and Acme Inc. IBM has their own collection of groups, users, and projects and so does Acme Inc." [safaribooksonline](https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html)
+  * However, projects and users have an unique UUID, and so by design, cross-domain access is possible and it is the same as intra-domain access.
   * create default domain
   ```
   openstack domain create --description "Default Domain" default
