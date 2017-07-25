@@ -13,3 +13,13 @@
   * http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/invalid-peering-configurations.html
   * http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide/vpc-peering-basics.html#vpc-peering-limitations
   
+  
+# Switch
+
+## Huawei 
+* Data Center Switches (http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches)
+  * Cloud Engine [CE5800 Seriers](http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches/ce5800)
+  * Cloud Engine [CE6800 Seriers](http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches/ce6800)
+* Configuration for 7800/6800/5800 http://support.huawei.com/enterprise/en/doc/DOC1000074869
+
+  
