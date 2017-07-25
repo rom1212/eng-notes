@@ -20,6 +20,7 @@
 * Data Center Switches (http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches)
   * Cloud Engine [CE5800 Seriers](http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches/ce5800)
   * Cloud Engine [CE6800 Seriers](http://e.huawei.com/us/products/enterprise-networking/switches/data-center-switches/ce6800)
-* Configuration for 7800/6800/5800 http://support.huawei.com/enterprise/en/doc/DOC1000074869
+* Configuration for CloudEngine 7800&6800&5800 V100R003C00: http://support.huawei.com/enterprise/en/doc/DOC1000074869
+* ZTP (Zero Touch Provisioning): http://support.huawei.com/enterprise/en/doc/DOC1000086918
 
   
