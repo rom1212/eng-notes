@@ -14,6 +14,10 @@
   * Additionally, this option provides the foundation for advanced services such as LBaaS and FWaaS.
   * TBD: It uses a VLAN-like encapsulation technique to encapsulate MAC-based OSI layer 2 Ethernet frames within layer 4 UDP packets
 
+## Deployment Cases
+https://docs.openstack.org/liberty/networking-guide/deploy.html
+* https://docs.openstack.org/liberty/networking-guide/scenario-classic-ovs.html
+
 # Identity 
 ## domains, projects (tenants), users, and roles.
 * doc: https://www.safaribooksonline.com/library/view/identity-authentication-and/9781491941249/ch01.html
