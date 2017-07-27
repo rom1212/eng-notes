@@ -2,7 +2,7 @@
 ## Commands
 * ? - all available commands
 * display ?  - show all the sub-commands
-  * display aaa xxx    
+  * display aaa    
 ```
   <xxx-xxx-xx>display aaa domain
 ---------------------------------------------------------------------
@@ -70,3 +70,7 @@ visit-ug                                             4
 ------------------------------------------------------
 Total 4, 4 printed
 ```
+  * display alarm
+    * display alarm active/history/statistics
+    * display alarm information - alarm configuration, all kinds of alarm settings
+  
