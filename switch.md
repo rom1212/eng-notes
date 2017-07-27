@@ -1,6 +1,9 @@
-# Huawei Switch
+# Huawei Switches - 7800&6800&5800 Series
 ## Documents
 * interface management: http://support.huawei.com/enterprise/en/doc/DOC1000074394
+  * Physical Interface Numbering Rules
+    * stack ID/subcard ID/interface sequence number, e.g. a physical interface could be represented as 10GE1/0/1, ..., 10GE1/0/48, where 10G is the interface type (which could be 10GE, 40GE)
+    * stack ID comes from the number of switches stacking together, and subcard ID is usually 0 for now since it is not supported yet.
 * virtualization (stack, SVF): http://support.huawei.com/enterprise/en/doc/DOC1000074401
   * stack: http://support.huawei.com/onlinetoolsweb/virtual/en/dc/dcf/dc_cfg_css_1150.html
     * display stack configuration
