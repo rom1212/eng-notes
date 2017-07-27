@@ -5,7 +5,7 @@
   * display aaa domain  
   * display aaa local-user
   
-  ```
+```
   <xxx-xxx-xx>display aaa domain
 ---------------------------------------------------------------------
 Domain-name                              State  Access-limit   Online
@@ -13,7 +13,7 @@ Domain-name                              State  Access-limit   Online
 default                                  Active           --        0
 default_admin                            Active           --        2
 ---------------------------------------------------------------------
-  ```
+```
 
 ```
 <xxx-xx-xx>display aaa local-user
