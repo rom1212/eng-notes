@@ -2,9 +2,7 @@
 ## Commands
 * ? - all available commands
 * display ?  - show all the sub-commands
-  * display aaa domain  
-  * display aaa local-user
-  
+  * display aaa xxx    
 ```
   <xxx-xxx-xx>display aaa domain
 ---------------------------------------------------------------------
@@ -13,9 +11,6 @@ Domain-name                              State  Access-limit   Online
 default                                  Active           --        0
 default_admin                            Active           --        2
 ---------------------------------------------------------------------
-```
-
-```
 <xxx-xx-xx>display aaa local-user
 Type: F - Ftp, T - Telnet, M - Terminal, S - Ssh, N - Snmp, X - Dot1x
 ---------------------------------------------------------------------------------------------------
