@@ -5,6 +5,8 @@
   * stack: http://support.huawei.com/onlinetoolsweb/virtual/en/dc/dcf/dc_cfg_css_1150.html
     * display stack configuration
     * http://dis-this.com/huawei-ce6800-istack/
+    * http://support.huawei.com/onlinetoolsweb/special/switch-p001.html
+    * http://support.huawei.com/enterprise/docinforeader!loadDocument1.action?contentId=DOC0000646941&partNo=10012
 
 
 ## Commands
