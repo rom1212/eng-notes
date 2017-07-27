@@ -73,4 +73,56 @@ Total 4, 4 printed
   * display alarm
     * display alarm active/history/statistics
     * display alarm information - alarm configuration, all kinds of alarm settings
-  
+  * display als (automatic laser shutdown, for energy saving)
+```
+<xxx-xx-xxxx-xx>display als all
+--------------------------------------------------------------------------------------
+Interface          ALS Status   Laser Status   Restart Mode   Interval(s)   Width(s)
+--------------------------------------------------------------------------------------
+10GE1/0/1          Disable      On             Auto           100           2
+10GE1/0/2          Disable      On             Auto           100           2
+10GE1/0/3          Disable      On             Auto           100           2
+10GE1/0/4          Disable      On             Auto           100           2
+10GE1/0/5          Disable      On             Auto           100           2
+10GE1/0/6          Disable      On             Auto           100           2
+10GE1/0/7          Disable      On             Auto           100           2
+10GE1/0/8          Disable      Off            Auto           100           2
+10GE1/0/9          Disable      On             Auto           100           2
+10GE1/0/10         Disable      On             Auto           100           2
+10GE1/0/11         Disable      On             Auto           100           2
+10GE1/0/12         Disable      On             Auto           100           2
+10GE1/0/13         Disable      On             Auto           100           2
+10GE1/0/14         Disable      On             Auto           100           2
+10GE1/0/15         Disable      On             Auto           100           2
+10GE1/0/16         Disable      On             Auto           100           2
+10GE1/0/17         Disable      On             Auto           100           2
+10GE1/0/18         Disable      On             Auto           100           2
+10GE1/0/19         Disable      On             Auto           100           2
+10GE1/0/20         Disable      On             Auto           100           2
+...
+...
+<xxx-xx-xxxx-xx>display als interface 10GE 1/0/1  (interface <interface type> <interface number>
+--------------------------------------------------------------------------------------
+Interface          ALS Status   Laser Status   Restart Mode   Interval(s)   Width(s)
+--------------------------------------------------------------------------------------
+10GE1/0/1          Disable      On             Auto           100           2
+--------------------------------------------------------------------------------------
+<xxx-xx-xxxx-xx>display als slot 1
+--------------------------------------------------------------------------------------
+Interface          ALS Status   Laser Status   Restart Mode   Interval(s)   Width(s)
+--------------------------------------------------------------------------------------
+10GE1/0/1          Disable      On             Auto           100           2
+10GE1/0/2          Disable      On             Auto           100           2
+10GE1/0/3          Disable      On             Auto           100           2
+10GE1/0/4          Disable      On             Auto           100           2
+10GE1/0/5          Disable      On             Auto           100           2
+<xxx-xx-xxxx-xx>display als slot 2 (slot slot-id)
+--------------------------------------------------------------------------------------
+Interface          ALS Status   Laser Status   Restart Mode   Interval(s)   Width(s)
+--------------------------------------------------------------------------------------
+10GE2/0/1          Disable      On             Auto           100           2
+10GE2/0/2          Disable      On             Auto           100           2
+10GE2/0/3          Disable      On             Auto           100           2
+10GE2/0/4          Disable      On             Auto           100           2
+10GE2/0/5          Disable      On             Auto           100           2
+```
