@@ -1,4 +1,9 @@
 # Huawei Switch
+## Documents
+* interface management: http://support.huawei.com/enterprise/en/doc/DOC1000074394
+* virtualization (stack, SVF): http://support.huawei.com/enterprise/en/doc/DOC1000074401
+
+
 ## Commands
 * ? - all available commands
 * display ?  - show all the sub-commands
