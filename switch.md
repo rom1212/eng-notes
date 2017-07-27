@@ -2,6 +2,9 @@
 ## Documents
 * interface management: http://support.huawei.com/enterprise/en/doc/DOC1000074394
 * virtualization (stack, SVF): http://support.huawei.com/enterprise/en/doc/DOC1000074401
+  * stack: http://support.huawei.com/onlinetoolsweb/virtual/en/dc/dcf/dc_cfg_css_1150.html
+    * display stack configuration
+    * http://dis-this.com/huawei-ce6800-istack/
 
 
 ## Commands
