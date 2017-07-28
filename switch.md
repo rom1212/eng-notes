@@ -141,3 +141,35 @@ Interface          ALS Status   Laser Status   Restart Mode   Interval(s)   Widt
 10GE2/0/4          Disable      On             Auto           100           2
 10GE2/0/5          Disable      On             Auto           100           2
 ```
+  * display stack
+  ```
+  <xxx-xx-xxxx-xx>display stack  (aggregate info from: display stack member n)
+--------------------------------------------------------------------------------
+MemberID Role     MAC              Priority   DeviceType         Description
+--------------------------------------------------------------------------------
++1       Master   xxxx-xxxx-xxxx   150        CE6850U-48S6Q-HI
+ 2       Standby  xxxx-xxxx-xxxx   150        CE6850U-48S6Q-HI
+--------------------------------------------------------------------------------
++ indicates the device through which the user logs in.
+# get switch model information here :-)
+<xxx-xx-xxxx-xx>display stack topology
+Stack Topology:
+----------------------------------------------
+            Stack-Port 1      Stack-Port 2
+MemberID   Status Neighbor   Status Neighbor
+----------------------------------------------
+1          up     2          --     --
+2          up     1          --     --
+----------------------------------------------
+
+Stack Link:
+----------------------------------------------------------------------------
+Stack-Port       Port               Status     PeerPort           PeerStatus
+----------------------------------------------------------------------------
+Stack-Port1/1    40GE1/0/5          up         40GE2/0/5          up
+Stack-Port1/1    40GE1/0/6          up         40GE2/0/6          up
+Stack-Port2/1    40GE2/0/5          up         40GE1/0/5          up
+Stack-Port2/1    40GE2/0/6          up         40GE1/0/6          up
+----------------------------------------------------------------------------
+# each switch uses 2 40GE ports to peer with the other one.
+  ```
