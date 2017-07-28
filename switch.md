@@ -1,5 +1,7 @@
 # Huawei Switches - 7800&6800&5800 Series
 ## Documents
+* configuration guide - Ethernet Switching: http://support.huawei.com/enterprise/en/doc/DOC1000074869
+  * good introduction about switching
 * interface management: http://support.huawei.com/enterprise/en/doc/DOC1000074394
   * Physical Interface Numbering Rules
     * stack ID/subcard ID/interface sequence number, e.g. a physical interface could be represented as 10GE1/0/1, ..., 10GE1/0/48, where 10G is the interface type (which could be 10GE, 40GE)
