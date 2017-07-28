@@ -176,4 +176,27 @@ Stack-Port2/1    40GE2/0/5          up         40GE1/0/5          up
 Stack-Port2/1    40GE2/0/6          up         40GE1/0/6          up
 ----------------------------------------------------------------------------
 # each switch uses 2 40GE ports to peer with the other one.
-  ```
+```
+  * display arp
+```
+<xxxx>display arp
+ARP Entry Types: D - Dynamic, S - Static, I - Interface
+EXP: Expire-time
+
+IP ADDRESS      MAC ADDRESS    EXP(M) TYPE/VLAN INTERFACE       VPN-INSTANCE
+------------------------------------------------------------------------------
+172.xx.xx.xx    xxxx-xxxx-xxxx        I         MEth0/0/0
+172.xx.xxx.253  xxxx-xxxx-xxxx   11   D         MEth0/0/0
+172.xx.xxx.254  xxxx-xxxx-xxxx   11   D         MEth0/0/0
+172.xx.xx.211   xxxx-xxxx-xxxx        I         Vlanif401m
+172.xx.xx.254   xxxx-xxxx-xxxx        I         Vlanif401n
+172.xx.xx.12    xxxx-xxxx-xxxx    7   D/401n    10GE1/0/12
+------------------------------------------------------------------------------
+Total:9         Dynamic:6       Static:0    Interface:3
+# for comparison, linux arp output
+~# arp
+Address                  HWtype  HWaddress           Flags Mask            Iface
+10.xx.xx.1              ether   xx:xx:xx:xx:xx:xx   C                     eth0
+10.xx.xx.2              ether   xx:xx:xx:xx:xx:xx   C                     eth0
+10.xx.xx.3              ether   xx:xx:xx:xx:xx:xx   C                     eth0
+```
