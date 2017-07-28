@@ -13,6 +13,10 @@
     * http://support.huawei.com/onlinetoolsweb/special/switch-p001.html
     * http://support.huawei.com/enterprise/docinforeader!loadDocument1.action?contentId=DOC0000646941&partNo=10012
 
+## Specifications
+* 5800, e.g. CE5855-48T4S2Q-EI: 48 base-T ports (mostly used for server management ports), 4S (4x10GE), 2Q(2x40GE) for uplinks
+* 6800, e.g. CE6850U-48S6Q-HI: 48x10GE can be used for app traffic (link to servers), and 6x40GE can be used for uplinks
+* 7800, e.g. CE7850-32Q-EI (only one model): 32x40GE mostly for post or spine
 
 ## Commands
 * ? - all available commands
