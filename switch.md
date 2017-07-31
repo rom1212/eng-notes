@@ -200,3 +200,31 @@ Address                  HWtype  HWaddress           Flags Mask            Iface
 10.xx.xx.2              ether   xx:xx:xx:xx:xx:xx   C                     eth0
 10.xx.xx.3              ether   xx:xx:xx:xx:xx:xx   C                     eth0
 ```
+  * display current-configuration
+```
+<xxx-xx-xxxx-xx>display current-configuration
+!Software Version V100R005C10SPC200
+!Last configuration was updated at 2017-xx-xx 09:40:03+00:00 by SYSTEM automatically
+!Last configuration was saved at 2017-xx-xx 08:53:14+00:00 by xxx
+#
+sysname xxx-xx-xxxx-xx
+#
+FTP server enable
+#
+device board 1 board-type CE6850U-48S6Q-HI
+device board 2 board-type CE6850U-48S6Q-HI
+#
+drop-profile default
+#
+dcb pfc
+#
+dcb ets-profile default
+#
+vlan batch 401x 401x
+#
+telnet ipv6 server disable
+#
+diffserv domain default
+...
+...
+```
