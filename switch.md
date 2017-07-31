@@ -1,7 +1,10 @@
 # Huawei Switches - 7800&6800&5800 Series
 ## Documents
-* configuration guide - Ethernet Switching: http://support.huawei.com/enterprise/en/doc/DOC1000074869
+* Configuration Guide - Ethernet Switching: http://support.huawei.com/enterprise/en/doc/DOC1000074869
   * good introduction about switching
+* Configuration Guide - IP Unicast Routing: http://support.huawei.com/enterprise/it/doc/DOC1000062644
+  * ip static-route ip_address mask <gateway address> [more](http://support.huawei.com/ehedex/pages/DOC1000135317AEG0221R/04/DOC1000135317AEG0221R/04/resources/dc/ip_route-static.html)
+  * related: http://support.huawei.com/enterprise/en/doc/DOC0100533706
 * interface management: http://support.huawei.com/enterprise/en/doc/DOC1000074394
   * Physical Interface Numbering Rules
     * stack ID/subcard ID/interface sequence number, e.g. a physical interface could be represented as 10GE1/0/1, ..., 10GE1/0/48, where 10G is the interface type (which could be 10GE, 40GE)
