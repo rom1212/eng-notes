@@ -15,6 +15,6 @@ $ screen -r <>  # attach to a screen, if there is only one screen, no need to sp
 
 ## Mount Drive from Windows with Readonly Access
 ```
-sudo mkdir /media/ming/Acer
-sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/sda3" "/media/ming/Acer"
+sudo mkdir /media/xxxx/Acer
+sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/sda3" "/media/xxxx/Acer"
 ```
