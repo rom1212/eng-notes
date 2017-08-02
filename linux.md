@@ -18,3 +18,16 @@ $ screen -r <>  # attach to a screen, if there is only one screen, no need to sp
 sudo mkdir /media/xxxx/Acer
 sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/sda3" "/media/xxxx/Acer"
 ```
+
+## Add User
+```
+sudo useradd -m ming
+sudo passwd ming
+sudo adduser ming sudo
+```
+
+## Limit SSH Access
+```
+# sudo vim /etc/ssh/sshd_config
+AllowUsers root xxxx
+```
