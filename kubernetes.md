@@ -1,3 +1,12 @@
+# Build 
+https://github.com/kubernetes/kubernetes/tree/master/build/
+https://kubernetes.io/docs/getting-started-guides/binary_release/
+
+# Scalability - Building Large Scale Clusters
+https://kubernetes.io/docs/admin/cluster-large/ at v1.7
+* No more than 2k nodes
+* No more than 60k pods.
+
 # Networking
 
 https://github.com/projectcalico/canal
