@@ -1,5 +1,9 @@
 # Huawei Switches - 7800&6800&5800 Series
 ## Documents
+* List of Configuration Files
+  *  http://support.huawei.com/enterprise/en/init-doc-list/cloudengine-7800-pid-21059820?belongVersionId=21117425&secondType=SECONDTYPE2
+* Configuration Guide - Basic Configuration
+  * [ZTP](http://support.huawei.com/enterprise/en/doc/DOC1000062638?idPath=7919710%7C21782165%7C21782239%7C22318639%7C21059820)
 * Configuration Guide - Ethernet Switching: http://support.huawei.com/enterprise/en/doc/DOC1000074869
   * good introduction about switching
 * Configuration Guide - IP Unicast Routing: http://support.huawei.com/enterprise/it/doc/DOC1000062644
