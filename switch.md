@@ -231,3 +231,6 @@ diffserv domain default
 ...
 ...
 ```
+
+# Juniper
+https://www.juniper.net/documentation/en_US/junos/topics/concept/layer-2-services-bridging-overview-l2.html
