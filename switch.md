@@ -25,6 +25,11 @@
 * 6800, e.g. CE6850U-48S6Q-HI: 48x10GE can be used for app traffic (link to servers), and 6x40GE can be used for uplinks
 * 7800, e.g. CE7850-32Q-EI (only one model): 32x40GE mostly for post or spine
 
+## Huawei MAC Addr OUI
+* http://hwaddress.com/company/huawei-technologies-coltd, e.g.
+  * 24:44:27, 2244-27xx-xxx
+  * 2c:9d:1e, 2c9d-1exx-xx
+  
 ## Commands
 * ? - all available commands
 * display ?  - show all the sub-commands
