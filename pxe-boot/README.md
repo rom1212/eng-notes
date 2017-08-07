@@ -1,4 +1,6 @@
 # Setup PXE Sever with Ubuntu 16.04 in VirtualBox
+* Docs:
+  * https://www.ostechnix.com/how-to-install-pxe-server-on-ubuntu-16-04/
 * Install dhcpd
   * https://www.ostechnix.com/install-dhcp-server-in-ubuntu-16-04/
   * sudo -E apt-get install isc-dhcp-server
