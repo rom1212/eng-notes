@@ -1,5 +1,9 @@
 # Setup PXE Sever with Ubuntu 16.04 in VirtualBox
 * Install dhcpd
+  * https://www.ostechnix.com/install-dhcp-server-in-ubuntu-16-04/
+  * sudo -E apt-get install isc-dhcp-server
+  * Add interface in /etc/default/isc-dhcp-server
+  * Add subnet in /etc/dhcp/dhcpd.conf. All interfaces must have subnet declared here for dhcpd to start properly.
 * Install apache
   * mount -o loop ubuntu-16.04.2-server-amd64.iso /mnt
   * mkdir /var/www/html/ubuntu-16.04.2
