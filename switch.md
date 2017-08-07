@@ -29,6 +29,7 @@
 * http://hwaddress.com/company/huawei-technologies-coltd, e.g.
   * 24:44:27, 2244-27xx-xxx
   * 2c:9d:1e, 2c9d-1exx-xx
+  * 48:d5:39,
   
 ## Commands
 * ? - all available commands
