@@ -30,3 +30,16 @@
 ### Files
 * logfile/
 * ztp_xxxx.log(.n)
+
+# arp discovery
+## arp
+```
+$ /usr/sbin/arp
+```
+
+## arp-scan
+https://www.blackmoreops.com/2015/12/31/use-arp-scan-to-find-hidden-devices-in-your-network/
+```
+$ sudo -E apt-get install arp-scan
+$ sudo arp-scan --interface=eth0 --localnet
+```
