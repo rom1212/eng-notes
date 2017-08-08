@@ -186,3 +186,8 @@ OPTION:  28 (  4) Broadcast address         xx.xx.xx.255
 OPTION:  42 (  4) NTP servers               xx.xx.xx.6
 ---------------------------------------------------------------------------
 ```
+# tcpdump
+```
+$ sudo tcpdump -i enp129s0f0  port 67 or port 68 -e -n
+23:02:52.570290 2c:9d:1e:xx:xx:xx > ff:ff:ff:ff:ff:ff, ethertype IPv4 (0x0800), length 316: xx.xx.48.6.68 > 255.255.255.255.67: BOOTP/DHCP, Request from 2c:9d:1e:xx:xx:xx, length 274
+```
