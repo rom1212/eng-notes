@@ -241,6 +241,9 @@ diffserv domain default
 ...
 ...
 ```
-
+  * display interface
+    * display interface brief
+    * display interface MEth
+    * display interface vlanif
 # Juniper
 https://www.juniper.net/documentation/en_US/junos/topics/concept/layer-2-services-bridging-overview-l2.html
