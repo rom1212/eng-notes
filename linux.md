@@ -31,3 +31,11 @@ sudo adduser ming sudo
 # sudo vim /etc/ssh/sshd_config
 AllowUsers root xxxx
 ```
+
+## SSH Keep Alive
+https://stackoverflow.com/questions/25084288/keep-ssh-session-alive
+```
+# .ssh/config, chmod 600 .ssh/config
+Host *
+ServerAliveInterval 240
+```
