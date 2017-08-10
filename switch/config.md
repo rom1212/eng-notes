@@ -9,7 +9,7 @@ interface 10GE1/0/1
 ## VID 1
 VID 1 is defined **by default** for all ports with untagged (UT), i.e. each port will accept traffic for VID 1 (i.e. the default VID), and remove the tag (i.e. untag) and send out of the port, e.g.
 ```
-<xxxxxx>display vlan
+<xxx-CE5855-xxx>display vlan
 The total number of vlans is : 2
 --------------------------------------------------------------------------------
 U: Up;         D: Down;         TG: Tagged;         UT: Untagged;
