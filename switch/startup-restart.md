@@ -29,3 +29,12 @@ startup patch <patch-name> { all | slot slot-id } # optional
 ```
 
 # Clear config
+
+# Debug
+## last uptime
+* display interface
+  
+  this shows the last up time for each interface. e.g. 
+    * 'Last physical up time', 
+    * 'Last physical down time',  
+    * 'Current system time:'
