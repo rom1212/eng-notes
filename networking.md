@@ -31,7 +31,7 @@
 * logfile/
 * ztp_xxxx.log(.n)
 
-# arp discovery
+# network discovery
 ## arp
 ```
 $ /usr/sbin/arp
@@ -43,3 +43,9 @@ https://www.blackmoreops.com/2015/12/31/use-arp-scan-to-find-hidden-devices-in-y
 $ sudo -E apt-get install arp-scan
 $ sudo arp-scan --interface=eth0 --localnet
 ```
+* http://www.nta-monitor.com/wiki/index.php/Arp-scan_User_Guide
+
+## others  
+* https://serverfault.com/questions/245136/how-to-find-out-mac-addresses-of-all-machines-on-network
+* "linux discovery nearby mac address"
+* https://superuser.com/questions/750359/check-if-a-dhcp-server-existing-in-my-network-using-bash
