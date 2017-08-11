@@ -8,3 +8,14 @@ According to the ztp log, it seems that switch will try different port, first fr
 * send DHCP request from GE40 ports
 * send DHCP request from GE10 ports
 * send DHCP request from GE ports
+
+
+# File Server
+## TFTP on Ubuntu 16.04
+```
+sudo apt install tftpd-hpa
+# make tfpt writable, https://askubuntu.com/questions/443117/how-to-configure-tftpd-hpa-to-allow-upload-of-new-files
+sudo chown -R tftp /var/lib/tftpboot
+sudo vim /etc/default/tftpd-hpa: TFTP_OPTIONS="--secure -c"
+sudo systemctl restsrt tftpd-hpa
+```
