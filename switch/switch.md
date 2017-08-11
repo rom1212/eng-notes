@@ -1,3 +1,7 @@
+# Huawei Switches - CloudEngine 8800&7800&6800&5800
+## Documents
+* Configuration Guide - IP Service: http://support.huawei.com/enterprise/en/doc/DOC1000150308
+
 # Huawei Switches - 7800&6800&5800 Series
 ## Documents
 * List of Configuration Files
