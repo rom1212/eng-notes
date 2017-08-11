@@ -1,3 +1,7 @@
+# docs
+* http://ask.xmodulo.com/monitor-dhcp-traffic-command-line-linux.html
+* https://wiki.archlinux.org/index.php/dhcpcd
+
 # dhcpdump
 ```
 xxx@xxx:~$ sudo dhcpdump -i enp129s0f0  -h ^48:d5:39:xx:xx
