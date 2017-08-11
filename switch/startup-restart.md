@@ -1,10 +1,12 @@
+# Docs
+* http://support.huawei.com/enterprise/en/doc/DOC1000062638?idPath=7919710%7C21782165%7C21782239%7C22318639%7C21059820
+
 # Restart the device
-http://support.huawei.com/enterprise/en/doc/DOC1000062638?idPath=7919710%7C21782165%7C21782239%7C22318639%7C21059820
 ```
 reboot [ fast | save diagnostic-information ]
 ```
 
-# Config for next starup
+# Config for next startup
 ```
 # view the specified files for next startup
 display startup
