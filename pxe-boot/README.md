@@ -11,8 +11,13 @@
   * mkdir /var/www/html/ubuntu-16.04.2
   * cp -rf /mnt/* /var/www/html/ubuntu-16.04.2/
 * Install tftfd
+  * sudo apt install tftpd-hpa
   * cp -rf /mnt/install/netboot/* /var/lib/tftpboot/
   * vim /var/lib/tftpboot/pxelinux.cfg/default
+  * optional - to make tfpt writable
+    * https://askubuntu.com/questions/443117/how-to-configure-tftpd-hpa-to-allow-upload-of-new-files
+    * sudo chown -R tftp /var/lib/tftpboot
+    * TFTP_OPTIONS="--secure -c"
 * Double check that system is setup correctly:
 ```
 # check tftpd
