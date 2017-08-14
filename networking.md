@@ -45,7 +45,11 @@ $ sudo arp-scan --interface=eth0 --localnet
 ```
 * http://www.nta-monitor.com/wiki/index.php/Arp-scan_User_Guide
 
+## nmap
+* https://en.wikipedia.org/wiki/Nmap
+* https://superuser.com/questions/750359/check-if-a-dhcp-server-existing-in-my-network-using-bash
+
 ## others  
 * https://serverfault.com/questions/245136/how-to-find-out-mac-addresses-of-all-machines-on-network
 * "linux discovery nearby mac address"
-* https://superuser.com/questions/750359/check-if-a-dhcp-server-existing-in-my-network-using-bash
+
