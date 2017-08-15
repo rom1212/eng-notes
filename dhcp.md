@@ -7,6 +7,73 @@
 sudo ./dhcptest --bind xxx.xx.49.11 --mac xx:xx:xx:08:98:85
 ```
 
+## Test DHCP server with specific options
+```
+# On the DHCP client, or even on the same host as the DHCP server (i.e. xxx.xx.49.11)
+~/dhcptest$ sudo ./dhcptest --bind xxx.xx.49.11 --mac xx:xx:xx:08:98:85 --query --request 66 --request 67
+dhcptest v0.7 - Created by Vladimir Panteleev
+https://github.com/CyberShadow/dhcptest
+Run with --help for a list of command-line options.
+
+Listening for DHCP replies on port 68.
+Sending packet:
+  op=BOOTREQUEST chaddr=xx:xx:xx:08:98:85 hops=0 xid=C7080B53 secs=0 flags=8000
+  ciaddr=0.0.0.0 yiaddr=0.0.0.0 siaddr=0.0.0.0 giaddr=0.0.0.0 sname= file=
+  2 options:
+     53 (DHCP Message Type): discover
+     55 (Parameter Request List):  66 (TFTP server name),  67 (Bootfile name)
+```
+
+```
+# On the DHCP Server
+~$ sudo dhcpdump -i <interface that dhcp server is listening to for xx.xx.49.11, e.g. enp2s0f0>
+  TIME: 2017-08-15 21:05:55.480
+    IP: xx.xx.49.11 (xx:xx:xx:34:cd:24) > 255.255.255.255 (ff:ff:ff:ff:ff:ff)
+    OP: 1 (BOOTPREQUEST)
+ HTYPE: 1 (Ethernet)
+  HLEN: 6
+  HOPS: 0
+   XID: c7080b53
+  SECS: 0
+ FLAGS: 7f80
+CIADDR: 0.0.0.0
+YIADDR: 0.0.0.0
+SIADDR: 0.0.0.0
+GIADDR: 0.0.0.0
+CHADDR: xx:xx:xx:08:98:85:00:00:00:00:00:00:00:00:00:00
+ SNAME: .
+ FNAME: .
+OPTION:  53 (  1) DHCP message type         1 (DHCPDISCOVER)
+OPTION:  55 (  2) Parameter Request List     66 (TFTP server name)
+                                             67 (Bootfile name)
+
+---------------------------------------------------------------------------
+
+  TIME: 2017-08-15 21:05:55.480
+    IP: xx.xx.49.11 (xx:xx:xx:34:cd:24) > 255.255.255.255 (ff:ff:ff:ff:ff:ff)
+    OP: 2 (BOOTPREPLY)
+ HTYPE: 1 (Ethernet)
+  HLEN: 6
+  HOPS: 0
+   XID: c7080b53
+  SECS: 0
+ FLAGS: 7f80
+CIADDR: 0.0.0.0
+YIADDR: xxx.xx.49.40
+SIADDR: xxx.xx.49.11
+GIADDR: 0.0.0.0
+CHADDR: xx:xx:xx:08:98:85:00:00:00:00:00:00:00:00:00:00
+ SNAME: .
+ FNAME: ztp_config.ini.
+OPTION:  53 (  1) DHCP message type         2 (DHCPOFFER)
+OPTION:  54 (  4) Server identifier         xxx.xx.49.11
+OPTION:  51 (  4) IP address leasetime      4600 (1h16m40s)
+OPTION:  66 ( 12) TFTP server name          xxx.xx.49.11
+OPTION:  67 ( 14) Bootfile name             ztp_config.ini
+OPTION:   1 (  4) Subnet mask               255.255.255.0
+---------------------------------------------------------------------------
+```
+
 # Debug DHCP
 https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/dhcp-debug.md
 
