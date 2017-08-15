@@ -28,3 +28,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user
   * sudo chown nobody:nogroup /home/sammy/ftp, or
   * chmod 555 /home/sammy/ftp
 * but the sub-directory can be writable.
+
+
+# Steps
+* clear saved-configuration
+* reboot fast
