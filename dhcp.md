@@ -1,3 +1,11 @@
+# Install & Start
+```
+sudo vim /etc/dhcp/dhcpd.conf
+sudo systemctl restart isc-dhcp-server
+sudo systemctl status isc-dhcp-server
+ls /var/lib/dhcp/
+```
+
 # Test DHCP Server: dhcptest
 * https://github.com/CyberShadow/dhcptest
 * Download DMD (package) from http://dlang.org/download.html#dmd
