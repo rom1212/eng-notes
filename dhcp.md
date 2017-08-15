@@ -1,7 +1,11 @@
-# Test DHCP Server
+# Test DHCP Server: dhcptest
 * https://github.com/CyberShadow/dhcptest
 * Download DMD (package) from http://dlang.org/download.html#dmd
   * ```sudo dpkg -i dmd_2.075.1-0_amd64.deb```
+## Test a specific DHCP server with a specific client MAC Address
+```
+sudo ./dhcptest --bind xxx.xx.49.11 --mac xx:xx:xx:08:98:85
+```
 
 # Debug DHCP
 https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/dhcp-debug.md
