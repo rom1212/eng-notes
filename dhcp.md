@@ -74,6 +74,23 @@ OPTION:   1 (  4) Subnet mask               255.255.255.0
 ---------------------------------------------------------------------------
 ```
 
+```
+# on DHCP server, dhcpd.conf
+host a4 {
+  hardware ethernet xx:xx:xx:08:98:85;
+  fixed-address xx.xx.49.40;
+  option domain-name-servers xxx.xx.49.11;
+  option routers xxx.xxx.49.254;
+  option broadcast-address xxx.xxx.49.255;
+  default-lease-time 4600;
+  max-lease-time 7200;
+  next-server xxx.xx.49.11;
+  filename "ztp_config.ini";
+  option tftp-server-name "xxx.xx.49.11";
+  option bootfile-name "ztp_config.ini";
+}
+```
+
 # Debug DHCP
 https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/dhcp-debug.md
 
