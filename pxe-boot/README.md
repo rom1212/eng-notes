@@ -33,3 +33,7 @@ curl http://localhost/ks-ubuntu-16.04.2.cfg  # make sure the content is correct.
 tail -f /var/log/syslog  # for DHCP log
 tail -f /var/log/apache2/access.log
 ```
+
+# PXE for local boot
+* https://wiki.centos.org/HowTos/PXE/PXE_Setup/Menus
+* search "pxe boot local disk"
