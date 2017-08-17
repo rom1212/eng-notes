@@ -9,6 +9,9 @@ According to the ztp log, it seems that switch will try different port, first fr
 * send DHCP request from GE10 ports
 * send DHCP request from GE ports
 
+# Docs
+* http://support.huawei.com/enterprise/en/doc/DOC1000150303?section=10052
+* http://support.huawei.com/ehedex/pages/DOC100006565831188218/08/DOC100006565831188218/08/resources/dc/dc_cfg_ztp_0017.html?ft=0&id=dc_cfg_ztp_0017
 
 # File Server
 ## TFTP on Ubuntu 16.04
@@ -31,5 +34,5 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-vsftpd-for-a-user
 
 
 # Steps
-* clear saved-configuration
+* reset saved-configuration
 * reboot fast
