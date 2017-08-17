@@ -136,3 +136,6 @@ Others:
 * https://nmap.org/nsedoc/scripts/dhcp-discover.html
 * http://www.unix.com/ip-networking/171195-dhcp-server-discover.html
 * https://www.puryear-it.com/find-rogue-dhcp-server-using-linux
+
+# DHCP docs
+* a list of options:  http://www.networksorcery.com/enp/protocol/bootp/options.htm
