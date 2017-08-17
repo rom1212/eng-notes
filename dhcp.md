@@ -138,4 +138,5 @@ Others:
 * https://www.puryear-it.com/find-rogue-dhcp-server-using-linux
 
 # DHCP docs
-* a list of options:  http://www.networksorcery.com/enp/protocol/bootp/options.htm
+* a list of options (names, but not config field name in dhcpd.conf):  http://www.networksorcery.com/enp/protocol/bootp/options.htm
+* config field name in dhcpd.conf (but no option number/code): https://linux.die.net/man/5/dhcp-options
