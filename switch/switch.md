@@ -27,6 +27,11 @@
     * http://dis-this.com/huawei-ce6800-istack/
     * http://support.huawei.com/onlinetoolsweb/special/switch-p001.html
     * http://support.huawei.com/enterprise/docinforeader!loadDocument1.action?contentId=DOC0000646941&partNo=10012
+* eNSP - enterprise Network Simulation Platform: 
+  * https://www.scribd.com/doc/146196044/huawei-simulator-pdf
+  * download:
+    * http://support.huawei.com/enterprise/en/network-management/ensp-pid-9017384/software
+    * click one "Version and Patch", and it will lead to the download page for that version. And click "Download" button.
 
 ## Specifications
 * 5800, e.g. CE5855-48T4S2Q-EI: 48 base-T ports (mostly used for server management ports), 4S (4x10GE), 2Q(2x40GE) for uplinks
