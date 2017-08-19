@@ -2,10 +2,14 @@
 ## Concepts
 * [port isolation](http://support.huawei.com/enterprise/docinforeader!loadDocument1.action?contentId=DOC1000069520&partNo=10082#dc_s_ccase_vlan_001_5)
 
-## Documents for 8800&7800&6800&5800 (new versions)
-* Configuration Guide - IP Service: http://support.huawei.com/enterprise/en/doc/DOC1000150308
+## Documents for 8800&7800&6800&5800 (new version - V200R001)
 * Configuration Guide - Basic Configuration (new version: recommended version - V200R001)
   * ZTP http://support.huawei.com/enterprise/en/doc/DOC1000150303?section=10052
+  * auto-backup
+    * configuration file auto-save
+    * configuration file auto-save backup-to-server server
+    * Configuring System Startup: http://support.huawei.com/enterprise/en/doc/DOC1000150303?section=10112
+* Configuration Guide - IP Service: http://support.huawei.com/enterprise/en/doc/DOC1000150308
 
 ## Documents for 7800&6800&5800
 * List of Configuration Files
