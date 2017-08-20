@@ -6,7 +6,8 @@
   * https://www.mkyong.com/java/how-to-read-file-from-java-bufferedreader-example/
   * sort the content of the file
   * only get some lines of the file.
-* Server
+* Java HTTP Server
+  * https://stackoverflow.com/questions/3732109/simple-http-server-in-java-using-only-java-se-api
 * https://www.seas.upenn.edu/~cis1xx/resources/JavaForCppProgrammers/j-javac-cpp-ltr.pdf
 * http://www.horstmann.com/ccc/c_to_java.pdf: a crash course from C++ to Java
 * http://www.cprogramming.com/tutorial/java/syntax-differences-java-c++.html
