@@ -11,7 +11,9 @@ https://github.com/pinterest/teletraan/wiki/Quickstart-guide
 ## Setup on Host
 https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
 * Run Teletraan Server
-  * It's easier to debug if we run it in foreground mode: ./teletraanservice/bin/run.sh run
+  * Add mysql password in file: ~/teletraan/deploy-service/teletraanservice/bin/server.yaml
+  * It's easier to debug if we run it in foreground mode: 
+  ```./teletraanservice/bin/run.sh run```
 * Run Deploy Dashboard
 ```
   cd ~/teletraan/deploy-board
