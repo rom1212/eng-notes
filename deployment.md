@@ -93,3 +93,8 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
         self.groups = groups
         self.reports = reports  # a list of PingReport, difference - ping_report["agentStatus"] = report.status
 ```
+
+### deployd/client/client.py 
+* send_reports() - used for two purposes
+  * report the status of the deployment
+  * check whether there is any goal changes from the server.
