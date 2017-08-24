@@ -23,7 +23,7 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
   (venv) xx@xx:~/teletraan/deploy-board$ ./run.sh start
 ```
 
-## Deploy Agent
+## Deploy Agent (deploy-agent)
 
 ### Data
 * DeployGoal
@@ -67,6 +67,11 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
         self.op_code = response.opCode or self.op_code = OperationCode._VALUES_TO_NAMES[json_value.get('op_code', OpCode.NOOP)]
 ```
 * PingResponse
+```diff
++ There is only one deployGoal in the response, but there could be more than one reports in the request. 
+- This is because it doesn't want to have multiple deployments at the same time.
+```
+
 ```
         self.opCode = OpCode.NOOP or self.opCode = jsonValue.get('opCode')
         self.deployGoal = None or self.deployGoal = DeployGoal(jsonValue=jsonValue.get('deployGoal'))
@@ -98,3 +103,11 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
 * send_reports() - used for two purposes
   * report the status of the deployment
   * check whether there is any goal changes from the server.
+  
+## Deploy Service (deploy-service)
+### deployservice/handler/PingHandler.java
+* ping()
+  * GoalAnalyst
+  * pick the first one from List<GoalAnalyst.InstallCandidate> installCandidates, which is sorted mostly according priority, and also consider AgentState.STOP, installCandidate.needWait.
+* canDeploy ???
+  * Check if we can start deploy on host for certain env. We should not allow more than parallelThreshold hosts in install in the same time
