@@ -22,3 +22,47 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
   (venv) xx@xx:~/teletraan/deploy-board$ pip install -r requirements.txt
   (venv) xx@xx:~/teletraan/deploy-board$ ./run.sh start
 ```
+
+## Deploy Agent
+
+### Data
+* DeployGoal
+```
+        self.deployId = None  # is this used for detect changes???
+        self.envId = None
+        self.envName = None
+        self.stageName = None
+        self.deployStage = None
+        self.build = None
+        self.deployAlias = None
+        self.config = None
+        self.scriptVariables = None
+        self.firstDeploy = None
+        self.isDocker = None
+```
+* DeployStatus
+```
+    report = None
+    build_info = None
+    runtime_config = None
+    first_deploy = None
+    op_code = OpCode.NOOP
+    script_variables = None
+    is_docker = None
+
+        self.report.envId = deploy_goal.envId
+        self.report.deployId = deploy_goal.deployId
+        self.report.deployStage = deploy_goal.deployStage
+        self.report.deployAlias = deploy_goal.deployAlias
+        self.report.envName = deploy_goal.envName
+        self.report.status = AgentStatus.UNKNOWN
+        self.report.stageName = deploy_goal.stageName
+        
+        self.first_deploy = deploy_goal.firstDeploy
+        self.is_docker = deploy_goal.isDocker
+        self.build_info = BuildInfo(deploy_goal.build.***)
+        self.script_variables = deploy_goal.scriptVariables
+        self.runtime_config = dict(deploy_goal.config)
+        
+        self.op_code = response.opCode or self.op_code = OperationCode._VALUES_TO_NAMES[json_value.get('op_code', OpCode.NOOP)]
+```
