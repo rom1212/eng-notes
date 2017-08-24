@@ -98,6 +98,14 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
         self.groups = groups
         self.reports = reports  # a list of PingReport, difference - ping_report["agentStatus"] = report.status
 ```
+* DeployReport
+  * This is confusing for some reasons
+    * There is already PingReport.
+    * There is DeployStatus.
+  
+### deployd/agent.py
+* self._client.send_reports(self._envs)
+  * how to determine whether it is just to send report, or it also need to get a new deployment id???
 
 ### deployd/client/client.py 
 * send_reports() - used for two purposes
