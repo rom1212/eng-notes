@@ -66,3 +66,30 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
         
         self.op_code = response.opCode or self.op_code = OperationCode._VALUES_TO_NAMES[json_value.get('op_code', OpCode.NOOP)]
 ```
+* PingResponse
+```
+        self.opCode = OpCode.NOOP or self.opCode = jsonValue.get('opCode')
+        self.deployGoal = None or self.deployGoal = DeployGoal(jsonValue=jsonValue.get('deployGoal'))
+```
+* PingReport
+```
+        self.deployId = None
+        self.envId = None
+        self.envName = None
+        self.stageName = None
+        self.deployStage = None
+        self.status = None  # AgentStatus, better be deploymentStatus??? or this is just for agent???
+        self.errorCode = 0
+        self.errorMessage = None
+        self.failCount = 0
+        self.extraInfo = None
+        self.deployAlias = None
+```
+* PingRequest
+```
+        self.hostId = hostId
+        self.hostName = hostName
+        self.hostIp = hostIp
+        self.groups = groups
+        self.reports = reports  # a list of PingReport, difference - ping_report["agentStatus"] = report.status
+```
