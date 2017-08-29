@@ -10,4 +10,5 @@ Build | Build Artifact
 
 Find the jar file in .\out\artifacts\<project name>_jar\<project name>.jar
 
+Run the jar file by: java -jar path/to/<project name>.jar
 ```
