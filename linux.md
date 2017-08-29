@@ -21,9 +21,9 @@ sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/
 
 ## Add User
 ```
-sudo useradd -m ming
-sudo passwd ming
-sudo adduser ming sudo
+sudo useradd -m xxx
+sudo passwd xxx
+sudo adduser xx sudo
 ```
 
 ## Limit SSH Access
