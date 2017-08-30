@@ -24,10 +24,14 @@ https://github.com/pinterest/teletraan/wiki/Quickstart-guide
     * jXRgaOLYTh-YOSxzODjSAg_3551948
     * jXRgaOLYTh-YOSxzODjSAg_3551948.extracted
   * symlink: /tmp/deploy-sentinel -> /tmp/deployd/builds/jXRgaOLYTh-YOSxzODjSAg_3551948
-* Deploy Steps/Stages
-  * deploy-downloader: deploy-agent/deployd/download/downloader.py
-  * deploy-stager: deploy-agent/deployed/staging/stager.py
-  * /tmp/deploy-sentinel/teletraan/
+
+### Deploy Steps/Stages
+* Steps
+  * PRE_DOWNLOAD, DOWNLOADING, POST_DOWNLOAD, STAGING, PRE_RESTART, RESTARTING, POST_RESTART, SERVING_BUILD
+* special steps - see agent.py:process_deploy()
+  * DOWNLOADING: use deploy-downloader: deploy-agent/deployd/download/downloader.py
+  * STAGING: deploy-stager: deploy-agent/deployed/staging/stager.py
+* ls /tmp/deploy-sentinel/teletraan/
     * POST_DOWNLOAD  POST_RESTART  PRE_DOWNLOAD  PRE_RESTART  RESTARTING  test.conf  test.conf.tmpl
     
 
