@@ -9,6 +9,11 @@ https://github.com/pinterest/teletraan/wiki/Quickstart-guide
     * just fill the host class. No need for the host name.
     * Or use "test-host-1" as the hostname because this is the content in /teletraan-demo/deploy-sentinel/host_info
   * Might need to run "deploy-agent" twice to make the deployment start to deploy
+  * Only one virtualenv is created in ~/teletraan-demo/venv
+    * start venv
+      * cd ~/teletraan-demo
+      * source venv/bin/activate or . venv/bin/activate
+    * can be used for publishing build or deploy-agent.
 
 ## Setup on Host
 https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
