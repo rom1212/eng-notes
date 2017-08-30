@@ -5,7 +5,9 @@ https://github.com/pinterest/teletraan
 https://github.com/pinterest/teletraan/wiki/Quickstart-guide
 * Manual Option
   * wget is faster
-  * Capacity Config - use "test-host-1" as the hostname because this is the content in /teletraan-demo/deploy-sentinel/host_info
+  * Capacity Config
+    * just fill the host class. No need for the host name.
+    * Or use "test-host-1" as the hostname because this is the content in /teletraan-demo/deploy-sentinel/host_info
   * Might need to run "deploy-agent" twice to make the deployment start to deploy
 
 ## Setup on Host
