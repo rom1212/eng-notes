@@ -15,6 +15,22 @@ https://github.com/pinterest/teletraan/wiki/Quickstart-guide
       * source venv/bin/activate or . venv/bin/activate
     * can be used for publishing build or deploy-agent.
 
+### Directory Structure
+* logs - /tmp/deployd/logs/
+  * deploy-agent.log  deploy-sentinel.log
+* binary
+  * downloaded to: /tmp/deployd/builds/
+    * deploy-sentinel-jXRgaOLYTh-YOSxzODjSAg_3551948.tar.gz
+    * jXRgaOLYTh-YOSxzODjSAg_3551948
+    * jXRgaOLYTh-YOSxzODjSAg_3551948.extracted
+  * symlink: /tmp/deploy-sentinel -> /tmp/deployd/builds/jXRgaOLYTh-YOSxzODjSAg_3551948
+* Deploy Steps/Stages
+  * deploy-downloader: deploy-agent/deployd/download/downloader.py
+  * deploy-stager: deploy-agent/deployed/staging/stager.py
+  * /tmp/deploy-sentinel/teletraan/
+    * POST_DOWNLOAD  POST_RESTART  PRE_DOWNLOAD  PRE_RESTART  RESTARTING  test.conf  test.conf.tmpl
+    
+
 ## Setup on Host
 https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
 * Run Teletraan Server
