@@ -23,7 +23,9 @@ sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/
 ```
 sudo useradd -m xxx
 sudo passwd xxx
-sudo adduser xx sudo
+# add user xx to "sudo" group, so that it can execute any command. 
+# /etc/sudoers is pre-configured to grant permissions to all members of this group (i.e. "sudo" group)
+sudo adduser xx sudo  
 ```
 
 ## Limit SSH Access
