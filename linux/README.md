@@ -30,6 +30,13 @@ sudo passwd xxx
 sudo adduser xx sudo  
 ```
 
+## Change Hostname
+```
+sudo hostname <new name> # take effect immediately
+vi /etc/hostname
+vi /etc/hosts # for future, and also sudo xxx will have warning about not recognizing the hostname.
+```
+
 ## Limit SSH Access
 ```
 # sudo vim /etc/ssh/sshd_config
