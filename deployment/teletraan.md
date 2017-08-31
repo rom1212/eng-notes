@@ -33,7 +33,23 @@ https://github.com/pinterest/teletraan/wiki/Quickstart-guide
   * STAGING: deploy-stager: deploy-agent/deployed/staging/stager.py
 * ls /tmp/deploy-sentinel/teletraan/
     * POST_DOWNLOAD  POST_RESTART  PRE_DOWNLOAD  PRE_RESTART  RESTARTING  test.conf  test.conf.tmpl
-    
+
+### Kill Previous Build/Version
+* teletraan/PRE_DOWNLOAD
+```
+#!/bin/bash
+
+set +e
+
+echo Running PRE_DOWNLOAD script.
+# Remove old tmp files
+rm -r /tmp/deploy-sentinel
+
+# Delete running processes on port 8000
+PORT_NUMBER=8000
+lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
+```
+
 
 ## Setup on Host
 https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
