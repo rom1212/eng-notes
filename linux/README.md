@@ -25,6 +25,8 @@ sudo useradd -m xxx
 sudo passwd xxx
 # add user xx to "sudo" group, so that it can execute any command. 
 # /etc/sudoers is pre-configured to grant permissions to all members of this group (i.e. "sudo" group)
+# https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line
+# ??? take effect next loging ???
 sudo adduser xx sudo  
 ```
 
