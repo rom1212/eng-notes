@@ -1,7 +1,12 @@
 # Create Debian package
 ## Docs
-* http://www.king-foo.com/2011/11/creating-debianubuntu-deb-packages/
-* https://ubuntuforums.org/showthread.php?t=910717
+* Examples
+  * http://www.king-foo.com/2011/11/creating-debianubuntu-deb-packages/
+  * https://ubuntuforums.org/showthread.php?t=910717
+  * https://askubuntu.com/questions/1345/what-is-the-simplest-debian-packaging-guide
+* Official
+  * http://packaging.ubuntu.com/html/
+  * https://www.debian.org/doc/debian-policy/ch-controlfields.html#s-binarycontrolfiles
 ## Example
 ```
 # In this directory, run
