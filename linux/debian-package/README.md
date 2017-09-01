@@ -17,3 +17,6 @@ sudo dpkg -i helloworld.deb
 # The package is installed in
 /usr/local/bin/helloworld.sh
 ```
+
+## Package Repository
+https://www.aptly.info/tutorial/repo/
