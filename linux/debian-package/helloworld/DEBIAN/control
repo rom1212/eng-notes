@@ -1,0 +1,5 @@
+Package: helloworld
+Version: 0.1
+Architecture: all
+Maintainer: Some Name
+Description: hello world description
