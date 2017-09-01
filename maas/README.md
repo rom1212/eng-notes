@@ -1,6 +1,7 @@
 # How it works
 ## Three Stages
 * enlist: https://docs.ubuntu.com/maas/2.1/en/nodes-add
+  *  maas/contrib/preseeds_v2/enlist_userdata - cloud-init config, maybe for enlistment
 * commision: https://docs.ubuntu.com/maas/2.1/en/nodes-commission 
 * deploy: https://docs.ubuntu.com/maas/2.1/en/installconfig-nodes-deploy
 
