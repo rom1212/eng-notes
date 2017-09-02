@@ -12,3 +12,6 @@ $ lscpu
 $ nproc
 $ grep processor /proc/cpuinfo
 ```
+
+## grep
+* invert match: grep -v 
