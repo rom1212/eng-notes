@@ -1,4 +1,6 @@
 # Services
+
+## Two Services
 * TeletraanService.java
 ```
         // Support pings as well
@@ -9,6 +11,15 @@
 # Just support pings
         Pings pings = new Pings(context);
 ```
+
+## Handlers
+### DeployHandler.java
+* internalDeploy() <- deploy() <- resources/EnvDeploys.java. It creates a new deployment for a given environment.
+  * create a record in "deploys" table.
+  * update deploy_id and deploy_type in "environs" table.
+    * select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs;
+
+
 
 # Tips
 * Adding a fields DeployGoalBean.java
