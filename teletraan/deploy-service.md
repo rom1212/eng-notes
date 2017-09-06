@@ -20,6 +20,11 @@
   * update deploy_id and deploy_type in "environs" table.
     * select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs order by last_update desc;
 
+## DAO
+* Implemtation
+  * common/src/java/com/pinterest/deployservice/db/
+* Interface
+  * common/src/java/com/pinterest/deployservice/dao/
 
 # Tips
 * Adding a fields DeployGoalBean.java
