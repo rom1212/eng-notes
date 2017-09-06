@@ -1,3 +1,13 @@
+# mysql client
+```
+# simple command, default is localhost:3306
+mysql -u root -p
+
+# command with more options
+mysql -u root -p --host localhost --port 3306
+```
+
+# Notes
 ```
 === uninstall on ubuntu 16.04 ===
 apt-get remove mysql-*
