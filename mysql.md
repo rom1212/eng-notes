@@ -7,6 +7,20 @@ mysql -u root -p
 mysql -u root -p --host localhost --port 3306
 ```
 
+# Schema
+## Show table schema
+```
+show create table <table name, e.g. agents>;
+```
+## Update primary key
+https://stackoverflow.com/questions/2341576/updating-mysql-primary-key
+```
+alter table xx drop primary key, add primary key(k1, k2, k3);
+e.g.
+alter table agents drop primary key, add primary key(host_id, env_id, deploy_id);
+```
+
+
 # Notes
 ```
 === uninstall on ubuntu 16.04 ===
