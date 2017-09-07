@@ -46,6 +46,11 @@ There are only two places that set the final state to be SUCCEEDED
 * not find related infor by
   * grep "DeployState.SUCCEEDED" * -r
   * grep "SUCCEEDED" * -r
+  
+Maybe we should mark it as SUCCEEDED when all active agents are deployed
+* need to re-consider when a new agent joins
+* the way to count the number of agents for an environment.
+
 
 # Tips
 * Adding a fields DeployGoalBean.java
