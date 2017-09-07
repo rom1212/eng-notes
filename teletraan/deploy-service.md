@@ -36,6 +36,17 @@
 * case 1.1: handle the last deployment step: SERVING_BUILD
   * This is the most common case for ping, where deployment is done, and it only does the reporting.
 
+## SUCCEEDED
+There are only two places that set the final state to be SUCCEEDED
+* grep FINAL_STATE_TRANSITION_MAP * -r
+  * common/src/main/java/com/pinterest/deployservice/handler/DeployHandler.java
+    * created a new deployment, and make the old one as succeeded.
+  * common/src/main/java/com/pinterest/deployservice/handler/CommonHandler.java
+    * transitioner found that the deployId is not the current deployId of the associated environment anymore.
+* not find related infor by
+  * grep "DeployState.SUCCEEDED" * -r
+  * grep "SUCCEEDED" * -r
+
 # Tips
 * Adding a fields DeployGoalBean.java
 Might have problem of "com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class", e.g.
