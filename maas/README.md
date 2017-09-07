@@ -18,5 +18,11 @@ Within each stage, the first 4 steps are common:
 ## API
 https://docs.ubuntu.com/maas/2.2/en/api
 
+## kernel, initrd, squashfs
+* decompress squashfs
+  *  sudo unsquashfs -f -d /media/location1 /media/location2/file.squashfs
+  * https://askubuntu.com/questions/437880/extract-a-squashfs-to-an-existing-directory
+
+
 # src/maasserver
 ##  node_action.py
