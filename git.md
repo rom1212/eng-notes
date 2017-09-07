@@ -11,6 +11,9 @@ git config --global https.proxy http://10.xx.xx.xx:3128
   * git push origin xxx
     * where xxx might be the same name of the branch name.
     * After the first push, i.e. the remote branch has been created, we can just use git push ???TTT
+  * push to a new repo, e.g. bb
+    * git remote add bb https://github.com/xxx/teletraan.git
+    * git push bb branch_name
 * git log
   * output to file with diff info: ```git log -p [file name] > log.txt```
 * git show
