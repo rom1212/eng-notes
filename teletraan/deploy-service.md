@@ -30,6 +30,10 @@
 * status: how the agent is doing the deployments, e.g. SUCCEEDED, TOO_MANY_RETRY, SCRIPT_FAILED. AgentStatus.java
 * state: how agent itself is going, e.g. NORMAL, UNREACHABLE, STOP, see AgentState.java
 
+## GoalAnalyst.java
+* case 1.5: could be beginning of a new agent ping???
+* case 1.2: agent normal execution with AgentStatus.SUCCEEDED, i.e. agent successfully executed the deployment step/stage. except the last step, i.e. SERVING_BUILD. 
+* case 1.1: handle the last deployment step: SERVING_BUILD
 
 # Tips
 * Adding a fields DeployGoalBean.java
