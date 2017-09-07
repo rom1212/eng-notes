@@ -16,7 +16,7 @@
 ### DeployHandler.java
 * internalDeploy() <- deploy() <- resources/EnvDeploys.java. It creates a new deployment for a given environment.
   * create a record in "deploys" table.
-    * select env_id, deploy_id, deploy_type, build_id, state from deploys order by start_date desc;
+    * select env_id, deploy_id, deploy_type, build_id, state, acc_status from deploys order by start_date desc;
   * update deploy_id and deploy_type in "environs" table.
     * select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs order by last_update desc;
 
