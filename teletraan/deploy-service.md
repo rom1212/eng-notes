@@ -50,6 +50,7 @@ There are only two places that set the final state to be SUCCEEDED
 Maybe we should mark it as SUCCEEDED when all active agents are deployed
 * need to re-consider when a new agent joins
 * the way to count the number of agents for an environment.
+* worker/StateTransitioner.java -> handler/CommonHandler.java
 
 
 # Tips
