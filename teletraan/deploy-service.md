@@ -34,6 +34,7 @@
 * case 1.5: could be beginning of a new agent ping???
 * case 1.2: agent normal execution with AgentStatus.SUCCEEDED, i.e. agent successfully executed the deployment step/stage. except the last step, i.e. SERVING_BUILD. 
 * case 1.1: handle the last deployment step: SERVING_BUILD
+  * This is the most common case for ping, where deployment is done, and it only does the reporting.
 
 # Tips
 * Adding a fields DeployGoalBean.java
