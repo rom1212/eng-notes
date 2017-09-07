@@ -26,6 +26,11 @@
 * Interface
   * common/src/java/com/pinterest/deployservice/dao/
 
+## AgentBean
+* status: how the agent is doing the deployments, e.g. SUCCEEDED, TOO_MANY_RETRY, SCRIPT_FAILED. AgentStatus.java
+* state: how agent itself is going, e.g. NORMAL, UNREACHABLE, STOP, see AgentState.java
+
+
 # Tips
 * Adding a fields DeployGoalBean.java
 Might have problem of "com.fasterxml.jackson.databind.JsonMappingException: No serializer found for class", e.g.
