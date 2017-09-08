@@ -43,3 +43,11 @@ deploy-stager -v QZoW3W7JQ3SClrzSnnQvBQ_2296782 -t /tmp/deploy-sentinel -e deplo
 ```
 
 agent.py: get_staging_script(), "deploy-stager"
+
+# deployd/common/config.py
+* get_target(): 
+  * default: /tmp/os.environ['ENV_NAME']
+  * self._configs.get('target')
+* get_script_directory(): 
+  * script_dir=self.get_target()/teletraan/
+  * or script_dir/os.environ['ENV_NAME']
