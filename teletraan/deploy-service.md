@@ -1,4 +1,9 @@
-# Services
+# Dev
+* ./build.sh
+* ./run.sh
+* ./update.sh - build.sh and run.sh
+
+# Code
 
 ## Two Services
 * TeletraanService.java
