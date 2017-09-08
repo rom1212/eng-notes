@@ -16,6 +16,23 @@
 # Just support pings
         Pings pings = new Pings(context);
 ```
+## Tables
+* environments
+```
+select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs order by last_update desc;
+```
+* deploys - one env_id -> many deploy_id
+```
+select env_id, deploy_id, deploy_type, build_id, state, acc_status from deploys order by start_date desc;
+```
+* agents - one (host_id, env_id) -> many deploy_id
+```
+select host_id, host_name, env_id, deploy_id, deploy_stage, state, status from agents;
+```
+* builds - build information (build_name -> env_name)
+```
+select build_id, build_name, artifact_url from builds order by publish_date desc;
+```
 
 ## Handlers
 ### DeployHandler.java
