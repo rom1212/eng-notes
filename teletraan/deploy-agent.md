@@ -58,3 +58,11 @@ agent.py: get_staging_script(), "deploy-stager"
 * get_script_directory(): 
   * script_dir=self.get_target()/teletraan/
   * or script_dir/os.environ['ENV_NAME']
+  
+## env_status.py
+* dump_envs()
+  * agent._update_ping_reports()
+    * agent.update_deploy_status()
+      * PingServer.__call__
+      * serve_build(): after the deployment (process_deploy())
+    * serve_build(): fail to update internal goal
