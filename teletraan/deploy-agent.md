@@ -32,3 +32,12 @@
 }
 
 ```
+
+# deploy-stager
+Arguments
+* -v, --build-id, args.build: build version ID
+* -t, --target, args.target: target directory name
+* -e, --env-name, args.env_name: environment name currently in deploy.
+```
+deploy-stager -v QZoW3W7JQ3SClrzSnnQvBQ_2296782 -t /tmp/deploy-sentinel -e deploy-sentinel
+```
