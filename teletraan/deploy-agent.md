@@ -1,4 +1,11 @@
-# env_status
+# dev
+## First time
+* ???
+## Code Update/Change
+* ./update.sh
+
+# code
+## env_status
 * deployd/common/config.py: get_env_status_fn()
 * deployd/agent.py: DeployAgent:_STATUS_FILE
 * /tmp/deployd/env_status, example:
@@ -33,7 +40,7 @@
 
 ```
 
-# deploy-stager
+## deploy-stager
 Arguments
 * -v, --build-id, args.build: build version ID
 * -t, --target, args.target: target directory name
@@ -44,7 +51,7 @@ deploy-stager -v QZoW3W7JQ3SClrzSnnQvBQ_2296782 -t /tmp/deploy-sentinel -e deplo
 
 agent.py: get_staging_script(), "deploy-stager"
 
-# deployd/common/config.py
+## deployd/common/config.py
 * get_target(): 
   * default: /tmp/os.environ['ENV_NAME']
   * self._configs.get('target')
