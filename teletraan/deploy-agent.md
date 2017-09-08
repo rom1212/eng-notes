@@ -41,3 +41,5 @@ Arguments
 ```
 deploy-stager -v QZoW3W7JQ3SClrzSnnQvBQ_2296782 -t /tmp/deploy-sentinel -e deploy-sentinel
 ```
+
+agent.py: get_staging_script(), "deploy-stager"
