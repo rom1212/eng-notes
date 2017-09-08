@@ -20,6 +20,11 @@
   * update deploy_id and deploy_type in "environs" table.
     * select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs order by last_update desc;
 
+### PingHandler
+* convergeEnvs() ??? 
+* LOG.debug("Found the following envs {} associated with host {} and group {}.", envs.keySet(), hostName, groups);
+* 
+
 ## DAO
 * Implemtation
   * common/src/java/com/pinterest/deployservice/db/
@@ -31,10 +36,10 @@
 * state: how agent itself is going, e.g. NORMAL, UNREACHABLE, STOP, see AgentState.java
 
 ## GoalAnalyst.java
-* case 1.5: could be beginning of a new agent ping???
-* case 1.2: agent normal execution with AgentStatus.SUCCEEDED, i.e. agent successfully executed the deployment step/stage. except the last step, i.e. SERVING_BUILD. 
 * case 1.1: handle the last deployment step: SERVING_BUILD
   * This is the most common case for ping, where deployment is done, and it only does the reporting.
+* case 1.2: agent normal execution with AgentStatus.SUCCEEDED, i.e. agent successfully executed the deployment step/stage. except the last step, i.e. SERVING_BUILD. 
+* case 1.5: could be beginning of a new agent ping???
 
 ## SUCCEEDED
 There are only two places that set the final state to be SUCCEEDED
