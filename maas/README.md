@@ -32,3 +32,4 @@ https://docs.ubuntu.com/maas/2.2/en/api
 ## ISCI with squashfs
 * kernel_opts.py
   * compose_purpose_opts()
+* provisioningserver/templates/pxe/config.ephemeral.amd64.generic.template
