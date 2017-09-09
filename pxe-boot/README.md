@@ -14,6 +14,7 @@
   * sudo apt install tftpd-hpa
   * cp -rf /mnt/install/netboot/* /var/lib/tftpboot/
   * vim /var/lib/tftpboot/pxelinux.cfg/default
+    * example: https://gist.github.com/ootput/772377
   * optional - to make tfpt writable
     * https://askubuntu.com/questions/443117/how-to-configure-tftpd-hpa-to-allow-upload-of-new-files
     * sudo chown -R tftp /var/lib/tftpboot
