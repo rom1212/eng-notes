@@ -47,5 +47,15 @@ and
 x newly installed   # where x is equal or larger than 2
 ```
 
-
+### Use dpkg-deb
+* find out the depends of a debian file
+```
+dpkg-deb -f helloworld.deb Depends
+```
+* find out the installed debian packages
+https://askubuntu.com/questions/17823/how-to-list-all-installed-packages
+```
+dpkg --get-selections | grep -v deinstall
+```
+* cons: it's not straight forward to check the versions.
 
