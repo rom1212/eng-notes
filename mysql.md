@@ -26,10 +26,10 @@ alter table agents drop primary key, add primary key(host_id, env_id, deploy_id)
 === uninstall on ubuntu 16.04 ===
 apt-get remove mysql-*
 apt-get purge mysql-*  # this one probably remove the following files already
-294  rm -rf  /var/lib/mysql
-296  rm -rf /etc/mysql/
-306  rm -rf /var/lib/mysql-files/
-307  rm -rf /var/lib/mysql-keyring/
+rm -rf  /var/lib/mysql
+rm -rf /etc/mysql/
+rm -rf /var/lib/mysql-files/
+rm -rf /var/lib/mysql-keyring/
 rm -rf /var/log/mysql
 
 === install on ubuntu 16.04 ===
