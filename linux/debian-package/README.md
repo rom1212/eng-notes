@@ -44,7 +44,7 @@ The following additional packages will be installed:
 ```
 and
 ```
-2 newly installed
+x newly installed   # where x is equal or larger than 2
 ```
 
 
