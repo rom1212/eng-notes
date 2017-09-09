@@ -24,5 +24,11 @@ https://docs.ubuntu.com/maas/2.2/en/api
   * https://askubuntu.com/questions/437880/extract-a-squashfs-to-an-existing-directory
 
 
-# src/maasserver
+# maasserver
 ##  node_action.py
+
+# provisioningserver
+
+## ISCI with squashfs
+* kernel_opts.py
+  * compose_purpose_opts()
