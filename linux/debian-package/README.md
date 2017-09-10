@@ -59,3 +59,10 @@ dpkg --get-selections | grep -v deinstall
 ```
 * cons: it's not straight forward to check the versions.
 
+# Cleanup Debian Package
+## Never needed packages
+```
+sudo apt autoremove
+```
+## Remove or Purge ???
+https://unix.stackexchange.com/questions/118880/should-i-use-apt-get-remove-or-apt-get-purge
