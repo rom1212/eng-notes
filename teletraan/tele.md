@@ -6,3 +6,14 @@
 * package info
   * scm as package name
   * scm_commit as package version 
+
+## Downloader
+* Add case for: extension == 'deb' 
+  * logging can be sent to server by run_cmd (which reads the logging records)
+* executor.py:run_cmd
+  * what if return code is not 0, will it throw exception?
+  * deploy_report - what's the status_code? how does that pop to server, and what will server act on that?
+  * try it with tests/unit/deploy/utils/test_exec.py
+  
+ 
+
