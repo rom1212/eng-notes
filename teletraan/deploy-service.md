@@ -47,6 +47,12 @@ select build_id, build_name, artifact_url from builds order by publish_date desc
 * LOG.debug("Found the following envs {} associated with host {} and group {}.", envs.keySet(), hostName, groups);
 * 
 
+### Restart
+```
+state      | acc_status    
+RUNNING    | PENDING_DEPLOY
+```
+
 ## DAO
 * Implemtation
   * common/src/java/com/pinterest/deployservice/db/
