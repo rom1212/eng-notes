@@ -25,6 +25,11 @@ select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from en
 ```
 select env_id, deploy_id, deploy_type, build_id, state, acc_status from deploys order by start_date desc;
 ```
+Retire a deployment
+```
+update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = '' and deploy_id = '';
+```
+
 * agents - one (host_id, env_id) -> many deploy_id
 ```
 select host_id, host_name, env_id, deploy_id, deploy_stage, state, status from agents;
@@ -88,6 +93,13 @@ Maybe we should mark it as SUCCEEDED when all active agents are deployed
 * the way to count the number of agents for an environment.
 * worker/StateTransitioner.java -> handler/CommonHandler.java
 
+# Dev
+## Need a new deployment for test
+* Use "RESTART" to retire old failed deployment. (keep the same build)
+* retire old deployment
+```
+update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
+```
 
 # Tips
 * Adding a fields DeployGoalBean.java
