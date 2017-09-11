@@ -49,8 +49,11 @@ select build_id, build_name, artifact_url from builds order by publish_date desc
 
 ### Restart
 ```
-state      | acc_status    
-RUNNING    | PENDING_DEPLOY
+# deploys table
++------------------------+------------------------+-------------+--------------------------------+-----------+----------------+
+| env_id                 | deploy_id              | deploy_type | build_id                       | state     | acc_status     |
++------------------------+------------------------+-------------+--------------------------------+-----------+----------------+
+| f3SvF2OgSgmavFU6b0aQiw | thchAmZLRt2TytOdq31LDQ | RESTART     | CXRHe11-TuOgxgSIP5Ydhw_8507456 | RUNNING   | PENDING_DEPLOY |
 ```
 
 ## DAO
