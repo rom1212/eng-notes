@@ -39,7 +39,7 @@ select host_id, host_name, env_id, deploy_id, deploy_stage, state, status from a
 select build_id, build_name, artifact_url from builds order by publish_date desc;
 ```
 
-## Handlers
+## Handlers/Resources
 ### DeployHandler.java
 * internalDeploy() <- deploy() <- resources/EnvDeploys.java. It creates a new deployment for a given environment.
   * create a record in "deploys" table.
@@ -50,7 +50,6 @@ select build_id, build_name, artifact_url from builds order by publish_date desc
 ### PingHandler
 * convergeEnvs() ??? 
 * LOG.debug("Found the following envs {} associated with host {} and group {}.", envs.keySet(), hostName, groups);
-* 
 
 ### Restart
 ```
@@ -60,6 +59,9 @@ select build_id, build_name, artifact_url from builds order by publish_date desc
 +------------------------+------------------------+-------------+--------------------------------+-----------+----------------+
 | f3SvF2OgSgmavFU6b0aQiw | thchAmZLRt2TytOdq31LDQ | RESTART     | CXRHe11-TuOgxgSIP5Ydhw_8507456 | RUNNING   | PENDING_DEPLOY |
 ```
+
+### Builds.java
+* resource/Builds.java
 
 ## DAO
 * Implemtation
