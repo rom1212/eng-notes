@@ -103,7 +103,7 @@ Maybe we should mark it as SUCCEEDED when all active agents are deployed
 ## Need a new deployment for test
 * Use "RESTART" to retire old failed deployment. (keep the same build)
   * clean up build directory: rm -rf /tmp/deployd/builds/*
-* retire old deployment
+* retire old deployment only when the "state" is SUCCEEDING or RUNNING. No need to retire it if its "state" is FAILING.
 ```
 update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
 ```
