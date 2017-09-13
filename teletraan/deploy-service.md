@@ -1,7 +1,25 @@
 # Dev
+
+## Iteration
 * ./build.sh
 * ./run.sh
 * ./update.sh - build.sh and run.sh
+
+## Need a new deployment for test
+* Use "RESTART" to retire old failed deployment. (keep the same build)
+  * clean up build directory: rm -rf /tmp/deployd/builds/*
+* retire old deployment only when the "state" is SUCCEEDING or RUNNING. No need to retire it if its "state" is FAILING.
+```
+update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
+```
+## Quick Experiment 
+common/.../common/CommonUtilsTest.java
+```java
+    @Test
+    public void testExperiment() {
+        System.out.println("testExperiment");
+    }
+```
 
 # Code
 
@@ -99,21 +117,10 @@ Maybe we should mark it as SUCCEEDED when all active agents are deployed
 * the way to count the number of agents for an environment.
 * worker/StateTransitioner.java -> handler/CommonHandler.java
 
-# Dev
-## Need a new deployment for test
-* Use "RESTART" to retire old failed deployment. (keep the same build)
-  * clean up build directory: rm -rf /tmp/deployd/builds/*
-* retire old deployment only when the "state" is SUCCEEDING or RUNNING. No need to retire it if its "state" is FAILING.
+## State Transition
+Restart could be
 ```
-update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
-```
-## Quick Experiment 
-common/.../common/CommonUtilsTest.java
-```java
-    @Test
-    public void testExperiment() {
-        System.out.println("testExperiment");
-    }
+| f3SvF2OgSgmavFU6b0aQiw | 6TIx81N5TvCSB2yNzCgDfw | RESTART     | 3MDgayoxR_aOTqTcycSLlw_6113136 | RUNNING   | PENDING_DEPLOY
 ```
 
 # Tips
