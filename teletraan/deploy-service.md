@@ -107,6 +107,14 @@ Maybe we should mark it as SUCCEEDED when all active agents are deployed
 ```
 update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
 ```
+## Quick Experiment 
+common/.../common/CommonUtilsTest.java
+```java
+    @Test
+    public void testExperiment() {
+        System.out.println("testExperiment");
+    }
+```
 
 # Tips
 * Adding a fields DeployGoalBean.java
