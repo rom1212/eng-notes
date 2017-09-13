@@ -19,7 +19,12 @@ alter table xx drop primary key, add primary key(k1, k2, k3);
 e.g.
 alter table agents drop primary key, add primary key(host_id, env_id, deploy_id);
 ```
-
+## Add column
+```
+ALTER TABLE table_name ADD COLUMN column_name column_type;
+e.g.
+ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
+```
 
 # Notes
 ```
