@@ -87,11 +87,15 @@ select build_id, build_name, artifact_url from builds order by publish_date desc
 * publish builds, etc.
 
 ### UserRoles.java
-* User for environment, where resource_id is the environment name.
+* Use for environment, where resource_id is the environment name.
 ```
 INFO  [2017-09-14 19:07:41,727] com.pinterest.teletraan.resource.UserRoles: Successfully created new user permission for resource deploy-sentinel with com.pinterest.deployservice.bean.UserRolesBean@1211df6a[user_name=user_name1,resource_id=deploy-sentinel,resource_type=ENV,role=OPERATOR]
 ```
-
+### TokenRoles.java
+* Use for environment, where resource_id is the environment name.
+```
+INFO  [2017-09-14 19:15:49,012] com.pinterest.teletraan.resource.TokenRoles: Successfully created new script permission for resource deploy-sentinel with com.pinterest.deployservice.bean.TokenRolesBean@73155791[script_name=script_name1,resource_id=deploy-sentinel,resource_type=ENV,token=xxxxxxxx,role=OPERATOR,expire_date=1820776548982]
+```
 ## DAO
 * Implemtation
   * common/src/java/com/pinterest/deployservice/db/
