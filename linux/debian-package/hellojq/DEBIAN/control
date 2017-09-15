@@ -1,0 +1,6 @@
+Package: hellojq
+Version: 0.1
+Architecture: all
+Maintainer: Some Name
+Description: hello jq description
+Depends: jq (>= 1.5)
