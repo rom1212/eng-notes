@@ -54,7 +54,7 @@ select host_id, host_name, env_id, deploy_id, deploy_stage, state, status from a
 ```
 * builds - build information (build_name -> env_name)
 ```
-select build_id, build_name, artifact_url from builds order by publish_date desc;
+select scm_commit_7, build_id, build_name, artifact_url from builds order by publish_date desc;
 ```
 * packages 
 ```
