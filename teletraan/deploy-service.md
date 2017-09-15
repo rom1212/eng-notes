@@ -56,6 +56,10 @@ select host_id, host_name, env_id, deploy_id, deploy_stage, state, status from a
 ```
 select build_id, build_name, artifact_url from builds order by publish_date desc;
 ```
+* packages 
+```
+select package_id, package_name, package_version, package_url from packages order by publish_date desc;
+```
 ## Interaction with Deploy Agent
 * return results to agent
   * PingResponseBean.java
