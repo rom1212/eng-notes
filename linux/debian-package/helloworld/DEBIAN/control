@@ -3,4 +3,3 @@ Version: 0.1
 Architecture: all
 Maintainer: Some Name
 Description: hello world description
-Depends: emacsen-common (>= 2.0.0)
