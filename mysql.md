@@ -1,4 +1,5 @@
-# mysql client
+# Admin Tools
+## mysql client
 ```
 # simple command, default is localhost:3306
 mysql -u root -p
@@ -6,6 +7,9 @@ mysql -u root -p
 # command with more options
 mysql -u root -p --host localhost --port 3306
 ```
+## Backup
+https://www.liquidweb.com/kb/how-to-back-up-mysql-databases-from-the-command-line/
+* mysqldump
 
 # Schema
 ## Show table schema
