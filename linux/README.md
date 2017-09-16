@@ -22,6 +22,9 @@ sudo passwd xxx
 # https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line
 # ??? take effect next loging ???
 sudo adduser xx sudo  
+
+# execute command without password: https://askubuntu.com/questions/147241/execute-sudo-without-password
+username ALL=(ALL) NOPASSWD: ALL
 ```
 
 ## Change Hostname
