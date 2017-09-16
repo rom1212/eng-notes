@@ -58,7 +58,7 @@ select scm_commit_7, build_id, build_name, artifact_url from builds order by pub
 ```
 * packages 
 ```
-select package_id, package_name, package_version, package_url from packages order by publish_date desc;
+select package_name, package_version, package_url, , group_id from packages order by publish_date desc;
 ```
 ## Interaction with Deploy Agent
 * return results to agent
