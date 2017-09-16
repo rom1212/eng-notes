@@ -64,6 +64,7 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
   ```./teletraanservice/bin/run.sh run```
 * Run Deploy Dashboard
 ```
+  pip install virtualenv
   cd ~/teletraan/deploy-board
   ~/teletraan/deploy-board$ virtualenv venv
   ~/teletraan/deploy-board$ source venv/bin/activate
@@ -73,6 +74,10 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
 http://127.0.0.1:8888/
 
 ## Deploy Agent (deploy-agent)
+In case "python setup.py install --force" fails,
+```
+pip install python-daemon==2.0.6
+```
 
 ### Data
 * DeployGoal
