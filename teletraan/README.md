@@ -53,7 +53,12 @@ lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
 
 ## Setup on Host
 https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
+* sudo vim /etc/sudoers
 * Run Teletraan Server
+  * sudo apt-get install  mysql-server-5.7, mysql -u root, source xxx/deploy-service/common/src/main/resources/sql/deploy.sql
+  * sudo apt install maven, and javac
+  * ./build.sh
+  * ./run.sh (or update.sh)
   * Add mysql password in file: ~/teletraan/deploy-service/teletraanservice/bin/server.yaml
   * It's easier to debug if we run it in foreground mode: 
   ```./teletraanservice/bin/run.sh run```
@@ -65,6 +70,7 @@ https://github.com/pinterest/teletraan/wiki/Setup-Teletraan-directly-on-host
   (venv) xx@xx:~/teletraan/deploy-board$ pip install -r requirements.txt
   (venv) xx@xx:~/teletraan/deploy-board$ ./run.sh start
 ```
+http://127.0.0.1:8888/
 
 ## Deploy Agent (deploy-agent)
 
