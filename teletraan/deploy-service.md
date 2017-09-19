@@ -12,6 +12,17 @@
 ```
 update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
 ```
+
+## Retire old deployments
+```
+update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = 'f3SvF2OgSgmavFU6b0aQiw' and deploy_id = 'thchAmZLRt2TytOdq31LDQ';
+```
+
+## Show Builds and Packages Together
+```
+select scm_commit_7, builds.build_id, package_name, package_url from builds join packages on builds.build_id = packages.build_id order by builds.publish_date desc;
+```
+
 ## Quick Experiment 
 common/.../common/CommonUtilsTest.java
 ```java
@@ -35,6 +46,7 @@ common/.../common/CommonUtilsTest.java
         Pings pings = new Pings(context);
 ```
 ## Tables
+* MySQL commands: show databases; use deploy; show tables;
 * environments
 ```
 select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from environs order by last_update desc;
@@ -66,6 +78,11 @@ select package_name, package_version, package_url, , group_id from packages orde
     * DeployGoalBean.java
 
 ## Handlers/Resources
+
+### Envrionment
+* com.pinterest.teletraan.resource.Environs: "Successfully created env stage"
+* com.pinterest.teletraan.resource.EnvCapacities: "Successfully updated env deploy-sentinel/canary capacity config"
+
 ### DeployHandler.java
 * internalDeploy() <- deploy() <- resources/EnvDeploys.java. It creates a new deployment for a given environment.
   * create a record in "deploys" table.
