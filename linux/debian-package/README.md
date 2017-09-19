@@ -29,6 +29,8 @@ https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpk
   * pay attention to ./ before name.deb
   * pros: can make use of apt for dry-run, and dependency check
 * sudo dpkg -i /path/to/deb/file, sudo apt-get install -f
+  * check installed packages: dpkg --get-selections
+  * to uninstall: sudo dpkg -r <package name, e.g. helloworld>
 * gdebi
 
 
