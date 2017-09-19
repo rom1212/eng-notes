@@ -33,6 +33,10 @@ https://unix.stackexchange.com/questions/159094/how-to-install-a-deb-file-by-dpk
   * to uninstall: sudo dpkg -r <package name, e.g. helloworld>
 * gdebi
 
+## Check  Installed Packages
+* apt list --installed
+* dpkg --get-selections | grep -v deinstall
+
 
 ## Check dependency
 ### Use apt
