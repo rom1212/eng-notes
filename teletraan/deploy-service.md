@@ -23,6 +23,17 @@ update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = '
 select scm_commit_7, builds.build_id, package_name, package_url from builds join packages on builds.build_id = packages.build_id order by builds.publish_date desc;
 ```
 
+## Reset Dev
+* Mysql
+  * delete from agents;  // delete existing agents
+  * Update as succeed, (or delete from deploys, be careful since other tables might referring to it, e.g. environs)
+  ```
+  update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = '' and deploy_id = '';
+  ```
+* Agent
+  * rm /tmp/deployd/env_status
+  * rm /tmp/deployd/logs/* or move log files;
+
 ## Quick Experiment 
 common/.../common/CommonUtilsTest.java
 ```java
