@@ -83,6 +83,10 @@ select scm_commit_7, build_id, build_name, artifact_url from builds order by pub
 ```
 select package_name, package_version, package_url, , group_id from packages order by publish_date desc;
 ```
+* map environment to hosts and envs
+  * hosts_and_envs
+  * groups_and_envs
+
 ## Interaction with Deploy Agent
 * return results to agent
   * PingResponseBean.java
