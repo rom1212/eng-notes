@@ -20,7 +20,7 @@ update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = '
 
 ## Show Builds and Packages Together
 ```
-select scm_commit_7, builds.build_id, package_name, package_url from builds join packages on builds.build_id = packages.build_id order by builds.publish_date desc;
+select scm_commit_7, builds.build_id, package_name, package_url, builds.publish_date from builds join pg_and_packages on builds.build_id = pg_and_packages.build_id order by builds.publish_date desc;
 ```
 
 ## Reset Dev
