@@ -96,7 +96,11 @@ select package_name, package_version, package_url, , group_id from packages orde
 
 ### Envrionment
 * com.pinterest.teletraan.resource.Environs: "Successfully created env stage"
-* com.pinterest.teletraan.resource.EnvCapacities: "Successfully updated env deploy-sentinel/canary capacity config"
+* com.pinterest.teletraan.resource.EnvCapacities:
+  * @Path("/v1/envs/{envName : [a-zA-Z0-9\\-_]+}/{stageName : [a-zA-Z0-9\\-_]+}/capacity")
+  * add()
+    * groupDAO.addGroupCapacity(envBean.getEnv_id(), name);
+    * groupDAO.addHostCapacity(envBean.getEnv_id(), name);
 
 ### DeployHandler.java
 * internalDeploy() <- deploy() <- resources/EnvDeploys.java. It creates a new deployment for a given environment.
