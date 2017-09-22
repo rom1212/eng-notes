@@ -1,3 +1,7 @@
+# Log Exceptions
+* http://stackoverflow.com/questions/5191830/best-way-to-log-a-python-exception
+* logger.exception()
+
 # How to get exception message
 ## docs
 * https://stackoverflow.com/questions/4308182/getting-the-exception-value-in-python
