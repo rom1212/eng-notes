@@ -1,3 +1,8 @@
+# Catch Exceptions
+* Catch all Exceptions
+  * Use: "except Exception" instead of BaseException because it also contains GeneratorExit, SystemExit and KeyboardInterrupt. Otherwise, it is hard to exit, for example, exit() or Ctrl+C cannot exit from the code.
+  * GeneratorExit is used for the clean-up work for generator, because it could be cases that the denerator is not done yet, and also need to do cleanups. https://stackoverflow.com/questions/30862196/generatorexit-in-python-generator
+
 # Log Exceptions
 * http://stackoverflow.com/questions/5191830/best-way-to-log-a-python-exception
 * logger.exception()
