@@ -5,7 +5,13 @@
 
 # Log Exceptions
 * http://stackoverflow.com/questions/5191830/best-way-to-log-a-python-exception
-* logger.exception()
+* logger.exception(), e.g.
+```
+        try:
+            self.serve_build()
+        except Exception:
+            log.exception("Deploy Agent got exceptions: {}".format(traceback.format_exc()))
+```
 
 # How to get exception message
 ## docs
