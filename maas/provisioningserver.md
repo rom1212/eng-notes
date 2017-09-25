@@ -9,9 +9,10 @@ service_monitor = ServiceMonitor(
 )
 ```
 * tgt
-  * https://linux.die.net/man/8/tgt-admin
-  * https://linux.die.net/man/8/tgtadm
-  * tgtd, tgtimg, tgt-setup-lun
+  * tgt-admin: https://linux.die.net/man/8/tgt-admin
+  * tgtadm: https://linux.die.net/man/8/tgtadm
+  * tgtd: http://manpages.ubuntu.com/manpages/zesty/man8/tgtd.8.html 
+  * tgtimg, tgt-setup-lun
   * /etc/tgt/conf.d/maas.conf
 ```
 <target iqn.2004-05.com.ubuntu:maas:ephemeral-ubuntu-arm64-xgene-uboot-xenial-daily>
