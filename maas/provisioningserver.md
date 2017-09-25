@@ -31,3 +31,13 @@ service_monitor = ServiceMonitor(
   
 ## import_images/
 * boot_resources.py
+  * def update_targets_conf(snapshot):
+  ```
+    targets_conf = os.path.join(snapshot, 'maas.tgt')
+    try: 
+            call_and_check(sudo([
+            get_path('/usr/sbin/tgt-admin'),
+            '--conf', targets_conf,
+            '--update', 'ALL',
+            ]))
+  ```
