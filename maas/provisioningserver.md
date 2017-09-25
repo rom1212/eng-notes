@@ -31,10 +31,18 @@ service_monitor = ServiceMonitor(
   
 ## import_images/
 * boot_resources.py
-  * link_bootloaders
-    * /var/lib/maas/boot-resources/snapshot-20170923-141239/bootloader/pxe/
-    * /var/lib/maas/boot-resources/snapshot-20170923-141239/ubuntu/amd64/generic/xenial/daily/
-  * update_iscsi_targets
+  * link_bootloaders(snapshot_path)
+    * link_bootloader(destination=snapshot_path)
+      * ```boot/__init__.py```
+        * stream_path = os.path.join(destination, 'bootloader', self.bios_boot_method, arch)
+          * /var/lib/maas/boot-resources/snapshot-20170923-141239/bootloader/pxe/i386/
+        * self._link_simplestream_bootloaders(stream_path, destination)
+          * put bootloader files in the root of the snapshot_path, i.e. directly under snapshot_path/
+          * _link_simplestream_bootloaders()
+            * /boot/pxe.py also has this method, and also add syslinux
+            * TTT??? where are the other files? _find_and_copy_bootloaders???
+    * ??? /var/lib/maas/boot-resources/snapshot-20170923-141239/ubuntu/amd64/generic/xenial/daily/
+  * update_iscsi_targets(snapshot_path)
   ```
   def update_iscsi_targets(snapshot_path):
     maaslog.info("Updating boot image iSCSI targets.")
