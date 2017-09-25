@@ -31,6 +31,9 @@ service_monitor = ServiceMonitor(
   
 ## import_images/
 * boot_resources.py
+  * link_bootloaders
+    * /var/lib/maas/boot-resources/snapshot-20170923-141239/bootloader/pxe/
+    * /var/lib/maas/boot-resources/snapshot-20170923-141239/ubuntu/amd64/generic/xenial/daily/
   * update_iscsi_targets
   ```
   def update_iscsi_targets(snapshot_path):
