@@ -57,3 +57,28 @@ service_monitor = ServiceMonitor(
             '--update', 'ALL',
             ]))
   ```
+
+# Files
+## /var/lib/maas/boot-resources/
+```
+* cache  current  snapshot-20170923-141239
+* current -> snapshot-20170923-141239
+* snapshot-20170923-141239
+  * bootppc64.bin->bootloader/open-firmware/ppc64el/bootppc64.bin
+  * bootx64.efi->bootloader/uefi/amd64/bootx64.efi
+  * chain.c32->bootloader/pxe/i386/chain.c32
+  * grub
+  * grubaa64.efi->bootloader/uefi/arm64/grubaa64.efi
+  * grubx64.efi->bootloader/uefi/amd64/grubx64.efi
+  * ifcpu64.c32->bootloader/pxe/i386/ifcpu64.c32
+  * ldlinux.c32->bootloader/pxe/i386/ldlinux.c32
+  * libcom32.c32->bootloader/pxe/i386/libcom32.c32
+  * libutil.c32->bootloader/pxe/i386/libutil.c32
+  * maas.meta
+  * maas.tgt
+  * pxelinux.0->bootloader/pxe/i386/pxelinux.0
+  * syslinux->bootloader/pxe/i386
+  * ubuntu
+    * amd64/generic/xenial/daily/
+      * boot-initrd  boot-kernel  squashfs
+```
