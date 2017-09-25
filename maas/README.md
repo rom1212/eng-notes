@@ -33,3 +33,14 @@ https://docs.ubuntu.com/maas/2.2/en/api
 * kernel_opts.py
   * compose_purpose_opts()
 * provisioningserver/templates/pxe/config.ephemeral.amd64.generic.template
+
+## Files
+* /var/lib/maas/boot-resources/
+  * snapshot-201709xx-xxxxxx
+  * current -> 
+  * cache
+* /var/lib/maas/dhcp/dhcpd.leases
+* /var/log/maas/
+  * maas.log
+  * rackd.log
+  * regiond.log
