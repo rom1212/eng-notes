@@ -31,8 +31,13 @@ service_monitor = ServiceMonitor(
   
 ## import_images/
 * boot_resources.py
-  * def update_targets_conf(snapshot):
+  * update_iscsi_targets
   ```
+  def update_iscsi_targets(snapshot_path):
+    maaslog.info("Updating boot image iSCSI targets.")
+    update_targets_conf(snapshot_path)
+
+  def update_targets_conf(snapshot):
     targets_conf = os.path.join(snapshot, 'maas.tgt')
     try: 
             call_and_check(sudo([
