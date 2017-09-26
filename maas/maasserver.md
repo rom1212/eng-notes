@@ -26,6 +26,14 @@
 * get_node_preseed_context:
   * 'preseed_data': compose_preseed(get_preseed_type_for(node), node)
   * maasserver/compose_preseed.py:compose_preseed()
+* get_preseed_type_for(node)
+  ```
+    if is_commissioning_preseed:
+        return PRESEED_TYPE.COMMISSIONING
+    else:
+        return PRESEED_TYPE.CURTIN
+  ```
+*   
 
 
 ## metadataserver/urls.py
