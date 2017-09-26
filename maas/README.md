@@ -2,7 +2,9 @@
 ## Three Phases
 * enlist: https://docs.ubuntu.com/maas/2.1/en/nodes-add
   *  maas/contrib/preseeds_v2/enlist_userdata - cloud-init config, maybe for enlistment
-* commision: https://docs.ubuntu.com/maas/2.1/en/nodes-commission 
+* commision:
+  * https://docs.ubuntu.com/maas/2.1/en/nodes-commission 
+  * https://github.com/maas/maas/blob/master/docs/development/notes/anatomy-of-recommissioning-in-maas-2.0.rst
 * deploy: https://docs.ubuntu.com/maas/2.1/en/installconfig-nodes-deploy
 
 Within each stage, the first 4 steps are common:
