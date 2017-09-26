@@ -11,6 +11,7 @@
     * cmdline = util.get_cmdline()
       * get kernel command line (parameters) from "/proc/cmdline" (or "/proc/1/cmdline" if it's lxd container)
       * kernel command line is sent by PXE boot config from PXE server. (with cc:xxx:end) ???TTT
+        * https://github.com/maas/maas/blob/master/src/provisioningserver/tests/test_kernel_opts.py
     * cmdline_name, url = parse_cmdline_url(cmdline)
     * kwargs = {'url': url, 'timeout': 10, 'retries': 2}
     * resp = util.read_file_or_url(**kwargs)
