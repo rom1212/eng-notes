@@ -10,12 +10,22 @@
   * class OperationsHandler(OperationsHandlerMixin, piston3.handler.BaseHandler, metaclass=OperationsHandlerType):
 
 ## preseed.py
+* render_preseed()
+  * load_preseed_template()
+  * context = get_preseed_context
+  * context.update(get_node_preseed_context())
+  * ```return template.substitute(**context).encode("utf-8")```
 * get_preseed_template()
   * PRESEED_TEMPLATE_LOCATIONS: "/etc/maas/preseeds", "/usr/share/maas/preseeds",
     * content is from maaas/contrib/preseeds_v2/
-      * commissioning, curtin_userdata, curtin_userdata_custom, curtin_userdata_windows, enlist_userdata, curtin,  curtin_userdata_centos, curtin_userdata_suse, enlist
+      * commissioning: {{preseed_data}}
+      * curtin: {{preseed_data}}
+      * enlist, enlist_userdata,
+      * curtin_userdata, curtin_userdata_custom, curtin_userdata_windows, curtin_userdata_centos, curtin_userdata_suse, 
       * for Ubuntu, there is no _osystem_xxx etc suffix.
-* 
+* get_node_preseed_context:
+  * 'preseed_data': compose_preseed(get_preseed_type_for(node), node)
+  * maasserver/compose_preseed.py:compose_preseed()
 
 
 ## metadataserver/urls.py
