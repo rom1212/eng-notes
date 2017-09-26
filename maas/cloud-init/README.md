@@ -17,6 +17,7 @@ apt-get install --reinstall --print-uris -qq cloud-init
 wget http://us.archive.ubuntu.com/ubuntu/pool/main/c/cloud-init/cloud-init_0.7.9-233-ge586fe35-0ubuntu1~16.04.1_all.deb
 dpkg -x cloud-init_0.7.9-233-ge586fe35-0ubuntu1~16.04.1_all.deb cloud-init/
 ```
+* https://github.com/romans1212notes/cloud-init/tree/master/cloud-init-0.7.9
 
 ## Check Version
 ```
