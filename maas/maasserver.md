@@ -26,6 +26,13 @@
 * get_node_preseed_context:
   * 'preseed_data': compose_preseed(get_preseed_type_for(node), node)
   * maasserver/compose_preseed.py:compose_preseed()
+    * compose_commissioning_preseed
+      * metadata_url = absolute_reverse('metadata', base_url=base_url)
+      * poweroff_timeout
+      * _compose_cloud_init_preseed
+    * compose_curtin_preseed
+      * metadata_url = absolute_reverse('curtin-metadata', base_url=base_url)
+      * _compose_cloud_init_preseed
 * get_preseed_type_for(node)
   ```
     if is_commissioning_preseed:
