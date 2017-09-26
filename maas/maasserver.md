@@ -9,6 +9,15 @@
   * dispatch: get "op", and find exported functions by self.exports.
   * class OperationsHandler(OperationsHandlerMixin, piston3.handler.BaseHandler, metaclass=OperationsHandlerType):
 
+## preseed.py
+* get_preseed_template
+ * PRESEED_TEMPLATE_LOCATIONS: "/etc/maas/preseeds", "/usr/share/maas/preseeds",
+   * content is from maaas/contrib/preseeds_v2/
+     * commissioning, curtin_userdata, curtin_userdata_custom, curtin_userdata_windows, enlist_userdata, curtin,  curtin_userdata_centos, curtin_userdata_suse, enlist
+     * for Ubuntu, there is no _osystem_xxx etc suffix.
+* 
+
+
 ## metadataserver/urls.py
 * meta_data_anon_handler = OperationsResource(AnonMetaDataHandler)
   * class AnonMetaDataHandler(VersionIndexHandler) in metadataserver/api.py
