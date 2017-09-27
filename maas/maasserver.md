@@ -74,3 +74,20 @@
 
 ## api.py
 * MAASScriptsHandler - (replace CommissioningScriptsHandler) 
+* CurtinUserDataHandler
+  * read -> get_curtin_userdata() -> get_curtin_yaml_config() + get_curtin_installer_url()
+    * main_config = get_curtin_config(node)
+      * template: maas/contrib/preseeds_v2/curtin_userdata
+        * debconf_selections
+    * cloud_config = compose_curtin_cloud_config(node) -> get_curtin_cloud_config
+      * /etc/cloud/cloud.cfg.d/90_maas_datasource.cfg
+      * /etc/cloud/cloud.cfg.d/90_maas_cloud_config.cfg
+      * /etc/cloud/cloud.cfg.d/90_maas_ubuntu_sso.cfg
+      * /etc/cloud/cloud.cfg.d/90_maas_cloud_init_reporting.cfg
+    * archive_config = compose_curtin_archive_config(node)
+      *  apt related
+    * reporter_config = compose_curtin_maas_reporter(node)
+    * swap_config = compose_curtin_swap_preseed(node)
+    * kernel_config = compose_curtin_kernel_preseed(node)
+      * 'kernel': kpackage
+    * verbose_config = compose_curtin_verbose_preseed()
