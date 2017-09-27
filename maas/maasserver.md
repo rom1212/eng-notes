@@ -76,7 +76,14 @@
 * MAASScriptsHandler - (replace CommissioningScriptsHandler)
 * UserDataHandler
   * user_data = NodeUserData.objects.get_user_data(node)
-    * where NodeUserData is written by maasserver/models/node.py: start_commissioning
+    * where NodeUserData is written by maasserver/models/node.py: start_commissioning() - which is trigger by api/ui
+      * commissioning_userdata = generate_user_data_for_status()
+        * metadataserver/user_data/__init__.py: generate_user_data_for_status
+          * metadataserver/template/commissioning.template
+            * maas_run_remote_scripts.py
+              * download_and_extract_tar("%s/maas-scripts/" % url)
+                * metadataserver/urls.py: maas-scripts/
+    
 * CurtinUserDataHandler
   * read -> get_curtin_userdata() -> get_curtin_yaml_config() + get_curtin_installer_url()
     * main_config = get_curtin_config(node)
