@@ -83,6 +83,8 @@
             * maas_run_remote_scripts.py
               * download_and_extract_tar("%s/maas-scripts/" % url)
                 * metadataserver/urls.py: maas-scripts/
+  * so, after host get user_data, it will call /maas-scripts/, and it's handlers.
+ 
     
 * CurtinUserDataHandler
   * read -> get_curtin_userdata() -> get_curtin_yaml_config() + get_curtin_installer_url()
