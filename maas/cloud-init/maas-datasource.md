@@ -13,10 +13,19 @@
     ('user-data', 'user-data', True, True),
   ]
   ```
-  Then, the actual urls accessed will be url = "%s/%s/%s" % (seed_url, version, path), e.g.
-    * /MAAS/metadata/2012-03-01/meta-data/instance-id
-    * /MAAS/metadata/2012-03-01/meta-data/local-hostname
-    * /MAAS/metadata/2012-03-01/meta-data/public-keys
-    * /MAAS/metadata/2012-03-01/meta-data/vendor-data
-    * /MAAS/metadata/2012-03-01/user-data
+  Then, the actual urls accessed will be url = "%s/%s/%s" % (seed_url, version, path),
+  Two types of seed_url are used in maas
+    * metadata (which is for comminssioning)
+      * /MAAS/metadata/2012-03-01/meta-data/instance-id
+      * /MAAS/metadata/2012-03-01/meta-data/local-hostname
+      * /MAAS/metadata/2012-03-01/meta-data/public-keys
+      * /MAAS/metadata/2012-03-01/meta-data/vendor-data
+      * /MAAS/metadata/2012-03-01/user-data
+    * curtin (which is for deploying)
+      * /MAAS/metadata/curtin/2012-03-01/meta-data/instance-id
+      * /MAAS/metadata/curtin/2012-03-01/meta-data/local-hostname
+      * /MAAS/metadata/curtin/2012-03-01/meta-data/public-keys
+      * /MAAS/metadata/curtin/2012-03-01/meta-data/vendor-data
+      * /MAAS/metadata/curtin/2012-03-01/user-data
+    
     
