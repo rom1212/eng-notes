@@ -74,6 +74,10 @@
 
 ## api.py
 * MAASScriptsHandler - (replace CommissioningScriptsHandler)
+  * read() 
+    * _add_script_set_to_tar():
+      * provisioningserver/refresh/node_info_scripts.py: NODE_INFO_SCRIPTS
+    * node.current_testing_script_set
 * UserDataHandler
   * user_data = NodeUserData.objects.get_user_data(node)
     * where NodeUserData is written by maasserver/models/node.py: start_commissioning() - which is trigger by api/ui
