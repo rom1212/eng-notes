@@ -27,5 +27,14 @@
       * /MAAS/metadata/curtin/2012-03-01/meta-data/public-keys
       * /MAAS/metadata/curtin/2012-03-01/meta-data/vendor-data
       * /MAAS/metadata/curtin/2012-03-01/user-data
+  * it returns a tuple of (metadata, userdata, vendordata)
+* class DataSourceMAAS(sources.DataSource):
+  * get_data()
+    * read_maas_seed_url() and then put the return to 
+      * self.userdata_raw = ud
+      * self.metadata = md
+      * self.vendordata_pure = vd
+    * In maas regiond.log, we see one more entry for xxx/meta-data/instance-id request, that's because it does a check before doing all the requests: self.wait_for_metadata_service(url)
+
     
     
