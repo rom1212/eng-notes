@@ -73,7 +73,10 @@
 * r'^[/]*(?P<version>[^/]+)/maas-scripts, maas_scripts_handler (MAASScriptsHandler), 
 
 ## api.py
-* MAASScriptsHandler - (replace CommissioningScriptsHandler) 
+* MAASScriptsHandler - (replace CommissioningScriptsHandler)
+* UserDataHandler
+  * user_data = NodeUserData.objects.get_user_data(node)
+    * where NodeUserData is written by maasserver/models/node.py: start_commissioning
 * CurtinUserDataHandler
   * read -> get_curtin_userdata() -> get_curtin_yaml_config() + get_curtin_installer_url()
     * main_config = get_curtin_config(node)
