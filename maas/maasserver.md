@@ -43,8 +43,10 @@
 *   
 
 
-## metadataserver/urls.py
-* meta_data_anon_handler = OperationsResource(AnonMetaDataHandler)
+# metadataserver
+## urls.py
+* r'^[/]*(?P<version>[^/]+)/by-id/(?P<system_id>[\w\-]+)/$', meta_data_anon_handler
+  * meta_data_anon_handler = OperationsResource(AnonMetaDataHandler)
   * class AnonMetaDataHandler(VersionIndexHandler) in metadataserver/api.py
     * operations
       * get_enlist_preseed
@@ -68,4 +70,7 @@
       * class MetadataViewHandler(OperationsHandler)
         * create = update = delete = None
         * def read(self, request, mac=None): return make_list_response(sorted(self.subfields))
+* r'^[/]*(?P<version>[^/]+)/maas-scripts, maas_scripts_handler (MAASScriptsHandler), 
 
+## api.py
+* MAASScriptsHandler - (replace CommissioningScriptsHandler) 
