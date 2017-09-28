@@ -25,12 +25,6 @@ https://docs.ubuntu.com/maas/2.2/en/api
   *  sudo unsquashfs -f -d /media/location1 /media/location2/file.squashfs
   * https://askubuntu.com/questions/437880/extract-a-squashfs-to-an-existing-directory
 
-
-# maasserver
-##  node_action.py
-
-# provisioningserver
-
 ## ISCI with squashfs
 * kernel_opts.py
   * compose_purpose_opts()
@@ -46,3 +40,6 @@ https://docs.ubuntu.com/maas/2.2/en/api
   * maas.log
   * rackd.log
   * regiond.log
+
+## services
+maas-regiond, maas-rackd
