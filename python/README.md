@@ -1,4 +1,9 @@
 # Development Environment
+## pip
+# pip with proxy
+```
+sudo pip --proxy http://xxxx:xxx install xxx
+```
 ## VirtualEnv
 ### Install
 https://virtualenv.pypa.io/en/stable/installation/
