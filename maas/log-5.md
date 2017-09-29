@@ -17,6 +17,7 @@
  'apparmor=0']
 ```
 * AnonMetaDataHandler:get_enlist_preseed()
+Use template: contrib/preseeds_v2/enlist
 ```
 #cloud-config
 datasource:
@@ -28,4 +29,27 @@ datasource:
     metadata_url: http://xx.xx.xx.xx:5240/MAAS/metadata/enlist
 
 output: {all: '| tee -a /var/log/cloud-init-output.log'
+```
+* EnlistUserDataHandler:read()
+Use template: contrib/preseeds_v2/enlist_userdata, which also include in src/metadataserver/user_data/templates/snippets/, e.g.
+```
+#cloud-config
+
+rsyslog:
+   remotes:
+     maas: "172.23.48.5:514"
+
+power_state:
+   delay: now
+   mode: poweroff
+   timeout: 1800
+   condition: test ! -e /tmp/block-poweroff
+
+misc_bucket:
+ - &maas_enlist |
+   # Bring up all interfaces. 
+   ...
+   add_bin "maas-ipmi-autodetect-tool" <<"END_MAAS_IPMI_AUTODETECT_TOOL"
+   ...
+```
 ```
