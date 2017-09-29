@@ -1,0 +1,243 @@
+#cloud-config
+
+rsyslog:
+   remotes:
+     maas: "xxx.xx.xx.xx:514"
+
+power_state:
+   delay: now
+   mode: poweroff
+   timeout: 1800
+   condition: test ! -e /tmp/block-poweroff
+
+misc_bucket:
+ - &maas_enlist |
+   # Bring up all interfaces.
+   ip -o link | cut -d: -f2 | xargs -I{} ip link set dev {} up
+   ####  IPMI setup  ######
+   # If IPMI network settings have been configured statically, you can
+   # make them DHCP. If \'true\', the IPMI network source will be changed
+   # to DHCP.
+   IPMI_CHANGE_STATIC_TO_DHCP="false"
+
+   # In certain hardware, the parameters for the ipmi_si kernel module
+   # might need to be specified. If you wish to send parameters, uncomment
+   # the following line.
+   #IPMI_SI_PARAMS="type=kcs ports=0xca2"
+
+   TEMP_D=$(mktemp -d "${TMPDIR:-/tmp}/${0##*/}.XXXXXX")
+   IPMI_CONFIG_D="${TEMP_D}/ipmi.d"
+   BIN_D="${TEMP_D}/bin"
+   OUT_D="${TEMP_D}/out"
+   PATH="$BIN_D:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+   mkdir -p "$BIN_D" "$OUT_D" "$IPMI_CONFIG_D"
+
+   load_modules() {
+      modprobe ipmi_msghandler
+      modprobe ipmi_devintf
+      modprobe ipmi_si ${IPMI_SI_PARAMS}
+      modprobe ipmi_ssif
+      udevadm settle
+   }
+
+   add_bin() {
+      cat > "${BIN_D}/$1"
+      chmod "${2:-755}" "${BIN_D}/$1"
+   }
+   add_ipmi_config() {
+      cat > "${IPMI_CONFIG_D}/$1"
+      chmod "${2:-644}" "${IPMI_CONFIG_D}/$1"
+   }
+
+   # Example config: enable BMC remote access (on some systems.)
+   #add_ipmi_config "02-global-config.ipmi" <<"END_IPMI_CONFIG"
+   #Section Lan_Channel
+   #     Volatile_Access_Mode                    Always_Available
+   #     Volatile_Enable_User_Level_Auth         Yes
+   #     Volatile_Channel_Privilege_Limit        Administrator
+   #     Non_Volatile_Access_Mode                Always_Available
+   #     Non_Volatile_Enable_User_Level_Auth     Yes
+   #     Non_Volatile_Channel_Privilege_Limit    Administrator
+   #EndSection
+   #END_IPMI_CONFIG
+
+   add_bin "maas-ipmi-autodetect-tool" <<"END_MAAS_IPMI_AUTODETECT_TOOL"
+   #!/usr/bin/python3
+   
+   import glob
+   import re
+   import subprocess
+   
+   
+   def detect_ipmi():
+       # XXX: andreserl 2013-04-09 bug=1064527: Try to detect if node
+       # is a Virtual Machine. If it is, do not try to detect IPMI.
+       with open(\'/proc/cpuinfo\', \'r\') as cpuinfo:
+           for line in cpuinfo:
+               if line.startswith(\'model name\') and \'QEMU\' in line:
+                   return (False, None)
+   
+       (status, output) = subprocess.getstatusoutput(\'ipmi-locate\')
+       show_re = re.compile(\'(IPMI\\ Version:) (\\d\\.\\d)\')
+       res = show_re.search(output)
+       if res is None:
+           found = glob.glob("/dev/ipmi[0-9]")
+           if len(found):
+               return (True, "UNKNOWN: %s" % " ".join(found))
+           return (False, "")
+   
+       # We\'ve detected IPMI, but it doesn\'t necessarily mean we can access
+       # the BMC. Let\'s test if we can.
+       cmd = \'bmc-config --checkout --key-pair=Lan_Conf:IP_Address_Source\'
+       (status, output) = subprocess.getstatusoutput(cmd)
+       if status != 0:
+           return (False, "")
+   
+       return (True, res.group(2))
+   
+   
+   def is_host_moonshot():
+       output = subprocess.check_output([\'ipmitool\', \'raw\', \'06\', \'01\'])
+       # 14 is the code that identifies a machine as a moonshot
+       if output.split()[0] == "14":
+           return True
+       return False
+   
+   
+   def main():
+       # Check whether IPMI exists or not.
+       (status, ipmi_version) = detect_ipmi()
+       if not status:
+           # if False, then failed to detect ipmi
+           exit(1)
+   
+       if is_host_moonshot():
+           print("moonshot")
+       else:
+           print("ipmi")
+   
+   
+   if __name__ == \'__main__\':
+       main()
+   END_MAAS_IPMI_AUTODETECT_TOOL
+
+   add_bin "maas-ipmi-autodetect" <<"END_MAAS_IPMI_AUTODETECT"
+   #!/usr/bin/python3
+   #
+   # maas-ipmi-autodetect - autodetect and autoconfigure IPMI.
+   #
+   # Copyright (C) 2013-2016 Canonical
+   #
+   # Authors:
+   #    Andres Rodriguez <andres.rodriguez@canonical.com>
+   #
+   # This program is free software: you can redistribute it and/or modify
+   # it under the terms of the GNU Affero General Public License as
+   # published by the Free Software Foundation, version 3 of the License.
+   #
+   # This program is distributed in the hope that it will be useful,
+   # but WITHOUT ANY WARRANTY; without even the implied warranty of
+   # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   # GNU Affero General Public License for more details.
+   #
+   # You should have received a copy of the GNU Affero General Public License
+   # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+   
+   from collections import OrderedDict
+   import json
+   import os
+   import platform
+   import random
+   import re
+   import string
+   import subprocess
+   import time
+   
+   
+   class IPMIError(Exception):
+       """An error related to IPMI."""
+   
+   
+   def run_command(command_args):
+       """Run a command. Return output if successful or raise exception if not."""
+       output = subprocess.check_output(command_args, stderr=subprocess.STDOUT)
+       return output.decode(\'utf-8\')
+   
+   
+   def bmc_get(key):
+       """Fetch the output of a key via bmc-config checkout."""
+       command = (\'bmc-config\', \'--checkout\', \'--key-pair=%s\' % key)
+       output = run_command(command)
+       return output
+   
+   
+   def bmc_set(key, value):
+       """Set the value of a key via bmc-config commit."""
+       command = (\'bmc-config\', \'--commit\', \'--key-pair=%s=%s\' % (key, value))
+       run_command(command)
+   
+   
+   def format_user_key(user_number, parameter):
+       """Format a user key string."""
+       return \'%s:%s\' % (user_number, parameter)
+   
+   
+   def bmc_user_get(user_number, parameter):
+       """Get a user parameter via bmc-config commit."""
+       key = format_user_key(user_number, parameter)
+       raw = bmc_get(key)
+       pattern = r\'^\\s*%s(?:[ \\t])+([^#\\s]+[^\
+]*)$\' % (re.escape(parameter))
+       match = re.search(pattern, raw, re.MULTILINE)
+       if match is None:
+           return None
+       return match.group(1)
+   
+   
+   def bmc_user_set(user_number, parameter, value):
+       """Set a user parameter via bmc-config commit."""
+       key = format_user_key(user_number, parameter)
+       bmc_set(key, value)
+   
+   
+   def bmc_list_sections():
+       """Retrieve the names of config sections from the BMC."""
+       command = (\'bmc-config\', \'-L\')
+       output = run_command(command)
+       return output
+   
+   
+   def list_user_numbers():
+       """List the user numbers on the BMC."""
+       output = bmc_list_sections()
+       pattern = r\'^(User\\d+)$\'
+       users = re.findall(pattern, output, re.MULTILINE)
+   
+       return users
+   
+   
+   def pick_user_number_from_list(search_username, user_numbers):
+       """Pick the best user number for a user from a list of user numbers.
+   
+       If any any existing user\'s username matches the search username, pick
+       that user.
+   
+       Otherwise, pick the first user that has no username set.
+   
+       If no users match those criteria, raise an IPMIError.
+       """
+       first_unused = None
+   
+       for user_number in user_numbers:
+           # The IPMI spec reserves User1 as anonymous.
+           if user_number == \'User1\':
+               continue
+   
+           username = bmc_user_get(user_number, \'Username\')
+   
+           if username == search_username:
+               return user_number
+   
+           # Usually a BMC won\'t include a Username value if the user is unused.
+           # Some HP BMCs use "(Empty User)" to indicate a user in unused.
