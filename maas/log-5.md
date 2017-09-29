@@ -17,6 +17,7 @@
  'apparmor=0']
 ```
 * AnonMetaDataHandler:get_enlist_preseed()
+
 Use template: contrib/preseeds_v2/enlist
 ```
 #cloud-config
@@ -31,6 +32,7 @@ datasource:
 output: {all: '| tee -a /var/log/cloud-init-output.log'
 ```
 * EnlistUserDataHandler:read()
+
 Use template: contrib/preseeds_v2/enlist_userdata, which also include in src/metadataserver/user_data/templates/snippets/, e.g.
 ```
 #cloud-config
