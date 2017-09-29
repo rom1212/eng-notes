@@ -122,3 +122,5 @@ system_info:
       security: ['http://ports.ubuntu.com/ubuntu-ports'
 ```
 * UserDataHandler:read()
+* MAASScriptsHandler
+```NODE_INFO_SCRIPTS```
