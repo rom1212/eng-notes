@@ -5,17 +5,17 @@ Add new line before each " File" (windows)
 :%s/ File/\rFile/gc
 ```
 
-## Replace \n as a new line
-Useful to convert string output of a multi-line string 
+## Format yaml string
+Replace \n as a new line. Useful to convert string output of a multi-line string, e.g. yaml.
 ```
 :%s/\\n/\r/gc 
 
 e.g.
-
+"#cloud-config\napt:\n  preserve_sources_list: false\n  primary:\n  - arches: [default]\n    uri: http://archive.ubuntu.com/ubuntu\n "
 ```
 
 ## Format python list
-Replace , with new line
+Replace , with new line, useful for formatting list output
 ```
 :%s/, /, \r /gc
 
