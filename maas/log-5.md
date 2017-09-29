@@ -53,3 +53,20 @@ misc_bucket:
    ...
 ```
 More details: [enlist_userdata_example](https://github.com/romans1212notes/eng-notes/blob/master/maas/enlist_userdata_example)
+
+## commissioning
+* tftp.py->kernel_opts.py:compose_purpose_opts-kernel_params()
+```
+['iscsi_target_name=iqn.2004-05.com.ubuntu:maas:ephemeral-ubuntu-amd64-generic-xenial-daily', 
+ 'iscsi_target_ip=xxx.xx.xx.x', 
+ 'iscsi_target_port=3260', 
+ 'iscsi_initiator=caring-eagle', 
+ 'ip=::::caring-eagle:BOOTIF', 
+ 'ip6=off', 
+ 'ro root=/dev/disk/by-path/ip-xxx.xx.xx.x:3260-iscsi-iqn.2004-05.com.ubuntu:maas:ephemeral-ubuntu-amd64-generic-xenial-daily-lun-1', 
+ 'overlayroot=tmpfs', 
+ 'overlayroot_cfgdisk=disabled', 
+ "cc:{'datasource_list': ['MAAS']}end_cc", 
+ 'cloud-config-url=http://xxx.xx.xx.x:5240/MAAS/metadata/latest/by-id/t76377/?op=get_preseed', 
+ 'apparmor=0']
+```
