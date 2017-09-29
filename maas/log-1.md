@@ -1,6 +1,6 @@
 # logs
 ## log01.kernel-opts - enlist
-cloud-config-url=http://xx.xx.xx.xx:xx.xx.xx.xx5240/MAAS/metadata/latest/enlist-preseed/?op=get_enlist_preseed
+cloud-config-url=http://xx.xx.xx.xx:5240/MAAS/metadata/latest/enlist-preseed/?op=get_enlist_preseed
 * should -> AnonMetaDataHandler.get_enlist_preseed -> preseed.py:render_enlistment_preseed,
   * get_preseed_context: metadata_enlist_url=absolute_reverse('enlist', base_url=base_url)
 ## log02.kernel-opts - commissioning
