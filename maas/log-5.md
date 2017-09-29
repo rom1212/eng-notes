@@ -52,4 +52,3 @@ misc_bucket:
    add_bin "maas-ipmi-autodetect-tool" <<"END_MAAS_IPMI_AUTODETECT_TOOL"
    ...
 ```
-```
