@@ -52,3 +52,4 @@ misc_bucket:
    add_bin "maas-ipmi-autodetect-tool" <<"END_MAAS_IPMI_AUTODETECT_TOOL"
    ...
 ```
+More details: [enlist_userdata_example](https://github.com/romans1212notes/eng-notes/blob/master/maas/enlist_userdata_example)
