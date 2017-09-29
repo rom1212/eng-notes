@@ -8,7 +8,7 @@ cloud-config-url=http://xx.xx.xx.xx:5240/MAAS/metadata/latest/by-id/fycnr3/?op=g
 ```
 Sep 28 11:37:11 kernel_opts.py-compose_purpose_opts-kernel_params: 
 ['iscsi_target_name=iqn.2004-05.com.ubuntu:maas:ephemeral-ubuntu-amd64-generic-xenial-daily',
- 'iscsi_target_ip=172.23.48.5',
+ 'iscsi_target_ip=xx.xx.xx.xx',
  'iscsi_target_port=3260',
  'iscsi_initiator=alert-ant',
  'ip=::::alert-ant:BOOTIF',
