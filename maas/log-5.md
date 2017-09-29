@@ -134,6 +134,7 @@ maasserver/models/node.py:start_commissioning()
   _start(commissioning_user_data)
     NodeUserData.objects.set_user_data(self, commissioning_user_data)
 ```
+Basically, user data is from metadataserver/user_data/templates/commissioning.template, which also include in src/metadataserver/user_data/templates/snippets/
 
 * MAASScriptsHandler
 ```NODE_INFO_SCRIPTS```
