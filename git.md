@@ -7,6 +7,9 @@ git config --global https.proxy http://10.xx.xx.xx:3128
 ```
 
 # commands
+* check repo and branches
+  * git remote -v 
+  * git branch -r (--remote)
 * git push
   * git push origin xxx
     * where xxx might be the same name of the branch name.
