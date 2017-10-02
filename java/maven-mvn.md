@@ -1,3 +1,10 @@
+# mvn commands
+
+## mvn test
+* single test:
+  * mvn -Dtest=DBDAOTest#testDeploymentQueries test
+    * DBDAOTest is test class name, and testDeploymentQueries is method name
+
 # Install on Ubuntu 16.04
 ## Install from apt package
 ```
