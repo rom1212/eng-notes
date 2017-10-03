@@ -1,7 +1,7 @@
 # mvn commands
 
 ## mvn test
-* single test:
+* [single test](http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html):
   * mvn -Dtest=DBDAOTest#testDeploymentQueries test
     * DBDAOTest is test class name, and testDeploymentQueries is method name
 
