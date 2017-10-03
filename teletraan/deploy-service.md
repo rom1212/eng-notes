@@ -4,6 +4,10 @@
 * ./build.sh
 * ./run.sh
 * ./update.sh - build.sh and run.sh
+* test: 
+  * rm -rf /tmp/deploy-unit-test/
+  * mvn -Dtest=DBDAOTest#testDeploymentQueries test
+    * DBDAOTest is test class name, and testDeploymentQueries is method name
 
 ## Need a new deployment for test
 * Use "RESTART" to retire old failed deployment. (keep the same build)
