@@ -30,6 +30,15 @@ e.g.
 ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
 ```
 
+# HA 
+## docs
+* https://dev.mysql.com/doc/refman/5.7/en/mysql-innodb-cluster-introduction.html
+* https://dev.mysql.com/doc/refman/5.7/en/group-replication.html
+* http://mysqlhighavailability.com/category/replication/group-replication/
+* https://dev.mysql.com/doc/relnotes/mysql/5.7/en/news-5-7-17.html
+* https://dev.mysql.com/doc/refman/5.7/en/group-replication-limitations.html
+* https://dev.mysql.com/doc/refman/5.7/en/mysql-innodb-cluster-limitations.html
+
 # Notes
 ```
 === uninstall on ubuntu 16.04 ===
