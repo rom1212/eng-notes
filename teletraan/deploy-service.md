@@ -68,7 +68,7 @@ select env_id, env_name, stage_name, deploy_id, deploy_type, last_update from en
 ```
 * deploys - one env_id -> many deploy_id
 ```
-select env_id, deploy_id, deploy_type, build_id, state, acc_status from deploys order by start_date desc;
+select deploy_id, deploy_type, env_id, build_id, state, acc_status from deploys order by start_date desc;
 ```
 Retire a deployment
 ```
