@@ -8,3 +8,7 @@
   * environs/env_landing.html
     * deploys/deploy_progress.tmpl
       * deploys/deploy_progress_summary.tmpl
+      
+# logs
+* /tmp/deploy_board/
+  * access.log
