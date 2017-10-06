@@ -43,3 +43,8 @@ https://docs.ubuntu.com/maas/2.2/en/api
 
 ## services
 maas-regiond, maas-rackd
+
+## Images
+https://docs.ubuntu.com/maas/2.1/en/installconfig-images
+
+MAAS supports the images it generates for stable Ubuntu releases and for CentOS 6.6 and CentOS 7. Ubuntu Advantage is needed in order to use Windows, RHEL and SUSE images or in order to build a custom image for any operating system.
