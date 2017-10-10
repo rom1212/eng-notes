@@ -60,10 +60,20 @@ git pull upstream master
 # PR after Review
 Case: after sending out PR, upstream also changed. If we only update changed files, PR will not compare with the newest upstream file, and so we musht somehow sync our patch branch with the base branch. 
 
-We cannot do rebase for our patch, because our patch is alread pushed, and rebase will make local diverge from remote, and we cannot push the changes with after rebase. Not sure why we can push the merged commits, but cannot push rebased commits??? TTT
+We cannot do rebase for our patch, because our patch is alread pushed, and rebase will make local diverge from remote, and we cannot push the changes with after rebase. Not sure why we can push the merged commits, but cannot push rebased commits??? TTT - rebase changes the parent and merge doesn't??? not sure.
 
-However, we can merge with the base branch, and then push to our patch branch. 
+However, we can still forcely push the changes to the patch branch, e.g.
+```
+git remote add upstream https://github.com/xxx/xxx.git
+git fetch upstream  # this is fetch, not pull because pull will do the merge.
+git checkout patch-n
+Options 1) git rebase -i upstream/master  
+# If there are so many changes, rebase could be a headach. We can redo our changes
+Options 2) git reset --hard xxx, git merge upstream/master, redo our changes.
+git push origin patch-n --force (or -f)
+```
 
+Merge is also an option, but it could mess-up the base.
 ```
 git remote add upstream https://github.com/xxx/xxx.git
 git fetch upstream  # this is fetch, not pull because pull will do the merge.
