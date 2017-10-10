@@ -58,6 +58,12 @@ git pull upstream master
 ```
 
 # PR after Review
+Case: after sending out PR, upstream also changed.
+
+We cannot do rebase for our patch, because our patch is alread pushed, and rebase will make local diverge from remote.
+
+It might have problem when doing the merge for the upstream master, because upstream needs to figure out how to merge and do the squash so that my changes/commits will appear mostly as one commit in the master.
+
 ```
 git remote add upstream https://github.com/xxx/xxx.git
 git fetch upstream  # this is fetch, not pull because pull will do the merge.
