@@ -58,11 +58,11 @@ git pull upstream master
 ```
 
 # PR after Review
-Case: after sending out PR, upstream also changed.
+Case: after sending out PR, upstream also changed. If we only update changed files, PR will not compare with the newest upstream file, and so we musht somehow sync our patch branch with the base branch. 
 
-We cannot do rebase for our patch, because our patch is alread pushed, and rebase will make local diverge from remote.
+We cannot do rebase for our patch, because our patch is alread pushed, and rebase will make local diverge from remote, and we cannot push the changes with after rebase. Not sure why we can push the merged commits, but cannot push rebased commits??? TTT
 
-It might have problem when doing the merge for the upstream master, because upstream needs to figure out how to merge and do the squash so that my changes/commits will appear mostly as one commit in the master.
+However, we can merge with the base branch, and then push to our patch branch. 
 
 ```
 git remote add upstream https://github.com/xxx/xxx.git
@@ -70,3 +70,10 @@ git fetch upstream  # this is fetch, not pull because pull will do the merge.
 git checkout patch-n
 git merge upstream/master
 ```
+
+It might have problem when doing the merge for the upstream master, because upstream needs to figure out how to merge and do the squash so that my changes/commits will appear mostly as one commit in the master.
+
+github provides three options:
+* Merge: which is basically "git merge"
+* squash and merge: which is "git merge --squash"
+* rebase
