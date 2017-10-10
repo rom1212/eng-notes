@@ -56,4 +56,11 @@ git clone git@github.com:YOUR-USERNAME/YOUR-FORKED-REPO.git
 ```
 git pull upstream master
 ```
+
+# PR after Review
+```
+git remote add upstream https://github.com/xxx/xxx.git
+git fetch upstream  # this is fetch, not pull because pull will do the merge.
+git checkout patch-n
+git merge upstream/master
 ```
