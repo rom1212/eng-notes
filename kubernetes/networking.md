@@ -12,6 +12,8 @@ http://chuckbutler.github.io/flannel-docker-charm/user/getting-started.html
     * look up from etcd (mostly in cached since it is using watch for subnets changes) to find out which host to pass the packet to
     * use UDP to send out the packets to the dst host
     * on that host, flanneld decode the packet, and pass it to a given container interface.
+* docs
+  * https://coreos.com/blog/introducing-rudder.html
 
 # Docs
 https://kubernetes.io/docs/concepts/cluster-administration/networking/
