@@ -15,6 +15,7 @@ ls /var/lib/dhcp/
 * source: https://github.com/isc-projects/kea
 * docs:
   * https://www.isc.org/wp-content/uploads/2017/05/131-kea-ripe74-final.pdf
+  * https://code.facebook.com/posts/845909058837784/using-isc-kea-dhcp-in-our-data-centers/
 * HA with MySQL Cluster
   * https://www.isc.org/blogs/kea-with-mysql-cluster-backend-test-report/
   * https://kb.isc.org/article/AA-01406/210/MySQL-Cluster-set-up-for-Kea-1.0.html
