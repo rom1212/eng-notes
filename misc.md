@@ -25,7 +25,12 @@ Tried several things:
   * First try:
     * http://www.knowledgewave.com/blog/how-to-recover-an-unsaved-word-document
     * Use Info->"Manage Document"->Recover Unsaved Documents
-      * cannot found the old document in the folder, e.g. xxx/Microsoft/Office/UnsavedFiles
+      * cannot found the old document (xxx.asd) in the folder, e.g. C:\Users\xxx\AppData\Local\Microsoft\Office\UnsavedFiles, and sub-folders.
+  * Second try:
+    * Use "Options"->Save-> AutoRecover file location: e.g. C:\Users\xxx\AppData\Roaming\Microsoft\Word\
+      * in the folder, found one file like this: ~Wxxx.asd
+    * Use Info->"Manage Document"->Recover Unsaved Documents, and change the default load location to the above location, and load that file, and it works!!!! yeah!!!
+      
     
 
 
