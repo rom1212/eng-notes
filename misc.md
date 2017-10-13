@@ -21,10 +21,12 @@ http://finance.sina.com.cn/realstock/company/sh600000/nc.shtml
 
 The document was worked on for sometime, and then the computer was shutdown/sleep. When login again, we found that the changes are not there. The document was a onedrive document opened by Word 2016.
 
-Done several things:
+Tried several things:
   * First try:
     * http://www.knowledgewave.com/blog/how-to-recover-an-unsaved-word-document
-    * 
+    * Use Info->"Manage Document"->Recover Unsaved Documents
+      * cannot found the old document in the folder, e.g. xxx/Microsoft/Office/UnsavedFiles
+    
 
 
 
