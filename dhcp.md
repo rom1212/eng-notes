@@ -1,4 +1,7 @@
-# Install & Start
+# DHCP Servers
+
+## ISC-DHCP
+* Install & Start
 ```
 sudo vim /etc/dhcp/dhcpd.conf
 sudo systemctl restart isc-dhcp-server
@@ -6,10 +9,22 @@ sudo systemctl status isc-dhcp-server
 ls /var/lib/dhcp/
 ```
 
+## ISC-KEA
+* http://www.isc.org/kea/
+* dev: http://kea.isc.org/wiki
+* source: https://github.com/isc-projects/kea
+* docs:
+  * https://www.isc.org/wp-content/uploads/2017/05/131-kea-ripe74-final.pdf
+* HA with MySQL Cluster
+  * https://www.isc.org/blogs/kea-with-mysql-cluster-backend-test-report/
+  * https://kb.isc.org/article/AA-01406/210/MySQL-Cluster-set-up-for-Kea-1.0.html
+  
+  
 # Test DHCP Server: dhcptest
 * https://github.com/CyberShadow/dhcptest
 * Download DMD (package) from http://dlang.org/download.html#dmd
   * ```sudo dpkg -i dmd_2.075.1-0_amd64.deb```
+
 ## Test a specific DHCP server with a specific client MAC Address
 ```
 sudo ./dhcptest --bind xxx.xx.49.11 --mac xx:xx:xx:08:98:85
