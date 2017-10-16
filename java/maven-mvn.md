@@ -47,3 +47,17 @@ ${user.home}/.m2/settings.xml
   </proxies>
 </settings>
 ```
+
+## Mirror
+```
+<settings>
+  <mirrors>
+    <mirror>
+      <id>UK</id>
+      <name>UK Central</name>
+      <url>http://uk.maven.org/maven2</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
+  </mirrors>
+</settings>  
+```
