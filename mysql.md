@@ -51,7 +51,7 @@ rm -rf /var/lib/mysql-keyring/
 rm -rf /var/log/mysql
 
 === install on ubuntu 16.04 ===
-apt-get install  mysql-server-5.7 # set root password, and also mysqld is already running.
+apt-get install  mysql-server # set root password, and also mysqld is already running. old version can use mysql-server-5.7 
 mysql_secure_installation # make it more secure by removing test accout and user 
 
 enable remote acces: 
