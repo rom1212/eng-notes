@@ -34,6 +34,10 @@ select scm_commit_7, builds.build_id, package_name, package_url, builds.publish_
   ```
   update deploys set state = 'SUCCEEDED', acc_status = 'ACCEPTED' where env_id = '' and deploy_id = '';
   ```
+  * Sometimes need to update deploy_id of the environment
+  ```
+  update environs set deploy_id='' where env_id='';
+  ```
 * Agent
   * rm /tmp/deployd/env_status
   * rm /tmp/deployd/logs/* or move log files;
