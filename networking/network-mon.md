@@ -12,3 +12,11 @@ man pcap
 #include <pcap/pcap.h>
 ```
 * Source: https://github.com/the-tcpdump-group/libpcap
+
+## nethogs
+* Source: https://github.com/raboof/nethogs/
+* Implementation
+  * https://github.com/raboof/nethogs/blob/master/src/decpcap.c
+    * call pcap_* functions
+  * 
+* reference to other tools, e.g. nettop, iftop, 
