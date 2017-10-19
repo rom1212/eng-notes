@@ -34,3 +34,15 @@ man pcap
 ### cacti
 * mostly a graphing tool
 * https://github.com/Cacti/cacti
+
+### arp-watch
+https://github.com/st3v/arp-watch/tree/master/observer
+
+### net-tools
+* source: https://github.com/ecki/net-tools, https://github.com/giftnuss/net-tools
+* including
+  * arp, hostname, ifconfig, netstat, rarp and route
+  * particular network hardware types (plipconfig, slattach, mii-tool)
+  * advanced aspects of IP configuration (iptunnel, ipmaddr).
+### traceroute
+https://packages.ubuntu.com/trusty/inetutils-traceroute
