@@ -32,4 +32,5 @@
 * ztp_xxxx.log(.n)
 
 # Important Topics
-* [network discovery] (https://github.com/romans1212notes/eng-notes/blob/master/networking/network-discovery.md)
+* [network discovery](https://github.com/romans1212notes/eng-notes/blob/master/networking/network-discovery.md)
+* [network monitoring](https://github.com/romans1212notes/eng-notes/blob/master/networking/network-mon.md)
