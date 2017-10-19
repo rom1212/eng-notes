@@ -11,6 +11,4 @@ man pcap
 ```
 #include <pcap/pcap.h>
 ```
-* Source
-https://github.com/the-tcpdump-group/libpcap
-
+* Source: https://github.com/the-tcpdump-group/libpcap
