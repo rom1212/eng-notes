@@ -23,6 +23,9 @@ vim /etc/sysctl.conf
 
 ## 2. iptables
 * https://www.howtogeek.com/177621/the-beginners-guide-to-iptables-the-linux-firewall/
+* man iptables
+  * TABLES: 'filter' (default), nat, etc
+  * iptables --table nat --list --verbose (-L -v)
 * update
 ```
 ```
