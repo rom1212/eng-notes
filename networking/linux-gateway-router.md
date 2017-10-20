@@ -16,5 +16,8 @@ cat /proc/sys/net/ipv4/ip_forward
 # Enable on the fly
 sysctl -w net.ipv4.ip_forward=1
 echo 1 > /proc/sys/net/ipv4/ip_forward
+
+# Permanet
+vim /etc/sysctl.conf
 ```
 
