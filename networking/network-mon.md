@@ -45,4 +45,11 @@ https://github.com/st3v/arp-watch/tree/master/observer
   * particular network hardware types (plipconfig, slattach, mii-tool)
   * advanced aspects of IP configuration (iptunnel, ipmaddr).
 ### traceroute
-https://packages.ubuntu.com/trusty/inetutils-traceroute
+* sudo apt install inetutils-traceroute
+* How it works
+  * http://www.thegeekstuff.com/2012/05/traceroute-examples
+  * send upd/icmp packets with TTL from 1 to n (max default 64). After discarding the packet, router sends an ICMP error message of “Time exceeded” back to the source from where packet generated. The ICMP packet that is sent back contains the IP address of the router.
+  * options
+    * -n: max TTL to use (i.e. max hops to use, max route path it can detect)
+    * -w: max wait time
+  
