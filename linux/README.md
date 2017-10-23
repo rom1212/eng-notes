@@ -48,6 +48,11 @@ Host *
 ServerAliveInterval 240
 ```
 
+## Who login/history
+```
+last [-10]
+```
+
 # Ubuntu
 
 ## gdebi - install packages with dependencies
