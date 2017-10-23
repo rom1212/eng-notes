@@ -34,6 +34,11 @@ vim /etc/sysctl.conf
 * ubuntu-dev-hetmon-01:
   * 192.168.10.10, enp0s3, intnet
   * 10.0.3.15, enp0s8, NAT
+  * sudo route add default gateway 192.168.10.1
+  * ip route
+  ```
+  ```
+  * 
 * ubuntu-dev-hetmon-04-router
   * 192.168.10.1, enp0s3, intnet
   * 192.168.50.1, enp0s8, intnet2
