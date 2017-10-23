@@ -30,4 +30,13 @@ vim /etc/sysctl.conf
 ```
 ```
 
-
+## Example
+* ubuntu-dev-hetmon-01:
+  * 192.168.10.10, enp0s3, intnet
+  * 10.0.3.15, enp0s8, NAT
+* ubuntu-dev-hetmon-04-router
+  * 192.168.10.1, enp0s3, intnet
+  * 192.168.50.1, enp0s8, intnet2
+  * 10.0.4.15, enp0s9, NAT
+* ubuntu-dev-netmon-05
+  * 192.168.50.10, enp0s3, intnet2
