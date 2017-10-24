@@ -68,8 +68,33 @@ vim /etc/sysctl.conf
   sudo ip route add default via 192.168.10.1 dev enp0s3
   sudo route add default gateway 192.168.10.1
 
+  # route info
+  $ ip ro
+  default via 192.168.10.1 dev enp0s3
+  default via 10.0.3.2 dev enp0s8  proto static  metric 100
+  10.0.3.0/24 dev enp0s8  proto kernel  scope link  src 10.0.3.15  metric 100
+  169.254.0.0/16 dev enp0s3  scope link  metric 1000
+  192.168.10.0/24 dev enp0s3  proto kernel  scope link  src 192.168.10.10  metric 100
+  $ route -n
+  Kernel IP routing table
+  Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+  0.0.0.0         192.168.10.1    0.0.0.0         UG    0      0        0 enp0s3
+  0.0.0.0         10.0.3.2        0.0.0.0         UG    100    0        0 enp0s8
+  10.0.3.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s8
+  169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s3
+  192.168.10.0    0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+
+  # ping 192.168.50.1
+
+  # traceroute
+  $ traceroute 192.168.50.1
+  traceroute to 192.168.50.1 (192.168.50.1), 64 hops max
+    1   192.168.50.1  0.353ms  0.164ms  0.339ms
+  $ traceroute 192.168.10.1
+  traceroute to 192.168.10.1 (192.168.10.1), 64 hops max
+    1   192.168.10.1  0.273ms  0.112ms  0.162ms
   ```
-  * 
+  *
 
 * ubuntu-dev-netmon-05
   * 192.168.50.10, enp0s3, intnet2
