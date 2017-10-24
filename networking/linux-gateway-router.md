@@ -64,9 +64,10 @@ vim /etc/sysctl.conf
   ```
   * add new gateway
   ```
+  # 'default' is a PREFIX, which is a shorthand for 0.0.0.0/0. iproute2 to verify???TTT
+  sudo ip route add default via 192.168.10.1 dev enp0s3
   sudo route add default gateway 192.168.10.1
 
-  sudo ip route
   ```
   * 
 
