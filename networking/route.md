@@ -1,5 +1,10 @@
 # routing table
-
+* docs
+  * http://linux-ip.net/html/routing-tables.html
+* server routing tables
+  * local, main, default, unspec
+* routing type for each table entry
+  * local, broadcast, nat: these three types are only used for table "local"
 
 # route command
 
