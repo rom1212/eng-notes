@@ -5,6 +5,10 @@
   * local, main, default, unspec
 * routing type for each table entry
   * local, broadcast, nat: these three types are only used for table "local"
+* nat
+  * use ip tables: http://linux-ip.net/html/nat-dnat.html#ex-nat-dnat-full
+  * use iproute2: http://linux-ip.net/html/nat-stateless.html
+  * https://serverfault.com/questions/135053/iproute2-rules-and-iptables-nat-what-is-the-difference
 
 # route command
 
