@@ -36,11 +36,11 @@ vim /etc/sysctl.conf
   ```
   # check the value: sysctl net.ipv4.ip_forward
   # enable ip forward
-  sysctl -w net.ipv4.ip_forward=1  or echo 1 > /proc/sys/net/ipv4/ip_forward
+  sudo sysctl -w net.ipv4.ip_forward=1  or echo 1 > /proc/sys/net/ipv4/ip_forward
   # where to route to, i.e. outgoing traffic, MASQUERADE???
-  iptables --table nat --append POSTROUTING --out-interface enp0s8 -j MASQUERADE
+  sudo iptables --table nat --append POSTROUTING --out-interface enp0s8 -j MASQUERADE
   # for each incoming interface
-  iptables --append FORWARD --in-interface enp0s3 -j ACCEPT
+  sudo iptables --append FORWARD --in-interface enp0s3 -j ACCEPT
   ```
 
 * ubuntu-dev-hetmon-01:
