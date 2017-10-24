@@ -2,6 +2,8 @@
 * docs
   * http://linux-ip.net/html/routing-tables.html
   * https://www.cyberciti.biz/faq/howto-linux-configuring-default-route-with-ipcommand/
+  * http://www.adminsehow.com/2011/09/iptables-packet-traverse-map/
+  * http://www.thegeekstuff.com/2012/04/route-examples/
 * server routing tables
   * local, main, default, unspec
 * routing type for each table entry
