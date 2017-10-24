@@ -9,6 +9,14 @@
 ### Docs
 * https://www.tecmint.com/command-line-tools-to-monitor-linux-performance/
 * http://www.bettertechtips.com/linux/linux-network-monitoring-tools/
+* https://www.digitalocean.com/community/tutorials/how-to-use-top-netstat-du-other-tools-to-monitor-server-resources#network
+* iptraf
+* https://www.ittsystems.com/best-open-source-network-monitoring-tools/
+* arpwatch
+* https://www.dynacont.net/documentation/linux/network_monitoring/
+* https://www.opsview.com/resources/network/blog/network-monitoring-tools-linux
+* https://www.linuxtechi.com/open-source-server-network-monitoring-tools-for-linux/
+* https://en.wikipedia.org/wiki/Open-AudIT
 
 ### libpcap
 * Install
