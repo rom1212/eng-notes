@@ -1,6 +1,7 @@
 # routing table
 * docs
   * http://linux-ip.net/html/routing-tables.html
+  * https://www.cyberciti.biz/faq/howto-linux-configuring-default-route-with-ipcommand/
 * server routing tables
   * local, main, default, unspec
 * routing type for each table entry
