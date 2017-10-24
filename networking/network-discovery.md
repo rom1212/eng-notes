@@ -50,4 +50,7 @@ Others:
 ## others  
 * https://serverfault.com/questions/245136/how-to-find-out-mac-addresses-of-all-machines-on-network
 * "linux discovery nearby mac address"
+* http://rayslinux.blogspot.com/2015/02/10-handy-tools-for-network-discovery.html
+* https://www.linux.com/learn/who-and-what-my-network-probing-your-network-linux
+* 
 
