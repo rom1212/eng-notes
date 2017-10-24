@@ -94,7 +94,11 @@ vim /etc/sysctl.conf
   traceroute to 192.168.10.1 (192.168.10.1), 64 hops max
     1   192.168.10.1  0.273ms  0.112ms  0.162ms
   ```
-  *
+  * delete gateway
+  ```
+  sudo ip route del default via 192.168.10.1 dev enp0s3
+  sudo ip route del default via 192.168.10.1
+  ```
 
 * ubuntu-dev-netmon-05
   * 192.168.50.10, enp0s3, intnet2
