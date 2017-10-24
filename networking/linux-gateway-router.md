@@ -46,9 +46,27 @@ vim /etc/sysctl.conf
 * ubuntu-dev-hetmon-01:
   * 192.168.10.10, enp0s3, intnet
   * 10.0.3.15, enp0s8, NAT
-  * sudo route add default gateway 192.168.10.1
-  * ip route
+  * route info before adding new gateway
   ```
+  $ ip route
+  default via 10.0.3.2 dev enp0s8  proto static  metric 100
+  10.0.3.0/24 dev enp0s8  proto kernel  scope link  src 10.0.3.15  metric 100
+  169.254.0.0/16 dev enp0s3  scope link  metric 1000
+  192.168.10.0/24 dev enp0s3  proto kernel  scope link  src 192.168.10.10  metric 100
+
+  $ route -n
+  Kernel IP routing table
+  Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+  0.0.0.0         10.0.3.2        0.0.0.0         UG    100    0        0 enp0s8
+  10.0.3.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s8
+  169.254.0.0     0.0.0.0         255.255.0.0     U     1000   0        0 enp0s3
+  192.168.10.0    0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+  ```
+  * add new gateway
+  ```
+  sudo route add default gateway 192.168.10.1
+
+  sudo ip route
   ```
   * 
 
