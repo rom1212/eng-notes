@@ -59,9 +59,12 @@ https://github.com/st3v/arp-watch/tree/master/observer
 * How it works
   * http://www.thegeekstuff.com/2012/05/traceroute-examples
   * send upd/icmp packets with TTL from 1 to n (max default 64). After discarding the packet, router sends an ICMP error message of “Time exceeded” back to the source from where packet generated. The ICMP packet that is sent back contains the IP address of the router.
-  * options
-    * -n: max TTL to use (i.e. max hops to use, max route path it can detect)
-    * -w: max wait time
-    * -I: ICMP
-    * -T: TCP
+  * TCP traceroute: use half-open technique, i.e. not a full tcp connection. TCP connection needs three-way hand-shake, but traceroute only use the first two hand-shake, and so it doesn't complete the three-way hand-shake and so there is no tcp connection established.
+    * https://linux.die.net/man/8/traceroute
+    *  https://linux.die.net/man/1/nmap
+* options
+  * -n: max TTL to use (i.e. max hops to use, max route path it can detect)
+  * -w: max wait time
+  * -I: ICMP
+  * -T: TCP
   
