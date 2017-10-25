@@ -4,6 +4,20 @@
 # commands
 ## tcpdump
 * ICMP only: tcpdump -i eth0 icmp
+* Analyze TCP traffic
+```
+# format
+#  IP (header)
+#     src -> dst                # this line is for TCP, N.B. there is no "TCP" text in this line.
+```
+* Abusolute sequence number: tcpdump -S
+* 
+
+## wireshark
+* sudo apt install wireshark
+* sudo wireshark - privilige
+* absolute sequence number
+  * Edit->Preferences->Protocols->TCP->Relative Sequence Numbers
 
 ## restart network
 * ip addr flush interface-name
