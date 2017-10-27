@@ -1,6 +1,10 @@
 # Development Environment
-## pip
-# pip with proxy
+## install pip
+```
+#ubuntu 16.04
+sudo apt install python-pip
+```
+## pip with proxy
 ```
 sudo pip --proxy http://xxxx:xxx install xxx
 ```
