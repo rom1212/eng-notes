@@ -23,6 +23,7 @@ sudo passwd xxx
 # ??? take effect next loging ???
 sudo adduser xx sudo  
 
+# sudo vim /etc/sudoers, add the following line at the end of it.
 # execute command without password: https://askubuntu.com/questions/147241/execute-sudo-without-password
 username ALL=(ALL) NOPASSWD: ALL
 ```
