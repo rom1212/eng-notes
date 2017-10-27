@@ -6,9 +6,11 @@ sudo apt install python-pip
 ```
 ## pip with proxy
 ```
+# it can also take environment varibles: http_proxy, https_proxy,
 sudo pip --proxy http://xxxx:xxx install xxx
 ```
 ## VirtualEnv
+* When behind a proxy, virtualenv can use environment variable http_proxy, https_proxy
 ### Install
 https://virtualenv.pypa.io/en/stable/installation/
 ```
