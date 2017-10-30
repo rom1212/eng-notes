@@ -3,9 +3,18 @@ https://github.com/kubernetes/kubernetes/tree/master/build/
 https://kubernetes.io/docs/getting-started-guides/binary_release/
 
 # Scalability - Building Large Scale Clusters
-https://kubernetes.io/docs/admin/cluster-large/ at v1.7
+## Docs
+* https://kubernetes.io/docs/admin/cluster-large/
+
+## v1.7
 * No more than 2k nodes
 * No more than 60k pods.
+
+## v1.8
+* No more than 5000 nodes
+* No more than 150000 total pods
+* No more than 300000 total containers
+* No more than 100 pods per node
 
 # Networking
 
