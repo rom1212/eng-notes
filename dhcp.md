@@ -3,11 +3,17 @@
 ## ISC-DHCP
 * Install & Start
 ```
+sudo apt install isc-dhcp-server
 sudo vim /etc/dhcp/dhcpd.conf
 sudo systemctl restart isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ls /var/lib/dhcp/
 ```
+* Example
+  * dhcp server ip: 192.168.1.105/24
+  * (dhcp.conf example)[https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/etc/dhcp/dhcpd.conf]
+  * more details: https://github.com/romans1212notes/eng-notes/tree/master/pxe-boot
+
 
 ## ISC-KEA
 * http://www.isc.org/kea/
