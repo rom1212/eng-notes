@@ -17,7 +17,7 @@ https://jingyan.baidu.com/article/eae07827bf73a81fed548576.html
 http://finance.sina.com.cn/realstock/company/sh600000/nc.shtml
 
 # Windows
-* Recover Unsaved Word document (Word 2016)
+## Recover Unsaved Word document (Word 2016)
 
 The document was worked on for sometime, and then the computer was shutdown/sleep. When login again, we found that the changes are not there. The document was a onedrive document opened by Word 2016.
 
