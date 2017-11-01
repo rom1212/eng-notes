@@ -11,7 +11,7 @@ ls /var/lib/dhcp/
 ```
 * Example
   * dhcp server ip: 192.168.1.105/24
-  * (dhcp.conf example)[https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/etc/dhcp/dhcpd.conf]
+  * [dhcp.conf example](https://github.com/romans1212notes/eng-notes/blob/master/pxe-boot/etc/dhcp/dhcpd.conf)
   * more details: https://github.com/romans1212notes/eng-notes/tree/master/pxe-boot
 
 
