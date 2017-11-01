@@ -59,8 +59,8 @@ persist-tun
 
 # pay attention to the path here. "\" doesn't work.
 ca C:/Users/xxx/ca.crt
-cert C:/Users/xxx/m00411952.crt
-key C:/Users/xxx/m00411952.key
+cert C:/Users/xxx/xxxx.crt
+key C:/Users/xxx/xxxx.key
 
 ns-cert-type server
 
