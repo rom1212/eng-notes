@@ -8,6 +8,7 @@ sudo vim /etc/dhcp/dhcpd.conf
 sudo systemctl restart isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ls /var/lib/dhcp/
+vim /var/log/syslog  # in case errors not show in systemctl status, e.g. address already in use.
 ```
 * Example
   * dhcp server ip: 192.168.1.105/24
