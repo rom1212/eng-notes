@@ -31,7 +31,40 @@ Tried several things:
       * in the folder, found one file like this: ~Wxxx.asd
     * Use Info->"Manage Document"->Recover Unsaved Documents, and change the default load location to the above location, and load that file, and it works!!!! yeah!!!
       
-    
+## OpenVPN
+* Download
+  * https://openvpn.net/index.php/open-source/downloads.html, e.g. OpenVPN 2.4.4 -- released on 2017.09.26
+* After starting, lower right corner, expand, right click, "Import file..."
+* config file
+```
+ ###OpenVPN Client.conf###
+client
 
+dev tun
 
+ #For windows client you will need TAP-Win32 adaptor name#
+;dev-node MyTap
 
+proto udp
+
+# VPN end point
+remote xx.xxx.x.xx 1194
+
+resolv-retry infinite
+
+nobind
+
+persist-key
+persist-tun
+
+# pay attention to the path here. "\" doesn't work.
+ca C:/Users/xxx/ca.crt
+cert C:/Users/xxx/m00411952.crt
+key C:/Users/xxx/m00411952.key
+
+ns-cert-type server
+
+comp-lzo
+
+verb 
+```
