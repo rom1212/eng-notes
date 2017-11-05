@@ -28,10 +28,13 @@ vim /var/log/syslog  # in case errors not show in systemctl status, e.g. address
   * https://kb.isc.org/article/AA-01406/210/MySQL-Cluster-set-up-for-Kea-1.0.html
   
 # Check DHCP Server - dhcp4check
-## Issues
+## Issues with dhcptest
 * If we bind to local address to send out DHCP DISCOVER packet, it cannot receive the broadcasted DHCP OFFER. Maybe that's because it is just listening to an specific local address, and not listening to the broadcast address (this is probably the issue of the underlying library implementation)
 * If we don't bind to a local address, we couldn't send out the request to 255.255.255.255. "Fatal error: Sendto error". So, the work around is to send to a broadcast address of the given local address's interface, mostly x.x.x.255 for /24 network.
 
+## Other docs
+* https://github.com/cmatsuoka/dhcpcheck/tree/master/dhcp
+* https://golanglibs.com/top?q=DHCP
 
 # Test DHCP Server: dhcptest
 * https://github.com/CyberShadow/dhcptest
