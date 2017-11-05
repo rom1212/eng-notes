@@ -8,3 +8,8 @@ Bearing this requirement on mind, you will find that any of other popular langua
 Like Java and C#, Golang is static, easy to learn and use, and backed by a top firm with large resources, but faster, more flexible, and lighter. Last and not least important, its compiled executive binaries are free of library dependency on linux, making deployment way too easy.
 
 ## === 
+
+# Docs
+* https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go
+  * Server-side I/O Performance: Node vs. PHP vs. Java vs. Go
+  * good article about Non-blocking I/O
