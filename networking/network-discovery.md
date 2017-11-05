@@ -58,6 +58,8 @@ Others:
   * exmaple with hping - http://www.slashroot.in/what-tcp-ping-and-how-it-used
 * https://elifulkerson.com/projects/tcping.php
 
+## lldp
+TTT???
 
 
 ## others  
