@@ -47,6 +47,19 @@ Others:
 * http://www.unix.com/ip-networking/171195-dhcp-server-discover.html
 * https://www.puryear-it.com/find-rogue-dhcp-server-using-linux
 
+## Net Scan
+* Netcat Power Tools - book
+  * using ICMP, or TCP SYN
+  * using nmap
+  
+## TCP Ping
+* https://serverfault.com/questions/14376/ping-alternative-for-tcp
+  * hping
+  * exmaple with hping - http://www.slashroot.in/what-tcp-ping-and-how-it-used
+* https://elifulkerson.com/projects/tcping.php
+
+
+
 ## others  
 * https://serverfault.com/questions/245136/how-to-find-out-mac-addresses-of-all-machines-on-network
 * "linux discovery nearby mac address"
