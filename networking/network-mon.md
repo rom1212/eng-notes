@@ -51,6 +51,7 @@ https://github.com/st3v/arp-watch/tree/master/observer
 * source: https://github.com/ecki/net-tools, https://github.com/giftnuss/net-tools
 * including
   * arp, hostname, ifconfig, netstat, rarp and route
+    * netstat with upd: e.g. netstat -a -p UDP -b
   * particular network hardware types (plipconfig, slattach, mii-tool)
   * advanced aspects of IP configuration (iptunnel, ipmaddr).
 ### traceroute
