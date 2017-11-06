@@ -15,7 +15,7 @@
 
 ## Credits
 
-Most example code taken from [A Tour of Go](http://tour.golang.org/) and a8m/go-lang-cheat-sheet
+Most example code taken from [A Tour of Go](http://tour.golang.org/) and [a8m/go-lang-cheat-sheet](https://github.com/a8m/go-lang-cheat-sheet)
 
 # Basic Syntax
 
