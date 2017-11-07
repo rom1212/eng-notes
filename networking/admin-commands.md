@@ -3,7 +3,11 @@
 
 # commands
 ## tcpdump
-* ICMP only: tcpdump -i eth0 icmp
+* Only one protocol
+  * ICMP only: tcpdump -i eth0 icmp
+  * UDP only: tcpdump -i eth0 udp
+* Options
+  * -S: Abusolute sequence number for TCP
 * Analyze TCP traffic
 ```
 # format
@@ -29,7 +33,6 @@ tcpdump: listening on enp0s3, link-type EN10MB (Ethernet), capture size 262144 b
     192.168.10.1.8000 > 192.168.10.10.56970: Flags [P.], cksum 0x9593 (incorrect -> 0xdc75), seq 3975861342:3975861359, ack 2671965004, win 235, options [nop,nop,TS val 3189662791 ecr 1116114306], length 17
 10:55:43.631784 IP (tos 0x0, ttl 64, id 9693, offset 0, flags [DF], proto TCP (6), length 52)
 ```
-* Abusolute sequence number: tcpdump -S
 * 
 
 ## wireshark
