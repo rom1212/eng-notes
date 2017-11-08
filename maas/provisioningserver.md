@@ -59,14 +59,24 @@ service_monitor = ServiceMonitor(
   ```
 
 ## rackdservices/tftp.py
-* TFTPBackend
+### TFTPBackend
 ```
     Static files such as kernels and initrds, as well as any non-MAAS files
     that the system may already be set up to serve, are served up normally.
     But PXE configurations are generated on the fly.
 ```
-
-* get_boot_method_reader
+* get_reader 
+  * get_boot_method_reader
+    * method.match_path
+      * pxe.py: PXEBootMethod(BootMethod) : match_path
+      
+### import tftp package
+* https://github.com/shylent/python-tx-tftp
+* class IBackend(interface.Interface):
+  * get_reader
+  * get_writer
+* @interface.implementer(IBackend)
+  * class FilesystemSynchronousBackend(object):
 
 ## How it get started
 * Create a plugin for Twisted - provisioningserver/plugin.py
