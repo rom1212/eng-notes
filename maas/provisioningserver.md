@@ -68,6 +68,19 @@ service_monitor = ServiceMonitor(
 
 * get_boot_method_reader
 
+## How it get started
+* Create a plugin for Twisted - provisioningserver/plugin.py
+  * @implementer(IServiceMaker, IPlugin)
+  * class ProvisioningServiceMaker
+    * makeService -> _makeServices
+      * _makeTFTPService
+        * rackdservices/tftp.py: TFTPService -> TFTPBackend
+      * _makeImageDownloadService
+        * class ImageDownloadService(TimerService, object)
+          * super(ImageDownloadService, self).__init__(self.check_interval, self.try_download)
+            * maybe_start_download -> _start_download 
+              * boot_images.py: import_boot_images() -> _run_import() -> boot_resources.import_images()
+
 # Files
 ## /var/lib/maas/boot-resources/
 ```
