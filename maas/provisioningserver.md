@@ -58,6 +58,16 @@ service_monitor = ServiceMonitor(
             ]))
   ```
 
+## rackdservices/tftp.py
+* TFTPBackend
+```
+    Static files such as kernels and initrds, as well as any non-MAAS files
+    that the system may already be set up to serve, are served up normally.
+    But PXE configurations are generated on the fly.
+```
+
+* get_boot_method_reader
+
 # Files
 ## /var/lib/maas/boot-resources/
 ```
