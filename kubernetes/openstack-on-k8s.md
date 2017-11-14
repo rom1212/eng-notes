@@ -31,4 +31,9 @@
       * Persistent volumen support is improving - stateful services, RabbitMQ, Ceph
       * Limited RBAC support with Helm
     * Ugly
+      * Underly/Overly networking
+        * K8s already has serveral components, what if one of them goes down.
+      * Persistent Volume setup
+      * Building Highly available K8s Cluster
+        * rack failure
     
