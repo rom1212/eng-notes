@@ -44,5 +44,20 @@
     * scaling
     * healing
     * upgrade - nightmare: config, database migration, availability, 
-
+  * demo
+    * kubectl get nodes
+    * kolla-kubernetes
+      * other options: lubeadm, local-up-cluster.sh, bootkube
+    * Helm
+    * kubectl -n kolla get pod
+  * PXE Boot baremental to Openstack on Kubernetes
+    * PXE
+    * MatchBox: https://github.com/coreos/matchbox
+      * matches machines (based on lables like MAC, UUID etc) to profile for PXE booting and provisioning
+    * Kubernetes using BootKube
+      * https://github.com/kubernetes-incubator/bootkube
+      * self-hosted: run kubernetes on kuberntes itself. can use kubectl to scale API
+    * Openstack using Kolla
+      * https://github.com/openstack/kolla-kubernetes
+      * containerized Openstack on Kubernetes
     
