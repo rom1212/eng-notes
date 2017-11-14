@@ -36,4 +36,13 @@
       * Persistent Volume setup
       * Building Highly available K8s Cluster
         * rack failure
+* Baremetal to Running Openstack on Kubernetes in 2 Minutes
+  * https://www.youtube.com/watch?v=3hcfesHqhgg
+  * headaches
+    * deploy - hard
+    * managing - monitoring & altering, logging, load balancer, billing
+    * scaling
+    * healing
+    * upgrade - nightmare: config, database migration, availability, 
+
     
