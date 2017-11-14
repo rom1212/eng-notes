@@ -8,3 +8,4 @@
 
 ## User Guide
 * https://kubevirt.gitbooks.io/user-guide/
+* http://events.linuxfoundation.org/sites/events/files/slides/running-virtual-machines-on-kubernetes-1.pdf
