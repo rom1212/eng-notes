@@ -17,4 +17,18 @@
       * highly opiionated about deployment
     * Kubernetes
       * more flexible to support future growth and changes.
-    
+  * Lessons learned - Openstack on K8s
+    * Good - K8s
+      * build from source - need to fix with few lines of changes, hot patcheds, cherry pick, security reviewed
+      * orchestration tool
+      * easy to deploy and upgrade - new container image, and upgrade
+      * relatively easy to customize - Kolla and Helm
+      * secrets management - K8s already has
+      * deploying requires minimal experience - even an intern can do that.
+    * Bad
+      * Fast evolving technologies - version control is very very important.
+      * Openstack Helm still under heavy development
+      * Persistent volumen support is improving - stateful services, RabbitMQ, Ceph
+      * Limited RBAC support with Helm
+    * Ugly
+    
