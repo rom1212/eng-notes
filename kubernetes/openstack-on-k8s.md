@@ -60,4 +60,6 @@
     * Openstack using Kolla
       * https://github.com/openstack/kolla-kubernetes
       * containerized Openstack on Kubernetes
+* OpenStack on Kubernetes- One Year After
+  * https://www.youtube.com/watch?v=hiepQrynsig
     
