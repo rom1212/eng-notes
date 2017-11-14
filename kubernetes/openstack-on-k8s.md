@@ -27,7 +27,7 @@
       * deploying requires minimal experience - even an intern can do that.
     * Bad
       * Fast evolving technologies - version control is very very important.
-      * Openstack Helm still under heavy development
+      * Openstack Helm still under heavy development
       * Persistent volumen support is improving - stateful services, RabbitMQ, Ceph
       * Limited RBAC support with Helm
     * Ugly
