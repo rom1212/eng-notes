@@ -10,3 +10,11 @@
     * Upgrade with ZDT (Zero down time) - Helm. k8s A/B upgrade.
     * Scale to meeting growing demand - K8s
     * Reduce time to create adn apply hot patches - Kolla, Helm
+  * Deployment choices - Kolla can generate Ansible and K8s images.
+    * Ansible
+      * limited support for rolling upgrade or scaling. First cluster is easy.
+      * require secrets management solution
+      * highly opiionated about deployment
+    * Kubernetes
+      * more flexible to support future growth and changes.
+    
