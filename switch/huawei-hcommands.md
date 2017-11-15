@@ -1,4 +1,11 @@
-# Huawei
+# Common Commands
+* display device
+* display startup
+* display interface
+* display stack
+* display 
+
+# All Commands 
 ```
 <xxx_xxxxx_xxxxxx_xx>?
 Current view commands:
