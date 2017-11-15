@@ -3,7 +3,8 @@
 * display startup
 * display interface
 * display stack
-* display 
+* display vlan
+* tracert xx.xx.xx.xx
 
 # All Commands 
 ```
