@@ -31,3 +31,12 @@
     * Minimize writing external software that manages Kubernetes
       * invevitably end up with less portable & more fragile solutions
     * Instead our tools should stand on the shoulders of Kubernetes
+    * Manage your cluster with only kubectl
+    * Upgrading a self-hosted Kubernetes cluster:
+    ```
+    kubectl apply -f kube-apiserver.yaml
+    kubectl apply -f kube-scheduler.yaml
+    kubectl apply -f kube-controller-manager.yaml
+    kubectl apply -f kube-proxy.yaml
+    ```
+  * not quite yet
