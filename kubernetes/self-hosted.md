@@ -2,13 +2,18 @@
 * [Self-Hosted Kubernetes](https://www.youtube.com/watch?v=tXyV3IQ8-0k), 2016-08-05, Aaron Levy
 * [KubeCeption! A Story of Self-Hosted Kubernetes by Aaron Levy, CoreOS, Inc.](https://www.youtube.com/watch?v=EbNxGK9MwN4), 2016-11-16, KubeCon 2016, Seattle
   * commands
-    * kubectl get deployments
+    * kubectl get deployments -n kube-system
     ```
                              DESIRED
     kube-controller-manager    2
     kube-scheduler             2 
+    kube-dns-v20
     ```
-    * kubectl get daemonsets
+    * kubectl get daemonsets -n kube-system
+    ```
+    kube-apiserver
+    kube-proxy
+    ```
     * kubectl get secrets
   * why self-host
     * vastly simplify Node bootstrap
@@ -39,4 +44,15 @@
     kubectl apply -f kube-controller-manager.yaml
     kubectl apply -f kube-proxy.yaml
     ```
-  * not quite yet
+  * Demo
+  ```
+  # on one terminal
+  $ watch kubectl get pods --all-namespaces --show-all
+  
+  # on another terminal
+  $ kubectl scale deployment/kube-scheduler --replicas=2 -n kube-system
+  $ kubectl scale deployment/kube-controller-manager --replicas=2 -n kube-system
+  $ kubectl edit daemonsets/kube-apiserver -n kube-system  # daemonset doesn't support rolling update yet
+  $ kubectl delete kube-apiserver-a3t47 -n kube-system
+  $ kubectl delete kube-apiserver-xs7vi -n kube-system
+  ```
