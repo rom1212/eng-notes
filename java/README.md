@@ -13,3 +13,9 @@
 * http://www.cprogramming.com/tutorial/java/syntax-differences-java-c++.html
 * http://docs.oracle.com/javase/tutorial/
 * Thinking in java: http://www.mindview.net/Books/TIJ/
+
+# Misc
+* Java Control Panel
+  * https://docs.oracle.com/javase/7/docs/technotes/guides/jweb/jcp/jcp.html
+  * java console: https://www.java.com/en/download/help/javaconsole.xml
+  * security - add websites for exceptions
