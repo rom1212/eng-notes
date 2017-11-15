@@ -1,3 +1,6 @@
+# Questions
+* How to find out directly connected switches? 
+
 # Huawei Switches - CloudEngine 8800&7800&6800&5800
 ## Concepts
 * [port isolation](http://support.huawei.com/enterprise/docinforeader!loadDocument1.action?contentId=DOC1000069520&partNo=10082#dc_s_ccase_vlan_001_5)
