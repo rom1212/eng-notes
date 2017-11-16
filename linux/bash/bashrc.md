@@ -3,6 +3,9 @@ alias gits='git status'
 alias gitb='git branch'
 alias bashrc='vim ~/.bashrc'
 alias sourceshell='source ~/.bashrc'
-export PATH=$PATH:~/bin/:~/go/bin/
+export PATH=$PATH:~/bin/:~/go/bin/:/usr/local/go/bin/
 export GOPATH=~/go/
+
+# show time in history command
+export HISTTIMEFORMAT="%d/%m/%y %T "
 ```
