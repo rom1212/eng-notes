@@ -1,11 +1,14 @@
 # Install
 https://www.tensorflow.org/install/install_linux
 
-## Install on Ubuntu 16.04: no-GPU, python27
+## Install/Upgrade on Ubuntu 16.04: no-GPU, python27
 ```
 sudo apt-get install python-pip python-dev
 sudo pip install pip --upgrade (optional)
-sudo pip install tensorflow 
+sudo pip install tensorflow
+
+# upgrade
+sudo pip install -U tensorflow
 ``` 
 Location: /usr/local/lib/python2.7/dist-packages/tensorflow
 
