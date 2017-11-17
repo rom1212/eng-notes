@@ -12,6 +12,11 @@ sudo pip install -U tensorflow
 ``` 
 Location: /usr/local/lib/python2.7/dist-packages/tensorflow
 
+# Code 
+
+## Models
+* https://github.com/tensorflow/models/tree/master/official/resnet 
+
 # Run examples
 
 ## MNIST softmax
