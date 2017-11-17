@@ -7,3 +7,6 @@ https://docs.openstack.org/kolla-kubernetes/latest/deployment-guide.html
   * file /etc/systemd/system/kubelet.service.d/10-kubeadm.conf:
     * ExecStart=/usr/bin/kubelet --fail-swap-on=false
 * kubeadm init --pod-network-cidr=10.1.0.0/16 --service-cidr=10.3.3.0/24
+
+## Automation/History
+git clone https://github.com/romans1212notes/kolla-kubernetes-guide.git
