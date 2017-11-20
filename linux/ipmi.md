@@ -11,3 +11,7 @@
 
 # Show IPMI Info
 * sudo ipmitool lan print
+
+# Config IP Address
+*  sudo ipmitool lan set 1 ipaddr 10.175.20.246
+*  sudo ipmitool lan set 1 defgw ipaddr 10.175.20.1
