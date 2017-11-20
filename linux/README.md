@@ -21,7 +21,10 @@ sudo passwd xxx
 # /etc/sudoers is pre-configured to grant permissions to all members of this group (i.e. "sudo" group)
 # https://askubuntu.com/questions/7477/how-can-i-add-a-new-user-as-sudoer-using-the-command-line
 # ??? take effect next loging ???
-sudo adduser xx sudo  
+sudo adduser xxx sudo
+
+# Change the default shell, e.g. /bin/bash
+sudo chsh xxx 
 
 # sudo vim /etc/sudoers, add the following line at the end of it.
 # execute command without password: https://askubuntu.com/questions/147241/execute-sudo-without-password
