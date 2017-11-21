@@ -1,5 +1,10 @@
-# network manager, ifconfig, ifup, ifdown
-* https://askubuntu.com/questions/1786/what-is-the-difference-between-network-manager-and-ifconfig-ifup-etc
+# Docs
+## Books
+* Guide to IP Layer Network Administration with Linux, http://linux-ip.net/html/index.html
+
+## Refs
+* network manager, ifconfig, ifup, ifdown
+  * https://askubuntu.com/questions/1786/what-is-the-difference-between-network-manager-and-ifconfig-ifup-etc
 
 # commands
 ## tcpdump
