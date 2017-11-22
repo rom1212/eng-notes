@@ -42,6 +42,8 @@ vi /etc/hosts # for future, and also sudo xxx will have warning about not recogn
 ```
 # sudo vim /etc/ssh/sshd_config
 AllowUsers root xxxx
+
+# sudo systemctl restart ssh
 ```
 
 ## SSH Keep Alive
