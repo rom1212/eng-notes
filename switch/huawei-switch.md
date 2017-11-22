@@ -14,7 +14,10 @@
     * Configuring System Startup: http://support.huawei.com/enterprise/en/doc/DOC1000150303?section=10112
 * Configuration Guide - IP Service: http://support.huawei.com/enterprise/en/doc/DOC1000150308
 * Configuration Guide - IP Unicast Routing: http://support.huawei.com/enterprise/en/doc/DOC1000150309
-  * OSPF, BGP, IS-IS
+  * OSPF, BGP, IS-IS: 
+* Configuration Guide - DCN and Server Management: http://support.huawei.com/enterprise/en/doc/DOC1000150304
+  * VXLAN, TRILL
+* Configuration Guide - MPLS: 
 
 ## Documents for 7800&6800&5800
 * List of Configuration Files
