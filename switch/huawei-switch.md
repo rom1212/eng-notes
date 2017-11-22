@@ -17,7 +17,7 @@
   * OSPF, BGP, IS-IS: 
 * Configuration Guide - DCN and Server Management: http://support.huawei.com/enterprise/en/doc/DOC1000150304
   * VXLAN, TRILL
-* Configuration Guide - MPLS: 
+* Configuration Guide - MPLS: http://support.huawei.com/enterprise/en/doc/DOC1000150311
 
 ## Documents for 7800&6800&5800
 * List of Configuration Files
