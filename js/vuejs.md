@@ -25,7 +25,11 @@ sudo npm install -g vue-cli
 vue init webpack my-project  # pay attention to the output information on how to do next
 cd my-project
 npm install # takes a long time for pulling all the depenendcies
-npm run dev
+npm run dev # add --host 0.0.0.0 to webpack-dev-server in package.json if want external access
+
+# test
+sudo apt-get install libfontconfig
+npm run unit
 ```
 ## Problem with localhost
 * If we also want other hosts to access the dev server, we need to expose it to 0.0.0.0
