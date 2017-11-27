@@ -20,7 +20,7 @@ sudo npm install -g vue-cli
 ## Docs
 * https://github.com/vuejs/vue-cli
 * https://scotch.io/tutorials/how-to-write-a-unit-test-for-vuejs
-## Commands
+## Write a Test
 ```
 vue init webpack my-project  # pay attention to the output information on how to do next
 cd my-project
@@ -30,6 +30,11 @@ npm run dev # add --host 0.0.0.0 to webpack-dev-server in package.json if want e
 # test
 sudo apt-get install libfontconfig
 npm run unit
+
+# Add a test with src/components/List.vue and test/unit/List.spec.js
+npm run unit
+
+# next Similating User Input
 ```
 ## Problem with localhost
 * If we also want other hosts to access the dev server, we need to expose it to 0.0.0.0
