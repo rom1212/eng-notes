@@ -19,9 +19,16 @@ sudo npm install -g vue-cli
 
 ## Docs
 * https://github.com/vuejs/vue-cli
-* 
+* https://scotch.io/tutorials/how-to-write-a-unit-test-for-vuejs
 ## Commands
 ```
-vue init webpack my-project
-
+vue init webpack my-project  # pay attention to the output information on how to do next
+cd my-project
+npm install # takes a long time for pulling all the depenendcies
+npm run dev
 ```
+## Problem with localhost
+* open package.json
+* under "scripts"
+  * "dev" is invoked when running "npm run dev"
+  * add  --host 0.0.0.0 to webpack-dev-server command
