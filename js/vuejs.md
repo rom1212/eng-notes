@@ -42,3 +42,6 @@ npm run unit
 * under "scripts"
   * "dev" is invoked when running "npm run dev"
   * add  --host 0.0.0.0 to webpack-dev-server command
+  
+# Learning Log
+* session #1: 
