@@ -28,6 +28,7 @@ npm install # takes a long time for pulling all the depenendcies
 npm run dev
 ```
 ## Problem with localhost
+* If we also want other hosts to access the dev server, we need to expose it to 0.0.0.0
 * open package.json
 * under "scripts"
   * "dev" is invoked when running "npm run dev"
