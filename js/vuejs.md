@@ -46,6 +46,11 @@ npm run unit
 # Learning Log
 * session #1 - about 2'45''
   * install npm
-  * read vuejs basic
-  * follow example to run vue init, solve problem of external access for webpack-dev-server
-  * add one simple test, and test pass
+  * read vuejs basic: browse https://vuejs.org/v2/guide/index.html
+  * read some comparison from React
+  * follow example
+    * https://github.com/vuejs/vue-cli
+    * https://scotch.io/tutorials/how-to-write-a-unit-test-for-vuejs
+  *  run vue init, solve problem of external access for webpack-dev-server, add one simple test, and test pass
+    * Fail once using one host, and changed to a new host.
+
