@@ -44,4 +44,8 @@ npm run unit
   * add  --host 0.0.0.0 to webpack-dev-server command
   
 # Learning Log
-* session #1: 
+* session #1 - about 2'45''
+  * install npm
+  * read vuejs basic
+  * follow example to run vue init, solve problem of external access for webpack-dev-server
+  * add one simple test, and test pass
