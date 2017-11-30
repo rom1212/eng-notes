@@ -1,4 +1,4 @@
-# npm
+# Install npm and node
 ## Install npm on Ubuntu 16.04
 Use PPA
 ```
@@ -28,6 +28,18 @@ Default Ubuntu Repository
 3.5.2
 ~$ nodejs --version
 v4.2.6
+```
+
+## Install a special version of node
+```
+sudo npm install -g n
+sudo n 4.4.1
+```
+
+## Install a special version of npm
+```diff
+- # install a special version of node first. Otherwise, it might override npm version
+sudo npm install -g npm@3.9.1
 ```
 
 ## Install package Globally
