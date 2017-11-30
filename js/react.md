@@ -3,7 +3,7 @@
 * http://buildwithreact.com/tutorial
 
 ## Quick Example
-* https://reactjs.org/docs/installation.html
+* https://github.com/facebookincubator/create-react-app (alt: https://reactjs.org/docs/installation.html)
 ```
 sudo npm insll -g create-react-app
 create-re#act-app my-app
