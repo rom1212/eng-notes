@@ -13,3 +13,6 @@ npm start
 #  Local:            http://localhost:3000/
 #  On Your Network:  http://10.xx.xx.xx:3000/
 ```
+
+## Unit Test
+* http://facebook.github.io/jest/docs/en/tutorial-react.html#content
