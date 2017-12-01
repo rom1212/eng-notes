@@ -8,7 +8,14 @@
 
 # Aws Serverless
 
+## Lambda
+
+## Docs
+* Serverless Applications Lens
+  * bit.ly/serverless_lens, https://d1.awsstatic.com/whitepapers/architecture/AWS-Serverless-Applications-Lens.pdf
+  * References: AWS Well-Architected Framework
+
 ## Fargate
 https://aws.amazon.com/blogs/aws/aws-fargate/
 
-## Lambda
+
