@@ -1,4 +1,7 @@
 
+# Instructions/Manual
+* Use Kolla for Kubernetes: https://github.com/romans1212notes/kolla-kubernetes-guide
+
 # Docs
 
 * Building OpenStack on Kubernetes for Zero Downtime Large-scale Production SaaS
