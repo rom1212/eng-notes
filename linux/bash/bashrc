@@ -1,4 +1,3 @@
-```
 alias gits='git status'
 alias gitb='git branch'
 alias bashrc='vim ~/.bashrc'
@@ -8,4 +7,3 @@ export GOPATH=~/go/
 
 # show time in history command
 export HISTTIMEFORMAT="%d/%m/%y %T "
-```
