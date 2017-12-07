@@ -1,21 +1,28 @@
-# Google Serverless
 
-## https://cloud.google.com/serverless/
+# Cloud Provider
+## Google Serverless
+
+### https://cloud.google.com/serverless/
   * AppEngine vs Functions
     * Web backend:	App Engine -> Datastore
     * Microservices:	Cloud Functions -> Datastore
     * Bots:	Cloud Functions
 
-# Aws Serverless
+## Aws Serverless
 
-## Lambda
+### Lambda
 
-## Docs
+### Docs
 * Serverless Applications Lens
   * bit.ly/serverless_lens, https://d1.awsstatic.com/whitepapers/architecture/AWS-Serverless-Applications-Lens.pdf
   * References: AWS Well-Architected Framework
 
-## Fargate
+### Fargate
 https://aws.amazon.com/blogs/aws/aws-fargate/
 
 
+# Open Source
+* https://github.com/apache/incubator-openwhisk
+* https://github.com/apache/incubator-openwhisk
+* https://github.com/kubeless/kubeless
+* https://github.com/anaibol/awesome-serverless
