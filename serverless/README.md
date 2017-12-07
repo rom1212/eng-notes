@@ -27,3 +27,6 @@ https://aws.amazon.com/blogs/aws/aws-fargate/
   * https://openwhisk.apache.org/
 * https://github.com/kubeless/kubeless
 * https://github.com/anaibol/awesome-serverless
+* https://github.com/GalacticFog/gestalt-lambda, http://docs.galacticfog.com/
+* https://www.infoworld.com/article/3193119/open-source-tools/get-functional-5-open-source-frameworks-for-serverless-computing.html
+
