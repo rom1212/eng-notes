@@ -22,7 +22,8 @@ https://aws.amazon.com/blogs/aws/aws-fargate/
 
 
 # Open Source
-* https://github.com/apache/incubator-openwhisk
-* https://github.com/apache/incubator-openwhisk
+* openwhisk
+  * https://github.com/apache/incubator-openwhisk
+  * https://openwhisk.apache.org/
 * https://github.com/kubeless/kubeless
 * https://github.com/anaibol/awesome-serverless
