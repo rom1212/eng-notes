@@ -15,6 +15,10 @@ https://www.quora.com/What-are-the-advantages-and-disadvantages-of-Golang
 ### ===
 Sometimes there may be more lines of code, but brevity is often not a virtue when it comes to producing reliable, reusable and readable code.
 
+My comments: For example: exceptions are good to use, however, it is hard to find out where are the exceptions thrown in a funciton by just reading the code.
+
+### ===
+
 # Docs
 * https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go
   * Server-side I/O Performance: Node vs. PHP vs. Java vs. Go
