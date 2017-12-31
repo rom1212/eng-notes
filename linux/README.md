@@ -23,9 +23,11 @@ sudo passwd xxx
 # ??? take effect next loging ???
 sudo adduser xxx sudo
 
-# Change the default shell, e.g. /bin/bash
-sudo chsh xxx 
-
+# Change the default shell, e.g. /bin/bash, check the value by $SHELL
+sudo chsh <user name> 
+Enter the new value, or press ENTER for the default
+        Login Shell []: /bin/bash
+        
 # sudo vim /etc/sudoers, add the following line at the end of it.
 # execute command without password: https://askubuntu.com/questions/147241/execute-sudo-without-password
 username ALL=(ALL) NOPASSWD: ALL
