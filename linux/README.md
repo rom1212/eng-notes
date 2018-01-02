@@ -38,6 +38,9 @@ username ALL=(ALL) NOPASSWD: ALL
 sudo hostname <new name> # take effect immediately
 vi /etc/hostname
 vi /etc/hosts # for future, and also sudo xxx will have warning about not recognizing the hostname.
+127.0.0.1       localhost
+127.0.1.1       <host name>
+
 ```
 
 ## Limit SSH Access
