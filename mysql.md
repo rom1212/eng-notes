@@ -7,6 +7,14 @@ mysql -u root -p
 # command with more options
 mysql -u root -p --host localhost --port 3306
 ```
+
+## Add User
+```
+create user 'dev'@'%' identified by 'test';
+grant all privileges on *.* to 'dev'@'%';
+flush privileges;
+```
+
 ## Backup
 https://www.liquidweb.com/kb/how-to-back-up-mysql-databases-from-the-command-line/
 * mysqldump
