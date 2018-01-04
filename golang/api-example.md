@@ -52,3 +52,10 @@ func main() {
 }
 ```
 Now, ```bee run``` can start the app, and we can access the API through localhost:8080/v1/<table name/resource name>
+
+## Generate Swagger Spec and UI
+```
+$ bee run -downdoc=true -gendoc=true
+
+# Then the swagger UI is accessible at: http://localhost:8080/swagger/
+```
