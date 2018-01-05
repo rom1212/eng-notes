@@ -27,7 +27,7 @@ Bee v1.9.1 only generate routers/, controllers/ and models/. We need to write ma
 package main
 
 import (
-        _ "cmdb-api/routers"
+        _ "<my project>/routers"
 
         "github.com/astaxie/beego"
         "github.com/astaxie/beego/orm"
