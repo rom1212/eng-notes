@@ -1,0 +1,3 @@
+# Considerations
+* Pagination
+* ID
