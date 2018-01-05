@@ -59,3 +59,6 @@ $ bee run -downdoc=true -gendoc=true
 
 # Then the swagger UI is accessible at: http://localhost:8080/swagger/
 ```
+
+# Example
+https://github.com/romans1212notes/beego-mysql-api
