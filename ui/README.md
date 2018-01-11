@@ -6,3 +6,4 @@
 
 ## DC/OS UI
 * https://github.com/dcos/dcos-ui
+* https://github.com/romans1212notes/mesos-guide/tree/master/mesosphere
