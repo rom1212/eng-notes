@@ -1,18 +1,3 @@
-```
-definitions:
-  BookRequest:
-    pageSize
-    pageToken
-  BookResponse:
-    books:
-      type: array
-      items:
-        type: Book
-    next_page_token:
-      type: string
-
-```
-
 swagger: "2.0"
 info:
   description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
@@ -36,6 +21,26 @@ schemes:
 - "http"
 paths:
   /user:
+    get:
+      tags: 
+      - "user"
+      operationId: "listUsers"
+      parameters: 
+      - in: query
+        name: pageToken
+        type: string
+        required: false
+      - in: query
+        name: pageSize
+        type: integer
+        required: false
+      responses:
+        200:
+          description: "ok"
+          schema:
+            $ref: "#/definitions/ListUserResponse"
+        default:
+          description: "successful operation"        
     post:
       tags:
       - "user"
@@ -222,6 +227,16 @@ paths:
         404:
           description: "User not found"
 definitions:
+  ListUserResponse:
+     type: object
+     properties:
+       users:
+         type: array
+         items:
+           $ref: "#/definitions/User"
+       nextPageToken:
+         type: string
+         
   User:
     type: "object"
     properties:
