@@ -1,0 +1,14 @@
+```
+definitions:
+  BookRequest:
+    pageSize
+    pageToken
+  BookResponse:
+    books:
+      type: array
+      items:
+        type: Book
+    next_page_token:
+      type: string
+
+```
