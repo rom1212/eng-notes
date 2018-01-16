@@ -2,6 +2,8 @@
 * https://github.com/romans1212notes/swagger-guide
 
 # Swagger Codegen
+https://github.com/swagger-api/swagger-codegen
+
 ## Usage
 ```
 package main
