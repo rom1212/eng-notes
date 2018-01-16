@@ -3,6 +3,8 @@
 
 # Swagger Codegen
 https://github.com/swagger-api/swagger-codegen
+## FAQ
+* How is the http code handled? exception or check the APIResponse?
 
 ## Usage
 ```
