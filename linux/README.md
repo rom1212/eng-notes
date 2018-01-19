@@ -14,6 +14,7 @@ sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/
 ```
 
 ## Add User
+Ubuntu 16.04
 ```
 sudo useradd -m xxx
 sudo passwd xxx
@@ -31,6 +32,12 @@ Enter the new value, or press ENTER for the default
 # sudo vim /etc/sudoers, add the following line at the end of it.
 # execute command without password: https://askubuntu.com/questions/147241/execute-sudo-without-password
 username ALL=(ALL) NOPASSWD: ALL
+```
+CentOS: useradd and adduser are the same
+```
+sudo useradd -m xxx
+sudo passwd xxx
+usermod -aG wheel username  # no sudo group here
 ```
 
 ## Change Hostname
