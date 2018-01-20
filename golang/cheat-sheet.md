@@ -43,6 +43,8 @@ go build
 go install
 go run <>
 ```
+## GOPATH
+The GOPATH environment variable is used to specify directories outside of $GOROOT that contain the source for Go projects and their binaries.
 
 ## Operators
 ### Arithmetic
