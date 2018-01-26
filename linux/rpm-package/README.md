@@ -11,3 +11,8 @@ rpm -qi mysql57-community-release-el7-11.noarch
 ```
 rpm -qip  mysql57-community-release-el7-11.noarch.rpm
 ```
+
+# Extract content from rpm file
+## rpm2cpio
+* http://ftp.rpm.org/max-rpm/s1-rpm-miscellania-rpm2cpio.html
+
