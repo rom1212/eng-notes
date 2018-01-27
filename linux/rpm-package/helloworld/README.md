@@ -1,5 +1,8 @@
-copy hello-world.sh to ~/
-cp rpmbulid to ~/
+In this directory, run this:
+```
+copy hello-world.sh ~/
+cp -r rpmbulid ~/
+```
 
 In $HOME directory, run this:
 ```
