@@ -18,5 +18,7 @@ TTT???
 
 # Extract content from rpm file
 ## rpm2cpio
-* http://ftp.rpm.org/max-rpm/s1-rpm-miscellania-rpm2cpio.html
-
+* http://ftp.rpm.org/max-rpm/s1-rpm-miscellania-rpm2cpio.html, e.g.
+```
+ rpm2cpio ./packagecloud-test-1.1-1.x86_64.rpm | cpio -idmv
+```
