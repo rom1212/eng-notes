@@ -1,5 +1,5 @@
 # rpm command
-## list all installed rpm packages
+* list all installed rpm packages
 ```
 rpm -qa
 ```
@@ -12,7 +12,7 @@ rpm -qi mysql57-community-release-el7-11.noarch
 rpm -qip  mysql57-community-release-el7-11.noarch.rpm
 ```
 
-## Upgrade
+# Upgrade
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
 TTT???
 
