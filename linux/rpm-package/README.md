@@ -11,6 +11,10 @@ rpm -qi mysql57-community-release-el7-11.noarch
 ```
 rpm -qip  mysql57-community-release-el7-11.noarch.rpm
 ```
+* uninstall a package
+```
+rpm -e hellocurl-1.0-1.el7.centos.noarch
+```
 
 # Upgrade
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
