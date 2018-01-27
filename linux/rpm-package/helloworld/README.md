@@ -8,3 +8,6 @@ In $HOME directory, run this:
 ```
 rpmbuild -bb rpmbuild/SPECS/hellowworld.spec
 ```
+
+
+Another way is to create a link to rpmbuild in home directory.
