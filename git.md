@@ -1,9 +1,15 @@
 # git config for ssl and proxy
+* doc: https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 ```
 git config --global http.sslVerify false
 git config --global https.sslVerify false
 git config --global http.proxy http://10.xx.xx.xx:3128
 git config --global https.proxy http://10.xx.xx.xx:3128
+```
+
+If there is no color (e.g. git diff doesn't show color on CentOS),
+```
+git config --global color.ui true
 ```
 
 # commands
