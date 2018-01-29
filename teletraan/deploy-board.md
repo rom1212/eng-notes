@@ -15,8 +15,8 @@
 
 # js
 ## teletraan-index.js
-* deploy-board/deploy_board/static/js/private/teletraan-index.js
-Global function calls, that can be called when clicking some buttons, based on ID. This can be use for
+* deploy-board/deploy_board/static/js/private/teletraan-index.js.
+  * Global function calls, that can be called when clicking some buttons, based on ID. This can be use for
 * get resources
 * creating resources, e.g.
 ```
