@@ -45,8 +45,8 @@ git config --global color.ui true
   * Seems that this doesn't have anything to do with master branch. To rebase with master, we need to use "git rebase master"
 * git revert commit_id
   * it automatically creates a commit which does the reversion.
-* git cherry-pick <commit>
-  * where <commit> is usually from another branch 
+* ```git cherry-pick <commit>```
+  * where ```<commit>``` is usually from another branch 
 
 # Keep a fork up to date
 https://gist.github.com/CristinaSolana/1885435
