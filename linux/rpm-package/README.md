@@ -2,7 +2,9 @@
 * http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
 
 # rpm command
-* https://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
+* docs
+  * https://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
+  * https://wiki.centos.org/TipsAndTricks/YumAndRPM
 * list all installed rpm packages
 ```
 rpm -qa
