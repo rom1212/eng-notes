@@ -9,9 +9,10 @@
   * [Operators](#operators): [Arithmetic](#arithmetic), [Comparison](#comparison), [Logical](#logical), [Other](#other)
   * [Functions](#functions): [Functions as values and closures](#functions-as-values-and-closures), [Variadic Functions](#variadic-functions)
   * [Control structures](#control-structures): [If](#if), [Loops](#loops), [Switch](#switch)
-  * [Packages](#packages)
+  * [Package](#package)
 * Advanced: [Embedding](#embedding), [Errors](#errors), [Goroutines](#goroutines), [Channels](#channels), [Channel Axioms](#channel-axioms)
 * [Snippets](#snippets): [Printing](#printing), [Http-Server](#http-server)
+* [Common Packages](#common-packages)
 
 ## Credits
 
@@ -219,7 +220,7 @@ f := float64(i)
 u := uint(f)
 ```
 
-## Packages 
+## Package 
 * Package declaration at top of every source file
 * Executables are in package `main`
 * Convention: package name == last name of import path (import path `math/rand` => package `rand`)
@@ -652,7 +653,7 @@ func main() {
 // }
 ```
 
-# Packages
+# Common Packages
 # os
 * hostname, err := os.Hostname()
 
