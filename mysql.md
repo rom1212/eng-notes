@@ -107,6 +107,9 @@ mysql> use xxup;
 mysql> show tables;
 mysql> select count(*) from t0526a;
 
+# turn off password validation
+mysql> uninstall plugin validate_password;
+
 innodb_buffer_pool_size and other variables
 
 === mysqladmin ===
