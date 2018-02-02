@@ -667,7 +667,8 @@ fmt.Println(string(b))
 ## net
 * Get IP Addresses
 ```go
-// https://gist.github.com/jniltinho/9787946
+// https://gist.github.com/jniltinho/9787946, https://stackoverflow.com/questions/23558425/how-do-i-get-the-local-ip-address-in-go
+// what if local docker interfaces???
 func getIpAddrs() []string {
 	var ipAddrs []string
 	ipAddrs = make([]string, 0)
