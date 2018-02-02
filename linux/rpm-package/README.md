@@ -13,6 +13,7 @@ rpm -qip  mysql57-community-release-el7-11.noarch.rpm
 ```
 * install a package
   * https://access.redhat.com/solutions/1189
+  * rpm -ivh foo.rpm
 * uninstall a package
 ```
 rpm -e hellocurl-1.0-1.el7.centos.noarch
