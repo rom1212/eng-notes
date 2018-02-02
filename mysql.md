@@ -1,4 +1,10 @@
-# Admin Tools
+# Install
+## Install on CentOS
+* https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-centos-7
+* Get password from log: ```sudo grep 'temporary password' /var/log/mysqld.log```
+* To turn off password validation: ```mysql> uninstall plugin validate_password;```
+
+# CLI Tools
 ## mysql client
 ```
 # simple command, default is localhost:3306
