@@ -651,3 +651,12 @@ func main() {
 //     ServeHTTP(w http.ResponseWriter, r *http.Request)
 // }
 ```
+
+# Packages
+## encoding/json
+* struct to json
+```
+b, err := json.Marshal(user)
+b, err := json.MarshalIndent(request, "", "    ")
+fmt.Println(string(b))
+```
