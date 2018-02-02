@@ -27,6 +27,7 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
   * --replacefiles solve this problem: "file /usr/bin/foo from install of foo-1.0-1 conflicts with file from package bar-2.0.20"
 * dry run:
   * rpm --test
+  * check whether it is installed???TTT : ```rpm -q <package name>```, this can also check previous versions
 
 # rpm package format
 * http://rpm5.org/docs/api/pkgformat.html
