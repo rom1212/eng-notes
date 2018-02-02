@@ -1,3 +1,6 @@
+# rpm basics
+* http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
+
 # rpm command
 * list all installed rpm packages
 ```
@@ -23,6 +26,9 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
   * --replacefiles solve this problem: "file /usr/bin/foo from install of foo-1.0-1 conflicts with file from package bar-2.0.20"
 * dry run:
   * rpm --test
+
+# rpm package format
+* http://rpm5.org/docs/api/pkgformat.html
 
 # yum command
 "The benefit of yum is that it will resolve dependencies for you and also install dependencies along with the concerned application. But you need to define the path of software resources in /etc/yum.repos.d in a .repo file
