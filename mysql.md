@@ -20,6 +20,11 @@ https://www.liquidweb.com/kb/how-to-back-up-mysql-databases-from-the-command-lin
 * mysqldump
 
 # Schema
+## Drop User
+```
+DROP USER IF EXISTS test
+```
+
 ## Show table schema
 ```
 show create table <table name, e.g. agents>;
