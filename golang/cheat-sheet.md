@@ -653,6 +653,9 @@ func main() {
 ```
 
 # Packages
+# os
+* hostname, err := os.Hostname()
+
 ## encoding/json
 * struct to json
 ```
