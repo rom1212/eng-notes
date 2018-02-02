@@ -1,6 +1,11 @@
 
 # Commands/Tools
-## screen
+## Long Running Process
+```
+nohup node server.js &
+```
+
+## Screen
 ```
 $ screen -ls  # list existing screens
 $ Ctrl-a d  # detach the screen
