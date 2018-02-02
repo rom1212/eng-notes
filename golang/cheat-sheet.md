@@ -667,6 +667,7 @@ fmt.Println(string(b))
 ## net
 * Get IP Addresses
 ```go
+// https://gist.github.com/jniltinho/9787946
 func getIpAddrs() []string {
 	var ipAddrs []string
 	ipAddrs = make([]string, 0)
