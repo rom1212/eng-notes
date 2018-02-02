@@ -45,3 +45,9 @@ TTT???
 ```
  rpm2cpio ./packagecloud-test-1.1-1.x86_64.rpm | cpio -idmv
 ```
+## show scripts
+```
+rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
+```
+https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-packages/
+  
