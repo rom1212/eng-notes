@@ -17,6 +17,8 @@ rpm -qip  mysql57-community-release-el7-11.noarch.rpm
 ```
 rpm -e hellocurl-1.0-1.el7.centos.noarch
 ```
+* conflicts: --force, --replacefiles
+  * https://stackoverflow.com/questions/17582768/rpm-ignore-conflicts
 
 # Upgrade
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
