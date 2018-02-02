@@ -19,6 +19,7 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
 ```
 * conflicts: --force, --replacefiles
   * https://stackoverflow.com/questions/17582768/rpm-ignore-conflicts
+  * --replacefiles solve this problem: "file /usr/bin/foo from install of foo-1.0-1 conflicts with file from package bar-2.0.20"
 
 # Upgrade
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
