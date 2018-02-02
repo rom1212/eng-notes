@@ -9,3 +9,6 @@
 * Generator
   * http://www.mybatis.org/generator/running/runningFromCmdLine.html
 
+# Common Issues
+## date
+* https://stackoverflow.com/questions/2305973/java-util-date-vs-java-sql-date
