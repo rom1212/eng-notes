@@ -1,3 +1,7 @@
+# Docs
+* Effective Go: https://golang.org/doc/effective_go.html
+* Cmd/Tools: https://golang.org/cmd/
+
 # Questions (TTT???):
 * GOPATH - a list of directories?
 * import local package "./xxxx" or must "myproject/xxx"
