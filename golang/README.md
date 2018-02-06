@@ -1,6 +1,7 @@
 # Docs
 * Effective Go: https://golang.org/doc/effective_go.html
 * Cmd/Tools: https://golang.org/cmd/
+* Code Review: https://github.com/golang/go/wiki/CodeReviewComments
 
 # Questions (TTT???):
 * GOPATH - a list of directories?
