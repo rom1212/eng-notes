@@ -31,7 +31,7 @@ func main() {
 ```
 `$ go run hello.go`
 
-## Build
+## Dev: Build/Run/Test
 Get a github repository, e.g.
 ```
 go get github.com/google/codesearch/index
@@ -43,6 +43,10 @@ go get ./...
 go build
 go install
 go run <>
+go test ./... # run all tests in current directory and all sub-directories
+go test foo/... # run all tests with import path prefixed with foo/
+go test foo... # run all tests with import path prefixed with foo/
+go test ... # run all tests in $GOPATH
 ```
 ## GOPATH
 The GOPATH environment variable is used to specify directories outside of $GOROOT that contain the source for Go projects and their binaries.
