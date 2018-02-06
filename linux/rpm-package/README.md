@@ -1,5 +1,6 @@
 # rpm basics
 * http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
+* scripts: https://fedoraproject.org/wiki/Packaging:Scriptlets
 
 # rpm command
 * docs
