@@ -63,6 +63,27 @@ AllowUsers root xxxx
 # sudo systemctl restart ssh
 ```
 
+## SSH Connection Reset
+* When ssh client see this error
+```
+$ ssh username@xx.xx.xx.xx
+ssh_exchange_identification: read: Connection reset by peer
+```
+* Check server sshd log
+Run
+```
+# on CentOS
+systemctl status sshd or vi /var/log/secure
+
+# See this error
+
+refused connect from xx.xx.xx.xx (xx.xx.xx.xx)
+```
+* vi /etc/hosts.deny, /etc/hosts.allow
+```
+clean up /etc/hosts.deny
+```
+
 ## SSH Keep Alive
 https://stackoverflow.com/questions/25084288/keep-ssh-session-alive
 ```
