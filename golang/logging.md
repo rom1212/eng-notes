@@ -1,4 +1,4 @@
-# glog
+# glog rotation
 ## logrotate
 * Difficulties
   * glog creates new log file when size grows bigger than MaxSize
@@ -9,3 +9,9 @@
     * by size: current logger file could be very big - by we can change MaxSize, e.g. 100M. So, we only do rotation when file size is bigger than 100M. 
 * olddir, maxage, copy 
 * only
+
+## glogrotate
+https://github.com/realzeitmedia/glogrotate
+
+## lumberjack
+https://github.com/natefinch/lumberjack
