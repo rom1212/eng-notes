@@ -17,4 +17,5 @@
 https://github.com/realzeitmedia/glogrotate
 
 ## lumberjack
-https://github.com/natefinch/lumberjack
+* https://github.com/natefinch/lumberjack
+* https://gist.github.com/jasonlollback/f395512056699fab8fc1
