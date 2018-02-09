@@ -464,6 +464,19 @@ func (foo Foo) Awesomize() string {
     return "Awesome!"
 }
 ```
+* Type assertion (https://tour.golang.org/methods/15)
+```go
+t := i.(T)      // If i does not hold a T, the statement will trigger a panic. 
+t, ok := i.(T)  // no panic
+```
+* Empty interface (https://tour.golang.org/methods/14)
+```
+var i interface{}
+i = 42
+
+type all interface{}
+```
+An empty interface may hold values of any type. Empty interfaces are used by code that handles values of unknown type.
 
 ## Embedding
 
