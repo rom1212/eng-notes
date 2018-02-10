@@ -1,3 +1,6 @@
+# glog
+* https://gist.github.com/heatxsink/7221ebe499b0767d4784
+
 # glog rotation
 ## How
 https://hpc.nih.gov/development/glog.html
