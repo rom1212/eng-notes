@@ -47,6 +47,8 @@ go test ./... # run all tests in current directory and all sub-directories
 go test foo/... # run all tests with import path prefixed with foo/
 go test foo... # run all tests with import path prefixed with foo/
 go test ... # run all tests in $GOPATH
+go test foo_test.go foo.test  # all tests in foo_test.go, and foo.go is needed to build the test.
+go test -run <TestName or regex>   # test all tests that match the name or regex
 ```
 ## GOPATH
 The GOPATH environment variable is used to specify directories outside of $GOROOT that contain the source for Go projects and their binaries.
