@@ -53,6 +53,9 @@ go test -run <TestName or regex>   # test all tests that match the name or regex
 ## GOPATH
 The GOPATH environment variable is used to specify directories outside of $GOROOT that contain the source for Go projects and their binaries.
 
+## Naming
+* const - mixedCaps, depends on whether to expose it or not [link](https://stackoverflow.com/questions/22688906/go-naming-conventions-for-const)
+
 ## Operators
 ### Arithmetic
 |Operator|Description|
