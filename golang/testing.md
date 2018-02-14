@@ -20,7 +20,9 @@ func tempFile(t *testing.T) string {
 		t.Fatalf("err: %s", err)
 	}
 	filename := tempFile.Name()
-	tempFile.Close()
+	if err :=tempFile.Close(); err != nil {
+		t.Fatalf("err: %s", err)
+	}	
 	
 	return filename
 }
@@ -48,7 +50,10 @@ func tempFile(t *testing.T) string {
 		t.Fatalf("err: %s", err)
 	}
 	filename := tempFile.Name()
-	tempFile.Close()
+
+	if err :=tempFile.Close(); err != nil {
+		t.Fatalf("err: %s", err)
+	}
 
 	fmt.Println("filename: ", filename)
 
