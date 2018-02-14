@@ -6,6 +6,6 @@ if err = out.Sync(); err != nil {
     return err
 }
 
-return out.Close()
+return out.Close()  // usually this is not a long function, and easier to make sure that it is closed.
 ```
 ## 
