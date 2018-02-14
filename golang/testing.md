@@ -71,3 +71,6 @@ func tempFile(t *testing.T) (string, string) {
 }
 
 ```
+* ioutil.go and ioutil_test.go
+  * https://github.com/golang/go/blob/master/src/io/ioutil/ioutil.go
+  * https://github.com/golang/go/blob/master/src/io/ioutil/ioutil_test.go
