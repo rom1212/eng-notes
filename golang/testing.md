@@ -4,6 +4,28 @@
     * ioutil.TempDir("", "fu"): creates a temp directory /tmp/fu12331431243/
 * io.ioutil.TempFile(dir, prefix)
   * Creates a temporary file in <dir> with <prefix> (not used this before)
+* These are helpful functions even when we need directoires/files be created because it simplifies error check:
+```go
+func tempDir(t *testing.T) string {
+	dir, err := ioutil.TempDir("", "fu")
+	if err != nil {
+		t.Fatalf("err: %s", err)
+	}
+	return dir
+}
+
+func tempFile(t *testing.T) string {
+	tempFile, err := ioutil.TempFile("", "fu")
+	if err != nil {
+		t.Fatalf("err: %s", err)
+	}
+	filename := tempFile.Name()
+	tempFile.Close()
+	
+	return filename
+}
+```
+
 * If we just want a tempory file or directory without creating them (or without them being existed)
 ```go
 func tempDir(t *testing.T) string {
@@ -19,7 +41,25 @@ func tempDir(t *testing.T) string {
 	return dir
 }
 
-// returns both temporary file and directory if we want to clean it up.
+// Code is more work than the below one, but only return one variable for easy cleanup
+func tempFile(t *testing.T) string {
+	tempFile, err := ioutil.TempFile("", "fu")
+	if err != nil {
+		t.Fatalf("err: %s", err)
+	}
+	filename := tempFile.Name()
+	tempFile.Close()
+
+	fmt.Println("filename: ", filename)
+
+	if err := os.Remove(filename); err != nil {
+		t.Fatalf("err: %s", err)
+	}
+
+	return filename
+}
+
+// more compact, but needs to return both temporary file and directory if we want to clean it up.
 func tempFile(t *testing.T) (string, string) {
 	dir := tempDir(t)
 	return filepath.Join(dir, "foo"), dir
