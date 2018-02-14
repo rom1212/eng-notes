@@ -1,3 +1,11 @@
+# Dev
+* gofmt
+* go test -v ./...
+* [errcheck](https://github.com/kisielk/errcheck)
+```
+errcheck ./...
+```
+
 # Docs
 * Effective Go: https://golang.org/doc/effective_go.html
 * Cmd/Tools: https://golang.org/cmd/
