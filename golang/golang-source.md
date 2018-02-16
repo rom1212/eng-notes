@@ -6,3 +6,8 @@
 
 # os
 * https://golang.org/src/os/path_test.go
+
+# io
+* https://golang.org/src/io/io.go
+  * Copy(dst Writer, src Reader) (written int64, err error): 
+    * if written data is not all write (i.e. written is not the same as src), there will be error.
