@@ -43,6 +43,8 @@ git config --global color.ui true
   * git rebase -i HEAD~5 # merge the last 5 commits. Use "pick" for the first commit (most recent), and use "squash" or "s" for the other previous commit
   * It will prompts about the commit message, and we can edit that.
   * Seems that this doesn't have anything to do with master branch. To rebase with master, we need to use "git rebase master"
+* amend (merge commit to the previous one)
+  * git commit --amend  (optional -a, -m). It prompts to change the message, just Ctrl-X)
 * git revert commit_id
   * it automatically creates a commit which does the reversion.
 * ```git cherry-pick <commit>```
