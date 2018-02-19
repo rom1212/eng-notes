@@ -1,3 +1,7 @@
+# How to Test
+## Learn from golang test itself
+* for testing exec.Command: https://golang.org/src/os/exec/exec_test.go
+
 # Temporary Directory and File
 * io.ioutil.TempDir(dir, prefix)
   * Creates the temporary directory in <dir> with a <prefix>. e.g.
