@@ -1,13 +1,18 @@
 # glog
 * https://gist.github.com/heatxsink/7221ebe499b0767d4784
 
-# glog rotation
-## logrotate is probably more complicated for this.
+## glog rotation
+* logrotate is probably more complicated for this.
+* use cron to delete old files
+```
+# delete files more than one day ago, runs every day at 23:15, basically (one second after 23:15)
+15 23 * * * cible find /path/to/logs -maxdepth 1 -name "*log*" -type f -mtime +0 -delete
+```
 
-## How
+### How
 https://hpc.nih.gov/development/glog.html
 
-## logrotate
+### logrotate
 * Difficulties
   * glog creates new log file when size grows bigger than MaxSize
   * We need a way to clean up old files.  
@@ -24,6 +29,7 @@ https://hpc.nih.gov/development/glog.html
   * also see: https://unix.stackexchange.com/questions/229807/delete-files-only-with-logrotate
   * using logrotate to delete old files is not a good solution because it will run postscript for every log file???TTT
 
+# Logging Tools
 ## glogrotate
 * https://github.com/realzeitmedia/glogrotate
 * https://github.com/logrotate/logrotate
