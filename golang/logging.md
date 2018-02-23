@@ -6,7 +6,7 @@
 * use cron to delete old files
 ```
 # delete files more than one day ago, runs every day at 23:15, basically (one second after 23:15)
-15 23 * * * cible find /path/to/logs -maxdepth 1 -name "*log*" -type f -mtime +0 -delete
+15 23 * * * <run username> find /path/to/logs -maxdepth 1 -name "*log*" -type f -mtime +0 -delete
 ```
 
 ### How
