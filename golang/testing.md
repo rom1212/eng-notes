@@ -5,6 +5,10 @@
 
 ## Mock
 * https://medium.com/agrea-technogies/mocking-dependencies-in-go-bb9739fef008
+* http://squarism.com/2014/11/28/mocking-in-golang/
+* http://goinbigdata.com/testing-go-code-with-testify/
+* goconvey: http://callistaenterprise.se/blogg/teknik/2017/03/03/go-blog-series-part4/
+* testify vs gomock
 
 ## Temporary Directory and File
 * io.ioutil.TempDir(dir, prefix)
