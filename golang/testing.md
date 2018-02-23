@@ -1,8 +1,12 @@
 # How to Test
 ## Learn from golang test itself
 * for testing exec.Command: https://golang.org/src/os/exec/exec_test.go
+* https://joeshaw.org/testing-with-os-exec-and-testmain/
 
-# Temporary Directory and File
+## Mock
+* https://medium.com/agrea-technogies/mocking-dependencies-in-go-bb9739fef008
+
+## Temporary Directory and File
 * io.ioutil.TempDir(dir, prefix)
   * Creates the temporary directory in <dir> with a <prefix>. e.g.
     * ioutil.TempDir("", "fu"): creates a temp directory /tmp/fu12331431243/
@@ -79,7 +83,7 @@ func tempFile(t *testing.T) (string, string) {
   * https://github.com/golang/go/blob/master/src/io/ioutil/ioutil.go
   * https://github.com/golang/go/blob/master/src/io/ioutil/ioutil_test.go
   
-# Test Working Directory
+## Test Working Directory
 ```go
   func TestGetFilename(t *testing.T) {
     _, filename, _, _ := runtime.Caller(0)
