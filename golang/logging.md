@@ -2,6 +2,8 @@
 * https://gist.github.com/heatxsink/7221ebe499b0767d4784
 
 # glog rotation
+## logrotate is probably more complicated for this.
+
 ## How
 https://hpc.nih.gov/development/glog.html
 
@@ -29,3 +31,6 @@ https://hpc.nih.gov/development/glog.html
 ## lumberjack
 * https://github.com/natefinch/lumberjack
 * https://gist.github.com/jasonlollback/f395512056699fab8fc1
+
+# Other resources
+* https://www.loggly.com/blog/think-differently-about-what-to-log-in-go-best-practices-examined/
