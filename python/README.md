@@ -73,3 +73,14 @@ https://pypi.python.org/pypi/flake8
    * xxxx xxxx xxx # noqa: E234
 * per file
    * ```# flake8: noqa```
+
+# Import
+## Local file import
+* common.py
+```python
+def get_api_url(relative_path):
+```
+* list.py
+```python
+from common import get_api_url
+```
