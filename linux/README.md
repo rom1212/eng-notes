@@ -85,9 +85,11 @@ clean up /etc/hosts.deny
 ```
 * a better way
 ```
-sudo systemctl stop denyhosts
-sudo sed -i '/192.168/d' /var/lib/denyhosts/* /etc/hosts.deny
-sudo systemctl start denyhosts
+sudo su
+systemctl stop denyhosts
+sed -i '/192.168/d' /var/lib/denyhosts/* /etc/hosts.deny
+systemctl start denyhosts
+exit
 ```
 
 ## SSH Keep Alive
