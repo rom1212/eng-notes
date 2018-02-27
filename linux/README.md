@@ -83,6 +83,12 @@ refused connect from xx.xx.xx.xx (xx.xx.xx.xx)
 ```
 clean up /etc/hosts.deny
 ```
+* a better way
+```
+sudo systemctl stop denyhosts
+sudo sed -i '/192.168/d' /var/lib/denyhosts/* /etc/hosts.deny
+sudo systemctl start denyhosts
+```
 
 ## SSH Keep Alive
 https://stackoverflow.com/questions/25084288/keep-ssh-session-alive
