@@ -17,4 +17,6 @@
 
 ## ioutil.ReadAll()
 * https://golang.org/pkg/io/ioutil/#example_ReadAll
-* 
+* To find out how go handlers reading and EOF, read this function: bytes.Buffer.ReadFrom()
+  * https://golang.org/src/bytes/buffer.go
+
