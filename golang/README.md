@@ -1,6 +1,7 @@
 # Dev
 * gofmt
 * go test -v ./...
+* guide???TTT
 * [errcheck](https://github.com/kisielk/errcheck)
 ```
 errcheck ./...
@@ -19,4 +20,8 @@ errcheck ./...
   * https://golang.org/pkg/os/exec/#example_Cmd_StdinPipe
   * http://blog.ralch.com/tutorial/golang-command-line-pipes/
   * "golang command redirection"
-
+* https://golang.org/ref/spec#Slice_expressions
+  * For arrays or strings, the indices are in range if 0 <= low <= high <= len(a)
+  * append nil
+  * nil slice
+* https://golang.org/ref/spec#Run_time_panics
