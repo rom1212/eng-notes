@@ -9,6 +9,9 @@ sudo apt install python-tk
 
 # run
 psrecord 20173 --plot plot.png --duration 60 --interval 0.1
+
+# include subprocesses - useful if the process spawn more processes
+psrecord 20173 --plot plot.png --duration 60 --interval 0.1 --include-children
 ```
 
 # cpustat
