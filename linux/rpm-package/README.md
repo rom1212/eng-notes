@@ -50,6 +50,15 @@ TTT???
 ```
  rpm2cpio ./packagecloud-test-1.1-1.x86_64.rpm | cpio -idmv
 ```
+rpmdev-extract (https://github.com/RsrchBoy/rpmdevtools/blob/master/rpmdev-extract) also use this method.
+* source code
+  * rpm2cpio
+    * https://github.com/rpm-software-management/rpm/blob/master/rpm2cpio.c
+    * https://github.com/rom1212/rpm/blob/master/rpm2cpio.c
+  * cpio
+    * https://ftp.gnu.org/gnu/cpio/
+    * https://github.com/Distrotech/cpio
+    * https://github.com/rom1212/cpio
 ## show scripts
 ```
 rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
