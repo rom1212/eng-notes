@@ -26,3 +26,19 @@
 * To find out how go handlers reading and EOF, read this function: bytes.Buffer.ReadFrom()
   * https://golang.org/src/bytes/buffer.go
 
+# Write to file
+
+## Append to a file
+```go
+        // can append even the file doesn't exist
+	file, err := os.OpenFile("/tmp/append.txt", os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0600)
+	if err != nil {
+		panic(err)
+	}
+	defer file.Close()
+	for i, s := range os.Args {
+		if _, err = file.WriteString(strconv.Itoa(i) + ":" + s + "\n"); err != nil {
+			panic(err)
+		}
+	}
+```
