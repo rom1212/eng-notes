@@ -11,4 +11,9 @@ sudo apt install python-tk
 psrecord 20173 --plot plot.png --duration 60 --interval 0.1
 ```
 
+# cpustat
+* memory information is not good, don't have min/max/avg for memory
+* https://github.com/uber-common/cpustat 
+* https://www.tecmint.com/cpustat-monitors-cpu-utilization-by-processes-in-linux/
+
 
