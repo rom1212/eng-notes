@@ -1,8 +1,9 @@
-# rpm basics
+# RPM
+## rpm basics
 * http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
 * scripts: https://fedoraproject.org/wiki/Packaging:Scriptlets
 
-# rpm command
+## rpm command
 * docs
   * https://www.tecmint.com/20-practical-examples-of-rpm-commands-in-linux/
   * https://wiki.centos.org/TipsAndTricks/YumAndRPM
@@ -32,20 +33,15 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
   * rpm --test
   * check whether it is installed???TTT : ```rpm -q <package name>```, this can also check previous versions
 
-# rpm package format
+## rpm package format
 * http://rpm5.org/docs/api/pkgformat.html
 
-# yum command
-"The benefit of yum is that it will resolve dependencies for you and also install dependencies along with the concerned application. But you need to define the path of software resources in /etc/yum.repos.d in a .repo file
-"
-* https://www.lifewire.com/install-rpm-packages-using-yum-2201155
-
-# Upgrade
+## ppgrade
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
 TTT???
 
-# Extract content from rpm file
-## rpm2cpio
+## Extract content from rpm file
+### rpm2cpio
 * http://ftp.rpm.org/max-rpm/s1-rpm-miscellania-rpm2cpio.html, e.g.
 ```
  rpm2cpio ./packagecloud-test-1.1-1.x86_64.rpm | cpio -idmv
@@ -59,9 +55,16 @@ rpmdev-extract (https://github.com/RsrchBoy/rpmdevtools/blob/master/rpmdev-extra
     * https://ftp.gnu.org/gnu/cpio/
     * https://github.com/Distrotech/cpio
     * https://github.com/rom1212/cpio
-## show scripts
+### show scripts
 ```
 rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
 ```
 https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-packages/
   
+
+# Yum
+## yum vs rpm command
+"The benefit of yum is that it will resolve dependencies for you and also install dependencies along with the concerned application. But you need to define the path of software resources in /etc/yum.repos.d in a .repo file
+"
+* https://www.lifewire.com/install-rpm-packages-using-yum-2201155
+## https://github.com/rpm-software-management/yum
