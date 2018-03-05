@@ -36,7 +36,7 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
 ## rpm package format
 * http://rpm5.org/docs/api/pkgformat.html
 
-## ppgrade
+## rpm install (-ivh) vs upgrade (-Uvh)
 * http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
 TTT???
 
@@ -67,4 +67,5 @@ https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-package
 "The benefit of yum is that it will resolve dependencies for you and also install dependencies along with the concerned application. But you need to define the path of software resources in /etc/yum.repos.d in a .repo file
 "
 * https://www.lifewire.com/install-rpm-packages-using-yum-2201155
-## https://github.com/rpm-software-management/yum
+## yum source - python
+* https://github.com/rpm-software-management/yum
