@@ -2,10 +2,19 @@
 * https://github.com/astrofrog/psrecord
 * For accuracy is to 0.1 second (which is the Linux limitation of update the system information)
 ```bash
+# Install pip if needed
+sudo apt/yum install pip
+sudo pip install -U pip
+
+# Install psutil
+sudo apt/yum install gcc
+sudo apt/yum install python-devel
+sudo pip install psutil
+
 # Install
 sudo pip install psrecord
 sudo pip install matplotlib
-sudo apt install python-tk
+sudo apt install python-tk or sudo yum install tkinter
 
 # run
 psrecord 20173 --plot plot.png --duration 60 --interval 0.1
