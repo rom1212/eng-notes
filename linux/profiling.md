@@ -16,6 +16,10 @@ sudo pip install psrecord
 sudo pip install matplotlib
 sudo apt install python-tk or sudo yum install tkinter
 
+# Config - for running on a host without Xwindow
+echo "backend: agg" > .config/matplotlib/matplotlibrc
+cat .config/matplotlib/matplotlibrc
+
 # run
 psrecord 20173 --plot plot.png --duration 60 --interval 0.1
 
