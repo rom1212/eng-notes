@@ -2,6 +2,7 @@
 ## rpm basics
 * http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
 * scripts: https://fedoraproject.org/wiki/Packaging:Scriptlets
+* source code: https://github.com/rpm-software-management/rpm
 
 ## rpm command
 * docs
@@ -37,7 +38,22 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
 * http://rpm5.org/docs/api/pkgformat.html
 
 ## rpm install (-ivh) vs upgrade (-Uvh)
-* http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
+* background: "rpm --upgrade" can handle files that are changed locally by someone manually. This is especially true for config files. rpm handles this by using md5 to remember whether some files are changed locally or not. This [link]( https://www.linuxquestions.org/questions/fedora-35/rpm-ivh-vs-rpm-uvh-256231/) explains the main idea:
+```
+Update (-U) is different install (-i) if the package was previously installed: especially if some of the files have been modified. Update will attempt to preserve your modifications, whereas install will remove all traces of any modifications you might have made.
+
+If the current contents of the file is different from both that what was originally installed and what is in the update package, and the file in the update package is also different from that originally installed, the current contents are saved to a file with .rpmsave extension before replacing it with the file from the update package.
+
+If there was no file in the originally installed package, the current file is renamed with the .rpmorig extension before replacing it with the file from the update package.
+
+If using update, you are responsible for manually processing any .rpmsave or .rpmorig files that are created.
+
+This handling of modifications is in addition to the other difference: update removes the old package (if there was one), but install does not (requiring manual use of uninstall (-e) if you want to get rid of the other versions).
+```
+* More details on the upgrade process is here: http://ftp.rpm.org/max-rpm/ch-rpm-upgrade.html
+  * original file: means the file last time installed
+  * current file: means the file at the time of installation, which could be modified by someone manually. So, it could be different from original file.
+  * new file: in the new package.
 TTT???
 
 ## Extract content from rpm file
