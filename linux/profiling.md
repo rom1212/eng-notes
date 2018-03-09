@@ -1,6 +1,7 @@
 # psrecord
 * https://github.com/astrofrog/psrecord
 * For accuracy is to 0.1 second (which is the Linux limitation of update the system information)
+  * also specified here in psutil: https://psutil.readthedocs.io/en/latest/
 ```bash
 # Install pip if needed
 sudo apt/yum install pip
