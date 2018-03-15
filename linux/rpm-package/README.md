@@ -5,14 +5,20 @@
 * source code: https://github.com/rpm-software-management/rpm
 
 ## naming
-Some RPM packages:
-* vim-minimal-7.4.160-2.el7.x86_64
-* tar-1.26-32.el7.x86_64
-* cloud-init-0.7.9-9.el7.centos.2.x86_64
-* make-3.82-23.el7.x86_64
-* wget-1.14-15.el7_4.1.x86_64
-* libcurl-7.29.0-42.el7_4.1.x86_64
-* gzip-1.5-9.el7.x86_64
+* <package name>-<version>-<release>.<arch>
+ 
+* Example RPM packages:
+```
+rpm -qi vim-minimal-7.4.160-2.el7.x86_64
+Name        : vim-minimal
+Epoch       : 2
+Version     : 7.4.160
+Release     : 2.el7
+Architecture: x86_64
+
+tar-1.26-32.el7.x86_64, cloud-init-0.7.9-9.el7.centos.2.x86_64, make-3.82-23.el7.x86_64
+wget-1.14-15.el7_4.1.x86_64, libcurl-7.29.0-42.el7_4.1.x86_64, gzip-1.5-9.el7.x86_64
+```
 
 ## rpm command
 * docs
