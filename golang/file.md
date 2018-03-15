@@ -42,3 +42,17 @@
 		}
 	}
 ```
+
+# Check File
+https://stackoverflow.com/questions/12518876/how-to-check-if-a-file-exists-in-go
+```go
+// check file not exist
+if _, err := os.Stat("/path/to/whatever"); os.IsNotExist(err) {
+  // path/to/whatever does not exist
+}
+
+// check file exist
+if _, err := os.Stat("/path/to/whatever"); err == nil {
+  // path/to/whatever exists
+}
+```
