@@ -5,7 +5,7 @@
 * source code: https://github.com/rpm-software-management/rpm
 
 ## naming
-* <package name>-<version>-<release>.<arch>
+* ```<package name>-<version>-<release>.<arch>```
  
 * Example RPM packages:
 ```
