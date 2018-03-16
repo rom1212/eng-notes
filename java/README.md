@@ -19,3 +19,5 @@
   * https://docs.oracle.com/javase/7/docs/technotes/guides/jweb/jcp/jcp.html
   * java console: https://www.java.com/en/download/help/javaconsole.xml
   * security - add websites for exceptions
+* code check tools
+  * https://pmd.github.io/pmd-6.1.0/
