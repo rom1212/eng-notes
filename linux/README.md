@@ -43,6 +43,13 @@ CentOS: useradd and adduser are the same
 sudo useradd -m xxx
 sudo passwd xxx
 usermod -aG wheel username  # no sudo group here
+
+visudo and uncomment these two lines (or vi /etc/sudoers
+## Allows people in group wheel to run all commands
+%wheel  ALL=(ALL)       ALL
+
+## Same thing without a password
+%wheel  ALL=(ALL)       NOPASSWD: ALL
 ```
 
 ## Change Hostname
