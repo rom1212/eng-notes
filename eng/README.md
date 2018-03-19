@@ -7,3 +7,13 @@ This is especially important to development because
 # Code quality control
 * https://pmd.github.io/pmd-6.1.0/
 * findbugs, code style check, errcheck (golang)
+
+# Ramp Up
+* Dev process
+  * build, deploy
+* Testing
+  * Add more test
+  * Make sure that it works
+* Small changes - 
+  * bug fix
+  * small feature
