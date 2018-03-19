@@ -5,10 +5,7 @@
 * go get -t ./...
 * go test -v ./...
 * guide???TTT
-* [errcheck](https://github.com/kisielk/errcheck)
-```
-errcheck ./...
-```
+* [errcheck](https://github.com/kisielk/errcheck): ```errcheck ./...```
 
 # Docs
 * Effective Go: https://golang.org/doc/effective_go.html
