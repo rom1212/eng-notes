@@ -7,6 +7,7 @@ cp -r rpmbulid ~/
 
 In $HOME directory, run this:
 ```
+# sudo yum install rpm-build
 rpmbuild -bb rpmbuild/SPECS/hellowworld.spec
 ```
 
