@@ -97,3 +97,11 @@ github provides three options:
 * Merge: which is basically "git merge"
 * squash and merge: which is "git merge --squash"
 * rebase
+
+# git for windows
+* https://git-scm.com/download/win or https://git-scm.com/download/win
+* credential manager
+  * https://github.com/Microsoft/Git-Credential-Manager-for-Windows/blob/master/Docs/CredentialManager.md
+  * remove stored credential  (one for a URL)
+    * git credential-manager remove
+    * git credential-manager clear (safter to run twice)
