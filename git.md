@@ -99,7 +99,8 @@ github provides three options:
 * rebase
 
 # git for windows
-* https://git-scm.com/download/win or https://git-scm.com/download/win
+* download: https://git-scm.com/download/win or https://git-scm.com/download/win
+* how to install: http://www.techoism.com/how-to-install-git-bash-on-windows/
 * credential manager
   * https://github.com/Microsoft/Git-Credential-Manager-for-Windows/blob/master/Docs/CredentialManager.md
   * remove stored credential  (one for a URL)
