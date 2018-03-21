@@ -4,6 +4,7 @@
   * https://getfedora.org/en/workstation/download/
     * Netinstall Images: 64-bit 482MB image
   * After installation, and Reboot - need to remove iso from Virtualbox Settings->Storage->Controller IDE.
+  * After reboot - click on "Activities" on upper left corner, or right click on desktop, or click ```_^_``` network icon
 
 # Install on Ubuntu 16.04
 ## Install vagrant
