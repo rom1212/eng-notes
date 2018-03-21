@@ -1,3 +1,10 @@
+# Virtualbox
+## Fedoral
+* Workstation for desktop (vs. server, atomic-docker)
+  * https://getfedora.org/en/workstation/download/
+    * Netinstall Images: 64-bit 482MB image
+  * After installation, and Reboot - need to remove iso from Virtualbox Settings->Storage->Controller IDE.
+
 # Install on Ubuntu 16.04
 ## Install vagrant
 ```
