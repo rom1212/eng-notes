@@ -6,3 +6,6 @@
 
 ## go 1.9
 three more cases to go
+
+## convert html to md
+https://www.browserling.com/tools/html-to-markdown
