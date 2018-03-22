@@ -1,7 +1,7 @@
 # Intellij
 
 ## Install golang plugin
-* Only version before 2017.1 works (e.g. build 171.xxx.xxx)
+* 2016.3.8 works; 2017.1.1 works
 * https://plugins.jetbrains.com/plugin/5047-go-language-golang-org-support-plugin
 * "Browse Repositories..."
 
