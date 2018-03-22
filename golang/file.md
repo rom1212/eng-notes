@@ -56,3 +56,11 @@ if _, err := os.Stat("/path/to/whatever"); err == nil {
   // path/to/whatever exists
 }
 ```
+
+# File Location/Directory
+```
+func currFileDir() string {
+	_, thisfile, _, _ := runtime.Caller(0)
+	return path.Dir(thisfile)
+}
+```
