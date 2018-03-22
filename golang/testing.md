@@ -10,6 +10,11 @@
 * goconvey: http://callistaenterprise.se/blogg/teknik/2017/03/03/go-blog-series-part4/
 * testify vs gomock
 
+## Integration test
+https://www.philosophicalhacker.com/post/integration-tests-in-go/
+* --short
+* --integ (own flag)
+
 ## Temporary Directory and File
 * io.ioutil.TempDir(dir, prefix)
   * Creates the temporary directory in <dir> with a <prefix>. e.g.
