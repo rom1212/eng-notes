@@ -6,6 +6,7 @@
 * checks
   * gofmt -l -w .
   * go vet ./...
+  * golint
 * guide???TTT
 * [errcheck](https://github.com/kisielk/errcheck): ```errcheck ./...```
 
