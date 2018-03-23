@@ -28,3 +28,8 @@ $ grep processor /proc/cpuinfo
 ```
 /usr/bin/find /home/username -maxdepth 1 -name "*.sh" -type f -mtime +8 -delete
 ```
+
+# Tools
+## Meld
+* http://meldmerge.org/
+* Can be setup as git diff
