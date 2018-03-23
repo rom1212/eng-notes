@@ -10,3 +10,5 @@
 * what are the tests been done before and after release is cut?
 * What are the major tests?
   * scalability: https://github.com/kubernetes/kubernetes/issues/60589
+* what are the major features.
+* major PRs, and Issues.
