@@ -7,3 +7,5 @@ export GOPATH=~/go/
 
 # show time in history command
 export HISTTIMEFORMAT="%d/%m/%y %T "
+alias pmd="$HOME/pmd-bin-6.2.0/bin/run.sh pmd"
+alias sportbugs="~/spotbugs-3.1.1/bin/spotbugs"
