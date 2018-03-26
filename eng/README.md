@@ -16,6 +16,17 @@ $ pmd -d /usr/src -R java-basic -f textcolor
 $ pmd -d . -R java-basic -f textcolor -version 1.8 -language java
 ```
 * https://pmd.github.io/pmd-6.2.0/pmd_userdocs_getting_started.html
+## Spotbugs/Findbugs
+* docs
+  * https://github.com/spotbugs/spotbugs
+  * http://spotbugs.readthedocs.io/en/latest/running.html#quick-start
+  * http://spotbugs.readthedocs.io/en/latest/installing.html
+  * http://findbugs.sourceforge.net/
+  * https://github.com/findbugsproject/findbugs
+* Works for jar or class, e.g.
+```
+~/spotbugs-3.1.1/bin/spotbugs -maxHeap 500 -effort:min -high -html -output spotbugs_high.html target/classes/ target/test-classes/
+```
 
 ## Others
 * findbugs, code style check, errcheck (golang)
