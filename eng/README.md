@@ -12,8 +12,10 @@ $ cd $HOME
 $ wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.2.0/pmd-bin-6.2.0.zip
 $ unzip pmd-bin-6.2.0.zip
 $ alias pmd="$HOME/pmd-bin-6.2.0/bin/run.sh pmd"
-$ pmd -d /usr/src -R java-basic -f text
+$ pmd -d /usr/src -R java-basic -f textcolor
 ```
+* https://pmd.github.io/pmd-6.2.0/pmd_userdocs_getting_started.html
+
 ## Others
 * findbugs, code style check, errcheck (golang)
 
