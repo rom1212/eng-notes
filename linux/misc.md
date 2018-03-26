@@ -1,4 +1,4 @@
-# Make file
+# Makefile
 ## Docs
 * www.gnu.org/software/make/manual/make.html
   * "default goal" - default target: 
@@ -21,3 +21,15 @@ clean:
 run:
      @java myprogram
 ```     
+
+# Environment variable
+* check whether an environment variable is set or not
+```
+${STATE?"Need to set STATE"}
+${DEST:?"Need to set DEST non-empty"}
+```
+The first variant (using just ?) requires STATE to be set, but STATE="" (an empty string) is OK — not exactly what you want, but the alternative and older notation.
+
+Refs:
+  * https://stackoverflow.com/questions/307503/whats-a-concise-way-to-check-that-environment-variables-are-set-in-a-unix-shell
+  * http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
