@@ -5,7 +5,16 @@ This is especially important to development because
 * we might forget the details, and after some time (e.g. 1 month), we can still easily catch up with the development.
 
 # Code quality control
-* https://pmd.github.io/pmd-6.1.0/
+## PMD
+* https://pmd.github.io/, https://pmd.github.io/pmd-6.1.0/
+```
+$ cd $HOME
+$ wget https://github.com/pmd/pmd/releases/download/pmd_releases%2F6.2.0/pmd-bin-6.2.0.zip
+$ unzip pmd-bin-6.2.0.zip
+$ alias pmd="$HOME/pmd-bin-6.2.0/bin/run.sh pmd"
+$ pmd -d /usr/src -R java-basic -f text
+```
+## Others
 * findbugs, code style check, errcheck (golang)
 
 # Ramp Up
