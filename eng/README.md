@@ -25,9 +25,18 @@ $ pmd -d . -R java-basic -f textcolor -version 1.8 -language java
   * http://spotbugs.readthedocs.io/en/latest/installing.html
   * http://findbugs.sourceforge.net/
   * https://github.com/findbugsproject/findbugs
+* Install
+```
+wget http://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs/3.1.1/spotbugs-3.1.1.tgz
+tar -xvf spotbugs-3.1.1.tgz
+export SPOTBUGS=~/findbugs-3.0.1/bin/findbugs  # can be used by other scripts
+alias spotbugs=~/findbugs-3.0.1/bin/findbugs   # for local usage
+```
 * Works for jar or class, e.g.
 ```
-~/spotbugs-3.1.1/bin/spotbugs -maxHeap 500 -effort:min -high -html -output spotbugs_high.html target/classes/ target/test-classes/
+~/spotbugs-3.1.1/bin/spotbugs -maxHeap 500 -effort:min -high -html -output spotbugs_high.html -auxclasspath target/lib/ target/classes/ target/test-classes/
+
+-auxclasspath target/lib/: for it not to complain about missing classes
 ```
 
 ## Others
