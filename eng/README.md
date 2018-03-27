@@ -16,6 +16,8 @@ $ pmd -d /usr/src -R java-basic -f textcolor
 $ pmd -d . -R java-basic -f textcolor -version 1.8 -language java
 ```
 * https://pmd.github.io/pmd-6.2.0/pmd_userdocs_getting_started.html
+* Using short name for ruleset, where short names are defined here for some examples
+  * https://github.com/pmd/pmd/blob/master/pmd-core/src/main/java/net/sourceforge/pmd/cli/PMDCommandLineInterface.java
 ## Spotbugs/Findbugs
 * docs
   * https://github.com/spotbugs/spotbugs
