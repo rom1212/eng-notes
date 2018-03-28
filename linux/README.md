@@ -107,6 +107,8 @@ Host *
 ServerAliveInterval 240
 ```
 
+## TMOUT
+
 ## Who login/history
 ```
 last [-10]
