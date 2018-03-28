@@ -1,5 +1,5 @@
-git config --global user.name "romans1212notes"
-git config --global user.email "romans1212notes"
+git config --global user.name "rom1212"
+git config --global user.email "rom1212"
 
 alias gits='git status'
 alias gitb='git branch'
