@@ -27,6 +27,19 @@
   * https://golang.org/src/bytes/buffer.go
 
 # Write to file
+## Write string to file
+```go
+	decoder := json.NewDecoder(r.Body)
+	var request Request
+	err := decoder.Decode(&request)
+	if err != nil {
+		panic(err)
+	}
+	defer r.Body.Close()
+
+	b, err := json.MarshalIndent(request, "", "    ")
+        ioutil.WriteFile("/tmp/request.json", b, os.ModePerm)
+```
 
 ## Append to a file
 ```go
