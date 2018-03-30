@@ -29,8 +29,8 @@ $ pmd -d . -R java-basic -f textcolor -version 1.8 -language java
 ```
 wget http://repo.maven.apache.org/maven2/com/github/spotbugs/spotbugs/3.1.1/spotbugs-3.1.1.tgz
 tar -xvf spotbugs-3.1.1.tgz
-export SPOTBUGS=~/findbugs-3.0.1/bin/findbugs  # can be used by other scripts
-alias spotbugs=~/findbugs-3.0.1/bin/findbugs   # for local usage
+export SPOTBUGS=~/spotbugs-3.1.1/bin/spotbugs  # can be used by other scripts
+alias spotbugs=~/spotbugs-3.1.1/bin/spotbugs   # for local usage
 ```
 * Works for jar or class, e.g.
 ```
