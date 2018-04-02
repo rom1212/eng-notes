@@ -29,7 +29,7 @@ $ grep processor /proc/cpuinfo
 /usr/bin/find /home/username -maxdepth 1 -name "*.sh" -type f -mtime +8 -delete
 ```
 
-## process with a given port
+## Process with a given port
 ```
 pid=`lsof -i:"<PORT>" -t`
 ```
@@ -37,6 +37,22 @@ pid=`lsof -i:"<PORT>" -t`
 lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
 ```
 
+## A port is taken or not
+* netstat -tap
+  * all tcp ports
+* netstat -tlnp
+  * -t : tcp
+  * -l : listening only
+  * -n : numeric
+  * -p : process id and program
+```
+function taken {
+  if netstat -tlnp | grep ":$@" >/dev/null 2>&1; then
+    true
+  else
+    false
+  fi
+```
 
 # Tools
 ## Meld
