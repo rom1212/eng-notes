@@ -3,4 +3,6 @@
 * mysql: 3602
 * python flask: 5503
 * dropwizard: 
-* beego: 
+  * 8080 - API
+  * 8081 - Admin
+* beego: 8080
