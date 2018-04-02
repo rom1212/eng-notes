@@ -53,6 +53,7 @@ function taken {
     false
   fi
 ```
+If a port is know, it is easier to use lsof to find out the process id, instead of parsing netstat output.
 
 # Tools
 ## Meld
