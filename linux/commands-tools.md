@@ -29,6 +29,15 @@ $ grep processor /proc/cpuinfo
 /usr/bin/find /home/username -maxdepth 1 -name "*.sh" -type f -mtime +8 -delete
 ```
 
+## process with a given port
+```
+pid=`lsof -i:"<PORT>" -t`
+```
+```
+lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
+```
+
+
 # Tools
 ## Meld
 * http://meldmerge.org/
