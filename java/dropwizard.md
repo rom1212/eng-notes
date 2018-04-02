@@ -1,3 +1,9 @@
+# Docs
+* http://www.dropwizard.io
+* http://www.dropwizard.io/1.3.0/docs/getting-started.html
+
+
+
 # API
 ## Start up log
 ```
