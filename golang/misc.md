@@ -23,3 +23,8 @@ My comments: For example: exceptions are good to use, however, it is hard to fin
 * https://www.toptal.com/back-end/server-side-io-performance-node-php-java-go
   * Server-side I/O Performance: Node vs. PHP vs. Java vs. Go
   * good article about Non-blocking I/O
+  
+# Windows
+## path
+* default GOPATH is c:\users\xxxx\go\
+* GOROOT (C:\go) is used to find out the stardard package (which is built-in go packages). If there is warning about a standard package imprting a non-standard package, that means some code in C:\go is importing something in c:\users\xxxx\go
