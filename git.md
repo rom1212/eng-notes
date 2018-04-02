@@ -49,7 +49,8 @@ git config --global color.ui true
   * it automatically creates a commit which does the reversion.
 * ```git cherry-pick <commit>```
   * where ```<commit>``` is usually from another branch 
-
+* get current branch name
+  * ``` CBN=`git rev-parse --symbolic-full-name --abbrev-ref HEAD` ```
 # Keep a fork up to date
 https://gist.github.com/CristinaSolana/1885435
 * Clone your fork:
