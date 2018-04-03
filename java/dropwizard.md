@@ -11,6 +11,9 @@
   * comments says that it is using yaml. But the code is using  @JsonProperty("server"). So, I think it is using json. And also, the ConfigurationTest.java is using jackson ObjectMapper.
 * Managed:
   * Create a service with start() and stop(): http://www.dropwizard.io/0.9.1/dropwizard-lifecycle/apidocs/io/dropwizard/lifecycle/Managed.html
+* Jersey:
+  * https://en.wikipedia.org/wiki/Project_Jersey
+  * https://jersey.java.net/
 
 
 # API
