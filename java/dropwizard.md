@@ -1,7 +1,16 @@
 # Docs
+
+## Main Docs
 * http://www.dropwizard.io
+* https://github.com/dropwizard/dropwizard
 * http://www.dropwizard.io/1.3.0/docs/getting-started.html
 
+## Misc Docs
+* Configuration:
+  * https://github.com/dropwizard/dropwizard/blob/master/dropwizard-core/src/main/java/io/dropwizard/Configuration.java
+  * comments says that it is using yaml. But the code is using  @JsonProperty("server"). So, I think it is using json. And also, the ConfigurationTest.java is using jackson ObjectMapper.
+* Managed:
+  * Create a service with start() and stop(): http://www.dropwizard.io/0.9.1/dropwizard-lifecycle/apidocs/io/dropwizard/lifecycle/Managed.html
 
 
 # API
