@@ -1,3 +1,14 @@
+# Basic Data types
+## string
+```go
+	list := strings.Split("", ",")
+	fmt.Println("len(list):", len(list))
+```
+output is 
+```
+len(list): 1
+```
+
 # Defer
 ## close on writable file
 https://joeshaw.org/dont-defer-close-on-writable-files/
