@@ -17,6 +17,11 @@
 * How to write Go code: https://golang.org/doc/code.html
 
 # Questions (TTT???):
+## Major Questions
+* what are the cases for runtime crash, e.g. nil pointer deferencence.
+  * interface is not set to a real object.
+
+## Other Questions
 * GOPATH - a list of directories?
 * import local package "./xxxx" or must "myproject/xxx"
 * pipe: 
