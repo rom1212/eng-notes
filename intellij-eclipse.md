@@ -30,3 +30,5 @@ vertical editing: Ctrl + Shift + V
 https://github.com/vrapper/vrapper/issues/330
 if Eclipse couldn't show the view of an open file, try "Window->New Window", which brings up a new IDE. After that, you could close the old window (IDE)
 ```
+## Install
+* Fedora: search software on the desktop, and then install
