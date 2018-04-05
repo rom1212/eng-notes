@@ -9,6 +9,9 @@
   * golint
 * guide???TTT
 * [errcheck](https://github.com/kisielk/errcheck): ```errcheck ./...```
+* editors
+  * Eclipse
+    * https://goclipse.github.io/
 
 # Docs
 * Effective Go: https://golang.org/doc/effective_go.html
