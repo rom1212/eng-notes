@@ -12,6 +12,11 @@
 ## Shortcuts
 * shortcut: Ctrl + Shift + L: list all the short cut keys, and hit it again will bring up the short cut key preference/setup page.
 * Shortcut for copy the line down: use Ctrl + Y (yank)
+* To be compatable with Intellij: 
+  * copy whole line: Ctrl + Shift + C
+  * cut the whole line: Ctrl + Shift + X
+  * duplicate the whole line: Ctrl + Shift + D
+* https://dzone.com/articles/effective-eclipse-shortcut-key
 ## vim plugin: 
 * http://stackoverflow.com/questions/2220653/what-vim-plugins-are-available-for-eclipse
 * vrapper:
