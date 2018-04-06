@@ -8,3 +8,9 @@
 * groups of group
   * each group is a template
   * super group is just a group of group: this will make make it simple, and re-usable.
+  
+ ```
+ groups:
+   dep 
+ 
+ ```
