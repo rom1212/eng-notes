@@ -6,6 +6,13 @@
   * After installation, and Reboot - need to remove iso from Virtualbox Settings->Storage->Controller IDE.
   * After reboot - click on "Activities" on upper left corner, or right click on desktop, or click ```_^_``` network icon
 
+# Shared Folder
+* doc: https://gist.github.com/estorgio/1d679f962e8209f8a9232f7593683265
+  * Once your VM is up and running, go to Devices menu -> Insert Guest Additions CD image menu. Then the CD will be automaticall
+    mounted, and code is automatically run, and then restart
+  * mkdir ~/shared
+  * ```sudo mount -t vboxsf <shared folder name input from Virtualbox UI>  ~/shared```
+
 # Install on Ubuntu 16.04
 ## Install vagrant
 ```
