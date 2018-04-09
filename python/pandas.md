@@ -44,6 +44,7 @@ dataframe
 ```python
 df = pd.read_csv('002032.csv')
 df = df[:5]
+df['date']=df['date'].astype(str)
 df.plot(x = 'date', y='close')
 plt.xticks(df.index, df['date'], rotation=90)
 plt.show()
