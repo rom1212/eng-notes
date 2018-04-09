@@ -33,3 +33,6 @@ The first variant (using just ?) requires STATE to be set, but STATE="" (an empt
 Refs:
   * https://stackoverflow.com/questions/307503/whats-a-concise-way-to-check-that-environment-variables-are-set-in-a-unix-shell
   * http://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
+
+# Other Linux distributions
+* https://www.whonix.org/, secure Linux for surfing internet.
