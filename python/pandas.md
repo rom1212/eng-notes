@@ -1,5 +1,3 @@
-# ndarray
-
 # DataFrame
 ## Create from ndarray
 ```
@@ -31,4 +29,13 @@ row2  4.660964e-309  2.505217e-292
 0.0
 >>> nda[1][0]
 4.6609637972718334e-309
+```
+## Plot
+```python
+arr = { 'm_srcaddr':['10.19.139.141', '10.19.139.143'], 'total_fwd_size': [2479.335,888.141]}
+df = pd.DataFrame(arr)
+type(df['m_srcaddr'][0])
+df.plot(x = 'm_srcaddr')
+plt.xticks(df.index, df['m_srcaddr'], rotation=90)
+plt.show()
 ```
