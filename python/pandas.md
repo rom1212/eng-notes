@@ -39,3 +39,11 @@ df.plot(x = 'm_srcaddr')
 plt.xticks(df.index, df['m_srcaddr'], rotation=90)
 plt.show()
 ```
+
+dataframe
+```
+df = pd.read_csv('002032.csv')
+df = df[:5]
+df.plot(x = 'date', y='close')
+plt.xticks(df.index, df['date'], rotation=90)
+```
