@@ -16,8 +16,9 @@
   * https://jersey.java.net/
 
 
-# API
-## Start up log
+# Service
+## API
+* Start up log
 ```
 INFO  [2017-12-30 03:31:24,719] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
 
@@ -25,3 +26,26 @@ INFO  [2017-12-30 03:31:24,719] io.dropwizard.jersey.DropwizardResourceConfig: T
     ...
 ```
 This is especially useful to find out where the code is.
+
+## Config ports
+server.yaml
+```
+logging:
+  level: INFO
+  loggers:
+    com.xx.xxx: DEBUG
+  appenders:
+    - type: file
+      timeZone: UTC
+      threshold: DEBUG
+      archive: false
+      currentLogFilename: /tmp/xx/service.log
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8090
+  adminConnectors:
+    - type: http
+      port: 8091
+```
