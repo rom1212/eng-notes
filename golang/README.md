@@ -6,7 +6,8 @@
 * checks
   * gofmt -l -w .
   * go vet ./...
-  * golint
+  * golint ./... (go get -u golang.org/x/lint/golint)
+    * only for some directories, e.g.: golint . utils/ tools/
 * guide???TTT
 * [errcheck](https://github.com/kisielk/errcheck): ```errcheck ./...```
 * editors
