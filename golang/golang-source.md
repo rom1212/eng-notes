@@ -1,8 +1,10 @@
-# fmt.print
+# fmt.Print
 * https://golang.org/src/fmt/print.go
   * func (p *pp) doPrintln(a []interface{})
     * printArg
 * combined type switch and reflection - TTT??? why
+* fmt.Print(err) is ok. Not sure why??? TTT (where err is an instance of error)
+  * glog.Error(err) is also ok.
 
 # os
 * https://golang.org/src/os/path_test.go
