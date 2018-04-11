@@ -23,7 +23,10 @@ Traceback (most recent call last):
     from virtualenv import main
 ImportError: No module named virtualen
 ```
-And you also can find virtualenv.py file in /usr/lib/python2.7/site-packages/. Please check whether the permission of virutalenv.py is right, e.g. less /usr/lib/python2.7/site-packages/virtualenv.py. 
+And you also can find virtualenv.py file in /usr/lib/python2.7/site-packages/. Please check whether the permission of virutalenv.py is right, e.g. less /usr/lib/python2.7/site-packages/virtualenv.py. Simple way to change the permission:
+```
+sudo chmod a+rX -R /usr/lib/python2.7/site-packages/
+```
 
 ## Tox
 ### Install
