@@ -106,8 +106,10 @@ https://stackoverflow.com/questions/25084288/keep-ssh-session-alive
 Host *
 ServerAliveInterval 240
 ```
-
-## TMOUT
+```
+# CentOS, RedHat, Fedora
+export TMOUT=0
+```
 
 ## Who login/history
 ```
