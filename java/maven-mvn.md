@@ -1,5 +1,10 @@
 # mvn commands
 
+## options
+* To build the parent alone, I run mvn package -N (where -N is "non-recursive").
+* To build a few modules, I run mvn package -pl api,servie (where -pl is "projects").
+* To build both: mvn package -pl api,service --also-make
+
 ## mvn test
 * [single test](http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html):
   * mvn -Dtest=DBDAOTest#testDeploymentQueries test
