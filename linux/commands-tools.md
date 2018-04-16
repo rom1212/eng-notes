@@ -55,6 +55,12 @@ function taken {
 ```
 If a port is know, it is easier to use lsof to find out the process id, instead of parsing netstat output.
 
+## chmod
+Add read permission for all files and directories recursively. pay attention to capital "X".
+```bash
+sudo chmod a+rX -R .
+```
+
 # Tools
 ## Meld
 * http://meldmerge.org/
