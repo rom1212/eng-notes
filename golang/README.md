@@ -8,6 +8,9 @@
   * go vet ./...
   * golint ./... (go get -u golang.org/x/lint/golint)
     * only for some directories, e.g.: golint . utils/ tools/
+  * gometalint
+  * goreporter: https://github.com/360EntSecGroup-Skylar/goreporter/
+  * awesome static analysis: https://github.com/360EntSecGroup-Skylar/goreporter/commits/master
 * guide???TTT
 * [errcheck](https://github.com/kisielk/errcheck): ```errcheck ./...```
 * editors
