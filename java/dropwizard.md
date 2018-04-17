@@ -1,4 +1,10 @@
 # Docs
+## Quick Start
+* Create a new dropwizard project
+```bash
+# http://www.dropwizard.io/1.3.0/docs/getting-started.html
+mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=1.3.0
+```
 
 ## Main Docs
 * http://www.dropwizard.io
