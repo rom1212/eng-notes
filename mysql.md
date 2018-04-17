@@ -6,12 +6,17 @@
 
 # CLI Tools
 ## mysql client
-```
+```bash
 # simple command, default is localhost:3306
 mysql -u root -p
 
 # command with more options
 mysql -u root -p --host localhost --port 3306
+
+# command with password, database and query
+MYSQL_PWD=${PWD} mysql --user="root" --connect-expired-password --database='cible' --execute="SELECT DISTINCT User FROM mysql.user;"
+
+mysql --user="root" --password=i2test --connect-expired-password --database='cible' --execute="SELECT DISTINCT User FROM mysql.user;"
 ```
 
 ## Add User
