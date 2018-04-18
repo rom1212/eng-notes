@@ -41,23 +41,53 @@ This is especially useful to find out where the code is.
 
 ## Config ports
 server.yaml
-```
-logging:
+```logging:
   level: INFO
   loggers:
-    com.xx.xxx: DEBUG
+    taskboard.io: DEBUG
   appenders:
     - type: file
+      currentLogFilename: /tmp/taskboard/service.log
       timeZone: UTC
-      threshold: DEBUG
-      archive: false
-      currentLogFilename: /tmp/xx/service.log
+      threshold: ALL
+      archive: true
+      archivedLogFilenamePattern: /tmp/taskboard/service.log.%d.gz
+      archivedFileCount: 10
 
 server:
   applicationConnectors:
     - type: http
-      port: 8090
+      port: 8080
   adminConnectors:
     - type: http
-      port: 8091
+      port: 8081
+
+  requestLog:
+    appenders:
+      - type: file
+        currentLogFilename: /tmp/taskboard/access.log
+        threshold: ALL
+        timeZone: UTC
+        archive: true
+        archivedLogFilenamePattern: /tmp/taskboard/access.log.%d.gz
+        archivedFileCount: 10
+```
+
+## Generate Swagger
+```java
+public class TaskBoardService extends Application<TaskBoardConfiguration> {
+    @Override
+    public void run(final TaskBoardConfiguration configuration,
+                    final Environment environment) {
+
+        environment.jersey().register(new ApiListingResource());
+        environment.jersey().register(new SwaggerSerializers());
+        BeanConfig config = new BeanConfig();
+        config.setTitle("Task Board Service API Docs");
+        config.setVersion("0.1.0");
+        // make sure this is correct, e.g. resource vs resources.
+        config.setResourcePackage("io.taskboard.service.resources");
+        config.setScan(true);
+    }
+}
 ```
