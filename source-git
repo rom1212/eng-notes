@@ -1,5 +1,5 @@
 git config --global user.name "rom1212"
-git config --global user.email "rom1212"
+git config --global user.email "21117906+rom1212@users.noreply.github.com"
 
 alias gits='git status'
 alias gitb='git branch'
@@ -9,5 +9,5 @@ alias gitb='git branch'
 #git config --global http.proxy http://10.xx.xx.xx:3128
 #git config --global https.proxy http://10.xx.xx.xx:3128
 
-#alias bashrc='vim ~/.bashrc'
-#alias sourceshell='source ~/.bashrc'
+alias bashrc='vim ~/.bashrc'
+alias sourceshell='source ~/.bashrc'
