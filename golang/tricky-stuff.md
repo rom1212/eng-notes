@@ -5,7 +5,7 @@
 	list := strings.Split("", ",")
 	fmt.Println("len(list):", len(list))
 ```
-output is 
+output is, where the content is empty string 
 ```
 len(list): 1
 ```
@@ -38,4 +38,22 @@ if err = out.Sync(); err != nil {
 
 return out.Close()  // usually this is not a long function, and easier to make sure that it is closed.
 ```
-## 
+## Tilde Home Directory
+* golang itself can not handle tilde (```~```) as home directory, because it is handled by shell/bash when passing it to go code as command line arguments. However, if we use it directly in the code, it can not interpretate it, even with AbsPath.
+
+## json
+* If json content is null, then it means empty, and will be converted as the default value of that time.
+* For example, 
+```
+type Book struct  {
+    Name string
+    Brorrower string    
+}
+```
+If Borrower is absent in the json, it will be empty string. We cannot distinguish between absence and real empty string. So, we can define a pointer to handle this, which will return nil when it is absent or null, e.g.
+```
+type Book struct  {
+    Name string
+    Brorrower *string    
+}
+```
