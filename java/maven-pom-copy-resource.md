@@ -8,6 +8,9 @@ By default, maven uses the following plugins:
 * maven-jar-plugin
 * maven-release-plugin???
 
+Notes:
+* If ```<includes>``` is not used, it copies recursively
+* ```<directory>``` is relative to current directory (i.e. the directory of pom.xml)
 ```
 
 <?xml version="1.0" encoding="UTF-8"?>
