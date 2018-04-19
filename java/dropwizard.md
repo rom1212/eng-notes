@@ -1,8 +1,11 @@
 # Docs
+## Example
+https://github.com/rom1212/taskboard-dropwizard
+
 ## Quick Start
 * Create a new dropwizard project
   * mvn "archetype:generate" "-DinteractiveMode=false" "-DarchetypeGroupId=io.dropwizard.archetypes" "-DarchetypeArtifactId=java-simple" "-DarchetypeVersion=1.3.0" "-DgroupId=myservice.xxx.com" "-DartifactId=myservice" "-Dpackage=com.xxx.myservice" "-Dname=MyService" "-Dversion=0.1-SNAPSHOT" "-Dshaded=true" "-Ddescription='My Service'"
-
+* found this here: dropwizard-archetypes/src/main/resources/dropwizard-create, by cloning and grep. github search doesn't work that well.
 ```bash
 # http://www.dropwizard.io/1.3.0/docs/getting-started.html
 # batch mode - the same as above, but displayed as one line
@@ -16,6 +19,7 @@ mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeAr
 * http://www.dropwizard.io
 * https://github.com/dropwizard/dropwizard
 * http://www.dropwizard.io/1.3.0/docs/getting-started.html
+* config reference: http://www.dropwizard.io/1.3.0/docs/manual/configuration.html#request-log
 
 ## Misc Docs
 * Configuration:
