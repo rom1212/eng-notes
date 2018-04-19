@@ -25,8 +25,14 @@
 
 # Questions (TTT???):
 ## Major Questions
-* what are the cases for runtime crash, e.g. nil pointer deferencence.
+### what are the cases for runtime crash? 
+* nil pointer deferencence
   * interface is not set to a real object.
+* panic: assignment to entry in nil map
+```
+var skipDirSet map[string]struct{}
+skipDirSet[skipDir] = struct{}{}  // create an empty struct.
+```
 
 ## Other Questions
 * GOPATH - a list of directories?
