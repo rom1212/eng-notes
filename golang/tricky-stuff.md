@@ -9,6 +9,19 @@ output is, where the content is empty string
 ```
 len(list): 1
 ```
+### map
+map is a pointer. it can be nil, e.g. this will cause ```panic: assignment to entry in nil map```
+```
+var skipDirSet map[string]struct{}
+skipDirSet[skipDir] = struct{}{}  // create an empty struct.
+```
+
+### empty struct
+https://dave.cheney.net/2014/03/25/the-empty-struct
+```
+skipDirSet := map[string]struct{}
+skipDirSet[skipDir] = struct{}{}  // create an empty struct.
+```
 
 ## Defer
 ### close on writable file
