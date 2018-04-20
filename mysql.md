@@ -3,6 +3,11 @@
 * https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-centos-7
 * Get password from log: ```sudo grep 'temporary password' /var/log/mysqld.log```
 * To turn off password validation: ```mysql> uninstall plugin validate_password;```
+## Install mysql-workbench
+```bash
+# ubuntu 16.04
+sudo apt install mysql-workbench
+```
 
 # CLI Tools
 ## mysql client
