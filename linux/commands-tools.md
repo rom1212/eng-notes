@@ -62,6 +62,12 @@ sudo chmod a+rX -R .
 ```
 
 ## rsync
+For more safety, use git to keep the history of dst (and src).
+```bash
+git init
+git add .
+git commit -am "first commit"
+```
 This is the most safe way to do it. It will not overwrite any file that exist on the destination.
 ```bash
 # show progress, ignore existing file/no overwrite, recursive, verbose
