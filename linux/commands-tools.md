@@ -62,11 +62,22 @@ sudo chmod a+rX -R .
 ```
 
 ## rsync
+This is the most safe way to do it. It will not overwrite any file that exist on the destination.
 ```bash
 # show progress, ignore existing file/no overwrite, recursive, verbose
 rsync -r -v --progress --ignore-existing --dry-run family-media-src/ family-media-dst/
 ```
 
+Might consider --size-only if we want to copy fils with different size. However, it might be dangerous
+if you want to copy something to src that is missing in the source.
+```bash
+rsync -r -v --progress --size-only --dry-run family-media-src/ family-media-dst/
+```
+
+For reference, for archive everything 
+```
+rsync -ra --progress --dry-run family-media-src/ family-media-dst/
+```
 # Tools
 ## Meld
 * http://meldmerge.org/
