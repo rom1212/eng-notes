@@ -68,6 +68,11 @@ git init
 git add .
 git commit -am "first commit"
 ```
+If git cost too much space, we can use a simple file to record all the file names and sizes
+```
+ find . -type f -printf '%P, size(b): %s\n'
+ ```
+
 This is the most safe way to do it. It will not overwrite any file that exist on the destination.
 ```bash
 # show progress, ignore existing file/no overwrite, recursive, verbose
