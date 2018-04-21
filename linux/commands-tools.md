@@ -40,7 +40,7 @@ lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
 ## A port is taken or not
 * netstat -tap
   * all tcp ports
-* netstat -tlnp
+* netstat -tlpn
   * -t : tcp
   * -l : listening only
   * -n : numeric
@@ -59,6 +59,12 @@ If a port is know, it is easier to use lsof to find out the process id, instead 
 Add read permission for all files and directories recursively. pay attention to capital "X".
 ```bash
 sudo chmod a+rX -R .
+```
+
+## rsync
+```bash
+# show progress, ignore existing file/no overwrite, recursive, verbose
+rsync -r -v --progress --ignore-existing --dry-run family-media-src/ family-media-dst/
 ```
 
 # Tools
