@@ -59,6 +59,21 @@ e.g.
 ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
 ```
 
+## Add Unique Constraint
+* CONSTRAINT and UNIQUE INDEX are the same, because
+  * "A UNIQUE index creates a constraint such that all values in the index must be distinct"
+  * https://dba.stackexchange.com/questions/63211/what-is-the-difference-between-uniqe-index-unique-unique-key-unique-constraint-k/63280
+  ```
+  unique index query_md5_index (query_md5)
+  unique query_md5_index (query_md5)
+  constraint md5_constraint unique (query_md5)
+  unique key query_md5_key (query_md5)
+  ```
+* INDEX and KEY are the same
+  * https://dev.mysql.com/doc/refman/8.0/en/create-table.html
+  * https://www.quora.com/What-is-the-difference-between-using-KEY-and-INDEX-in-MySQL
+
+
 # HA 
 ## docs
 * https://dev.mysql.com/doc/refman/5.7/en/mysql-innodb-cluster-introduction.html
