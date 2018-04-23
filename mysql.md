@@ -64,7 +64,10 @@ ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
   * "A UNIQUE index creates a constraint such that all values in the index must be distinct"
   * https://dba.stackexchange.com/questions/63211/what-is-the-difference-between-uniqe-index-unique-unique-key-unique-constraint-k/63280
   ```
-  unique index query_md5_index (query_md5)
+  unique index `query_md5_index` (`query_md5`)
+  # actually MySQL internally use unique key, which we can find out using 
+  # show table create <table name>
+  
   unique query_md5_index (query_md5)
   constraint md5_constraint unique (query_md5)
   unique key query_md5_key (query_md5)
