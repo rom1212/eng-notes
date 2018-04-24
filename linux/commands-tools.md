@@ -89,6 +89,11 @@ For reference, for archive everything
 ```
 rsync -ra --progress --dry-run family-media-src/ family-media-dst/
 ```
+
+# command, hash, type
+* https://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
+* hash: no output if the command is already there/exists.
+
 # Tools
 ## Meld
 * http://meldmerge.org/
