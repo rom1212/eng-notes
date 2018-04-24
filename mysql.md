@@ -75,6 +75,9 @@ ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
 * INDEX and KEY are the same
   * https://dev.mysql.com/doc/refman/8.0/en/create-table.html
   * https://www.quora.com/What-is-the-difference-between-using-KEY-and-INDEX-in-MySQL
+* NULL values is unique for MySQL unique index with multiple columns
+  * Multiple column unique key allows multiple rows?
+  * https://www.sitepoint.com/use-unique-indexes-mysql-databases/
 
 
 # HA 
