@@ -17,3 +17,13 @@
 # Common Issues
 ## date
 * https://stackoverflow.com/questions/2305973/java-util-date-vs-java-sql-date
+
+# MySQL Test
+## mysql-connector-mxj
+* Newest version is 5.0.12 and is discontinued, with two jar files.
+  * mysql-connector-mxj-5.0.12.jar
+  * mysql-connector-mxj-db-files-5.0.12.jar
+    * created: 5-5-9/Linux-x86_64/
+    * inflated: 5-5-9/Linux-x86_64/mysql
+    * inflated: 5-5-9/Linux-x86_64/version.txt
+    * inflated: 5-5-9/Linux-x86_64/mysqld
