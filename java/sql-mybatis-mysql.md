@@ -27,3 +27,8 @@
     * inflated: 5-5-9/Linux-x86_64/mysql
     * inflated: 5-5-9/Linux-x86_64/version.txt
     * inflated: 5-5-9/Linux-x86_64/mysqld
+* debug
+  ```
+  cd <path to mysqld>/data
+  ../bin/mysql -u tester -p --port <the port number, e.g. 3305> --socket=./mysql.sock
+  ```
