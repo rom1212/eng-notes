@@ -1,6 +1,13 @@
 # glog
 * https://gist.github.com/heatxsink/7221ebe499b0767d4784
 
+## Usage
+```go
+// don't need concatinate string
+glog.Info("end point: ", end point)
+// can log err directory, no need to use err.Error()
+glog.Error("Failed to extract content with error:", err)
+```
 ## glog rotation
 * logrotate is probably more complicated for this.
 * use cron to delete old files
