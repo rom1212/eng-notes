@@ -90,6 +90,11 @@ For reference, for archive everything
 rsync -ra --progress --dry-run family-media-src/ family-media-dst/
 ```
 
+## ls timestamp millisecond
+```
+ls -la --time-style=full-iso blah
+```
+
 # command, hash, type
 * https://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
 * hash: no output if the command is already there/exists.
