@@ -9,6 +9,9 @@
 * [single test](http://maven.apache.org/surefire/maven-surefire-plugin/examples/single-test.html):
   * mvn -Dtest=DBDAOTest#testDeploymentQueries test
     * DBDAOTest is test class name, and testDeploymentQueries is method name
+* Integration test is different, because it handles setting up other resources, and clean up, and verification. If our
+  code can handle all those things, we can just use "mvn test", e.g. our code can do setting up database using mysql-connector-mxj in setUpTest. 
+  * https://stackoverflow.com/questions/1399240/how-do-i-get-my-maven-integration-tests-to-run
 
 # Install on Ubuntu 16.04
 ## Install from apt package
