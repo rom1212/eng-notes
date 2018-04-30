@@ -11,7 +11,7 @@
   * Generated - mapper classes, mapper xml files, e.g. (we can also manually create them)
     * BookMapper.java
     ```java
-    int updateByPrimaryKeySelective(HostTagBean record);
+    int updateByPrimaryKeySelective(BookBean record);
     ```
     * BookMapper.xml
     ```xml
