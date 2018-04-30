@@ -8,6 +8,38 @@
   * http://www.mybatis.org/mybatis-3/index.html
 * Generator
   * http://www.mybatis.org/generator/running/runningFromCmdLine.html
+  * Generated - mapper classes, mapper xml files, e.g. (we can also manually create them)
+    * BookMapper.java
+    ```java
+    int updateByPrimaryKeySelective(HostTagBean record);
+    ```
+    * BookMapper.xml
+    ```xml
+    <update id="updateByPrimaryKeySelective" parameterType="com.xxx.xxx.db.model.BookBean">
+    update book
+    <set>
+      <if test="name != null">
+        name = #{name,jdbcType=CHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        owner = #{owner,jdbcType=VARCHAR},
+      </if>
+      <if test="statusEnum != null">
+        status_enum = #{statusEnum,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+    </update>    
+    ```
 * Problems
   * it might fail silently if the mapper class and the mapper xml doesn't match. e.g
     * The generated model file has a "status" field, but the mapper xml file doesn't have it when doing insert. In the end, the insert operation will succeed without writing "status" field.
