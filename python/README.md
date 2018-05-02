@@ -97,6 +97,9 @@ def get_api_url(relative_path):
 from common import get_api_url
 ```
 
-# Misc
+# Tools & Misc
 ## IDE
 * https://pythonhosted.org/spyder/installation.html
+## Fabric
+* Fabric is a Python (2.5-2.7) library and command-line tool for streamlining the use of SSH for application deployment or systems administration tasks.
+* http://www.fabfile.org/
