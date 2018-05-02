@@ -96,3 +96,7 @@ def get_api_url(relative_path):
 ```python
 from common import get_api_url
 ```
+
+# Misc
+## IDE
+* https://pythonhosted.org/spyder/installation.html
