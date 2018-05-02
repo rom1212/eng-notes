@@ -93,11 +93,22 @@ rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
 ```
 https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-packages/
   
+# DNF
+## Reasons
+* new dependency solving algorithm
+* python 2 and 3
+* better documentation
+* https://www.linux.com/learn/what-you-need-know-about-fedoras-switch-yum-dnf
 
-# Yum
+# Yum - deprecated - 
+
 ## yum vs rpm command
 "The benefit of yum is that it will resolve dependencies for you and also install dependencies along with the concerned application. But you need to define the path of software resources in /etc/yum.repos.d in a .repo file
 "
 * https://www.lifewire.com/install-rpm-packages-using-yum-2201155
+
 ## yum source - python
 * https://github.com/rpm-software-management/yum
+
+## commands
+* sudo yum erase golang - old version of golang.
