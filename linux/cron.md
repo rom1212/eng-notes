@@ -5,7 +5,14 @@
   * /etc/crontab - global crontab
   * other crontab files can be put here: /etc/cron.d/
   * /etc/cron.daily etc are actually setup by either crontab or /etc/cron.d/
-  
+* create-cron.sh
+```
+#!/bin/bash -ex
+
+BIN=`realpath ./bin.sh`
+# execute on the 5th minute of every hour
+echo "5 * * * * $USER $BIN" | sudo tee /etc/cron.d/mycron.cron
+```
 
 ## crontab
 ```
