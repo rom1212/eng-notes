@@ -1,5 +1,8 @@
 
 # Commands/Tools
+## command line editing
+* https://www.gnu.org/software/bash/manual/html_node/Readline-Killing-Commands.html#Readline-Killing-Commands
+
 ## Long Running Process
 ```
 nohup node server.js &
