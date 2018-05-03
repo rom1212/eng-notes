@@ -1,5 +1,7 @@
 # Commands
-
+## ps
+* ps auxf - process tree
+* ps alx - PPID
 ## sed
 * remove trailing spaces
 ```
