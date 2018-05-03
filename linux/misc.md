@@ -36,3 +36,8 @@ Refs:
 
 # Other Linux distributions
 * https://www.whonix.org/, secure Linux for surfing internet.
+
+# systemd
+* https://linoxide.com/linux-how-to/systemd-boot-process/
+* https://unix.stackexchange.com/questions/47695/how-to-write-startup-script-for-systemd
+
