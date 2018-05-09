@@ -9,6 +9,43 @@ output is, where the content is empty string
 ```
 len(list): 1
 ```
+### slice 
+empty slice works fine with append and range,
+```go
+package main
+import "fmt"
+func main() {
+    var ls []string
+    fmt.Println("ls:", ls, "len(ls):", len(ls))
+	
+    for k,v := range ls {
+	    fmt.Println("key:", k, "value:", v, ">")
+    }
+
+    ls = append(ls, "first")
+    for k,v := range ls {
+	    fmt.Println("key:", k, "value:<", v, ">")
+    }
+	
+    ll := []string{}
+    fmt.Println("ll:", ll, "len(ll):", len(ll))
+    for k,v := range ll {
+	    fmt.Println("key:", k, "value:", v, ">")
+    }
+
+    ll = append(ll, "second")
+    for k,v := range ll {
+	    fmt.Println("key:", k, "value:<", v, ">")
+    }
+}
+
+// output
+ls: [] len(ls): 0
+key: 0 value:< first >
+ll: [] len(ll): 0
+key: 0 value:< second >
+```
+
 ### map
 map is a pointer. it can be nil, e.g. this will cause ```panic: assignment to entry in nil map```
 ```
