@@ -64,3 +64,16 @@
   cd <path to mysqld>/data
   ../bin/mysql -u tester -p --port <the port number, e.g. 3305> --socket=./mysql.sock
   ```
+* common issues
+  * might not be able to stop it somehow, e.g. if the folder is deleted. We need to stop the process first, and then remove the folder, e.g.
+```
+if lsof -i tcp:3303; then
+    lsof -i tcp:3303 | awk 'NR!=1 {print $2}' | xargs kill
+fi
+
+if lsof -i tcp:3305; then
+    lsof -i tcp:3305 | awk 'NR!=1 {print $2}' | xargs kill
+fi
+
+rm -rf /tmp/xxx/xx/  # the directory for embedded mysql working directory
+```
