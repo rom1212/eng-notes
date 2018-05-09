@@ -32,14 +32,22 @@ $ grep processor /proc/cpuinfo
 ```
 
 ## Process with a given port
+TTT???: is there a case that there are multiple processes with the same port? I guess not.
 ```
 pid=`lsof -i:"<PORT>" -t`
 ```
+
 ```
+# check whether we can find the process or not, otherwise kill will fail because no argument is given
+if lsof -i tcp:3303; then
+    lsof -i tcp:3303 | awk 'NR!=1 {print $2}' | xargs kill
+    # or lsof -i tcp:3303 -t | xargs kill
+fi
+
 lsof -i tcp:${PORT_NUMBER} | awk 'NR!=1 {print $2}' | xargs kill
 ```
 
-## A port is taken or not
+A port is taken or not
 * netstat -tap
   * all tcp ports
 * netstat -tlpn
@@ -55,7 +63,7 @@ function taken {
     false
   fi
 ```
-If a port is know, it is easier to use lsof to find out the process id, instead of parsing netstat output.
+If a port is know, it is easier to use lsof to find out the process id, instead of parsing netstat output. However, netstat is usually already installed, but lsof is not.
 
 ## chmod
 Add read permission for all files and directories recursively. pay attention to capital "X".
