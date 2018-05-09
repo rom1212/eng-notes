@@ -45,7 +45,8 @@ This is especially useful to find out where the code is.
 
 ## Config ports
 server.yaml
-```logging:
+```
+logging:
   level: INFO
   loggers:
     taskboard.io: DEBUG
@@ -57,6 +58,9 @@ server.yaml
       archive: true
       archivedLogFilenamePattern: /tmp/taskboard/service.log.%d.gz
       archivedFileCount: 10
+      # customized logging format with file line number
+      # logFormat: "%date %level [%thread] %logger{10} [%file:%line] %msg%n"
+      # includeCallerData: true        
 
 server:
   applicationConnectors:
