@@ -10,7 +10,7 @@
 ## Update API
 * probably the most complex API
 * Difficult cases
-  * null value vs real value
+  * null value vs no-care-value
     * Always clean up for different exclusive cases, e.g. if we have a column called "relationship", which doesn't matter
       if it is there is only one value in "attrs", otherwise,  "relationship" has a given value.
     * In this case, if we don't specify a value for "relationship" when there is only one value in "attrs", it could become a
