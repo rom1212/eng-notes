@@ -41,3 +41,5 @@ Refs:
 * https://linoxide.com/linux-how-to/systemd-boot-process/
 * https://unix.stackexchange.com/questions/47695/how-to-write-startup-script-for-systemd
 
+# simple email server
+* yum install -y mailx
