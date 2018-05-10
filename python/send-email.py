@@ -5,7 +5,7 @@ import smtplib
 
 def send_email(subject, content):
   email = MIMEText(content)
-  sender = 'cible-build@huawei.com'
+  sender = 'xxx@xxx.com'
   receivers = ['xxxx@gmail.com','yyyy@gmail.com']
   email['Subject'] = subject
   email['From'] = sender
