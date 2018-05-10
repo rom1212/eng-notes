@@ -43,3 +43,7 @@ Refs:
 
 # simple email server
 * yum install -y mailx
+
+# root user
+* run as root user has security concerns. Some Linux system will limit the execution, e.g. mysqld might not be able to run as root user in CentOS.
+* difference between root user and normal user could be that root user has root access, and so it can access all system directories, e.g. /usr/lib/..., /usr/local/... . But when run as normal user, it could have access problem, e.g. /usr/lib/python2.7/site-packages/virtualenv.py might not have read permission, and so it complains that it couldn't find virtualenv when running virtualenv.
