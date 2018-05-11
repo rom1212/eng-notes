@@ -9,3 +9,20 @@ func ListFiles(dir string, skipDirs []string) ([]string, error) {
 	return ListFilesWithSkipDirSet(dir, skipDirSet)
 }
 ```
+
+## Simple Deep Copy
+```go
+type Books []Book
+func (books Books) clone() Books {
+        clone := make([]Book, 0)
+        for _, book := range books {
+                clone = append(clone, book)
+        }
+        return clone
+}
+```
+It seems that slice doesn't work, e.g. 
+```go
+clone := books[:]
+```
+I guess it is because each element is still a pointer internally.
