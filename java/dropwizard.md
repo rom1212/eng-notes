@@ -80,6 +80,8 @@ server:
         archivedLogFilenamePattern: /tmp/taskboard/access.log.%d.gz
         archivedFileCount: 10
 ```
+For customized logging, see:
+* https://stackoverflow.com/questions/27522905/dropwizard-log-format-method-and-line-is-not-working
 
 ## Generate Swagger
 ```java
