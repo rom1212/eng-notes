@@ -35,12 +35,14 @@ git config --global color.ui true
     git show --name-only <commit id>
     ```
 * git diff
-  * git diff mingzhao..master (use .. instead of ..., which might cause problems, e.g. mingzhao...master and master...mingzhao are different)
+  * git diff mingzhao..master (use .. instead of ..., which might cause problems, e.g. mingzhao...master and 
+     master...mingzhao are different)
   * git diff --name-only mingzhao..master
   * git diff <commit a> <commit b> [filename]
 * git branch -r  : remote branches
 * merge local commits into one
-  * git rebase -i HEAD~5 # merge the last 5 commits. Use "pick" for the first commit (most recent), and use "squash" or "s" for the other previous commit
+  * git rebase -i HEAD~5 # merge the last 5 commits. Use "pick" for the first commit (most recent), and use "squash" or "s"
+    for the other previous commit
   * It will prompts about the commit message, and we can edit that.
   * Seems that this doesn't have anything to do with master branch. To rebase with master, we need to use "git rebase master"
 * amend (merge commit to the previous one)
@@ -51,6 +53,14 @@ git config --global color.ui true
   * where ```<commit>``` is usually from another branch 
 * get current branch name
   * ``` CBN=`git rev-parse --symbolic-full-name --abbrev-ref HEAD` ```
+* git rebase vs git reset
+  * git reset --hard <commit>
+  * git rebase master
+* quickly clean up repository
+  * rm -rf . 
+  * git reset --hard
+ 
+
 # Keep a fork up to date
 https://gist.github.com/CristinaSolana/1885435
 * Clone your fork:
