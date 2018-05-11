@@ -58,6 +58,15 @@ ALTER TABLE table_name ADD COLUMN column_name column_type;
 e.g.
 ALTER TABLE deploys ADD COLUMN error_message   VARCHAR(2048);
 ```
+## NULL value
+* NULL value is special in MySQL
+* update to NULL
+```
+UPDATE your_table
+SET    your_column = NULL
+WHERE  some_id = 1;
+```
+* https://stackoverflow.com/questions/3870540/how-to-update-column-with-null-value
 
 ## Add Unique Constraint
 * CONSTRAINT and UNIQUE INDEX are the same, because
