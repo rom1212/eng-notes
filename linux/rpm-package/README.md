@@ -92,7 +92,25 @@ rpmdev-extract (https://github.com/RsrchBoy/rpmdevtools/blob/master/rpmdev-extra
 rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
 ```
 https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-packages/
-  
+
+
+## debug rpm problem
+* what could be wrong when cannot remove a package
+  * some other package requires this file - probably fail to remove this package.
+  * some other package provides this file - why remove successfully? 
+* redo it
+* why rpm -q --whatprovides doesn't find helloworld
+* what's next
+  * why there is no conflict detected when installing helloworld-1.0, but detected for 2.0? timestamp of file content
+    * file /usr/local/bin/hello-world.sh from install of helloworld-2.0-1.el7.centos.noarch conflicts with file from package deployagent-1.0-1.noarch
+  * 
+```
+# what are the packages that provides file: /usr/local/bin/hello-world.sh
+rpm -q --whatprovides hello-world.sh  # not rpm -q --whatprovides /usr/local/bin/hello-world.sh
+# what are the packages that requires file: /usr/local/bin/hello-world.sh
+rpm -q --whatrequires hello-world.sh  # not rpm -q --whatrequires /usr/local/bin/hello-world.sh
+```
+
 # DNF
 ## Reasons
 * new dependency solving algorithm
