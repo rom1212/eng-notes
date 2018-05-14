@@ -49,6 +49,19 @@ rpm -e hellocurl-1.0-1.el7.centos.noarch
 * dry run:
   * rpm --test
   * check whether it is installed???TTT : ```rpm -q <package name>```, this can also check previous versions
+* whatprovides
+```
+$ sudo rpm -q --whatprovides /etc/sudoers.d/
+sudo-1.8.6p7-23.h3.x86_64
+
+$ sudo rpm -q --whatprovides /etc/cron.d/
+cronie-1.4.11-14.1.h1.x86_64
+$ sudo rpm -q --whatprovides /etc/cron.d/timezone.cron
+rsyslog-7.4.7-7.2.h1.x86_64
+$ sudo rpm -q --whatprovides /etc/yum/yum-cron.conf 
+yum-3.4.3-125.noarch
+
+```
 
 ## rpm package format
 * http://rpm5.org/docs/api/pkgformat.html
