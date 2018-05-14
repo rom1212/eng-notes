@@ -21,6 +21,16 @@ sudo mkdir /media/xxxx/Acer
 sudo mount -t "ntfs" -ro "uhelper=udisks2,nodev,nosuid,uid=1000,gid=1000" "/dev/sda3" "/media/xxxx/Acer"
 ```
 
+## Add Group
+* http://man7.org/linux/man-pages/man5/login.defs.5.html
+```
+# /etc/login.defs
+UID_MIN                  1000
+UID_MAX                 60000
+# System accounts
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+```
 ## Add User
 Ubuntu 16.04
 ```
