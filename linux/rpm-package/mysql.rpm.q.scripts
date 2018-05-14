@@ -1,0 +1,31 @@
+$ rpm -q --scripts mysql-community-server-5.7.22-1.el7.x86_64
+preinstall scriptlet (using /bin/sh):
+/usr/sbin/groupadd -g 27 -o -r mysql >/dev/null 2>&1 || :
+/usr/sbin/useradd -M -N -g mysql -o -r -d /var/lib/mysql -s /bin/false \
+    -c "MySQL Server" -u 27 mysql >/dev/null 2>&1 || :
+postinstall scriptlet (using /bin/sh):
+datadir=$(/usr/bin/my_print_defaults server mysqld | grep '^--datadir=' | sed -n 's/--datadir=//p' | tail -n 1)
+/bin/chmod 0751 "$datadir" >/dev/null 2>&1 || :
+/bin/touch /var/log/mysqld.log >/dev/null 2>&1 || :
+/bin/chown mysql:mysql /var/log/mysqld.log >/dev/null 2>&1 || :
+
+if [ $1 -eq 1 ] ; then 
+        # Initial installation 
+        systemctl preset mysqld.service >/dev/null 2>&1 || : 
+fi 
+
+/usr/bin/systemctl enable mysqld >/dev/null 2>&1 || :
+preuninstall scriptlet (using /bin/sh):
+
+if [ $1 -eq 0 ] ; then 
+        # Package removal, not upgrade 
+        systemctl --no-reload disable mysqld.service > /dev/null 2>&1 || : 
+        systemctl stop mysqld.service > /dev/null 2>&1 || : 
+fi
+postuninstall scriptlet (using /bin/sh):
+
+systemctl daemon-reload >/dev/null 2>&1 || : 
+if [ $1 -ge 1 ] ; then 
+        # Package upgrade, not uninstall 
+        systemctl try-restart mysqld.service >/dev/null 2>&1 || : 
+fi
