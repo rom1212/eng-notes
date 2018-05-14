@@ -94,6 +94,13 @@ rpm -qp --scripts ./packagecloud-test-1.1-1.x86_64.rpm
 https://blog.packagecloud.io/eng/2015/10/13/inspect-extract-contents-rpm-packages/
 
 
+## Rebuild spec
+* https://stackoverflow.com/questions/5613954/extract-the-spec-file-from-rpm-package
+* create a spec from an installed package
+```
+rpmrebuild -s hercules.spec hercules
+```
+
 ## debug rpm problem
 * what could be wrong when cannot remove a package
   * some other package requires this file - probably fail to remove this package.
