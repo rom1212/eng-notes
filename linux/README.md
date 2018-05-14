@@ -31,6 +31,9 @@ UID_MAX                 60000
 SYS_UID_MIN               201
 SYS_UID_MAX               999
 ```
+* system group vs normal group
+  * https://askubuntu.com/questions/523949/what-is-a-system-group-as-opposed-to-a-normal-group
+  * When you create a system user, by the fault the command doesn't create a home folder and its terminal is set to /bin/false, whereas for normal users these defaults doesn't apply.
 ## Add User
 Ubuntu 16.04
 ```
