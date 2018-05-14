@@ -8,6 +8,9 @@
 # ubuntu 16.04
 sudo apt install mysql-workbench
 ```
+# source code
+* https://github.com/mysql/mysql-server/blob/8.0/packaging/rpm-oel/mysql.spec.in
+* https://github.com/twitter/mysql/blob/master/packaging/rpm-oel/mysql.spec.in
 
 # CLI Tools
 ## mysql client
