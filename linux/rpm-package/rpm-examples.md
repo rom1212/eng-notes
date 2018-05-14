@@ -6,3 +6,4 @@ rpmrebuild --package --notest-install -e oracle-instantclient-basic-10.2.0.4-1.x
 rpmrebuild -s hercules.spec hercules
 ```
 ## MySQL
+* rpmrebuild -s mysql.spec mysql-community-server-5.7.22-1.el7.x86_64
