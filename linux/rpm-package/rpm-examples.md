@@ -19,6 +19,21 @@ rpmrebuild -s hercules.spec hercules
 rpm -q --scripts mysql-community-server-5.7.22-1.el7.x86_64
 sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/mysql57-community/packages/mysql-community-server-5.7.22-1.el7.x86_64.rpm
 ```
+## Cassandra
+* https://www.howtoforge.com/tutorial/how-to-install-apache-cassandra-on-centos-7/
+  * http://blog.mclaughlinsoftware.com/2017/07/25/install-cassandra-on-fedora/
+```
+sudo vim /etc/yum.repos.d/cassandra.repo
+[cassandra]
+name=Apache Cassandra
+baseurl=https://www.apache.org/dist/cassandra/redhat/311x/
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://www.apache.org/dist/cassandra/KEYS
+
+sudo yum -y install --downloadonly cassandra
+sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/cassandra/packages/cassandra-3.11.2-1.noarch.rpm
+```
 
 ## Others
 * cassandra
