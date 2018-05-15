@@ -1,4 +1,7 @@
-# IntelliJ
+# Also
+* General instructions: https://github.com/rom1212/eng-notes/blob/master/intellij-eclipse.md
+
+# IntelliJ for Java
 * build jar
   * https://stackoverflow.com/questions/1082580/how-to-build-jars-from-intellij-properly
 
@@ -12,3 +15,6 @@ Find the jar file in .\out\artifacts\<project name>_jar\<project name>.jar
 
 Run the jar file by: java -jar path/to/<project name>.jar
 ```
+
+# Eclipse for Java
+
