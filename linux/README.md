@@ -67,6 +67,7 @@ visudo and uncomment these two lines (or vi /etc/sudoers
 ## Same thing without a password
 %wheel  ALL=(ALL)       NOPASSWD: ALL
 ```
+Can also use /etc/suoders.d/ to add sudo permissions without changing /etc/sudoers
 
 ## Change Hostname
 ```
