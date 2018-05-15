@@ -1,4 +1,12 @@
-# RPM Spec Examples
+# RPM Spec
+## Scripts
+* Add user on $pre
+  * https://linux.die.net/man/8/useradd
+  * useradd can create and update an existing user
+  * could be security risk if that user already exists and we add it to the e.g. sudo.
+
+
+
 ## Tools
 * https://stackoverflow.com/questions/5613954/extract-the-spec-file-from-rpm-package
 ```
