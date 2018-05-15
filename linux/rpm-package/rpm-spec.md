@@ -4,8 +4,11 @@
   * https://linux.die.net/man/8/useradd
   * useradd can create and update an existing user
   * could be security risk if that user already exists and we add it to the e.g. sudo.
-
-
+* delete user in $preun or $postun
+  * might be ok - 
+  * security concerns - some else created with the same user id
+* create wheel group in /etc/suoders.d/xxx
+  * How fast it is to pickup the new update?
 
 ## Tools
 * https://stackoverflow.com/questions/5613954/extract-the-spec-file-from-rpm-package
