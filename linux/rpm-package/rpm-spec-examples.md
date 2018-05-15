@@ -46,3 +46,8 @@ sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/cassandra/packages/cassandra
   * https://github.com/kubernetes/release/blob/master/rpm/kubelet.spec
 * cadvisor - simple
   * https://git.centos.org/blob/rpms!cadvisor.git/058502407d0469fbb112b23226a47f15de8068dc/SPECS!cadvisor.spec
+
+# Improvements
+* use global variable
+* https://www.endpoint.com/blog/2009/08/20/defining-variables-for-rpmbuild
+* ```@ xxx @```???TTT
