@@ -67,7 +67,10 @@ visudo and uncomment these two lines (or vi /etc/sudoers
 ## Same thing without a password
 %wheel  ALL=(ALL)       NOPASSWD: ALL
 ```
-Can also use /etc/suoders.d/ to add sudo permissions without changing /etc/sudoers
+Notes:
+* Can also use /etc/suoders.d/ to add sudo permissions without changing /etc/sudoers
+* https://linux.die.net/man/8/useradd
+  * will it create a directory for -m -d
 
 ## Change Hostname
 ```
