@@ -1,9 +1,22 @@
 # basicConfig
+## simple logging
+```python
+import logging
+logging.basicConfig(filename='example.log',level=logging.DEBUG)
+logging.debug('This message should go to the log file')
+logging.info('So should this')
+logging.warning('And this, too')
+```
+
 ## set format
-```
+```python
 logging.basicConfig(filename=filename, level=logging.DEBUG,
-                    format='%(asctime)s %(name)-12s:%(lineno)d %(levelname)-8s %(message)s')
+                    format='%(asctime)s %(name)s [%(filename)s:%(lineno)d] %(levelname)s %(message)s')
+# 2018-05-15 16:06:32,311 root [build-notify.py:32] INFO
+                  
+# or                      format='%(asctime)s %(name)-12s %(filename)s:%(lineno)d %(levelname)-8s %(message)s')
 ```
+
 ## debug process and thread
 ```
 format='[process: %(process)d %(processName)s %(thread)d %(threadName)s]'
