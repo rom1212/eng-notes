@@ -8,3 +8,6 @@ Response serviceResponse = client.target(url).
 List<String> list = serviceResponse.readEntity(new GenericType<List<String>>() {
                 });
 ```
+
+## Error handling
+http://www.codingpedia.org/ama/error-handling-in-rest-api-with-jersey/
