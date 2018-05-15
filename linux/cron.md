@@ -1,4 +1,5 @@
-# anacron
+# cron job
+## anacron
 
 ## Create cron
 * locations
@@ -46,3 +47,7 @@ every first minute of the hour 22:
 ## crontab command
 /var/spool/cron/<user>
 
+## duplicate running
+* https://stackoverflow.com/questions/10552016/how-to-prevent-the-cron-job-execution-if-it-is-already-running
+  * flock - can it release the lock if the process dies?
+* https://stackoverflow.com/questions/14409651/will-cron-start-a-new-job-if-the-current-job-is-not-complete
