@@ -17,4 +17,7 @@ Run the jar file by: java -jar path/to/<project name>.jar
 ```
 
 # Eclipse for Java
+* Classpath similar to ```-cp path:path```
+  * Find the java file with main() -> Right Click -> Debug As - > Debug Configurations -> Java Application (double click to create)
+  * Classpath tab: Advanced -> Add Variable String
 
