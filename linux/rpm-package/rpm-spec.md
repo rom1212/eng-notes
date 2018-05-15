@@ -31,7 +31,7 @@ sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/mysql57-community/packages/m
 * https://www.howtoforge.com/tutorial/how-to-install-apache-cassandra-on-centos-7/
   * http://blog.mclaughlinsoftware.com/2017/07/25/install-cassandra-on-fedora/
 ```
-sudo vim /etc/yum.repos.d/cassandra.repo
+$ sudo vim /etc/yum.repos.d/cassandra.repo
 [cassandra]
 name=Apache Cassandra
 baseurl=https://www.apache.org/dist/cassandra/redhat/311x/
@@ -39,8 +39,25 @@ gpgcheck=1
 repo_gpgcheck=1
 gpgkey=https://www.apache.org/dist/cassandra/KEYS
 
-sudo yum -y install --downloadonly cassandra
-sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/cassandra/packages/cassandra-3.11.2-1.noarch.rpm
+$ sudo yum -y install --downloadonly cassandra
+
+$ sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/cassandra/packages/cassandra-3.11.2-1.noarch.rpm
+warning: /var/cache/yum/x86_64/2.0SP2/cassandra/packages/cassandra-3.11.2-1.noarch.rpm: Header V4 RSA/SHA256 Signature, key ID fe4b2bda: NOKEY
+preinstall scriptlet (using /bin/sh):
+getent group cassandra >/dev/null || groupadd -r cassandra
+getent passwd cassandra >/dev/null || \
+useradd -d /var/lib/cassandra -g cassandra -M -r cassandra
+exit 0
+postinstall scriptlet (using /bin/sh):
+alternatives --install //etc/cassandra/conf cassandra //etc/cassandra/default.conf/ 0
+exit 0
+preuninstall scriptlet (using /bin/sh):
+# only delete alternative on removal, not upgrade
+if [ "$1" = "0" ]; then
+    alternatives --remove cassandra //etc/cassandra/default.conf/
+fi
+exit 0
+
 ```
 
 ## Others
