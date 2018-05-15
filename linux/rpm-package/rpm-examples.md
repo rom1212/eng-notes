@@ -23,6 +23,7 @@ sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/mysql57-community/packages/m
 ## Others
 * cassandra
   * https://github.com/karlbohlmark/cassandra-rpm/blob/master/apache-cassandra.spec
+  * https://github.com/apache/cassandra-builds
 * dhcp
   * https://git.centos.org/blob/rpms!dhcp.git/3f2076a2a871a7866f908b22e38f2a6da8f0651e/SPECS!dhcp.spec
   * https://src.fedoraproject.org/cgit/rpms/dhcp.git/tree/dhcp.spec?id=4a364d130b918caed6d357fd5a1fcc2c35926851
