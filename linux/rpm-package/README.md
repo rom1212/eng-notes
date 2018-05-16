@@ -3,6 +3,10 @@
 * http://ftp.rpm.org/max-rpm/index.html. ???TTT read this.
 * scripts: https://fedoraproject.org/wiki/Packaging:Scriptlets
 * source code: https://github.com/rpm-software-management/rpm
+* online book: http://ftp.rpm.org/max-rpm/index.html
+  * relocatable package: http://ftp.rpm.org/max-rpm/ch-rpm-reloc.html
+    * with Prefix in spec file. "%files" section can have files without the prefix.
+    * this is tricky because our pre post scripts might depend on the path.
 
 ## naming
 * ```<package name>-<version>-<release>.<arch>```
