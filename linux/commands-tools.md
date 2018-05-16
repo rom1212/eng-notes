@@ -105,9 +105,15 @@ rsync -ra --progress --dry-run family-media-src/ family-media-dst/
 ls -la --time-style=full-iso blah
 ```
 
-# command, hash, type
+## command, hash, type
 * https://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
 * hash: no output if the command is already there/exists.
+
+## run as another user
+* su
+  * ```su - user``` will make it more like a real shell with environment variables, e.g.g HOME, and go to home directory, while ```su user``` just change to the other user.
+* runuser
+* sudo 
 
 # Tools
 ## Meld
