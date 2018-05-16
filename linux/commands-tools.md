@@ -114,6 +114,36 @@ ls -la --time-style=full-iso blah
   * ```su - user``` will make it more like a real shell with environment variables, e.g.g HOME, and go to home directory, while ```su user``` just change to the other user.
 * runuser
 * sudo 
+* https://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/
+
+## sudo, /etc/sudoers
+* /etc/sudoers and /etc/suoders.d/ are used to configure sudo command.
+```
+# syntax
+<username or %groupname> <host>=[(<user that can be run as with -u option>[:<group that can be run as with -g option>)]] [NOPASSWD:|PASSWD:] <commands or ALL>
+
+# root on Ubuntu a root user: can run on all hosts, run as any user, run as any group, run all commands 
+root ALL=(ALL:ALL) ALL
+# it's fine to run this command
+sudo -u tt1 ls
+
+# root user on CentOs
+root    ALL=(ALL) ALL
+# sudo -g tt1 ls /
+# Sorry, user root is not allowed to execute '/bin/ls /' as root:tt1 on <host name>.
+
+# cannot run as another user/group
+<username> ALL= NOPASSWD: ALL, PASSWD: /usr/bin/su, PASSWD: /usr/sbin/runuser
+
+sudo -u tt1 ls
+[sudo] password for <currrent user>:
+sudo -g tt1 ls
+[sudo] password for <currrent user>:
+```
+ 
+* docs
+  * https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
+
 
 # Tools
 ## Meld
