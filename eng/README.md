@@ -1,8 +1,21 @@
-# Project Setup Automation
+# Development
+## Tricky Bugs
+* Enum change
+  * whenever add or remove an enum (e.g. status), make sure to check all the use cases of existing enum values. 
+  * Example: InActive and Active, and we want to add InUse. One usage case is to get all the Active entities, and it uses
+    "status==Active". This doesn't work with InUse, and we need to change it to "status!=InActive".
+* 
+
+## Code Review
+* [code review](./code-review.md)
+
+## Project Setup Automation
 It is so important to automate all the setups of a project, including install, and build and run.
 This is especially important to development because
 * we might do that again and again
 * we might forget the details, and after some time (e.g. 1 month), we can still easily catch up with the development.
+
+
 
 # Code quality control
 ## PMD
