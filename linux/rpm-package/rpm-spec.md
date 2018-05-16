@@ -4,11 +4,14 @@
   * https://linux.die.net/man/8/useradd
   * useradd can create and update an existing user
   * could be security risk if that user already exists and we add it to the e.g. sudo.
+  * we can fail it when user already exists, but that make it inconvenient. Also, we need to remove the user after uninstall, otherwise we can not install it again.
+  * So the easy way is to create the user when it doesn't exist, and also add sudo permission to it. This is risky, but convenient.
 * delete user in $preun or $postun
   * might be ok - 
   * security concerns - some else created with the same user id
-* create wheel group in /etc/suoders.d/xxx
-  * How fast it is to pickup the new update?
+  * https://ma.ttias.be/on-removing-users-with-postun-in-rpm-spec-files/
+* create new group in /etc/suoders.d/xxx
+  * How fast it is to pickup the new update? Seem very fast, or each time we run sudo.
 
 ## Tools
 * https://stackoverflow.com/questions/5613954/extract-the-spec-file-from-rpm-package
