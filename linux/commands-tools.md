@@ -110,10 +110,11 @@ ls -la --time-style=full-iso blah
 * hash: no output if the command is already there/exists.
 
 ## run as another user
-* su
+* su - need password for the target user that will ran as.
+  * it is not "super user", it is "substitute user"
   * ```su - user``` will make it more like a real shell with environment variables, e.g.g HOME, and go to home directory, while ```su user``` just change to the other user.
 * runuser
-* sudo 
+* sudo - much much secure - need password for the user of running sudo.
 * https://www.cyberciti.biz/open-source/command-line-hacks/linux-run-command-as-different-user/
 
 ## sudo, /etc/sudoers
