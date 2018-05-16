@@ -4,7 +4,9 @@
   * whenever add or remove an enum (e.g. status), make sure to check all the use cases of existing enum values. 
   * Example: InActive and Active, and we want to add InUse. One usage case is to get all the Active entities, and it uses
     "status==Active". This doesn't work with InUse, and we need to change it to "status!=InActive".
-* 
+* Relative directory
+  * Make use of absolute path as possible, since the current working directory could change in the code (e.g. os.chdir, not by calling system("cd xxx")). 
+  * Example: if we set glog by flag.Set("log_dir", "./logs"), the logs file could change to "/tmp" if the current working directory is changed to some other directory where the code doesn't have permission to write logs. Actually writing to "/tmp/" is easier to find out. But writing to other places is more difficult to debug (when we need to use lsof to find out)
 
 ## Code Review
 * [code review](./code-review.md)
@@ -14,7 +16,6 @@ It is so important to automate all the setups of a project, including install, a
 This is especially important to development because
 * we might do that again and again
 * we might forget the details, and after some time (e.g. 1 month), we can still easily catch up with the development.
-
 
 
 # Code quality control
@@ -53,7 +54,7 @@ alias spotbugs=~/spotbugs-3.1.1/bin/spotbugs   # for local usage
 ```
 
 ## Others
-* findbugs, code style check, errcheck (golang)
+* findbugs, code style check, errcheck (golang), gometalinter
 
 # Ramp Up
 * Dev process
