@@ -7,6 +7,7 @@
   * relocatable package: http://ftp.rpm.org/max-rpm/ch-rpm-reloc.html
     * with Prefix in spec file. "%files" section can have files without the prefix.
     * this is tricky because our pre post scripts might depend on the path.
+    * --prefix NEWPATH vs --relocate OLDPATH=NEWPATH ???TTT
 
 ## naming
 * ```<package name>-<version>-<release>.<arch>```
