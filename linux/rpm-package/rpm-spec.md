@@ -1,5 +1,7 @@
 # RPM Spec
 ## Scripts
+* argument values
+  * http://meinit.nl/rpm-spec-prepostpreunpostun-argument-values
 * Add user on $pre
   * https://linux.die.net/man/8/useradd
   * useradd can create and update an existing user
