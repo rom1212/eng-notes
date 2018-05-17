@@ -14,7 +14,7 @@ sudo pip --proxy http://xxxx:xxx install xxx
 ### Install
 https://virtualenv.pypa.io/en/stable/installation/
 ```
-[sudo] pip install virtualenv
+sudo pip install virtualenv
 ```
 If you stil have this problem after installation:
 ```
@@ -27,6 +27,22 @@ And you also can find virtualenv.py file in /usr/lib/python2.7/site-packages/. P
 ```
 sudo chmod a+rX -R /usr/lib/python2.7/site-packages/
 ```
+This problem is mostly because of umask, which is the reverse side of permission bits, and so 022 corresponds to ```rxwr-xr-x
+```, and 077 corresponds to ```rwx------```.
+* the default is first setup in /etc/login.defs
+  *  ubuntu: 
+  ```
+  # Prefix these values with "0" to get octal, "0x" to get hexadecimal.
+  UMASK           022
+  ```
+  * CentOS
+  ```
+  # The permission mask is initialized to this value. If not specified, 
+  # the permission mask will be initialized to 022.
+  UMASK           077
+  ```
+  * seems that if it not specified in /etc/logins.defs, and any where else it is 022.
+  
 
 ## Tox
 ### Install
