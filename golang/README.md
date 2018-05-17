@@ -36,6 +36,8 @@ skipDirSet[skipDir] = struct{}{}  // create an empty struct.
 
 ## Other Questions
 * GOPATH - a list of directories?
+  * ```go get``` put code in the first path
+  * ```go install``` put package in the one of the code.
 * import local package "./xxxx" or must "myproject/xxx"
 * pipe: 
   * https://golang.org/pkg/os/exec/#example_Cmd_StdinPipe
