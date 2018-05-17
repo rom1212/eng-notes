@@ -145,6 +145,27 @@ sudo -g tt1 ls
 * docs
   * https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos
 
+## umask
+umask is the reverse side of permission bits, and so 022 corresponds to ```rxwr-xr-x```, and 077 corresponds to ```rwx------```.
+* the default is first setup in /etc/login.defs
+  *  ubuntu: 
+  ```
+  # Prefix these values with "0" to get octal, "0x" to get hexadecimal.
+  UMASK           022
+  ```
+  * CentOS
+  ```
+  # The permission mask is initialized to this value. If not specified, 
+  # the permission mask will be initialized to 022.
+  UMASK           077
+  ```
+  * seems that if it not specified in /etc/logins.defs, and any where else it is 022.
+* other places
+  * /etc/profile (interactive only)
+  * /etc/bashrc (interactive and non-interactive). subprocess is non-interactive.
+  * http://bencane.com/2013/09/16/understanding-a-little-more-about-etcprofile-and-etcbashrc/
+* problem related to umask is pip install virtualenv
+  * please see https://github.com/rom1212/eng-notes/blob/master/python/README.md#virtualenv
 
 # Tools
 ## Meld
