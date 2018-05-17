@@ -19,7 +19,35 @@
 rpmrebuild --package --notest-install -e oracle-instantclient-basic-10.2.0.4-1.x86_64.rpm
 rpmrebuild -s hercules.spec hercules
 ```
-## MySQL
+
+## Improvements
+* use global variable
+* https://www.endpoint.com/blog/2009/08/20/defining-variables-for-rpmbuild
+* ```@ xxx @```???TTT
+
+## Provides and Requires
+* http://ftp.rpm.org/api/4.4.2.2/dependencies.html
+* Requires
+  * Requires: python perl
+  * Requires: python, perl
+  * Requires: python >= 1.3, perl
+```
+ Sometimes you need to make sure the system your package is being installed on has a package which provides a certain capability, even though you don't care what specific package provides it. For example, sendmail won't work properly unless a local delivery agent (lda) is present. You can ensure that one is installed like this:
+
+	Requires: lda
+
+This will match either a package called lda (as mentioned above), or any package which contains:
+
+	Provides: lda
+```
+* Provides
+* rpmbuild can automatically add requires and provides for package name and version
+  * rpm -qp --requires <rpm file>
+  *  rpm -qp --provides <rpm file>
+
+## Examples
+
+### MySQL
 * docs
   * https://www.perkin.org.uk/posts/how-to-build-mysql-releases.html
 * online specs
@@ -33,7 +61,7 @@ rpmrebuild -s hercules.spec hercules
 rpm -q --scripts mysql-community-server-5.7.22-1.el7.x86_64
 sudo rpm -qp --scripts /var/cache/yum/x86_64/2.0SP2/mysql57-community/packages/mysql-community-server-5.7.22-1.el7.x86_64.rpm
 ```
-## Cassandra
+### Cassandra
 * https://www.howtoforge.com/tutorial/how-to-install-apache-cassandra-on-centos-7/
   * http://blog.mclaughlinsoftware.com/2017/07/25/install-cassandra-on-fedora/
 ```
@@ -66,7 +94,7 @@ exit 0
 
 ```
 
-## Others
+### Others
 * cassandra
   * https://github.com/karlbohlmark/cassandra-rpm/blob/master/apache-cassandra.spec
   * https://github.com/apache/cassandra-builds
@@ -77,8 +105,3 @@ exit 0
   * https://github.com/kubernetes/release/blob/master/rpm/kubelet.spec
 * cadvisor - simple
   * https://git.centos.org/blob/rpms!cadvisor.git/058502407d0469fbb112b23226a47f15de8068dc/SPECS!cadvisor.spec
-
-# Improvements
-* use global variable
-* https://www.endpoint.com/blog/2009/08/20/defining-variables-for-rpmbuild
-* ```@ xxx @```???TTT
