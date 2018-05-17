@@ -28,24 +28,7 @@ And you also can find virtualenv.py file in /usr/lib/python2.7/site-packages/. P
 sudo chmod a+rX -R /usr/lib/python2.7/site-packages/
 ```
 This problem is mostly because of umask, which is the reverse side of permission bits, and so 022 corresponds to ```rxwr-xr-x
-```, and 077 corresponds to ```rwx------```.
-* the default is first setup in /etc/login.defs
-  *  ubuntu: 
-  ```
-  # Prefix these values with "0" to get octal, "0x" to get hexadecimal.
-  UMASK           022
-  ```
-  * CentOS
-  ```
-  # The permission mask is initialized to this value. If not specified, 
-  # the permission mask will be initialized to 022.
-  UMASK           077
-  ```
-  * seems that if it not specified in /etc/logins.defs, and any where else it is 022.
-* other places
-  * /etc/profile (interactive only)
-  * /etc/bashrc (interactive and non-interactive). subprocess is non-interactive.
-  * http://bencane.com/2013/09/16/understanding-a-little-more-about-etcprofile-and-etcbashrc/
+```, and 077 corresponds to ```rwx------```. More details see: https://github.com/rom1212/eng-notes/blob/master/linux/commands-tools.md#umask
 
 ## Tox
 ### Install
