@@ -11,6 +11,8 @@ sudo pip --proxy http://xxxx:xxx install xxx
 ```
 ## VirtualEnv
 * When behind a proxy, virtualenv can use environment variable http_proxy, https_proxy
+* --no-site-packages: might be a better way of creating a completely new environment.
+
 ### Install
 https://virtualenv.pypa.io/en/stable/installation/
 ```
