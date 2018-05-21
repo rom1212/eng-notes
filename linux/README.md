@@ -1,7 +1,11 @@
 
 # Commands/Tools
 ## command line editing
+* frequent usage
+  * M-: The Meta key is labeled ALT on many keyboards.
+  * M-d: delete to the end of current word. 
 * https://www.gnu.org/software/bash/manual/html_node/Readline-Killing-Commands.html#Readline-Killing-Commands
+* https://www.gnu.org/software/bash/manual/html_node/Introduction-and-Notation.html#Introduction-and-Notation
 
 ## Long Running Process
 ```
