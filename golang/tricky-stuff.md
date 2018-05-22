@@ -1,4 +1,5 @@
 # Golang Tricky Stuff
+
 ## Basic Data types
 ### string
 ```go
@@ -58,6 +59,25 @@ https://dave.cheney.net/2014/03/25/the-empty-struct
 ```
 skipDirSet := map[string]struct{}
 skipDirSet[skipDir] = struct{}{}  // create an empty struct.
+```
+### Pointer
+* cannot get a pointer from a const
+* cannot get a pointer from function return value
+* https://stackoverflow.com/questions/30716354/how-do-i-do-a-literal-int64-in-go
+* use case: we define some const value, and want to use them for pointers in a struct
+```go
+const (
+	defaultEndpoint       string = "http://localhost:8080"
+)
+func getStringPtr(s string) *string {
+	return &s
+}
+
+func getIntPtr(i int) *int {
+	return &i
+}
+
+config.endpoint = getStringPtr(defaultEndpoint)
 ```
 
 ## Defer
