@@ -2,7 +2,8 @@
 ## Docs
 * man proc: http://man7.org/linux/man-pages/man5/proc.5.html
   * cat /proc/xxx/status
-* 
+  * cat /proc/[pid]/comm
+  * cat /proc/[pid]/cmdline
 ## Process Name
 * process name is actually the name of the executable, known as "comm"
 * it can be shown by
