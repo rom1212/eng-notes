@@ -20,3 +20,7 @@ do
 echo $number
 done
 ```
+## Misc
+```
+DATE=`date '+%Y-%m-%dT%H:%M:%S'`
+```
