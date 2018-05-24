@@ -14,3 +14,9 @@
   * cat /proc/xxx/status
     * Name: xxx
  
+## Process info
+http://man7.org/linux/man-pages/man1/ps.1.html
+```
+# capital O
+processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
+```
