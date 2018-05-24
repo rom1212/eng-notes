@@ -11,8 +11,13 @@ processinfo=`ps -O etimes,etime,uid,euser=USER,comm=NAME -p $pid`
 
 ## sed
 * remove trailing spaces
-```
+```bash
 sed -i 's/[ \t]*$//' <filename, or *>
+
+# remove trailing whitespace
+function remove-trailing-whitespace() {
+  sed -i 's/[ \t]*$//' $1
+}
 ```
 
 ## Number of Cores/CPUs/Processors
