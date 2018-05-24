@@ -2,10 +2,11 @@
 ## ps
 * ps auxf - process tree
 * ps alx - PPID
+* ps -f -p <pid> # PPID
 * http://man7.org/linux/man-pages/man1/ps.1.html
 ```
 # capital O
-processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
+processinfo=`ps -O etimes,etime,uid,euser=USER,comm=NAME -p $pid`
 ```
 
 ## sed
