@@ -7,5 +7,12 @@ export GOPATH=~/go/
 
 # show time in history command
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# remove trailing whitespace
+function remove-trailing-whitespace() {
+  sed -i 's/[ \t]*$//' $1
+}
+
+# other tools
 alias pmd="$HOME/pmd-bin-6.2.0/bin/run.sh pmd"
 alias sportbugs="~/spotbugs-3.1.1/bin/spotbugs"
