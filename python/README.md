@@ -100,6 +100,12 @@ def get_api_url(relative_path):
 ```python
 from common import get_api_url
 ```
+* better way is to add to python path
+```python
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'common'))  # path is a directory name
+from common.common import get_api_url
+```
 
 # Tools & Misc
 ## IDE
