@@ -5,3 +5,5 @@
 if len(s) == 0 { ... }
 if s == "" { ... }
 ```
+* case-insensitive
+https://golang.org/pkg/strings/#EqualFold
