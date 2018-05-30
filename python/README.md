@@ -94,17 +94,19 @@ https://pypi.python.org/pypi/flake8
 ## Local file import
 * common.py
 ```python
-def get_api_url(relative_path):
+def get_something():
 ```
 * list.py
 ```python
-from common import get_api_url
+from common import get_something
 ```
 * better way is to add to python path
 ```python
+# put common.py on common/ directory
+# Add __init__.py to the common directory.
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(__file__), 'common'))  # path is a directory name
-from common.common import get_api_url
+from common.common import get_something
 ```
 
 # Tools & Misc
