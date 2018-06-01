@@ -15,3 +15,5 @@ https://coderwall.com/p/cp5fya/measuring-execution-time-in-go
 time.Now()
 time.Since()
 ```
+
+time formatting: https://gobyexample.com/time-formatting-parsing
