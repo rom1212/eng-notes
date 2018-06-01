@@ -8,5 +8,6 @@ https://www.chazzuka.com/2015/03/load-parse-json-file-golang/
 * bad fields
 
 ## pointer
-https://dhdersch.github.io/golang/2016/01/23/golang-when-to-use-string-pointers.html
-
+* https://dhdersch.github.io/golang/2016/01/23/golang-when-to-use-string-pointers.html
+* https://stackoverflow.com/questions/19633763/unmarshaling-json-in-golang-required-field
+* https://stackoverflow.com/questions/47256201/golang-ignore-json-fields-when-marshalling-not-unmarshalling
