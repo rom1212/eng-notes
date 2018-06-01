@@ -48,3 +48,6 @@ skipDirSet[skipDir] = struct{}{}  // create an empty struct.
   * append nil
   * nil slice
 * https://golang.org/ref/spec#Run_time_panics
+* dependencies
+  * https://stackoverflow.com/questions/17539407/golang-how-to-import-local-packages-without-gopath
+  * https://dave.cheney.net/2014/12/01/five-suggestions-for-setting-up-a-go-project  
