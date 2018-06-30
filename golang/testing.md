@@ -10,6 +10,9 @@
 * goconvey: http://callistaenterprise.se/blogg/teknik/2017/03/03/go-blog-series-part4/
 * testify vs gomock
 
+## Test exec.Commmand
+* https://npf.io/2015/06/testing-exec-command/
+
 ## Integration test
 https://www.philosophicalhacker.com/post/integration-tests-in-go/
 * --short
