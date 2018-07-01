@@ -3,6 +3,9 @@
 * for testing exec.Command: https://golang.org/src/os/exec/exec_test.go
 * https://joeshaw.org/testing-with-os-exec-and-testmain/
 
+## Test logging
+* t.Logf("output: %s", output)
+
 ## Mock
 * https://medium.com/agrea-technogies/mocking-dependencies-in-go-bb9739fef008
 * http://squarism.com/2014/11/28/mocking-in-golang/
