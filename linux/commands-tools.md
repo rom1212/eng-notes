@@ -183,3 +183,9 @@ umask is the reverse side of permission bits, and so 022 corresponds to ```rxwr-
 ## Meld
 * http://meldmerge.org/
 * Can be setup as git diff
+
+## Command line editing
+https://www.gnu.org/software/bash/manual/html_node/Readline-Killing-Commands.html#Readline-Killing-Commands
+```
+Alt-D (M-D) current cursor to the end of current word
+```
