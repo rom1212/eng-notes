@@ -16,6 +16,14 @@
 ## Test exec.Commmand
 * https://npf.io/2015/06/testing-exec-command/
 
+## Test api client
+* https://www.markphelps.me/testing-api-clients-in-go/
+  * make client able to talk with a local server
+  * create local server with httptest.NewServer.
+
+## Test verbose
+* if t.Verbose()
+   * print more information here
 ## Integration test
 https://www.philosophicalhacker.com/post/integration-tests-in-go/
 * --short
