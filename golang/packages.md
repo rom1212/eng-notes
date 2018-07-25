@@ -17,3 +17,13 @@ time.Since()
 ```
 
 time formatting: https://gobyexample.com/time-formatting-parsing
+
+## regular expression
+* docs: 
+  * https://golang.org/pkg/regexp/syntax/
+  * https://golang.org/pkg/regexp/#Match
+* examples
+```go
+regexp.MatchString("foo.*", "seafood")
+regexp.MatchString(`foo[\s]*`, "seafoo d"). // match with white space in between
+```
