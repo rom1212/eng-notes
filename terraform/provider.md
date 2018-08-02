@@ -5,6 +5,9 @@
 * https://www.terraform.io/docs/extend/writing-custom-providers.html
 
 ## Provider Example from users perspective
+* https://www.terraform.io/intro/getting-started/build.html
+
+"The provider block is used to configure the named provider, in our case "aws". A provider is responsible for creating and managing resources. Multiple provider blocks can exist if a Terraform configuration is composed of multiple providers, which is a common situation."
 
 ## Helper lib to write provider
 * https://godoc.org/github.com/hashicorp/terraform/helper/schema
