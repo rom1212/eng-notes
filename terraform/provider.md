@@ -4,6 +4,9 @@
 * https://www.terraform.io/docs/plugins/provider.html
 * https://www.terraform.io/docs/extend/writing-custom-providers.html
 * https://www.terraform.io/docs/extend/schemas/
+  * Can be used for provider schema and resource schema. 
+  * https://www.terraform.io/docs/extend/schemas/schema-behaviors.html
+    * Default, and DefaultFunc
 
 ## Provider Example from users perspective
 * https://www.terraform.io/intro/getting-started/build.html
