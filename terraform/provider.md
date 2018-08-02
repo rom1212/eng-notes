@@ -4,6 +4,10 @@
 
 ## Helper lib to write provider
 * https://godoc.org/github.com/hashicorp/terraform/helper/schema
+* How to write a provider
+  * create resources, using schema.Resource
+  * use those resources in the schema.Provider
+  * use the new resource in .tf file.
 
 ## Provider from developer perspective
 Provider contains a collection of resources by ResourcesMap.
