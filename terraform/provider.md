@@ -28,19 +28,7 @@ resource "aws_instance" "example" {
   * use those resources in the schema.Provider
   * use the new resource in .tf file.
 
-### Provider from developer perspective
-Provider contains a collection of resources by ResourcesMap.
-```go
-func Provider() *schema.Provider {
-        return &schema.Provider{
-                ResourcesMap: map[string]*schema.Resource{
-                        "example_server": resourceServer(),
-                },
-        }
-}
-```
-
-### Resource
+### Step 1 - Create Resource
 * "As a general convention, Terraform providers put each resource in their own file, 
 named after the resource, prefixed with resource_. To create an example_server, 
 this would be resource_server.go by convention"
@@ -72,7 +60,24 @@ this would be resource_server.go by convention"
   }
   ```
 
-### Use New Provider and Resource
+### Step 2 - Create Provider
+Provider contains a collection of resources by ResourcesMap.
+```go
+func Provider() *schema.Provider {
+        return &schema.Provider{
+                ResourcesMap: map[string]*schema.Resource{
+                        "example_server": resourceServer(),
+                },
+        }
+}
 ```
+
+
+### Step 3 - Use New Provider and Resource in tf file
+```
+// Do I have to have "provider" section???
+provider "my-provider" {
+}
+
 resource "example_server" "my-server" {}
 ```
