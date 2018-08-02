@@ -28,7 +28,7 @@ resource "aws_instance" "example" {
   * use those resources in the schema.Provider
   * use the new resource in .tf file.
 
-## Provider from developer perspective
+### Provider from developer perspective
 Provider contains a collection of resources by ResourcesMap.
 ```go
 func Provider() *schema.Provider {
@@ -40,7 +40,7 @@ func Provider() *schema.Provider {
 }
 ```
 
-## Resource
+### Resource
 * "As a general convention, Terraform providers put each resource in their own file, 
 named after the resource, prefixed with resource_. To create an example_server, 
 this would be resource_server.go by convention"
@@ -71,3 +71,8 @@ this would be resource_server.go by convention"
         }
   }
   ```
+
+### Use New Provider and Resource
+```
+resource "example_server" "my-server" {}
+```
