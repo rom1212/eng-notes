@@ -1,9 +1,21 @@
 # Terraform Provider
 
-## Provider Example
+## Provider Example from users perspective
 
 ## Helper lib to write provider
 * https://godoc.org/github.com/hashicorp/terraform/helper/schema
+
+## Provider from developer perspective
+Provider contains a collection of resources by ResourcesMap.
+```go
+func Provider() *schema.Provider {
+        return &schema.Provider{
+                ResourcesMap: map[string]*schema.Resource{
+                        "example_server": resourceServer(),
+                },
+        }
+}
+```
 
 ## Resource
 * "As a general convention, Terraform providers put each resource in their own file, 
