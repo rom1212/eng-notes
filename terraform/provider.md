@@ -1,5 +1,9 @@
 # Terraform Provider
 
+## Docs
+* https://www.terraform.io/docs/plugins/provider.html
+* https://www.terraform.io/docs/extend/writing-custom-providers.html
+
 ## Provider Example from users perspective
 
 ## Helper lib to write provider
