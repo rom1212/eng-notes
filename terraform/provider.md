@@ -8,6 +8,18 @@
 * https://www.terraform.io/intro/getting-started/build.html
 
 "The provider block is used to configure the named provider, in our case "aws". A provider is responsible for creating and managing resources. Multiple provider blocks can exist if a Terraform configuration is composed of multiple providers, which is a common situation."
+```go
+provider "aws" {
+  access_key = "ACCESS_KEY_HERE"
+  secret_key = "SECRET_KEY_HERE"
+  region     = "us-east-1"
+}
+
+resource "aws_instance" "example" {
+  ami           = "ami-2757f631"
+  instance_type = "t2.micro"
+}
+```
 
 ## Helper lib to write provider
 * https://godoc.org/github.com/hashicorp/terraform/helper/schema
