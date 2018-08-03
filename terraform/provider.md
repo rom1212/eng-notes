@@ -7,6 +7,8 @@
   * Can be used for provider schema and resource schema. 
   * https://www.terraform.io/docs/extend/schemas/schema-behaviors.html
     * Default, and DefaultFunc
+## Examples
+* https://github.com/terraform-providers/terraform-provider-google/blob/master/google/provider.go
 
 ## Provider Example from users perspective
 * https://www.terraform.io/intro/getting-started/build.html
