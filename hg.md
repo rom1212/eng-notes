@@ -1,3 +1,6 @@
+# docs
+* https://www.mercurial-scm.org/guide
+
 # hg basic commands
 * hg status
 * hg diff
