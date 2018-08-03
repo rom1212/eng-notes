@@ -3,6 +3,7 @@
 * hg diff
 * hg add
 * hg commit -m ""
+* hg amend
 * hg help extensions: can find out what are the enabled extensions.
 * hg update <commit>:
   * make the <commit> as the working commit.
