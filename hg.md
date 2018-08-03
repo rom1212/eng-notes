@@ -10,6 +10,7 @@
   ```
 * hg add
 * hg commit -m ""
+  * only change the message, and and edit opens for multi-line message: ```hg commit --amend```
 * hg amend
 * hg help extensions: can find out what are the enabled extensions.
 * hg update <commit>:
