@@ -4,6 +4,10 @@
 # hg basic commands
 * hg status
 * hg diff
+  * difference between two commits/revisions
+  ```
+  hg diff -r <commit2> -r <commit1>
+  ```
 * hg add
 * hg commit -m ""
 * hg amend
