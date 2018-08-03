@@ -4,6 +4,8 @@
 * hg add
 * hg commit -m ""
 * hg help extensions: can find out what are the enabled extensions.
+* hg update <commit>:
+  * make the <commit> as the working commit.
 
 # hg advanced commands
 * git reset: ```hg strip --keep -r .```
