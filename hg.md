@@ -21,11 +21,17 @@
 
 Need to enable strip extension in ~/.hgrc
 ```
+# ~/.hgrc
 [extensions]
 strip =
 ```
-* merge commits: ```hg histedit <commit>```
-```
-[extensions]
-histedit =
-```
+* merge commits: 
+  * merge and keep old nodes (commits): ```hg histedit <commit>```
+  * simple merge: ```hg histedit -k <commit>```
+  * enable
+  ```
+  # ~/.hgrc
+  [extensions]
+  histedit =
+  ```
+ 
