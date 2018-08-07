@@ -16,6 +16,9 @@
 ## Test exec.Commmand
 * https://npf.io/2015/06/testing-exec-command/
 
+## Test os.exit
+* https://stackoverflow.com/questions/26225513/how-to-test-os-exit-scenarios-in-go
+
 ## Test api client
 * https://www.markphelps.me/testing-api-clients-in-go/
   * make client able to talk with a local server
