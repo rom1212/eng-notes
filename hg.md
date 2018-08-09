@@ -26,8 +26,12 @@ Need to enable strip extension in ~/.hgrc
 strip =
 ```
 * merge commits: 
-  * merge and keep old nodes (commits): ```hg histedit <commit>```
-  * simple merge: ```hg histedit -k <commit>```
+  * merge and keep old nodes (commits): 
+  ```
+  # alias hgfold='hg histedit --keep'
+  hg histedit --keep <commit>
+  ```
+  * simple merge: ```hg histedit <commit>```
   * enable
   ```
   # ~/.hgrc
