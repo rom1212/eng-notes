@@ -65,3 +65,12 @@ alias spotbugs=~/spotbugs-3.1.1/bin/spotbugs   # for local usage
 * Small changes - 
   * bug fix
   * small feature
+
+## Start a New Project
+* Who I can learn from so that I can
+  * start the project faster
+  * avoid pitfalls.
+  
+## Production Service
+* Do we have throttling to avoid DDOS?
+* Do we have draining to start from scratch, e.g. can we drain the old messages in our queue?
