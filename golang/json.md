@@ -28,10 +28,10 @@ if err := json.Unmarshal(b, &f); err != nil {
 }
 
 for k, v := range f {
-    s, err := json.Marshal(v)
+    bytes, err := json.Marshal(v)
     if err != nil {
         fmt.Println(err)
     }
-    fmt.Println(k, s)
+    fmt.Println(k, string(bytes))
 }
 ```
