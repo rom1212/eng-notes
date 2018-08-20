@@ -14,3 +14,24 @@ https://www.chazzuka.com/2015/03/load-parse-json-file-golang/
 
 ## Json parsing error
 ```invalid character 'p' after top-level value```
+
+## Decoding arbitrary data
+* https://blog.golang.org/json-and-go
+* Only decode the top level string, and make lower level as json string
+```golang
+b := []byte(`{"Name":"Wednesday","Age":6,"Parents":["Gomez","Morticia"]}`)
+
+var f interface{}
+if err := json.Unmarshal(b, &f); err != nil {
+    fmt.Print(err)
+    return
+}
+
+for k, v := range f {
+    s, err := json.Marshal(v)
+    if err != nil {
+        fmt.Println(err)
+    }
+    fmt.Println(k, s)
+}
+```
