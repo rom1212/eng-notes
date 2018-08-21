@@ -95,3 +95,8 @@ https://github.com/terraform-providers/terraform-provider-google/blob/master/goo
 log.Println("[DEBUG] updating enable_legacy_abac")
 log.Printf("[INFO] GKE cluster %s legacy ABAC has been updated to %v", d.Id(), enabled)
 ```
+
+However, terraform seems only use DEBUG level to print out providers log, e.g.
+```
+[DEBUG] plugin.terraform-provider-google: 2018/xx/xx xx:xx:xx [INFO] GKE cluster redis has been created
+```
