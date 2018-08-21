@@ -12,6 +12,6 @@
   * pluginPath
 
 ## How to Setup Plugin Directory
-* terraform init -plugin-dir <plugin dir>
 * the same directory of "terraform" binary
+* terraform init -plugin-dir <plugin dir>
 * ~/.terraform.d/plugins
