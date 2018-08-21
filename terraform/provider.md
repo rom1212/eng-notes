@@ -87,3 +87,11 @@ provider "my-provider" {
 
 resource "example_server" "my-server" {}
 ```
+
+## Logging
+### Examples
+https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_container_cluster.go#L687
+```go
+log.Println("[DEBUG] updating enable_legacy_abac")
+log.Printf("[INFO] GKE cluster %s legacy ABAC has been updated to %v", d.Id(), enabled)
+```
