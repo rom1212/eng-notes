@@ -99,3 +99,10 @@ func main() {
     fmt.Println(dir)
 }
 ```
+
+## Join Path
+```go
+import "path/filepath"
+//sep := string(os.PathSeparator)
+path := filepath.Join("this/path/", "./tmp/")  // not ending "/", i.e. "this/path/tmp"
+```
