@@ -59,7 +59,8 @@
 	}
 ```
 
-# Check File
+# File and Directory
+## Check File
 https://stackoverflow.com/questions/12518876/how-to-check-if-a-file-exists-in-go
 ```go
 // check file not exist
@@ -73,10 +74,28 @@ if _, err := os.Stat("/path/to/whatever"); err == nil {
 }
 ```
 
-# File Location/Directory
+## File Location/Directory
 ```
 func currFileDir() string {
 	_, thisfile, _, _ := runtime.Caller(0)
 	return path.Dir(thisfile)
+}
+```
+
+## Running Binary Directory
+```go
+import (
+    "fmt"
+    "log"
+    "os"
+    "path/filepath"
+)
+
+func main() {
+    dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+    if err != nil {
+            log.Fatal(err)
+    }
+    fmt.Println(dir)
 }
 ```
