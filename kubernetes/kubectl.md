@@ -13,5 +13,7 @@ kubectl get pods --all-namespaces
 
 ## kubectl
 ```
-kubectl --cluster <cluster name> --username <user name, e.g. admin> --password <pass word> get pods --all-namespaces
+kubectl --cluster <> --username <e.g. admin> --password <> get pods --all-namespaces
+
+# can use to skip https check: --insecure-skip-tls-verify=true
 ```
