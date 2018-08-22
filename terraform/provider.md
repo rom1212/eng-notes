@@ -100,3 +100,6 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
 ```
 [DEBUG] plugin.terraform-provider-google: 2018/xx/xx xx:xx:xx [INFO] GKE cluster redis has been created
 ```
+
+## Debugging
+* export TF_LOG=DEBUG
