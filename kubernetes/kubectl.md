@@ -17,3 +17,7 @@ kubectl --cluster <> --username <e.g. admin> --password <> get pods --all-namesp
 
 # can use to skip https check: --insecure-skip-tls-verify=true
 ```
+
+# kubectl code
+## Apply
+* https://github.com/kubernetes/kubernetes/blob/master/pkg/kubectl/cmd/apply.go
