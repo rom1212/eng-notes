@@ -103,3 +103,9 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
 
 ## Debugging
 * export TF_LOG=DEBUG
+
+## Tricky
+* Schema
+  * Required: true
+    * it doens't mean that we need to specify it in the tf file, as long as it has DefaultFunc.
+  * Cannot use "Required: false", must use "Optional: true", not verified.
