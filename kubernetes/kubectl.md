@@ -22,9 +22,9 @@ gcloud container clusters get-credentials <cluster name> --zone us-east4-b --pro
 kubectl get pods --context gke_<project name>_us-east4-b_<cluster name> --all-namespaces
 
 NAMESPACE     NAME                                              READY     STATUS    RESTARTS   AGE
-default       redis-0                                           1/1       Running   0          12m
-default       redis-1                                           1/1       Running   0          12m
-default       redis-2                                           1/1       Running   0          12m
+default       <cluster name>-0                                           1/1       Running   0          12m
+default       <cluster name>-1                                           1/1       Running   0          12m
+default       <cluster name>-2                                           1/1       Running   0          12m
 kube-system   event-exporter-v0.1.9-5c8fb98cdb-qfnsx            2/2       Running   0          15m
 kube-system   fluentd-gcp-v2.0.17-7gk6p                         2/2       Running   0          14m
 kube-system   fluentd-gcp-v2.0.17-j2pjx                         2/2       Running   0          14m
