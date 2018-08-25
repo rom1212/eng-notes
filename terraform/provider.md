@@ -104,6 +104,11 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
 ## Debugging
 * export TF_LOG=DEBUG
 
+## Testing
+* Acceptance test
+  * example: TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout 120m
+  * https://github.com/hashicorp/terraform/blob/master/Makefile
+
 ## Tricky
 * Schema
   * Required: true
