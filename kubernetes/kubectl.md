@@ -41,6 +41,11 @@ kube-system   l7-default-backend-57856c5f55-zcpq7               1/1       Runnin
 kube-system   metrics-server-v0.2.1-7f8dd98c8f-9h4gd            2/2       Running   0          14m
 ```
 
+```
+kubectl apply -f <file name, or - which mean stdin>
+
+https://stackoverflow.com/questions/46238571/explain-the-last-dash-in-a-bash-pipe-expression
+```
 # kubectl code
 ## Apply
 * https://github.com/kubernetes/kubernetes/blob/master/pkg/kubectl/cmd/apply.go
