@@ -108,6 +108,13 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
 * Acceptance test
   * example: TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout 120m
   * https://github.com/hashicorp/terraform/blob/master/Makefile
+  * https://www.terraform.io/docs/extend/testing/acceptance-tests/index.html
+* Unittest with Acceptance test framework
+  * Instead of using resource.Test, use resource.Unittest. And then use replace the client code which talks to the network/cloud provider. 
+  * Looks that it doesn't compile provider into binary and run the binary in the test. However, it just calls the library to talk to the provider.  
+  * test for error: 
+    * use ExpectError, https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
+    * this applies to the Acceptance test above
 
 ## Tricky
 * Schema
