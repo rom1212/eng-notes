@@ -9,6 +9,12 @@
     * Default, and DefaultFunc
 ## Examples
 * https://github.com/terraform-providers/terraform-provider-google/blob/master/google/provider.go
+  * redis resource 
+    * https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_redis_instance.go
+    * https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_redis_instance_test.go
+  * pubsub topic
+    * https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic.go
+    * https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic_test.go
 
 ## Provider Example from users perspective
 * https://www.terraform.io/intro/getting-started/build.html
