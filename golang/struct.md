@@ -26,3 +26,8 @@ It seems that slice doesn't work, e.g.
 clone := books[:]
 ```
 I guess it is because each element is still a pointer internally.
+
+## exported field
+* Only fields whose first letter is capital are exported.
+* https://golang.org/ref/spec#Exported_identifiers
+
