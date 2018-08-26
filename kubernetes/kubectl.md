@@ -11,7 +11,7 @@ kubectl get pods --all-namespaces
 ```
 ```
 
-## kubectl
+## kubectl apply
 ```
 kubectl --cluster <> --username <e.g. admin> --password <> get pods --all-namespaces
 
@@ -46,6 +46,15 @@ kubectl apply -f <file name, or - which mean stdin>
 
 https://stackoverflow.com/questions/46238571/explain-the-last-dash-in-a-bash-pipe-expression
 ```
+
+## kubectl apply vs create
+* https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/
+* https://stackoverflow.com/questions/47369351/kubectl-apply-vs-kubectl-create
+* How to delete what's created by kubectl apply
+* manage deployment
+  * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
+  * https://kubernetes.io/docs/concepts/configuration/overview/
+
 # kubectl code
 ## Apply
 * https://github.com/kubernetes/kubernetes/blob/master/pkg/kubectl/cmd/apply.go
