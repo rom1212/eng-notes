@@ -9,7 +9,10 @@ kubectl get pods --all-namespaces
 
 ## kubectl config
 ```
-kubectl config set clusters.<cluster name>.certificate-authority-data
+kubectl config set clusters.<cluster name>.certificate-authority-data <certificate string>
+
+kubectl config set users.<user name>.client-certificate-data <certificate string>
+kubectl config set users.<user name>.client-key-data <certificate string>
 ```
 
 ## kubectl apply
