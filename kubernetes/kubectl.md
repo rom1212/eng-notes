@@ -20,6 +20,7 @@ kubectl config set users.<user name>.client-key-data <certificate string>
 kubectl --cluster <> --username <e.g. admin> --password <> get pods --all-namespaces
 
 # can use to skip https check: --insecure-skip-tls-verify=true
+kubectl --insecure-skip-tls-verify=true --server https:// --username --password  get pods --all-namespaces
 
 # example from GKE
 gcloud container clusters get-credentials <cluster name> --zone us-east4-b --project <proejct name>
