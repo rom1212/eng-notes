@@ -73,7 +73,7 @@ this would be resource_server.go by convention"
   ```
 * when each function is used?
   * terraform plan is according to the resource ID??? not exactly sure.
-* when delete a resource in the config
+* when to delete a resource in the config? when a resource is removed from tf file, e.g. when removing a resource, terraform thinks that "0 to change", and "1 to destroy".
 ```
 An execution plan has been generated and is shown below.
 Resource actions are indicated with the following symbols:
@@ -83,6 +83,7 @@ Terraform will perform the following actions:
 
   - <resource type>.<resource name>
 
+Plan: 0 to add, 0 to change, 1 to destroy.
 ```
   
 
