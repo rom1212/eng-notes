@@ -44,7 +44,7 @@ resource "aws_instance" "example" {
 * "As a general convention, Terraform providers put each resource in their own file, 
 named after the resource, prefixed with resource_. To create an example_server, 
 this would be resource_server.go by convention"
-* User: https://godoc.org/github.com/hashicorp/terraform/helper/schema#Resource
+* Use: https://godoc.org/github.com/hashicorp/terraform/helper/schema#Resource
   ```go
   Schema map[string]*schema.Schema // name might better be Schemas, since it is actually a collection of Schemas
   Create CreateFunc
@@ -71,6 +71,20 @@ this would be resource_server.go by convention"
         }
   }
   ```
+* when each function is used?
+  * terraform plan is according to the resource ID??? not exactly sure.
+* when delete a resource in the config
+```
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  - <resource type>.<resource name>
+
+```
+  
 
 ### Step 2 - Create Provider
 Provider contains a collection of resources by ResourcesMap.
