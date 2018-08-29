@@ -101,7 +101,19 @@ Terraform will perform the following actions:
 
 Plan: 0 to add, 0 to change, 1 to destroy.
 ```
-  
+* when to update a resource? when the input parameters change, e.g. one of the input parameter changes, and terraform know that because the input parameters are saved in terraform.tfstate file.
+```
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  ~ <resource type>.<resource name>
+      <key>: "old value" => "new value"
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+```
 
 ### Step 2 - Create Provider
 Provider contains a collection of resources by ResourcesMap.
