@@ -1,4 +1,11 @@
 # terraform apply
+## setup steps
+* check providers
+* figure out references
+* start plugins
+* add implicity dependencies
+* "terraform: building graph: GraphTypeRefresh"
+* initialize providers
 ## start a plugin
 * https://github.com/hashicorp/terraform/blob/master/vendor/github.com/hashicorp/go-plugin/client.go#L506
 ```go
