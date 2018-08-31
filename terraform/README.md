@@ -4,6 +4,8 @@
 * source: https://github.com/hashicorp/terraform
 * Write a provider
   * [provider.md](provider.md)
+* variables
+  * https://www.terraform.io/docs/configuration/variables.html
   
 # Others
 * https://www.runatlantis.io/guide/#overview
