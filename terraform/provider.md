@@ -16,7 +16,7 @@
     * [resource_pubsub_topic.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic.go)
     * [resource_pubsub_topic_test.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic_test.go)
 * kubernetes: https://github.com/terraform-providers/terraform-provider-kubernetes/tree/master/kubernetes
-  * [resource_kubernetes_service.go] (https://github.com/terraform-providers/terraform-provider-kubernetes/blob/master/kubernetes/resource_kubernetes_service.go)
+  * [resource_kubernetes_service.go](https://github.com/terraform-providers/terraform-provider-kubernetes/blob/master/kubernetes/resource_kubernetes_service.go)
 
 ## Provider Example from users perspective
 * https://www.terraform.io/intro/getting-started/build.html
