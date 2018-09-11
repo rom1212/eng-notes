@@ -72,3 +72,6 @@ verb
 # PaaS/Saas software
 * https://www.gremlin.com/
 * http://www.seleniumhq.org/projects/webdriver/
+
+stackoverflow salary:
+* https://stackoverflow.blog/2018/09/05/developer-salaries-in-2018-updating-the-stack-overflow-salary-calculator/
