@@ -22,6 +22,7 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
 
 ## config
 * https://github.com/hashicorp/terraform/blob/master/config/config.go
+* loader: https://github.com/hashicorp/terraform/blob/master/config/loader.go
 
 ## command/plan
 * https://github.com/hashicorp/terraform/blob/master/command/plan.go
