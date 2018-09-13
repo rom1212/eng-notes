@@ -17,3 +17,8 @@ xxxx [DEBUG] plugin: waiting for RPC address: path=path/to/terraform-provider-te
 xxxx [DEBUG] plugin.terraform-provider-template: plugin address: timestamp=2018-08-29T10:02:29.580-0700 address=/tmp/plugin987776049 network=unix
 ```
 Since cmd.Args includes the command itself as Args[0]. So, the plugin is started without any argument.
+
+# Code
+
+## config
+* https://github.com/hashicorp/terraform/blob/master/config/config.go
