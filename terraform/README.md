@@ -8,7 +8,8 @@
   * https://www.terraform.io/docs/configuration/variables.html
 
 # Commands
-https://www.terraform.io/docs/commands/plan.html
+* https://www.terraform.io/docs/commands/plan.html
+* log debug: ```export TF_LOG=DEBUG```
  
 # Others
 * https://www.runatlantis.io/guide/#overview
