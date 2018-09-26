@@ -16,3 +16,6 @@
     * Rollback() and Update() here is the same 
       * https://github.com/helm/helm/blob/master/pkg/kube/client.go
         * Update()
+
+## Charts
+* https://github.com/helm/charts/tree/master/stable
