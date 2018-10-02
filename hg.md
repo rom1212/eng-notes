@@ -15,6 +15,8 @@
 * hg help extensions: can find out what are the enabled extensions.
 * hg update <commit>:
   * make the <commit> as the working commit.
+* ```hg revert <file name>```
+  * revert the changes in this file, similar to git checkout filename
 
 # hg advanced commands
 * git reset: ```hg strip --keep -r .```
