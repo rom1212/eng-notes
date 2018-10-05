@@ -21,7 +21,7 @@
 	}
 ```
 
-## ioutilReadFile
+## ioutil.ReadFile
 * func ReadFile(filename string) ([]byte, error)
   * https://golang.org/pkg/io/ioutil/#example_ReadFile
 
