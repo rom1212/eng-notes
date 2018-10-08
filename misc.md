@@ -75,3 +75,6 @@ verb
 
 stackoverflow salary:
 * https://stackoverflow.blog/2018/09/05/developer-salaries-in-2018-updating-the-stack-overflow-salary-calculator/
+
+# C++ compiler
+* compiler https://llvm.org/
