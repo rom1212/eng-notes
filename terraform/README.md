@@ -13,3 +13,10 @@
  
 # Others
 * https://www.runatlantis.io/guide/#overview
+
+# Compare
+* https://dzone.com/articles/terraform-vs-helm-for-kubernetes
+* https://github.com/djhaskin987/terraform-provider-helmcmd/blob/master/helmcmd/helmcmd.go
+* http://blog.infracloud.io/terraform-helm-kubernetes/
+* https://github.com/mcuadros/terraform-provider-helm
+
