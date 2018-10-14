@@ -13,7 +13,7 @@
   * type DeploymentInformer interface {
   * type deploymentInformer struct {
 
-## Lister
-# Deployment Lister
+# Lister
+## Deployment Lister
 * Lister is used by informer
 * https://github.com/kubernetes/client-go/blob/master/listers/apps/v1/deployment.go
