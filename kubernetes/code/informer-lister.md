@@ -5,6 +5,9 @@
     * client.AppsV1().Deployments(namespace).List(options)
   * WatchFunc: what to watch and options
     * client.AppsV1().Deployments(namespace).Watch(options)
+* interface and strut
+  * type DeploymentInformer interface {
+  * type deploymentInformer struct {
 
 # Lister
 Lister is used by informer
