@@ -63,3 +63,32 @@ https://stackoverflow.com/questions/46238571/explain-the-last-dash-in-a-bash-pip
 # kubectl code
 ## Apply
 * https://github.com/kubernetes/kubernetes/blob/master/pkg/kubectl/cmd/apply.go
+
+## kubectl cmd examples
+From https://github.com/coreos/tectonic-installer/issues/2945
+```
+$ kubectl --namespace kube-system get pod
+
+NAME                                                                    READY     STATUS    RESTARTS   AGE
+kube-apiserver-9kwj9                                                    1/1       Running   0          7d
+kube-controller-manager-5b65d64c97-hkkxk                                0/1       Pending   0          14h
+kube-dns-64cd9cc494-d9hdp                                               0/3       Pending   0          14h
+kube-flannel-2mhqh                                                      2/2       Running   0          7d
+kube-flannel-4d6s6                                                      2/2       Running   1          7d
+kube-flannel-gb4ph                                                      2/2       Running   0          7d
+kube-flannel-w5xfq                                                      2/2       Running   1          7d
+kube-proxy-hsx5w                                                        1/1       Running   0          7d
+kube-proxy-pq6mz                                                        1/1       Running   0          7d
+kube-proxy-s9x2p                                                        1/1       Running   0          7d
+kube-proxy-vkwv7                                                        1/1       Running   0          7d
+kube-scheduler-7b675dc9f7-9s7hb                                         0/1       Pending   0          14h
+pod-checkpointer-mjpz9                                                  1/1       Running   0          7d
+pod-checkpointer-mjpz9-ip-10-17-1-125.ap-northeast-1.compute.internal   1/1       Running   0          7d
+tiller-deploy-7dcdcd5f64-5pt8z                                          1/1       Running   0          14h
+
+$ kubectl --namespace kube-system get deployment              
+NAME                      DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
+kube-controller-manager   1         1         1            0           8d
+kube-dns                  1         1         1            0           8d
+kube-scheduler            1         1         1            0           8d
+```
