@@ -12,7 +12,10 @@
 * DeploymentController uses informer to create, but uses the Lister from informer internally.
 * docs
   * https://blog.csdn.net/yan234280533/article/details/78565797
-
+* Uses
+  * https://github.com/kubernetes/client-go/blob/master/util/workqueue/doc.go
+  * https://github.com/kubernetes/apimachinery/blob/master/pkg/util/wait/wait.go
+  
 ### Deployment informer
 * https://github.com/kubernetes/client-go/blob/master/informers/apps/v1/deployment.go, specifies
   * ListFunc: what to list and options
