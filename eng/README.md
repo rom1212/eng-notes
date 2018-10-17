@@ -5,8 +5,12 @@
   * Example: InActive and Active, and we want to add InUse. One usage case is to get all the Active entities, and it uses
     "status==Active". This doesn't work with InUse, and we need to change it to "status!=InActive".
 * Relative directory
+  * Don't depend on current working directory since this is not threadsafe.
   * Make use of absolute path as possible, since the current working directory could change in the code (e.g. os.chdir, not by calling system("cd xxx")). 
   * Example: if we set glog by flag.Set("log_dir", "./logs"), the logs file could change to "/tmp" if the current working directory is changed to some other directory where the code doesn't have permission to write logs. Actually writing to "/tmp/" is easier to find out. But writing to other places is more difficult to debug (when we need to use lsof to find out)
+* Deadlock
+  * In golang, don't use channel together with mutex, because they can cause deadlock
+
 
 ## Code Review
 * [code review](./code-review.md)
