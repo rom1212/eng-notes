@@ -19,4 +19,5 @@
 * https://github.com/djhaskin987/terraform-provider-helmcmd/blob/master/helmcmd/helmcmd.go
 * http://blog.infracloud.io/terraform-helm-kubernetes/
 * https://github.com/mcuadros/terraform-provider-helm
+* https://pulumi.io/reference/vs/terraform.html
 
