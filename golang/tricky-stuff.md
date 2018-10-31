@@ -1,5 +1,16 @@
 # Golang Tricky Stuff
 
+## Common Mistakes 
+* Using goroutines on loop iterator variables
+  * https://github.com/golang/go/wiki/CommonMistakes 
+  * t.Parallel, https://gist.github.com/posener/92a55c4cd441fc5e5e85f27bca008721 
+  ```go
+  	for _, tc := range tests {
+		tc := tc
+		t.Run(tc.name, func(t *testing.T) {
+			t.Parallel()
+  ```
+
 ## Basic Data types
 ### string
 ```go
