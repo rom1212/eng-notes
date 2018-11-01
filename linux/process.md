@@ -26,3 +26,5 @@ processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
   * https://askubuntu.com/questions/360252/what-do-the-stat-column-values-in-ps-mean
   * Sl - sleep multi-threaded
   * Ss - sleep, leader
+* parent process, cmd width, start time, elapsed time
+  * ps -e -o pid,ppid,stime,etime,cmd:600,etime=  
