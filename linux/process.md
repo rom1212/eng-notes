@@ -20,3 +20,9 @@ http://man7.org/linux/man-pages/man1/ps.1.html
 # capital O
 processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
 ```
+
+## ps
+* process state
+  * https://askubuntu.com/questions/360252/what-do-the-stat-column-values-in-ps-mean
+  * Sl - sleep multi-threaded
+  * Ss - sleep, leader
