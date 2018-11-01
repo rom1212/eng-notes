@@ -28,3 +28,5 @@ processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
   * Ss - sleep, leader
 * parent process, cmd width, start time, elapsed time
   * ps -e -o pid,ppid,stime,etime,cmd:600,etime=  
+* process tree
+  * ps auxf
