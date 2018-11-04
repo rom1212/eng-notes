@@ -119,6 +119,10 @@ if err = out.Sync(); err != nil {
 
 return out.Close()  // usually this is not a long function, and easier to make sure that it is closed.
 ```
+
+### gotchas
+https://blog.learngoprogramming.com/gotchas-of-defer-in-go-1-8d070894cb01
+
 ## Tilde Home Directory
 * golang itself can not handle tilde (```~```) as home directory, because it is handled by shell/bash when passing it to go code as command line arguments. However, if we use it directly in the code, it can not interpretate it, even with AbsPath.
 
