@@ -41,4 +41,10 @@ Also, this command will fail if there is sub-directory
 cmd := "cat *" // doesn't work because it tries to cat sub directory and it will fail
 ```
 
+## Run with timeout
+* search "golang cmd exec timeout"
+* https://stackoverflow.com/questions/11886531/terminating-a-process-started-with-os-exec-in-golang
+* https://gist.github.com/scottcagno/7f7f372429c03b2fd404726084eacf3e
+* https://medium.com/@vCabbage/go-timeout-commands-with-os-exec-commandcontext-ba0c861ed738
+* https://github.com/golang/go/issues/9580
 
