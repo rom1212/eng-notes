@@ -31,3 +31,8 @@ I guess it is because each element is still a pointer internally.
 * Only fields whose first letter is capital are exported.
 * https://golang.org/ref/spec#Exported_identifiers
 
+## Prompted fields
+* composite fields
+  * cannot be used as field names in composite literals of the struct, i.e. cannot used in initialization
+* https://stackoverflow.com/questions/41686692/embedding-structs-in-golang-gives-error-unknown-field
+
