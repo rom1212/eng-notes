@@ -48,3 +48,8 @@ cmd := "cat *" // doesn't work because it tries to cat sub directory and it will
 * https://medium.com/@vCabbage/go-timeout-commands-with-os-exec-commandcontext-ba0c861ed738
 * https://github.com/golang/go/issues/9580
 
+## Kill a process
+* how to kill its subprocesses
+* signal
+  * https://github.com/golang/go/issues/7938
+
