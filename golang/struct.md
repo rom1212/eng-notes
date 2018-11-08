@@ -32,6 +32,7 @@ I guess it is because each element is still a pointer internally.
 * https://golang.org/ref/spec#Exported_identifiers
 
 ## Prompted fields
+* https://medium.com/golangspec/promoted-fields-and-methods-in-go-4e8d7aefb3e3
 * composite fields
   * cannot be used as field names in composite literals of the struct, i.e. cannot used in initialization
 * https://stackoverflow.com/questions/41686692/embedding-structs-in-golang-gives-error-unknown-field
