@@ -166,6 +166,24 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
   * test for error: 
     * use ExpectError, https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
     * this applies to the Acceptance test above
+  * print out the State
+  ```
+  resource.UnitTest(t, resource.TestCase{
+          Providers: testProviders,
+          Steps: []resource.TestStep{
+                  {
+                          Config: tc.resource,  
+                          Check: resource.ComposeTestCheckFunc(
+                                  func(s *terraform.State) error {
+                                          fmt.Println("terraform.State:", s)
+                                          return nil            
+                                  },                    
+                          ),                    
+                          // ExpectNonEmptyPlan: true,
+                  },
+          },
+  })
+  ```
 
 ## Tricky
 * Schema
