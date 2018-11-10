@@ -154,6 +154,23 @@ However, terraform seems only use DEBUG level to print out providers log, e.g.
 
 ## Debugging
 * export TF_LOG=DEBUG
+* when to initialize providers - before confirming actions, i.e. before "Terraform will perform the following actions:"
+```
+2018-11-xxTxx:xx:xx.xxx-xxxx [DEBUG] plugin.terraform-provider-google: 2018/11/xx xx:xx:xx [INFO] Requesting Google token...
+2018-11-xxTxx:xx:xx.xxx-xxxx [DEBUG] plugin.terraform-provider-google: 2018/11/xx xx:xx:xx [INFO] Instantiating GCE client...
+
+...
+
+Terraform will perform the following actions:
+
+...
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: 
+```
 
 ## Testing
 * Acceptance test
