@@ -180,10 +180,10 @@ Do you want to perform these actions?
 * Unittest with Acceptance test framework
   * Instead of using resource.Test, use resource.Unittest. And then use replace the client code which talks to the network/cloud provider. 
   * Looks that it doesn't compile provider into binary and run the binary in the test. However, it just calls the library to talk to the provider.  
-  * test for error: 
-    * use ExpectError, https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
-    * this applies to the Acceptance test above
-  * print out the State
+* test for error: 
+  * use ExpectError, https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
+  * this applies to the Acceptance test above
+* print out the State
   ```
   resource.UnitTest(t, resource.TestCase{
           Providers: testProviders,
