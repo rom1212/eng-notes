@@ -173,6 +173,8 @@ Do you want to perform these actions?
 ```
 
 ## Testing
+* docs
+  * https://www.terraform.io/docs/extend/best-practices/testing.html
 * Acceptance test
   * example: TF_ACC=1 go test $(TEST) -v $(TESTARGS) -timeout 120m
   * https://github.com/hashicorp/terraform/blob/master/Makefile
@@ -196,11 +198,21 @@ Do you want to perform these actions?
                                           return nil            
                                   },                    
                           ),                    
-                          // ExpectNonEmptyPlan: true,
                   },
           },
   })
   ```
+* debug - plan was not empty after running "terraform apply"
+  * symptom
+  ```
+  // Step 1 is the second step, step 0 is the first step.
+  testing.go:538: Step 1 error: After applying this step, the plan was not empty:
+  // https://github.com/hashicorp/terraform/blob/master/helper/resource/testing.go
+  ```
+  * reasons
+    * could be that the mock function for the Read() of the second step is wrong, maybe use the same Read in the first step. In this case, can use PreConfig to set a mock function for each step.
+  * a non-empty plan after successfully running terraform apply. This is typically due to a valid but otherwise misconfiguration of the resource, and is generally undesirable. However, if we want to intentionally create a test case for it, we can use ```ExpectNonEmptyPlan: true```
+  * https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
 
 ## Tricky
 * Schema
