@@ -211,6 +211,20 @@ Do you want to perform these actions?
   ```
   * reasons
     * could be that the mock function for the Read() of the second step is wrong, maybe use the same Read in the first step. In this case, can use PreConfig to set a mock function for each step.
+    * be careful that there are multiple Read() during one step. For resource Update(), the first Read() should usually be mocked to read the old resource, and after Update(), Reads should be mocked to read new resource. So, it's tricky to setup the mock Read(). track or print out the running of all functions can find the problem. One way is to setup a variable readCalledTimes to track when Read is called, and return different mock, e.g.
+    ```
+    readCalledTimes := 0
+    readFunc = func (xxx) (xxx) {
+      readCalledTimes++
+      switch readCalledTimes {
+      case 1, 2, xxx:
+        return xxx
+      case l, m, n:
+        return xxx
+      default:
+        return some err
+    }
+    ```
   * a non-empty plan after successfully running terraform apply. This is typically due to a valid but otherwise misconfiguration of the resource, and is generally undesirable. However, if we want to intentionally create a test case for it, we can use ```ExpectNonEmptyPlan: true```
   * https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
 
