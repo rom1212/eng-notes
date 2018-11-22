@@ -7,3 +7,7 @@
   w := lockFile.If(storage.Conditions{DoesNotExist: true}).NewWriter(c.storageContext)
   ```
 * unlock: check the generation number from lock, and make sure they match.
+
+# general gslock (similar)
+* https://github.com/marcacohen/gcslock
+* https://cloud.google.com/storage/docs/object-versioning
