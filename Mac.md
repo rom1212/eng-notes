@@ -1,3 +1,5 @@
 # Mac iOS
 ## Screen shot
-* Press Shift-Command-4.
+* Shift-Command-3 for whole screen
+* Shift-Command-4 for window selection
+
