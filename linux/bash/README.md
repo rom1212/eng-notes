@@ -24,3 +24,12 @@ done
 ```
 DATE=`date '+%Y-%m-%dT%H:%M:%S'`
 ```
+
+## default value
+https://stackoverflow.com/questions/2013547/assigning-default-values-to-shell-variables-with-a-single-command-in-bash
+```
+FOO=${VARIABLE:-default}  # If variable not set or null, use default.
+Or, which will assign default to VARIABLE as well:
+
+FOO=${VARIABLE:=default}  # If variable not set or null, set it to default.
+```
