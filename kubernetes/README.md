@@ -5,6 +5,7 @@
 * contributions
   * https://github.com/kubeflow/kubeflow
   * https://ksonnet.io/ vs helm
+  * workflow: https://github.com/argoproj/argo
 
 ## SIG
 https://github.com/kubernetes/kubernetes/wiki/Special-Interest-Groups-(SIGs)
