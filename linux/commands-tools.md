@@ -159,6 +159,15 @@ sudo -g tt1 ls
 
 ## umask
 umask is the reverse side of permission bits, and so 022 corresponds to ```rxwr-xr-x```, and 077 corresponds to ```rwx------```.
+* wiki: https://en.m.wikipedia.org/wiki/Umask
+
+If the mask has a bit set to "1", it means that the corresponding initial file permission will be disabled.
+```shell
+$ umask         # display current value (as octal)
+0022
+$ umask -S      # display current value symbolically - which are allowed
+u=rwx,g=rx,o=rx
+```
 * the default is first setup in /etc/login.defs
   *  ubuntu: 
   ```
