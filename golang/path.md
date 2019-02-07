@@ -1,4 +1,5 @@
 # golang path
+## copyFileWithSudo
 ```go
 func copyFileWithSudo(from, to string) {
         // Create directory
@@ -13,3 +14,8 @@ func copyFileWithSudo(from, to string) {
         runCommand(t, "sudo", []string{"chmod", "644", to})
 }
 ```
+
+## 
+* https://github.com/golang/go/issues/25849
+* https://github.com/mholt/archiver/pull/65
+  * with [this improvement](https://github.com/mholt/archiver/commit/7ef86db1333bd7d433a9ea78f19bbd8cb5007d63#diff-635e4219ee55ef011b2b32bba065606b)
