@@ -27,3 +27,6 @@ https://golang.org/pkg/strings/#EqualFold
 # 3 22909
 # 6 21527
 ```
+
+* quote and escape
+  * https://golang.org/pkg/strconv/#Quote
