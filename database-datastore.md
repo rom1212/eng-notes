@@ -1,8 +1,10 @@
 # Transaction
 ## When need a transaction?
-* write value depends on read value
-* write to different rows
-* multiple reads need to happen for data at the same PIT (point in time)
+* read-write transaction
+  * write value depends on read value
+  * write to different rows (or multiple writes)
+* read-only transaction
+  * multiple reads need to happen for data at the same PIT (point in time)
 
 # (My)SQL Database
 ## Schema Design
