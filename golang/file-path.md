@@ -106,7 +106,8 @@ func main() {
 ```
 os.MkdirAll(folderPath, os.ModePerm);
 ```
-Have to use os.ModePerm, otherwise, it cannot create the second level directory.
+Have to use os.ModePerm, otherwise, it cannot create the second level directory. See:
+https://github.com/golang/go/issues/15210
 
 # Path
 
