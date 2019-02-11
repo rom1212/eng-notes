@@ -101,6 +101,12 @@ func main() {
 }
 ```
 
+## Create Directory
+* MkDirAll
+```
+os.MkdirAll(folderPath, os.ModePerm);
+```
+Have to use os.ModePerm, otherwise, it cannot create the second level directory.
 
 # Path
 
