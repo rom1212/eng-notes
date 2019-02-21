@@ -24,6 +24,26 @@
 ## ioutil.ReadFile
 * func ReadFile(filename string) ([]byte, error)
   * https://golang.org/pkg/io/ioutil/#example_ReadFile
+```
+// Can be used for quick debugging
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+)
+
+func main() {
+	content, err := ioutil.ReadFile("testdata/hello")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Printf("File contents: %s\n", content)
+
+}
+```
 
 ## ioutil.ReadAll()
 * https://golang.org/pkg/io/ioutil/#example_ReadAll
