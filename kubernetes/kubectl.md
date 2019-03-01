@@ -5,6 +5,7 @@
 kubectl config view
 kubectl cluster-info
 kubectl get pods --all-namespaces
+kubectl get pods -o json # json output, https://gist.github.com/so0k/42313dbb3b547a0f51a547bb968696ba
 ```
 
 ## kubectl config
