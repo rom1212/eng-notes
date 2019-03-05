@@ -20,15 +20,33 @@ docs:
   ```
 
 ### Go
+Normal string
+```
+"{ \"some key\": \"input1 \\\n input1 \" }"
+```
+because Go does escaping first, so \\\n is translated to \n, and the above json is translated to 
+```
+{ "some key": "input1 \n input1 " }
+```
+
+Raw string
+```
+`{ "some key": "input1 \n input1 " }`
+```
 
 ### Shell
-Input:
+Shell with escaping:
 ```
 "{ \"some key\": \"input1 \\\n input1 \" }"
 ```
 because shell does escaping first, so \\\n is translated to \n, and the above json is translated to 
 ```
 { "some key": "input1 \n input1 " }
+```
+
+Shel without escaping:
+```
+'{ "some key": "input1 \n input1 " }'
 ```
 
 ### Pyhton
