@@ -49,5 +49,9 @@ Shel raw string without escaping:
 '{ "some key": "input1 \n input1 " }'
 ```
 
-### Pyhton
+### Python
+Raw string
+```
+r`some thing`
+```
 
