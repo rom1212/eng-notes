@@ -22,6 +22,14 @@ docs:
 ### Go
 
 ### Shell
+Input:
+```
+"{ \"some key\": \"input1 \\\n input1 \" }"
+```
+because shell does escaping first, so \\\n is translated to \n, and the above json is translated to 
+```
+{ "some key": "input1 \n input1 " }
+```
 
 ### Pyhton
 
