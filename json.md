@@ -44,7 +44,7 @@ because shell does escaping first, so \\\n is translated to \n, and the above js
 { "some key": "input1 \n input1 " }
 ```
 
-Shel without escaping:
+Shel raw string without escaping:
 ```
 '{ "some key": "input1 \n input1 " }'
 ```
