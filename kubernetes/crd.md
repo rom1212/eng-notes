@@ -1,1 +1,0 @@
-# CRD - Custom Resource Definition
