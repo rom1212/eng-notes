@@ -13,15 +13,22 @@ You can deploy and update a custom controller on a running cluster, independentl
 * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
 
 ```bash
-# both plural or singular works on kubectl
-kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabs --all-namespaces
-kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontab --all-namespaces
-No resources found.
+# create CRD - "kind: Crontab" is defined under "names"
+$ kubectl create -f resourcedefinition.yaml
 
-# for wrong resource type
-kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabsss --all-namespaces
+# plural, singular or shortNames work on kubectl
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabs --all-namespaces
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontab --all-namespaces
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespacesNo resources found.
+
+# for wrong resource type, partial resource names doesn't work, e.g. "get cronta"
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabsss --all-namespaces
 the server doesn't have a resource type "crontabsss"
 
+# create crontab - what matters here is "kind: Crontab"
+$ kubectl create -f my-crontab.yaml
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o yaml
+$ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o json
 ```
 
 ## AA - Agregated API
