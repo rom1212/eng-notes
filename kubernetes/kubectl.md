@@ -53,6 +53,10 @@ kubectl apply -f <file name, or - which mean stdin>
 
 https://stackoverflow.com/questions/46238571/explain-the-last-dash-in-a-bash-pipe-expression
 ```
+## kubectl apply --prune
+* https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply
+* https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/#in-place-updates-of-resources
+* ```kubectl apply attaches an annotation to the resource in order to determine the changes to the configuration since the previous invocation```
 
 ## kubectl apply vs create
 * https://kubernetes.io/docs/concepts/overview/object-management-kubectl/overview/
