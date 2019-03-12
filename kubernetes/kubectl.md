@@ -12,6 +12,7 @@ kubectl get pods -o json # json output, https://gist.github.com/so0k/42313dbb3b5
 * output formats: https://gist.github.com/so0k/42313dbb3b547a0f51a547bb968696ba
 * jsonpath
 * go-template
+  * basic: https://blog.gopheracademy.com/advent-2017/using-go-templates/
   * newline: https://medium.com/@hank.jacobs/kubectl-printing-newlines-when-using-go-template-output-cce67a0cfe46
 
 ## kubectl config
