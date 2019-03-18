@@ -27,7 +27,9 @@
 ## Major Questions
 ### what are the cases for runtime crash? 
 * nil pointer deferencence
+  * error message: ```runtime error: invalid memory address or nil pointer dereference```
   * interface is not set to a real object.
+  * pointer is not assigned a value
 * panic: assignment to entry in nil map
 ```
 var skipDirSet map[string]struct{}
