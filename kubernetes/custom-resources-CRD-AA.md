@@ -15,6 +15,12 @@ You can deploy and update a custom controller on a running cluster, independentl
 ```bash
 # create CRD - "kind: Crontab" is defined under "names"
 $ kubectl create -f resourcedefinition.yaml
+$ kubectl get crd
+```
+
+```
+# create crontab - what matters here is "kind: Crontab"
+$ kubectl create -f my-crontab.yaml
 
 # plural, singular or shortNames work on kubectl
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabs --all-namespaces
@@ -25,8 +31,7 @@ $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin -
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get crontabsss --all-namespaces
 the server doesn't have a resource type "crontabsss"
 
-# create crontab - what matters here is "kind: Crontab"
-$ kubectl create -f my-crontab.yaml
+
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o yaml
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o json
 ```
