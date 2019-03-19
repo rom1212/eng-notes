@@ -5,7 +5,9 @@
 kubectl config view
 kubectl cluster-info
 kubectl get pods --all-namespaces
-kubectl get pods -o json # json output, https://gist.github.com/so0k/42313dbb3b547a0f51a547bb968696ba
+kubectl get pods -o json
+# get credential from GKE
+gcloud container clusters get-credentials --zone <zone, might use --region> --project <project name> <cluster name>
 ```
 
 ## kubectl get
