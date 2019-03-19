@@ -73,6 +73,11 @@ https://stackoverflow.com/questions/46238571/explain-the-last-dash-in-a-bash-pip
   * https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/
   * https://kubernetes.io/docs/concepts/configuration/overview/
 
+## kubectl explain
+```shell
+kubectl explain deployment --recursive
+```
+
 # kubectl code
 ## Apply
 * https://github.com/kubernetes/kubernetes/blob/master/pkg/kubectl/cmd/apply.go
