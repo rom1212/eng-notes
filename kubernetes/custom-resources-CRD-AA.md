@@ -41,23 +41,27 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
 ## CRD and Controller
 * Kubernetes controllers
   * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-* kubectl rollout status
-  * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#deployment-status
-* API conventions
-  * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
-* API Resource
-  * StatefulSet was a beta resource.
-  * A resource has many objects created under it.
-  * resource can also refers to the compute resources.
-  * ```kubectl api-resources```: a complete list of supported resources.
-* Object
-  * https://kubernetes.io/docs/concepts/#kubernetes-objects
-  * An object is under an API resource.
-* kubectl use a different naming - resource is the same as object, resource type is the same as API resource.
-  * kubectl apply -h: 
-    * Apply a configuration to a resource by filename or stdin. The resource name must be specified.
-    * Here it is using "resource" as "object"
-    * However, the comment is right for this: 
-      * "save-config: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future."
+  * controller status, e.g. kubectl rollout status
+    * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#deployment-status
+* Conventions:
+  * API conventions
+    * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
+  * Writing Controllers
+    * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-api-machinery/controllers.md
+* Concepts
+  * API Resource
+    * StatefulSet was a beta resource.
+    * A resource has many objects created under it.
+    * resource can also refers to the compute resources.
+    * ```kubectl api-resources```: a complete list of supported resources.
+  * Object
+    * https://kubernetes.io/docs/concepts/#kubernetes-objects
+    * An object is under an API resource.
+  * kubectl use a different naming - resource is the same as object, resource type is the same as API resource.
+    * kubectl apply -h: 
+      * Apply a configuration to a resource by filename or stdin. The resource name must be specified.
+      * Here it is using "resource" as "object"
+      * However, the comment is right for this: 
+        * "save-config: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future."
 
 ## AA - Agregated API
