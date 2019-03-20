@@ -43,6 +43,9 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
   * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
   * controller status, e.g. kubectl rollout status
     * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#deployment-status
+    * [Deployment status]( https://github.com/kubernetes/kubernetes/blob/ac16ac7cbe11585a53f70057d05a6212952b5051/pkg/kubectl/rollout_status.go#L60)
+    * [DaemonSet status](https://github.com/kubernetes/kubernetes/blob/ac16ac7cbe11585a53f70057d05a6212952b5051/pkg/kubectl/rollout_status.go#L96)
+    * [StatefulSet status](https://github.com/kubernetes/kubernetes/blob/ac16ac7cbe11585a53f70057d05a6212952b5051/pkg/kubectl/rollout_status.go#L121)
 * Conventions:
   * API conventions
     * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
