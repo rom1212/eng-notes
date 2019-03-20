@@ -49,9 +49,13 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
 * Conventions:
   * API conventions
     * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
+    * API references
+      * https://kubernetes.io/docs/reference/kubernetes-api/
+      * https://kubernetes.io/docs/reference/
   * Writing Controllers
     * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-api-machinery/controllers.md
 * Concepts
+  * https://kubernetes.io/docs/concepts/
   * API Resource
     * StatefulSet was a beta resource.
     * A resource has many objects created under it.
