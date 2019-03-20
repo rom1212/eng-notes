@@ -49,6 +49,7 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
   * StatefulSet was a beta resource.
   * A resource has many objects created under it.
   * resource can also refers to the compute resources.
+  * ```kubectl api-resources```: a complete list of supported resources.
 * Object
   * https://kubernetes.io/docs/concepts/#kubernetes-objects
   * An object is under an API resource.
@@ -56,5 +57,7 @@ https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-r
   * kubectl apply -h: 
     * Apply a configuration to a resource by filename or stdin. The resource name must be specified.
     * Here it is using "resource" as "object"
+    * However, the comment is right for this: 
+      * "save-config: If true, the configuration of current object will be saved in its annotation. Otherwise, the annotation will be unchanged. This flag is useful when you want to perform kubectl apply on this object in the future."
 
 ## AA - Agregated API
