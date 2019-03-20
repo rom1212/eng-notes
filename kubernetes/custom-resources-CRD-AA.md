@@ -35,5 +35,8 @@ the server doesn't have a resource type "crontabsss"
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o yaml
 $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin --password <>  get ct --all-namespaces -o json
 ```
+metadata.generation can be automatically increased by using [status subresource](
+https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#status-subresource)
+
 
 ## AA - Agregated API
