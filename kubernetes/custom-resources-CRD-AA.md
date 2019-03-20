@@ -38,5 +38,23 @@ $ kubectl --insecure-skip-tls-verify=true --server https://<> --username admin -
 metadata.generation can be automatically increased by using [status subresource](
 https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#status-subresource)
 
+## CRD and Controller
+* Kubernetes controllers
+  * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+* kubectl rollout status
+  * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#deployment-status
+* API conventions
+  * https://github.com/kubernetes/community/blob/master/contributors/devel/sig-architecture/api-conventions.md
+* API Resource
+  * StatefulSet was a beta resource.
+  * A resource has many objects created under it.
+  * resource can also refers to the compute resources.
+* Object
+  * https://kubernetes.io/docs/concepts/#kubernetes-objects
+  * An object is under an API resource.
+* kubectl use a different naming - resource is the same as object, resource type is the same as API resource.
+  * kubectl apply -h: 
+    * Apply a configuration to a resource by filename or stdin. The resource name must be specified.
+    * Here it is using "resource" as "object"
 
 ## AA - Agregated API
