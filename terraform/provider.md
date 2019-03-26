@@ -15,6 +15,7 @@
   * pubsub topic
     * [resource_pubsub_topic.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic.go)
     * [resource_pubsub_topic_test.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_pubsub_topic_test.go)
+    * [resource_container_cluster.go, and timeout](https://github.com/terraform-providers/terraform-provider-google/blob/1c982355e4405974186f97d1dee75af6a37f3aa9/google/resource_container_cluster.go#L59)
 * kubernetes: https://github.com/terraform-providers/terraform-provider-kubernetes/tree/master/kubernetes
   * [resource_kubernetes_service.go](https://github.com/terraform-providers/terraform-provider-kubernetes/blob/master/kubernetes/resource_kubernetes_service.go)
 
