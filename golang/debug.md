@@ -2,7 +2,9 @@
 
 ## Print sub-directory recursively
 ```golang
-filepath.Walk(".",
+func walkDir(dir string) {
+
+filepath.Walk(dir,
     func(path string, info os.FileInfo, err error) error {
     if err != nil {
        log.Infof("filepath.Walk error: %v", err)
@@ -12,4 +14,6 @@ filepath.Walk(".",
     // fmt.Println(path, info.Size())
     return nil
 })
+
+}
 ```
