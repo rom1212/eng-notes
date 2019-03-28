@@ -3,6 +3,8 @@
 ## Docs
 * https://kubernetes.io/docs/concepts/overview/components/
 * https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+* finalizer
+  * https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#finalizers
 
 ## Deployment Controller
 * Code
