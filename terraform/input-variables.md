@@ -2,6 +2,13 @@
 ## docs
 * https://www.terraform.io/docs/configuration/variables.html
 
+## Assign values
+* in tfvars file
+  ```
+  # map
+  myvar = {key = "x.x.x.x"}
+  ```
+
 ## Variable Precedence
 From low to high
 * default value during declaration
