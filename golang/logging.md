@@ -1,3 +1,8 @@
+# golang log
+* https://golang.org/pkg/log/
+* "That logger writes to standard error and prints the date and time of each logged message."
+  * ```2009/01/23 01:23:23 message```
+
 # glog
 * https://gist.github.com/heatxsink/7221ebe499b0767d4784
 
