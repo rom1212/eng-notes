@@ -52,4 +52,5 @@ cmd := "cat *" // doesn't work because it tries to cat sub directory and it will
 * how to kill its subprocesses
 * signal
   * https://github.com/golang/go/issues/7938
+  * ProcessState and WaitStatus: https://github.com/golang/go/issues/19798
 
