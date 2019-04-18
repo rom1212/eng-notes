@@ -63,6 +63,7 @@ func main() {
 
 	b, err := json.MarshalIndent(request, "", "    ")
         ioutil.WriteFile("/tmp/request.json", b, os.ModePerm)
+	// ioutil.WriteFile("/tmp/request.json", []bytes(someString), os.ModePerm)
 ```
 
 ## Append to a file
