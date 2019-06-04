@@ -14,12 +14,6 @@
   * cat /proc/xxx/status
     * Name: xxx
  
-## Process info
-http://man7.org/linux/man-pages/man1/ps.1.html
-```
-# capital O
-processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
-```
 
 ## ps
 * process state
@@ -27,6 +21,13 @@ processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
   * Sl - sleep multi-threaded
   * Ss - sleep, leader
 * parent process, cmd width, start time, elapsed time
-  * ps -e -o pid,ppid,stime,etime,cmd:600,etime=  
+  * ps -e -o pid,ppid,stime,etime,cmd:600,etime=
+  * can be use if the command is too long to fit into screen
 * process tree
   * ps auxf
+* Process info
+http://man7.org/linux/man-pages/man1/ps.1.html
+```
+# capital O?
+processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
+```
