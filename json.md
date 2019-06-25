@@ -2,6 +2,7 @@
 
 ## Multi-line
 
+No multi-line string with control character. Must be escaped. This is understandable because json is supposed to be read by machine, not human. That' why terraform is using HCL format which is indended for human.
 
 According to json specification (http://json.org/), 
 ```
@@ -18,6 +19,7 @@ docs:
   ```
   JSON is an extremely rigid schema. It's great, but it has a couple of shortcomings, the largest of which is the inability to store multi-line strings. 
   ```
+
 
 ### Go
 Normal string
