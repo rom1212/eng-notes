@@ -30,3 +30,9 @@ https://golang.org/pkg/strings/#EqualFold
 
 * quote and escape
   * https://golang.org/pkg/strconv/#Quote
+* split
+https://golang.org/pkg/strings/#SplitN
+```
+// split into at most 2 fields, seperated by "="
+fields := strings.SplitN(format, "=", 2)
+```
