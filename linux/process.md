@@ -31,3 +31,9 @@ http://man7.org/linux/man-pages/man1/ps.1.html
 # capital O?
 processinfo=`ps -p $pid -O etimes,etime,uid,euser=USER,comm=NAME`
 ```
+
+## Signal
+* SIGINT - sent by Ctrl+C (human interruption)
+* SIGTERM - send by kill
+* https://www.quora.com/What-is-the-difference-between-the-SIGINT-and-SIGTERM-signals-in-Linux-What%E2%80%99s-the-difference-between-the-SIGKILL-and-SIGSTOP-signals
+
