@@ -8,6 +8,8 @@ kubectl get pods --all-namespaces
 kubectl get pods -o json
 # get credential from GKE
 gcloud container clusters get-credentials --zone <zone, might use --region> --project <project name> <cluster name>
+
+kubectl get ns --show-labels
 ```
 
 ## kubectl get
