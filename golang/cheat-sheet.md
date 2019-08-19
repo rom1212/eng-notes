@@ -380,6 +380,15 @@ for range time.Tick(time.Second) {
 
 ## Maps
 
+Create an empty map: 
+* https://stackoverflow.com/questions/31064688/which-is-the-nicer-way-to-initialize-a-map-in-golang
+* https://stackoverflow.com/questions/16959992/creating-map-with-without-make
+```
+// These two are the same
+var m = map[string]int{}
+var m = make(map[string]int)
+```
+
 ```go
 var m map[string]int
 m = make(map[string]int)
@@ -400,7 +409,6 @@ var m = map[string]Vertex{
 ```go
 // Get map keys
 keys := reflect.ValueOf(abc).MapKeys()
-
 ```
 
 
