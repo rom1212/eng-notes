@@ -1,15 +1,21 @@
-# OS
+# golang packages
+## OS
 * RemoveAll: rm -r
 
-# json
+## json
 * https://golang.org/pkg/encoding/json/#MarshalIndent
 
 https://coderwall.com/p/cp5fya/measuring-execution-time-in-go
 
-# github/third-party
-* https://github.com/satori/go.uuid 
+## reflect
+```go
+v := reflect.ValueOf(w)
+if reflect.TypeOf(w).Kind() == reflect.Ptr {
+    v = v.Elem()
+}
+zero := reflect.Zero(v.Type())
+```
 
-# packages
 ## time
 ```
 time.Now()
@@ -27,3 +33,7 @@ time formatting: https://gobyexample.com/time-formatting-parsing
 regexp.MatchString("foo.*", "seafood")
 regexp.MatchString(`foo[\s]*`, "seafoo d"). // match with white space in between
 ```
+
+# github/third-party
+* https://github.com/satori/go.uuid 
+
