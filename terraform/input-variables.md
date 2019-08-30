@@ -1,4 +1,7 @@
 # input variables
+## 0.12 type constraints
+* https://www.terraform.io/docs/configuration/types.html
+
 ## docs
 * https://www.terraform.io/docs/configuration/variables.html
 
