@@ -8,7 +8,7 @@
   * https://www.terraform.io/docs/extend/schemas/schema-behaviors.html
     * Default, and DefaultFunc
 ## Examples
-* https://github.com/terraform-providers/terraform-provider-google/blob/master/google/provider.go
+* Google: https://github.com/terraform-providers/terraform-provider-google/blob/master/google/provider.go
   * redis resource 
     * [resource_redis_instance.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_redis_instance.go)
     * [resource_redis_instance_test.go](https://github.com/terraform-providers/terraform-provider-google/blob/master/google/resource_redis_instance_test.go)
@@ -18,6 +18,8 @@
     * [resource_container_cluster.go, and timeout](https://github.com/terraform-providers/terraform-provider-google/blob/1c982355e4405974186f97d1dee75af6a37f3aa9/google/resource_container_cluster.go#L59)
 * kubernetes: https://github.com/terraform-providers/terraform-provider-kubernetes/tree/master/kubernetes
   * [resource_kubernetes_service.go](https://github.com/terraform-providers/terraform-provider-kubernetes/blob/master/kubernetes/resource_kubernetes_service.go)
+* AWS:
+  * https://github.com/terraform-providers/terraform-provider-aws/blob/master/aws/data_source_aws_ami.go
 
 ## Provider Example from users perspective
 * https://www.terraform.io/intro/getting-started/build.html
