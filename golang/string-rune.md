@@ -64,3 +64,43 @@ fields := strings.SplitN(format, "=", 2)
 '\uDFFF'     // illegal: surrogate half
 '\U00110000' // illegal: invalid Unicode code point
 ```
+* Exeperiments
+  * https://play.golang.org/p/zxaOLq4pYAH
+```go
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	fmt.Println("Hello, playground")
+	s := "\n\013\n\t10.10.1.1"
+	fmt.Printf("[]byte(s): %v\n", []byte(s))
+	fmt.Printf("X: %X\n", s)
+	fmt.Printf("v: %v\n", s)
+	fmt.Printf("s: %s\n", s)
+	fmt.Printf("q: %q\n", s)
+	fmt.Printf("strconv.Quote: %v\n", strconv.Quote(s))
+
+	fmt.Printf("[]byte(s): %v\n", []byte("\n\013\n\t10.10.1.1"))
+	fmt.Printf("[]byte(s): %v\n", []byte("\n\v\n\t10.10.1.1"))
+}
+```
+```
+output
+Hello, playground
+[]byte(s): [10 11 10 9 49 48 46 49 48 46 49 46 49]
+X: 0A0B0A0931302E31302E312E31
+v: 
+
+	10.10.1.1
+s: 
+
+	10.10.1.1
+q: "\n\v\n\t10.10.1.1"
+strconv.Quote: "\n\v\n\t10.10.1.1"
+[]byte(s): [10 11 10 9 49 48 46 49 48 46 49 46 49]
+[]byte(s): [10 11 10 9 49 48 46 49 48 46 49 46 49]
+```
