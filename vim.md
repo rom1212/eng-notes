@@ -1,5 +1,10 @@
 # Commands
-## Add new line
+## Add a word and new line in the end
+```
+%s/\n/something\r/gc
+```
+
+## Add new line before a word
 Add new line before each " File" (windows)
 ```
 :%s/ File/\rFile/gc
