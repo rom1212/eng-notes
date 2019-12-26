@@ -236,3 +236,15 @@ Do you want to perform these actions?
   * Required: true
     * it doens't mean that we need to specify it in the tf file, as long as it has DefaultFunc.
   * Cannot use "Required: false", must use "Optional: true", not verified.
+
+* "provider" section is NOT required
+
+Each time a new provider is added to configuration -- either explicitly via a provider block or by adding a resource from that provider -- Terraform must initialize the provider before it can be used. Initialization downloads and installs the provider's plugin so that it can later be executed.
+
+Provider initialization is one of the actions of terraform init. Running this command will download and initialize any providers that are not already initialized.
+
+Providers downloaded by terraform init are only installed for the current working directory; other working directories can have their own installed provider versions.
+
+Note that terraform init cannot automatically download providers that are not distributed by HashiCorp. See Third-party Plugins below for installation instructions.
+
+For more information, see the terraform init command.
