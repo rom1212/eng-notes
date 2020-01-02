@@ -17,3 +17,8 @@ copy /usr/lib/systemd/system/mariadb.service to /etc/systemd/system/mariadb.serv
 Restart=always
 RestartSec=3
 ```
+
+# Manually Stop a Service
+```
+$ sudo systemctl stop mariadb.service
+```
