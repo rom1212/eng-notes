@@ -20,9 +20,14 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
 
 # Code
 
-## config
+## Config
 * https://github.com/hashicorp/terraform/blob/master/config/config.go
 * loader: https://github.com/hashicorp/terraform/blob/master/config/loader.go
 
-## command/plan
+## Command/Plan
 * https://github.com/hashicorp/terraform/blob/master/command/plan.go
+
+## Command/Apply
+* https://github.com/hashicorp/terraform/blob/master/command/apply.go
+  * https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/command/meta.go#L280
+  * https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/local/backend.go#L296 
