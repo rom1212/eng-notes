@@ -31,3 +31,4 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
 * https://github.com/hashicorp/terraform/blob/master/command/apply.go
   * https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/command/meta.go#L280
   * https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/local/backend.go#L296 
+  * [backend/backend.go:RunningOperation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/backend.go#L246)
