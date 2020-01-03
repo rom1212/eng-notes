@@ -32,6 +32,6 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
   * [command/meta.go:RunOperation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/command/meta.go#L280)
   * [backend/local/backend.go:Operation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/local/backend.go#L296)
     * opRefresh, opPlan, opApply
-  * [backend/backend.go:RunningOperation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/backend.go#L246)
-  * [terraform/context.go: "[INFO] terraform: building graph: GraphTypeRefresh"](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/terraform/context.go#L257)
-  * [terraform/context.go: "[DEBUG] Starting graph walk: walkRefresh"]
+    * [backend/backend.go:RunningOperation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/backend.go#L246)
+  * [terraform/context.go:Graph(): "[INFO] terraform: building graph: GraphTypeRefresh"](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/terraform/context.go#L257)
+  * terraform/context.go:walk(): "[DEBUG] Starting graph walk: walkRefresh"
