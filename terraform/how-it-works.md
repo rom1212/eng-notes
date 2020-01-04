@@ -44,4 +44,13 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
       * ```baseState = refreshedState // plan will be relative to our refreshed state```
       * ```plan, planDiags = tfCtx.Plan() // Plan only depends on tfCtx, not depends on baseState. baseState is only used for renderPlan(), and this is why opApply ignores refreshedState from tfCtx.Refresh``` 
       * ```b.renderPlan(plan, baseState, schemas)```
-      
+    * [opApply] (https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/local/backend_apply.go#L19)
+      * ```log.Printf("[INFO] backend/local: apply calling Refresh")```
+      * ```_, err := tfCtx.Refresh()```
+      * ```log.Printf("[INFO] backend/local: apply calling Plan")```
+      * ```plan, planDiags := tfCtx.Plan()```
+      * ```log.Printf("[INFO] backend/local: apply calling Apply")```
+      * ```_, applyDiags = tfCtx.Apply()```
+      * ```applyState = tfCtx.State()```
+      * ```runningOp.State = applyState```
+      * ```err := statemgr.WriteAndPersist(opState, applyState)```
