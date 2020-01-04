@@ -33,6 +33,6 @@ Since cmd.Args includes the command itself as Args[0]. So, the plugin is started
   * [backend/local/backend.go:Operation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/local/backend.go#L296)
     * [backend/backend.go:RunningOperation](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/backend/backend.go#L246)    
     * opRefresh, opPlan, opApply
-      * [terraform/context.go:Refresh()](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/terraform/context.go#L583)
+      * [terraform/context.go:Refresh()](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/terraform/context.go#L583): This will update the state that this context works with, along with returning it.
         * Build the graph: [terraform/context.go:Graph(): "[INFO] terraform: building graph: GraphTypeRefresh"](https://github.com/hashicorp/terraform/blob/413e423bbabe2b3aea450572c29b54c39638c82a/terraform/context.go#L257)
         * Do the walk: terraform/context.go:walk(): "[DEBUG] Starting graph walk: walkRefresh"
