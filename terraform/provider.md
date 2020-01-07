@@ -237,6 +237,12 @@ Do you want to perform these actions?
     * it doens't mean that we need to specify it in the tf file, as long as it has DefaultFunc.
   * Cannot use "Required: false", must use "Optional: true", not verified.
 
+* Update()
+  * Update could have many cases, e.g.
+    * nothing change
+    * inplace update
+    * addition update
+    * removal update
 * "provider" section is NOT required
 
 Each time a new provider is added to configuration -- either explicitly via a provider block or by adding a resource from that provider -- Terraform must initialize the provider before it can be used. Initialization downloads and installs the provider's plugin so that it can later be executed.
