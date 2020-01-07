@@ -10,7 +10,14 @@
   * Example: if we set glog by flag.Set("log_dir", "./logs"), the logs file could change to "/tmp" if the current working directory is changed to some other directory where the code doesn't have permission to write logs. Actually writing to "/tmp/" is easier to find out. But writing to other places is more difficult to debug (when we need to use lsof to find out)
 * Deadlock
   * In golang, don't use channel together with mutex, because they can cause deadlock
-
+* Update(): update is complicated.
+  * update cases
+    * nothing changes
+    * Inplace update
+    * Addition update
+    * removal update
+  * Examples:
+    * terraform resource: Update()
 
 ## Code Review
 * [code review](./code-review.md)
