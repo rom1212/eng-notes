@@ -1,3 +1,6 @@
+# Run
+* requires to run "terraform init" first (for tf 0.12)
+
 # check-variables (option for 0.11, default for 0.12)
 * https://github.com/hashicorp/terraform/issues/21408
 ```
