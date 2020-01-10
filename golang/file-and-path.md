@@ -133,10 +133,28 @@ https://github.com/golang/go/issues/15210
 # Path
 
 ## Join Path
+There are two function: path.Join and filepath.Join, see:
+* https://stackoverflow.com/questions/39181790/whats-the-difference-between-path-path-filepath-packages-in-go
+
+Please note that they will remove the ending slash "/" in the path, see: https://play.golang.org/p/m2wosNkr3Mc
+```go
+func main() {
+	fmt.Println("Hello, playground")
+	fmt.Printf("path:<%s>\n", path.Join("", ""))
+	fmt.Printf("path:<%s>\n", path.Join("", "/good"))
+	fmt.Printf("path:<%s>\n", path.Join("", "/good/"))
+	fmt.Printf("path:<%s>\n", path.Join("/more", "/good"))
+	fmt.Printf("path:<%s>\n", path.Join("/more/", "/good"))
+	fmt.Printf("path:<%s>\n", path.Join("/more/", "/good/"))
+}
+```
+
+
+
 ```go
 import "path/filepath"
 //sep := string(os.PathSeparator)
-path := filepath.Join("this/path/", "./tmp/")  // not ending "/", i.e. "this/path/tmp"
+path := filepath.Join("this/path/", "./tmp/")  // no ending "/", i.e. "this/path/tmp"
 ```
 
 ## copyFileWithSudo
