@@ -15,7 +15,7 @@
 
 # URL
 * URL path: everthing comes after the domain name. It can be empty.
-  * https://play.golang.org/p/m2wosNkr3Mc
+  * https://play.golang.org/p/T48GNoxrhCD
 ```go
 func main() {
 	fmt.Println("Hello, playground")
@@ -27,6 +27,9 @@ func main() {
 	fmt.Printf("path:<%s>\n", path.Join("/more/", "/good/"))
 
 	myurl, err := url.Parse("http://this.com")
+	fmt.Printf("url:%#v, err: %v\n", myurl, err)
+
+	myurl, err = url.Parse("http://this.com/")
 	fmt.Printf("url:%#v, err: %v\n", myurl, err)
 
 	myurl, err = url.Parse("http://this.com/mypath")
@@ -45,6 +48,7 @@ path:</more/good>
 path:</more/good>
 path:</more/good>
 url:&url.URL{Scheme:"http", Opaque:"", User:(*url.Userinfo)(nil), Host:"this.com", Path:"", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}, err: <nil>
+url:&url.URL{Scheme:"http", Opaque:"", User:(*url.Userinfo)(nil), Host:"this.com", Path:"/", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}, err: <nil>
 url:&url.URL{Scheme:"http", Opaque:"", User:(*url.Userinfo)(nil), Host:"this.com", Path:"/mypath", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}, err: <nil>
 url:&url.URL{Scheme:"http", Opaque:"", User:(*url.Userinfo)(nil), Host:"this.com", Path:"/mypath/", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}, err: <nil>
 ```
