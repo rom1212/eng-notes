@@ -230,6 +230,8 @@ Do you want to perform these actions?
     ```
   * a non-empty plan after successfully running terraform apply. This is typically due to a valid but otherwise misconfiguration of the resource, and is generally undesirable. However, if we want to intentionally create a test case for it, we can use ```ExpectNonEmptyPlan: true```
   * https://www.terraform.io/docs/extend/best-practices/testing.html#expecting-errors-or-non-empty-plans
+* If there are failures, it doesn't run the "Check" functions
+  * https://github.com/hashicorp/terraform-plugin-sdk/blob/7f53d13be6bdb4b24d447c26d66bcf8888c5be90/helper/resource/testing_config.go#L98
 
 ## Tricky
 * Schema
