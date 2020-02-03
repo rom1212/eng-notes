@@ -234,6 +234,7 @@ Do you want to perform these actions?
   * https://github.com/hashicorp/terraform-plugin-sdk/blob/7f53d13be6bdb4b24d447c26d66bcf8888c5be90/helper/resource/testing_config.go#L98
   * Normal steps calls [testStepConfig](https://github.com/hashicorp/terraform-plugin-sdk/blob/7f53d13be6bdb4b24d447c26d66bcf8888c5be90/helper/resource/testing_config.go#L23)
   * Destroy step calls [testStep](https://github.com/hashicorp/terraform-plugin-sdk/blob/7f53d13be6bdb4b24d447c26d66bcf8888c5be90/helper/resource/testing_config.go#L30), and we can see it by print step.Destroy is true or false. It is called from [testing.go](https://github.com/hashicorp/terraform-plugin-sdk/blob/7f53d13be6bdb4b24d447c26d66bcf8888c5be90/helper/resource/testing.go#L699)
+  * testing steps start from 0. If we test Update, Create step should be step 0, and Update step should be step 1.
 
 ## Tricky
 * Schema
