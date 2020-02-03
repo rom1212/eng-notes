@@ -17,3 +17,12 @@ func walkDir(dir string) {
 	}
 }
 ```
+
+## Print stack trace
+```go
+import (
+	"runtime/debug"
+)
+debug.Stack() // Print out to stderr
+fmt.Printf("Stack Trace: %v\n", string(debug.Stack()))  / Print to stdout
+```
