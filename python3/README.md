@@ -4,3 +4,6 @@
 
 # regular expression
 * https://docs.python.org/3/library/re.html
+
+# type hint
+* not for exception: https://stackoverflow.com/questions/44282268/python-type-hinting-with-exceptions
