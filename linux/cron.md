@@ -45,6 +45,21 @@ every first minute of the hour 22:
 ```
 
 ## crontab command
+* create cron to run as yourself
+* crontab -e
+  * example: daily at 23:30
+    * ```30 23  * * * /home/<user>/bin/cron/test_cron.sh```
+    * test_cron.sh: 
+      * ```#!/bin/bash```
+      * ```/home/<user>/bin/cron/test.sh >> /home/<user>/bin/cron/test_cron.log 2>&1``` 
+    * test.sh
+      * ```#!/bin/bash```
+      * ```echo ======================================```
+      * ```echo run date: $(date)```
+      * ```USER=$(whoami)```
+      * ```day=$(date +"%Y-%m-%d")```
+* crontab -l
+
 /var/spool/cron/<user>
 
 ## duplicate running
