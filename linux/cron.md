@@ -1,12 +1,28 @@
 # cron job
-## anacron
+## crontab command - easy for run as normal user
+* crontab -e
+  * example: daily at 23:30
+    * ```30 23  * * * /home/<user>/bin/cron/test_cron.sh```
+    * test_cron.sh: 
+      * ```#!/bin/bash```
+      * ```/home/<user>/bin/cron/test.sh >> /home/<user>/bin/cron/test_cron.log 2>&1``` 
+    * test.sh
+      * ```#!/bin/bash```
+      * ```echo ======================================```
+      * ```echo run date: $(date)```
+      * ```USER=$(whoami)```
+      * ```day=$(date +"%Y-%m-%d")```
+* crontab -l
+
+/var/spool/cron/<user>
 
 ## Create cron
+* Ubuntu uses anacron
 * locations
   * /etc/crontab - global crontab
   * other crontab files can be put here: /etc/cron.d/
   * /etc/cron.daily etc are actually setup by either crontab or /etc/cron.d/
-* create-cron.sh
+* create-cron.sh (might not work anymore)
 ```
 #!/bin/bash -ex
 
@@ -15,7 +31,7 @@ BIN=`realpath ./bin.sh`
 echo "5 * * * * $USER $BIN" | sudo tee /etc/cron.d/mycron.cron
 ```
 
-## crontab
+## general crontab definition
 ```
 # Example of job definition:
 # .---------------- minute (0 - 59)
@@ -43,24 +59,6 @@ every first minute of the hour 22:
 ```
 0 22 * * *   <user> echo $(date) >> /tmp/cron.daily.log
 ```
-
-## crontab command
-* create cron to run as yourself
-* crontab -e
-  * example: daily at 23:30
-    * ```30 23  * * * /home/<user>/bin/cron/test_cron.sh```
-    * test_cron.sh: 
-      * ```#!/bin/bash```
-      * ```/home/<user>/bin/cron/test.sh >> /home/<user>/bin/cron/test_cron.log 2>&1``` 
-    * test.sh
-      * ```#!/bin/bash```
-      * ```echo ======================================```
-      * ```echo run date: $(date)```
-      * ```USER=$(whoami)```
-      * ```day=$(date +"%Y-%m-%d")```
-* crontab -l
-
-/var/spool/cron/<user>
 
 ## duplicate running
 * https://stackoverflow.com/questions/10552016/how-to-prevent-the-cron-job-execution-if-it-is-already-running
