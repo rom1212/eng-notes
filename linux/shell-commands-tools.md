@@ -19,6 +19,16 @@ function remove-trailing-whitespace() {
   sed -i 's/[ \t]*$//' $1
 }
 ```
+* regular expression
+```bash
+$ echo '   ""good   morning"    ' | sed 's/[ "]*//g'
+goodmorning
+```
+Extended regular expression
+```bash
+$ echo "123 abc" | sed -r 's/[0-9]+/& &/'
+123 123 abc
+```
 
 ## Number of Cores/CPUs/Processors
 ```
