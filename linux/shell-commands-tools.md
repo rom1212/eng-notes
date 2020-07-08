@@ -1,4 +1,4 @@
-# Commands
+# Shell Commands
 ## ps
 * ps auxf - process tree
 * ps alx - PPID
@@ -28,6 +28,14 @@ Extended regular expression
 ```bash
 $ echo "123 abc" | sed -r 's/[0-9]+/& &/'
 123 123 abc
+```
+
+## cut
+```bash
+$ echo 'foo: "bar"' | cut -d ':' -f 2
+ "bar"
+$ echo 'foo: "bar"' | cut -d ':' -f 2 | sed 's/[ "]*//g'
+bar
 ```
 
 ## Number of Cores/CPUs/Processors
