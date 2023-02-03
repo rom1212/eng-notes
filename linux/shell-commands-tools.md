@@ -10,25 +10,37 @@ processinfo=`ps -O etimes,etime,uid,euser=USER,comm=NAME -p $pid`
 ```
 
 ## sed
-* remove trailing spaces
-```bash
-sed -i 's/[ \t]*$//' <filename, or *>
+  * delimiter can be anything, e.g.
+  ```
+  sed -i 's|<some>|<else>|g' *
+  ```
+  * `.` can match any character, to match `.`, we need to use `\.`, e.g.
+  ```
+  sed -i 's|a\.txt|b\.txt|g' *
+  ```
+  * sed for all the files under a directory recursively
+  ```
+  find ./ -type f  -exec sed -i 's|<some>|<else>|g' {} +
+  ```
+  * remove trailing spaces
+  ```bash
+  sed -i 's/[ \t]*$//' <filename, or *>
 
-# remove trailing whitespace
-function remove-trailing-whitespace() {
-  sed -i 's/[ \t]*$//' $1
-}
-```
-* regular expression
-```bash
-$ echo '   ""good   morning"    ' | sed 's/[ "]*//g'
-goodmorning
-```
-Extended regular expression
-```bash
-$ echo "123 abc" | sed -r 's/[0-9]+/& &/'
-123 123 abc
-```
+  # remove trailing whitespace
+  function remove-trailing-whitespace() {
+    sed -i 's/[ \t]*$//' $1
+  }
+  ```
+  * regular expression
+  ```bash
+  $ echo '   ""good   morning"    ' | sed 's/[ "]*//g'
+  goodmorning
+  ```
+  Extended regular expression
+  ```bash
+  $ echo "123 abc" | sed -r 's/[0-9]+/& &/'
+  123 123 abc
+  ```
 
 ## cut
 ```bash
@@ -60,7 +72,14 @@ $ grep processor /proc/cpuinfo
 ```
 /usr/bin/find /home/username -maxdepth 1 -name "*.sh" -type f -mtime +8 -delete
 ```
-
+* find all files and run some command
+  ```
+  // process file one by one
+  find ./ -type f  -exec echo {} \;
+  // process all the files at once, i.e. all the files are passed an arguments separated by space
+  find ./ -type f  -exec echo {} +
+  ```
+  
 ## Process with a given port
 TTT???: is there a case that there are multiple processes with the same port? I guess not.
 ```
